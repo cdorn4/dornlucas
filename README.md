@@ -2,6 +2,8 @@
 
 A static Jekyll site containing the exported Weebly pages and media for `dornlucas.com`.
 
+The native Jekyll layer lives in `_layouts`, `_posts`, `assets`, and the Markdown pages. The legacy event galleries remain as cleaned standalone HTML pages because their original gallery markup and image ordering are worth preserving.
+
 The export currently includes the original homepage/blog index plus these pages: `Baby Shower`, `Bjorklunden 2024`, `Disposable Cameras`, `FK 2019`, `How we met`, `Our Wedding`, and `The Engagement`. The original export is preserved outside this repository as `480379615644731484-1787771491.zip`.
 
 The exported blog indexes have now been converted into 30 native Jekyll posts: 20 from `Next thing next` and 10 from `F**k 2019`, covering May 2019 through March 2026. Some slideshow image references point to files that are not present in the export and still need separate recovery.
