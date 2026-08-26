@@ -7,6 +7,7 @@ import argparse
 import html
 import json
 import re
+import zipfile
 from dataclasses import dataclass, field
 from datetime import datetime
 from html.parser import HTMLParser
@@ -103,8 +104,16 @@ def slugify(title: str) -> str:
 
 
 def rewrite_asset_paths(content: str) -> str:
-    content = re.sub(r'(?P<prefix>(?:src|href)=["\'])(?!https?://|/)(?:\.\.?/)*((?:4/5/1/7/4517458)/)', r'\g<prefix>/uploads/\2', content)
-    content = re.sub(r'(["\']url["\']\s*:\s*["\'])(?!https?://|/)((?:4/5/1/7/4517458)/)', r'\1/uploads/\2', content)
+    content = re.sub(
+        r'(?P<attribute>src|href)=["\'](?:https?://)?(?:\.\.?/)*((?:4/5/1/7/4517458)/[^"\']+)["\']',
+        r'\g<attribute>="{{ "/uploads/\2" | relative_url }}"',
+        content,
+    )
+    content = re.sub(
+        r'(["\']url["\']\s*:\s*["\'])(?!https?://|/)((?:4/5/1/7/4517458)/[^"\']+)(["\'])',
+        r'\1{{ "/uploads/\2" | relative_url }}\3',
+        content,
+    )
     return content
 
 
@@ -127,9 +136,15 @@ def convert_slideshows(content: str) -> str:
     return pattern.sub(replace, content)
 
 
-def import_posts(index_path: Path, posts_dir: Path, section: str) -> int:
+def import_posts(index_path: Path, posts_dir: Path, section: str, zip_path: Path | None = None) -> int:
     parser = TreeParser()
-    parser.feed(index_path.read_text(encoding="utf-8", errors="replace"))
+    if zip_path:
+        with zipfile.ZipFile(zip_path) as archive:
+            entry = next(name for name in archive.namelist() if name.endswith(f"/{index_path.name}"))
+            source = archive.read(entry).decode("utf-8", errors="replace")
+    else:
+        source = index_path.read_text(encoding="utf-8", errors="replace")
+    parser.feed(source)
     posts = [node for node in descendants(parser.root, "div") if node.attr("id").startswith("blog-post-")]
     posts_dir.mkdir(parents=True, exist_ok=True)
     imported = 0
@@ -153,8 +168,9 @@ def import_posts(index_path: Path, posts_dir: Path, section: str) -> int:
         if slug in used_slugs:
             slug = f"{slug}-{date.strftime('%Y%m%d')}"
         used_slugs.add(slug)
-        body = rewrite_asset_paths("\n".join(serialize(child) for child in content.children))
-        body = convert_slideshows(body).strip()
+        body = "\n".join(serialize(child) for child in content.children)
+        body = convert_slideshows(body)
+        body = rewrite_asset_paths(body).strip()
         output = posts_dir / f"{date.isoformat()}-{slug}.html"
         output.write_text(
             f"---\nlayout: post\ntitle: {json_quote(title)}\ndate: {date.isoformat()} 12:00:00 -0500\npermalink: /{section}/{slug}/\n---\n\n{body}\n",
@@ -173,8 +189,9 @@ def main() -> int:
     parser.add_argument("--index", type=Path, default=Path("index.html"))
     parser.add_argument("--posts", type=Path, default=Path("_posts"))
     parser.add_argument("--section", default="next-thing-next", help="Original blog URL section")
+    parser.add_argument("--zip", type=Path, help="Read the index directly from a ZIP archive")
     args = parser.parse_args()
-    count = import_posts(args.index, args.posts, args.section.strip("/"))
+    count = import_posts(args.index, args.posts, args.section.strip("/"), args.zip)
     print(f"Imported {count} posts from {args.index} into {args.posts}")
     return 0
 
