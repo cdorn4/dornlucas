@@ -55,4 +55,4 @@ The optimizer uses a 2,000-pixel maximum dimension, JPEG/WebP quality 84, PNG op
 
 ## Deployment
 
-This site can deploy to GitHub Pages, Netlify, Cloudflare Pages, or any static host. For GitHub Pages, set the repository Pages source to the branch and folder where the built site is published, or use a Pages workflow that runs `bundle exec jekyll build`.
+This site can deploy to GitHub Pages, Netlify, Cloudflare Pages, or any static host. GitHub Pages deployment is configured in `.github/workflows/pages.yml`. In the repository settings, set Pages to **GitHub Actions**, then push to `main`. The site is configured for the project URL `https://cdorn4.github.io/dornlucas/`.
