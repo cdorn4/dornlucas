@@ -1,9 +1,9 @@
-title: Dorn Lucas
-email: your-email@example.com
+title: Next thing next
+email: DORNANDLUCAS@gmail.com
 description: >-
-  A personal site and journal by Dorn Lucas.
+  The Dorn and Lucas family archive, photo journals, and notes.
 baseurl: ""
-url: ""
+url: "https://www.dornlucas.com"
 lang: en-US
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/

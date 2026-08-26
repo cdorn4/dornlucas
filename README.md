@@ -1,6 +1,10 @@
 # Dorn Lucas Jekyll site
 
-A static Jekyll site prepared for migrating a Weebly website and its blog pages.
+A static Jekyll site containing the exported Weebly pages and media for `dornlucas.com`.
+
+The export currently includes the original homepage/blog index plus these pages: `Baby Shower`, `Bjorklunden 2024`, `Disposable Cameras`, `FK 2019`, `How we met`, `Our Wedding`, and `The Engagement`. The original export is preserved outside this repository as `480379615644731484-1787771491.zip`.
+
+The exported blog indexes have now been converted into 30 native Jekyll posts: 20 from `Next thing next` and 10 from `F**k 2019`, covering May 2019 through March 2026. Some slideshow image references point to files that are not present in the export and still need separate recovery.
 
 ## Run locally
 
@@ -36,6 +40,16 @@ excerpt: A short description for archive pages and social previews.
 7. Run the local build and check every imported route before deploying.
 
 The starter post in `_posts` is only a migration placeholder and can be deleted after the real articles are imported.
+
+## Optimize images
+
+The exported photos can be optimized in place while preserving their existing paths and filenames:
+
+```powershell
+python scripts/optimize_images.py uploads
+```
+
+The optimizer uses a 2,000-pixel maximum dimension, JPEG/WebP quality 84, PNG optimization, and keeps the existing file when recompression would be larger. Keep the original ZIP as the full-quality backup.
 
 ## Deployment
 

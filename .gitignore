@@ -7,3 +7,6 @@ vendor/
 Gemfile.lock
 .DS_Store
 Thumbs.db
+scrape-check/
+weebly-export/
+scraped-site/

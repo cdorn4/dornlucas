@@ -2,24 +2,29 @@
 layout: default
 title: Journal
 permalink: /blog/
+description: The complete Next thing next journal archive.
 ---
-<section class="page-intro shell">
-  <p class="eyebrow">The journal</p>
-  <h1>Writing, collected.</h1>
-  <p class="lede">A chronological home for your imported Weebly blog pages and everything that comes after.</p>
+<section class="archive-hero shell">
+  <p class="eyebrow">Next thing next</p>
+  <h1>The journal.</h1>
+  <p class="lede">Thirty entries spanning family life, travel, health, and the ordinary days worth remembering.</p>
 </section>
 
 <section class="archive shell" aria-label="Blog archive">
+  {% assign current_year = '' %}
   {% for post in site.posts %}
+    {% assign post_year = post.date | date: '%Y' %}
+    {% if post_year != current_year %}
+      {% assign current_year = post_year %}
+      <h2 class="archive-year">{{ current_year }}</h2>
+    {% endif %}
     <article class="archive-item">
-      <p class="post-meta">{{ post.date | date: '%B %-d, %Y' }}</p>
+      <p class="post-meta">{{ post.date | date: '%b %-d' }}</p>
       <div>
-        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-        <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.content | strip_html | strip_newlines | truncate: 220 }}</p>
       </div>
-      <a class="text-link" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">Read <span aria-hidden="true">&rarr;</span></a>
+      <a class="arrow-link" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">Read <span aria-hidden="true">&rarr;</span></a>
     </article>
-  {% else %}
-    <p class="empty-state">No posts yet. Add Markdown files to <code>_posts</code> to begin the archive.</p>
   {% endfor %}
 </section>
