@@ -1,0 +1,22 @@
+title: Dorn Lucas
+email: your-email@example.com
+description: >-
+  A personal site and journal by Dorn Lucas.
+baseurl: ""
+url: ""
+lang: en-US
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+future: false
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules
+  - .jekyll-cache
+  - .sass-cache
