@@ -5,7 +5,7 @@ description: The Dorn and Lucas family archive, photo journals, and notes.
 ---
 <section class="home-hero shell">
   <div class="hero-kicker"><span class="signal-dot"></span> The Dorn + Lucas archive</div>
-  <h1>Next thing<br><em>next.</em></h1>
+  <h1>NEW SITE UNDER<br><em>CONSTRUCTION.</em></h1>
   <p class="hero-intro">A living record of family, travel, photographs, and the small stories that make up a life.</p>
   <div class="hero-actions">
     <a class="button button-primary" href="{{ '/blog/' | relative_url }}">Read the journal <span aria-hidden="true">&rarr;</span></a>
