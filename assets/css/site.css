@@ -404,6 +404,118 @@ nav[aria-label="Primary navigation"] {
 }
 
 /* ==========================================================================
+   Home Latest Post (Expandable Featured Article)
+   ========================================================================== */
+
+.home-latest-post {
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.latest-post-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(28px, 5vw, 48px);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: box-shadow var(--transition-base);
+}
+
+.latest-post-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.latest-post-header {
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line-subtle);
+}
+
+.latest-post-title {
+  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  font-weight: 500;
+  margin: 0 0 16px;
+}
+
+.latest-post-title a {
+  text-decoration: none;
+  color: var(--ink);
+  transition: color var(--transition-fast);
+}
+
+.latest-post-title a:hover {
+  color: var(--accent);
+}
+
+.expandable-wrapper {
+  position: relative;
+  max-height: 480px;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.expandable-wrapper.is-expanded {
+  max-height: 8000px;
+}
+
+.expand-fade-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.94) 75%, rgba(255, 255, 255, 1));
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.expandable-wrapper.is-expanded .expand-fade-overlay {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.latest-post-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line-subtle);
+  flex-wrap: wrap;
+}
+
+.expand-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  background: var(--paper-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.expand-toggle-btn:hover {
+  background: var(--ink);
+  color: #ffffff;
+  border-color: var(--ink);
+}
+
+.expand-btn-icon {
+  font-size: 0.95rem;
+  transition: transform var(--transition-fast);
+}
+
+/* ==========================================================================
    Home Journal / Recent Posts
    ========================================================================== */
 
@@ -432,7 +544,7 @@ nav[aria-label="Primary navigation"] {
 
 .featured-posts {
   display: grid;
-  grid-template-columns: 1.35fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   margin-top: 44px;
   background: var(--line);
