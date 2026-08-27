@@ -5,11 +5,11 @@ description: The Dorn and Lucas family archive, photo journals, and notes.
 ---
 <section class="home-hero shell">
   <div class="hero-kicker"><span class="signal-dot"></span> The Dorn + Lucas archive</div>
-  <h1>NEW SITE UNDER<br><em>CONSTRUCTION.</em></h1>
+  <h1>NEXT THING<br><em>NEXT.</em></h1>
   <p class="hero-intro">A living record of family, travel, photographs, and the small stories that make up a life.</p>
   <div class="hero-actions">
     <a class="button button-primary" href="{{ '/blog/' | relative_url }}">Read the journal <span aria-hidden="true">&rarr;</span></a>
-    <a class="button button-quiet" href="{{ '/photos/' | relative_url }}">Browse the photographs</a>
+    <a class="button button-quiet" href="{{ '/photos/' | relative_url }}">Browse photographs</a>
   </div>
   <div class="hero-note"><span>01</span><span>Established 2019</span><span>Appleton, Wisconsin</span></div>
 </section>

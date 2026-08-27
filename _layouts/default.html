@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Plus+Jakarta+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
     {% seo %}
     {% feed_meta %}
@@ -13,12 +16,12 @@
       <div class="shell header-inner">
         <a class="brand" href="{{ '/' | relative_url }}" aria-label="Next thing next home">
           <span class="brand-mark">N</span>
-          <span>Next thing next</span>
+          <span class="brand-text">Next thing next</span>
         </a>
         <nav aria-label="Primary navigation">
-          <a href="{{ '/' | relative_url }}">Home</a>
-          <a href="{{ '/blog/' | relative_url }}">Journal <span aria-hidden="true">&nearr;</span></a>
-          <a href="{{ '/photos/' | relative_url }}">Photos <span aria-hidden="true">&nearr;</span></a>
+          <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
+          <a href="{{ '/blog/' | relative_url }}" class="nav-link">Journal <span class="nav-arrow" aria-hidden="true">&nearr;</span></a>
+          <a href="{{ '/photos/' | relative_url }}" class="nav-link">Photos <span class="nav-arrow" aria-hidden="true">&nearr;</span></a>
         </nav>
       </div>
     </header>
@@ -29,7 +32,15 @@
 
     <footer class="site-footer">
       <div class="shell footer-inner">
-        <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}</p>
+        <div class="footer-col">
+          <p class="footer-brand"><strong>Next thing next</strong> &mdash; The Dorn &amp; Lucas family archive.</p>
+          <p class="footer-copy">&copy; {{ 'now' | date: '%Y' }} Chris Dorn &amp; Elyse Lucas. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <a href="{{ '/blog/' | relative_url }}">Journal</a>
+          <a href="{{ '/photos/' | relative_url }}">Photos</a>
+          <a href="#main-content" class="back-to-top" aria-label="Scroll back to top">Top &uarr;</a>
+        </div>
       </div>
     </footer>
   </body>
