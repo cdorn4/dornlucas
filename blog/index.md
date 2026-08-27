@@ -6,8 +6,8 @@ description: The complete Next thing next journal archive.
 ---
 <section class="archive-hero shell">
   <p class="eyebrow">Next thing next</p>
-  <h1>The journal.</h1>
-  <p class="lede">Thirty entries spanning family life, travel, health, and the ordinary days worth remembering.</p>
+    <h2>The Blog</h2>
+  <p class="lede">The sporadic updates of Chris, Elyse and Auggie.</p>
 </section>
 
 <section class="archive shell" aria-label="Blog archive">

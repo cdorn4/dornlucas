@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Photographs
-permalink: /photos/
-description: Photo collections from the Dorn and Lucas family archive.
+title: Life Events
+permalink: /life-events/
+description: Milestone life events and photo collections from the Dorn and Lucas family archive.
 ---
 <section class="archive-hero shell">
-  <p class="eyebrow">The visual archive</p>
-  <h1>Photographs.</h1>
-  <p class="lede">A quieter index of the galleries carried over from the original site.</p>
+  <p class="eyebrow">The big things</p>
+  <h2>Life Events.</h2>
+  <p class="lede">A curated index of milestone galleries and stories carried over from the original archive.</p>
 </section>
 <section class="photo-index shell" aria-label="Photo collections">
   <a class="photo-index-item photo-index-featured" href="{{ '/our-wedding.html' | relative_url }}">
