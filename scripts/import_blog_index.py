@@ -106,12 +106,12 @@ def slugify(title: str) -> str:
 def rewrite_asset_paths(content: str) -> str:
     content = re.sub(
         r'(?P<attribute>src|href)=["\'](?:https?://)?(?:\.\.?/)*((?:4/5/1/7/4517458)/[^"\']+)["\']',
-        r'\g<attribute>="{{ "/uploads/\2" | relative_url }}"',
+        r'\g<attribute>="{{ "/files/photos/\2" | relative_url }}"',
         content,
     )
     content = re.sub(
         r'(["\']url["\']\s*:\s*["\'])(?!https?://|/)((?:4/5/1/7/4517458)/[^"\']+)(["\'])',
-        r'\1{{ "/uploads/\2" | relative_url }}\3',
+        r'\1{{ "/files/photos/\2" | relative_url }}\3',
         content,
     )
     return content

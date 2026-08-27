@@ -46,7 +46,7 @@ def optimize_image(path: Path, max_size: int, quality: int) -> tuple[int, int, b
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("directory", type=Path, nargs="?", default=Path("uploads"))
+    parser.add_argument("directory", type=Path, nargs="?", default=Path("files/photos"))
     parser.add_argument("--max-size", type=int, default=2000)
     parser.add_argument("--quality", type=int, default=84)
     args = parser.parse_args()

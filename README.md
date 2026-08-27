@@ -36,7 +36,7 @@ excerpt: A short description for archive pages and social previews.
 ---
 ```
 
-4. Move article images into `assets/images/` and update image links to `/assets/images/filename.jpg`.
+4. Move article images into `files/photos/` and update image links to `/files/photos/filename.jpg`. Keep imported Weebly media and newer post content separate by storing all photos under this media folder.
 5. For non-blog Weebly pages, add a Markdown file at the desired route with `layout: default` and `permalink` front matter. The existing `about.md` is an example.
 6. Update the site title, description, email, and URL in `_config.yml`.
 7. Run the local build and check every imported route before deploying.
@@ -48,7 +48,7 @@ The starter post in `_posts` is only a migration placeholder and can be deleted 
 The exported photos can be optimized in place while preserving their existing paths and filenames:
 
 ```powershell
-python scripts/optimize_images.py uploads
+python scripts/optimize_images.py files/photos
 ```
 
 The optimizer uses a 2,000-pixel maximum dimension, JPEG/WebP quality 84, PNG optimization, and keeps the existing file when recompression would be larger. Keep the original ZIP as the full-quality backup.
