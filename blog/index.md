@@ -6,7 +6,7 @@ description: The complete Next thing next journal archive.
 ---
 <section class="archive-hero shell">
   <p class="eyebrow">Next thing next</p>
-    <h2>The Blog</h2>
+    <h1>The Blog</h1>
   <p class="lede">The sporadic updates of Chris, Elyse and Auggie.</p>
 </section>
 
