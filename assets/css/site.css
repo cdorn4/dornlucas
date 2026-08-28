@@ -147,6 +147,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   min-height: 84px;
+  min-height: 94px;
   gap: 24px;
 }
 
@@ -154,9 +155,11 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 12px;
+  gap: 14px;
   text-decoration: none;
   font-family: var(--font-sans);
   font-size: 0.8rem;
+  font-size: 0.84rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -177,6 +180,10 @@ h1, h2, h3, h4, h5, h6 {
   height: 44px;
   padding: 2px 4px;
   border-radius: 8px;
+  width: 82px;
+  height: 56px;
+  padding: 3px 5px;
+  border-radius: 9px;
   background: var(--accent);
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition-base), background var(--transition-fast), box-shadow var(--transition-fast);
@@ -1153,6 +1160,12 @@ nav[aria-label="Primary navigation"] {
   
   .header-inner {
     min-height: 72px;
+    min-height: 80px;
+  }
+  
+  .brand-mark {
+    width: 68px;
+    height: 48px;
   }
   
   nav[aria-label="Primary navigation"] {
