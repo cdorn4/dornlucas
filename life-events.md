@@ -15,7 +15,7 @@ description: Milestone life events and photo collections from the Dorn and Lucas
     <span><strong>Our Wedding</strong><small>How we met, the engagement, the wedding day &amp; disposable cameras</small></span>
     <span aria-hidden="true">&nearr;</span>
   </a>
-  <a class="photo-index-item" href="{{ '/fk-2019.html' | relative_url }}">
+  <a class="photo-index-item" href="{{ '/fk-2019/' | relative_url }}">
     <span class="photo-index-number">02</span>
     <span><strong>F**k 2019</strong><small>The year in dispatches and updates</small></span>
     <span aria-hidden="true">&nearr;</span>
