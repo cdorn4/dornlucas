@@ -719,7 +719,27 @@ nav[aria-label="Primary navigation"] {
   padding: clamp(36px, 5vw, 56px) 0 28px;
 }
 
-.archive-hero h1 {
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.back-link:hover {
+  color: var(--accent-dark);
+  transform: translateX(-3px);
+}
+
+.archive-hero h1,
+.archive-hero h2 {
   font-size: clamp(2.0rem, 3.8vw, 2.85rem);
   letter-spacing: -0.03em;
   font-weight: 500;
