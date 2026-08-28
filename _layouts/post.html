@@ -22,8 +22,30 @@ layout: default
   <footer class="post-footer">
     <div class="post-footer-divider"></div>
     <div class="post-footer-nav">
-      <a class="arrow-link back-link" href="{{ '/blog/' | relative_url }}"><span aria-hidden="true">&larr;</span> Back to all entries</a>
-      <a class="arrow-link top-link" href="#main-content">Back to top <span aria-hidden="true">&uarr;</span></a>
+      {% assign found_current = false %}
+      {% assign newer_post = nil %}
+      {% assign older_post = nil %}
+      {% for post in site.posts %}
+        {% if post.url == page.url %}
+          {% assign newer_post = candidate_post %}
+          {% assign found_current = true %}
+        {% elsif found_current and older_post == nil %}
+          {% assign older_post = post %}
+        {% endif %}
+        {% assign candidate_post = post %}
+      {% endfor %}
+      {% if older_post %}
+        <a class="post-nav-link post-nav-older" href="{{ older_post.url | relative_url }}">
+          <span class="post-nav-label"><span aria-hidden="true">&larr;</span> Previous post</span>
+          <strong>{{ older_post.title }}</strong>
+        </a>
+      {% endif %}
+      {% if newer_post %}
+        <a class="post-nav-link post-nav-newer" href="{{ newer_post.url | relative_url }}">
+          <span class="post-nav-label">Next post <span aria-hidden="true">&rarr;</span></span>
+          <strong>{{ newer_post.title }}</strong>
+        </a>
+      {% endif %}
     </div>
   </footer>
 </article>

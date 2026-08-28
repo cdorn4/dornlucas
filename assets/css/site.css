@@ -1084,20 +1084,64 @@ nav[aria-label="Primary navigation"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 28px;
   flex-wrap: wrap;
 }
 
-.post-footer-nav .back-link {
-  font-size: 0.82rem;
+.post-nav-link {
+  display: flex;
+  flex: 1 1 220px;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  text-decoration: none;
 }
 
-.post-footer-nav .top-link {
-  font-size: 0.82rem;
+.post-nav-newer {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.post-nav-label {
+  color: var(--accent-dark);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.post-nav-link strong {
+  color: var(--ink);
+  font-family: var(--font-serif-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.post-nav-link:hover strong {
+  color: var(--accent);
+}
+
+.post-nav-link:only-child {
+  max-width: 50%;
+}
+
+@media (max-width: 560px) {
+  .post-nav-newer {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .post-nav-link:only-child {
+    max-width: none;
+  }
+}
+
+.post-nav-link .post-nav-label {
   color: var(--muted);
 }
 
-.post-footer-nav .top-link:hover {
+.post-nav-link:hover .post-nav-label {
   color: var(--accent-dark);
 }
 
