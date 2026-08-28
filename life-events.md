@@ -13,6 +13,7 @@ description: Milestone life events and photo collections from the Dorn and Lucas
   <a class="photo-index-item photo-index-featured" href="{{ '/wedding/' | relative_url }}">
     <span class="photo-index-number">01</span>
     <span><strong>Our Wedding</strong><small>How we met, the engagement, the wedding day &amp; disposable cameras</small></span>
+    <span><strong>Our Wedding</strong><small>Early years, the wedding day &amp; disposable cameras</small></span>
     <span aria-hidden="true">&nearr;</span>
   </a>
   <a class="photo-index-item" href="{{ '/fk-2019/' | relative_url }}">
@@ -21,12 +22,14 @@ description: Milestone life events and photo collections from the Dorn and Lucas
     <span aria-hidden="true">&nearr;</span>
   </a>
     <a class="photo-index-item" href="{{ '/auggie.html' | relative_url }}">
+  <a class="photo-index-item" href="{{ '/auggie.html' | relative_url }}">
     <span class="photo-index-number">03</span>
     <span><strong>Welcome Auggie</strong><small>The only good thing out of covid</small></span>
     <span aria-hidden="true">&nearr;</span>
   </a>
   <a class="photo-index-item" href="{{ '/bjoumlrklunden-2024.html' | relative_url }}">
     <span class="photo-index-number">03</span>
+    <span class="photo-index-number">04</span>
     <span><strong>Bj&ouml;rklunden 2024</strong><small>5 Years out</small></span>
     <span aria-hidden="true">&nearr;</span>
   </a>
