@@ -20,9 +20,14 @@ description: Milestone life events and photo collections from the Dorn and Lucas
     <span><strong>F**k 2019</strong><small>The year in dispatches and updates</small></span>
     <span aria-hidden="true">&nearr;</span>
   </a>
+    <a class="photo-index-item" href="{{ '/auggie.html' | relative_url }}">
+    <span class="photo-index-number">03</span>
+    <span><strong>Welcome Auggie</strong><small>The only good thing out of covid</small></span>
+    <span aria-hidden="true">&nearr;</span>
+  </a>
   <a class="photo-index-item" href="{{ '/bjoumlrklunden-2024.html' | relative_url }}">
     <span class="photo-index-number">03</span>
-    <span><strong>Bj&ouml;rklunden 2024</strong><small>A weekend by the lake</small></span>
+    <span><strong>Bj&ouml;rklunden 2024</strong><small>5 Years out</small></span>
     <span aria-hidden="true">&nearr;</span>
   </a>
 </section>
