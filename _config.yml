@@ -1,9 +1,9 @@
 title: Next thing next
 email: DORNANDLUCAS@gmail.com
 description: >-
-  The Dorn and Lucas family archive, photo journals, and notes.
-baseurl: "/dornlucas"
-url: "https://cdorn4.github.io"
+  The Dorn and Lucas family archive, blog, and notes.
+baseurl: ""
+url: "https://dornlucas.com"
 lang: en-US
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
