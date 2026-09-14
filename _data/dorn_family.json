@@ -1,0 +1,66 @@
+{
+  "title": "Dorn Family Tree",
+  "generations": [
+    {
+      "label": "Grandparents",
+      "couples": [
+        {
+          "id": "dorn_parents",
+          "person1": {
+            "name": "Karen Dorn",
+            "maiden": "Teschner",
+            "birth_year": null,
+            "death_year": null,
+            "photo": null
+          },
+          "person2": {
+            "name": "Allan Dorn",
+            "maiden": null,
+            "birth_year": null,
+            "death_year": null,
+            "photo": null
+          }
+        }
+      ]
+    },
+    {
+      "label": "Parents",
+      "couples": [
+        {
+          "id": "chris_elyse",
+          "parent_couple_1": "dorn_parents",
+          "married_year": null,
+          "person1": {
+            "name": "Chris Dorn",
+            "maiden": null,
+            "birth_year": 1988,
+            "death_year": null,
+            "photo": null,
+            "parent_couple": "dorn_parents"
+          },
+          "person2": {
+            "name": "Elyse Dorn",
+            "maiden": "Lucas",
+            "birth_year": null,
+            "death_year": null,
+            "photo": null
+          }
+        }
+      ]
+    },
+    {
+      "label": "Children",
+      "individuals": [
+        {
+          "id": "auggie",
+          "name": "August Dorn",
+          "nickname": "Auggie",
+          "birth_year": 2021,
+          "death_year": null,
+          "photo": null,
+          "parent_couple": "chris_elyse"
+        }
+      ]
+    }
+  ]
+}
