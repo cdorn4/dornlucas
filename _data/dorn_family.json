@@ -39,8 +39,8 @@
             "parent_couple": "dorn_parents"
           },
           "person2": {
-            "name": "Elyse Dorn",
-            "maiden": "Lucas",
+            "name": "Elyse Lucas",
+            "maiden": null,
             "birth_year": null,
             "death_year": null,
             "photo": null
