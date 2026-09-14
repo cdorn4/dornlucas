@@ -33,7 +33,7 @@
           "person1": {
             "name": "Chris Dorn",
             "maiden": null,
-            "birth_year": 1988,
+            "birth_year": 1987,
             "death_year": null,
             "photo": null,
             "parent_couple": "dorn_parents"
@@ -41,7 +41,7 @@
           "person2": {
             "name": "Elyse Lucas",
             "maiden": null,
-            "birth_year": null,
+            "birth_year": 1988,
             "death_year": null,
             "photo": null
           }
