@@ -418,7 +418,7 @@ async function encrypt(pwd, text) {
 
 const plaintext = renderUnifiedTree(dornData, lucasData);
 const payload = await encrypt(password, plaintext);
-const SESSION_KEY = 'unified_family_tree_session_v1';
+const SESSION_KEY = 'unified_family_tree_session_v3';
 
 const pageHtml = `---
 layout: default
