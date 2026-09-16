@@ -7,45 +7,134 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
 const password = process.argv[2] || 'dorn2026';
-const sourceFile = path.join(rootDir, '_data', 'dorn_family.json');
-const targetPage = path.join(rootDir, 'dorn-family-tree.html');
+const targetPage = path.join(rootDir, 'family-tree.html');
 
-if (!fs.existsSync(sourceFile)) {
-  console.error(`Source file missing: ${sourceFile}`);
+const dornFile = path.join(rootDir, '_data', 'dorn_family.json');
+const lucasFile = path.join(rootDir, '_data', 'lucas_family.json');
+
+if (!fs.existsSync(dornFile) || !fs.existsSync(lucasFile)) {
+  console.error(`Source files missing: ${dornFile} or ${lucasFile}`);
   process.exit(1);
 }
 
-const data = JSON.parse(fs.readFileSync(sourceFile, 'utf-8'));
+const dornData = JSON.parse(fs.readFileSync(dornFile, 'utf-8'));
+const lucasData = JSON.parse(fs.readFileSync(lucasFile, 'utf-8'));
 
 function renderPersonCard(person) {
   if (!person) return '';
+  const initial = person.name ? person.name.trim().charAt(0).toUpperCase() : '?';
   const photoHtml = person.photo
-    ? `<img src="${person.photo}" alt="${person.name}" class="ft-avatar">`
-    : `<div class="ft-avatar-placeholder">${person.name.charAt(0)}</div>`;
+    ? `<img src="${person.photo}" alt="${person.name || 'Unknown'}" class="ft-avatar">`
+    : `<div class="ft-avatar-placeholder">${initial}</div>`;
 
   const maidenText = person.maiden ? `<span class="ft-maiden">(${person.maiden})</span>` : '';
-  const yearsText = (person.birth_year || person.death_year)
-    ? `<div class="ft-years">${person.birth_year || ''}${person.death_year ? '–' + person.death_year : ''}</div>`
+
+  const formatYear = (d, y) => {
+    if (y) return y;
+    if (!d) return '';
+    const m = String(d).match(/\b\d{4}\b/);
+    return m ? m[0] : d;
+  };
+  const bText = formatYear(person.birthdate || person.birth_date, person.birth_year);
+  const dText = formatYear(person.death_date || person.deathdate, person.death_year);
+  const yearsText = (bText || dText)
+    ? `<div class="ft-years">${bText}${dText ? '–' + dText : ''}</div>`
     : '';
+
+  const displayName = person.name
+    ? `${person.name} ${maidenText}`
+    : `<span style="color:var(--muted);font-style:italic;">Unknown</span> ${maidenText}`;
 
   return `
     <div class="ft-person">
       ${photoHtml}
-      <div class="ft-name">${person.name} ${maidenText}</div>
+      <div class="ft-name">${displayName}</div>
       ${yearsText}
     </div>
   `;
 }
 
-function renderTree(treeData) {
+function getConnections(treeData, prefix) {
+  const conns = [];
+  treeData.generations.forEach(gen => {
+    if (gen.couples) {
+      gen.couples.forEach(c => {
+        const childId = `card-${prefix}-${c.id.replace(/_/g, '-')}`;
+        if (c.parent_couple_1) {
+          conns.push({ parent: `card-${prefix}-${c.parent_couple_1.replace(/_/g, '-')}`, child: childId });
+        }
+        if (c.parent_couple_2) {
+          conns.push({ parent: `card-${prefix}-${c.parent_couple_2.replace(/_/g, '-')}`, child: childId });
+        }
+        if (c.parent_couple) {
+          conns.push({ parent: `card-${prefix}-${c.parent_couple.replace(/_/g, '-')}`, child: childId });
+        }
+      });
+    }
+    if (gen.individuals) {
+      gen.individuals.forEach(ind => {
+        const childId = `card-${prefix}-${ind.id.replace(/_/g, '-')}`;
+        if (ind.parent_couple) {
+          conns.push({ parent: `card-${prefix}-${ind.parent_couple.replace(/_/g, '-')}`, child: childId });
+        }
+      });
+    }
+  });
+  return conns;
+}
+
+function renderBranchTree(treeData, prefix) {
+  return `
+    <div class="ft-diagram-tree ft-branch-view" id="ft-diagram-tree-${prefix}">
+      ${treeData.generations.map((gen) => `
+        <div class="ft-gen" id="gen-${prefix}-${gen.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">
+          <div class="ft-gen-label">${gen.label}</div>
+          ${gen.couples ? `
+            <div class="ft-couples-row">
+              ${gen.couples.map(c => `
+                <div class="ft-couple-card${c.id === 'chris_elyse' ? ' main-couple' : ''}" id="card-${prefix}-${c.id.replace(/_/g, '-')}">
+                  ${renderPersonCard(c.person1)}
+                  <div class="ft-heart">&amp;</div>
+                  ${renderPersonCard(c.person2)}
+                </div>
+              `).join('')}
+            </div>
+          ` : ''}
+          ${gen.individuals ? `
+            <div class="ft-individuals-row">
+              ${gen.individuals.map(ind => `
+                <div class="ft-individual-card" id="card-${prefix}-${ind.id.replace(/_/g, '-')}">
+                  ${renderPersonCard(ind)}
+                </div>
+              `).join('')}
+            </div>
+          ` : ''}
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderUnifiedTree(dornTree, lucasTree) {
+  const dornConns = getConnections(dornTree, 'dorn');
+  const lucasConns = getConnections(lucasTree, 'lucas');
+  const allConnections = [...dornConns, ...lucasConns];
+
   return `
     <div class="family-tree-container">
       <div class="ft-header-bar">
-        <div class="ft-back-link">
-          <a href="/family-tree.html">&larr; Back to Lineage Hub</a>
+        <h2 class="ft-title">Family Tree</h2>
+        <p class="ft-subtitle">Select a lineage branch below. Drag or use mouse wheel to navigate.</p>
+
+        <!-- Segmented Branch Toggle -->
+        <div class="ft-branch-toggle-group">
+          <button type="button" class="ft-toggle-btn active" id="btn-branch-dorn" onclick="switchBranch('dorn')">
+            Dorn Family Line
+          </button>
+          <button type="button" class="ft-toggle-btn" id="btn-branch-lucas" onclick="switchBranch('lucas')">
+            Lucas Family Line
+          </button>
         </div>
-        <h2 class="ft-title">${treeData.title}</h2>
-        <p class="ft-subtitle">Use mouse wheel or drag to navigate. Touch pinch & drag supported.</p>
       </div>
 
       <div class="ft-viewport-wrapper">
@@ -62,43 +151,8 @@ function renderTree(treeData) {
           <div class="ft-canvas-content" id="ft-canvas-content">
             <svg class="ft-svg-lines" id="ft-svg-lines"></svg>
             
-            <div class="ft-diagram-tree" id="ft-diagram-tree">
-              <!-- Generation 1: Grandparents -->
-              <div class="ft-gen" id="gen-grandparents">
-                <div class="ft-gen-label">Grandparents</div>
-                <div class="ft-couples-row">
-                  ${treeData.generations[0].couples.map(c => `
-                    <div class="ft-couple-card" id="card-${c.id}">
-                      ${renderPersonCard(c.person1)}
-                      <div class="ft-heart">&amp;</div>
-                      ${renderPersonCard(c.person2)}
-                    </div>
-                  `).join('')}
-                </div>
-              </div>
-
-              <!-- Generation 2: Parents -->
-              <div class="ft-gen" id="gen-parents">
-                <div class="ft-gen-label">Parents</div>
-                <div class="ft-couples-row">
-                  <div class="ft-couple-card main-couple" id="card-chris-elyse">
-                    ${renderPersonCard(treeData.generations[1].couples[0].person1)}
-                    <div class="ft-heart">&amp;</div>
-                    ${renderPersonCard(treeData.generations[1].couples[0].person2)}
-                  </div>
-                </div>
-              </div>
-
-              <!-- Generation 3: Children -->
-              <div class="ft-gen" id="gen-children">
-                <div class="ft-gen-label">Children</div>
-                <div class="ft-individuals-row">
-                  <div class="ft-individual-card" id="card-auggie">
-                    ${renderPersonCard(treeData.generations[2].individuals[0])}
-                  </div>
-                </div>
-              </div>
-            </div>
+            ${renderBranchTree(dornTree, 'dorn')}
+            ${renderBranchTree(lucasTree, 'lucas')}
           </div>
         </div>
       </div>
@@ -106,7 +160,6 @@ function renderTree(treeData) {
 
     <script>
     (function() {
-      // Interactive Pan & Zoom Engine
       const viewport = document.getElementById('ft-canvas-viewport');
       const content = document.getElementById('ft-canvas-content');
       if (!viewport || !content) return;
@@ -117,6 +170,40 @@ function renderTree(treeData) {
       let isDragging = false;
       let startX = 0;
       let startY = 0;
+      let currentBranch = 'dorn';
+
+      // Initialize initial branch view display
+      const dornView = document.getElementById('ft-diagram-tree-dorn');
+      const lucasView = document.getElementById('ft-diagram-tree-lucas');
+      if (dornView) dornView.style.display = 'flex';
+      if (lucasView) lucasView.style.display = 'none';
+
+      window.switchBranch = function(branchKey) {
+        currentBranch = branchKey;
+        const dView = document.getElementById('ft-diagram-tree-dorn');
+        const lView = document.getElementById('ft-diagram-tree-lucas');
+        const dBtn = document.getElementById('btn-branch-dorn');
+        const lBtn = document.getElementById('btn-branch-lucas');
+
+        if (branchKey === 'lucas') {
+          if (dView) dView.style.display = 'none';
+          if (lView) lView.style.display = 'flex';
+          if (dBtn) dBtn.classList.remove('active');
+          if (lBtn) lBtn.classList.add('active');
+        } else {
+          if (lView) lView.style.display = 'none';
+          if (dView) dView.style.display = 'flex';
+          if (lBtn) lBtn.classList.remove('active');
+          if (dBtn) dBtn.classList.add('active');
+        }
+
+        // Reset transform and redraw connectors for active branch
+        scale = 1;
+        panX = 0;
+        panY = 0;
+        updateTransform();
+        setTimeout(drawConnectors, 60);
+      };
 
       function updateTransform() {
         content.style.transform = \`translate(\${panX}px, \${panY}px) scale(\${scale})\`;
@@ -124,7 +211,7 @@ function renderTree(treeData) {
 
       // Mouse Drag Panning
       viewport.addEventListener('mousedown', (e) => {
-        if (e.target.closest('.ft-btn')) return;
+        if (e.target.closest('.ft-btn') || e.target.closest('.ft-toggle-btn')) return;
         isDragging = true;
         startX = e.clientX - panX;
         startY = e.clientY - panY;
@@ -160,7 +247,6 @@ function renderTree(treeData) {
           scale = Math.max(scale / zoomFactor, 0.4);
         }
 
-        // Adjust pan to zoom towards cursor
         panX = mouseX - (mouseX - panX) * (scale / oldScale);
         panY = mouseY - (mouseY - panY) * (scale / oldScale);
         updateTransform();
@@ -226,7 +312,9 @@ function renderTree(treeData) {
 
       document.getElementById('ft-zoom-fit')?.addEventListener('click', () => {
         const vpRect = viewport.getBoundingClientRect();
-        const treeRect = document.getElementById('ft-diagram-tree').getBoundingClientRect();
+        const activeTree = document.getElementById(\`ft-diagram-tree-\${currentBranch}\`);
+        if (!activeTree) return;
+        const treeRect = activeTree.getBoundingClientRect();
         const scaleX = (vpRect.width - 40) / treeRect.width;
         const scaleY = (vpRect.height - 40) / treeRect.height;
         scale = Math.min(Math.max(Math.min(scaleX, scaleY), 0.5), 1.5);
@@ -240,13 +328,6 @@ function renderTree(treeData) {
         const svg = document.getElementById('ft-svg-lines');
         if (!svg) return;
         svg.innerHTML = '';
-
-        const dornParents = document.getElementById('card-dorn-parents');
-        const lucasParents = document.getElementById('card-lucas-parents');
-        const chrisElyse = document.getElementById('card-chris-elyse');
-        const auggie = document.getElementById('card-auggie');
-
-        if (!chrisElyse || !auggie) return;
 
         const vpRect = content.getBoundingClientRect();
 
@@ -278,19 +359,23 @@ function renderTree(treeData) {
           svg.appendChild(path);
         }
 
-        if (dornParents) addPath(getCenterBottom(dornParents), getCenterTop(chrisElyse));
-        if (lucasParents) addPath(getCenterBottom(lucasParents), getCenterTop(chrisElyse));
-        if (auggie) addPath(getCenterBottom(chrisElyse), getCenterTop(auggie));
+        const connections = ${JSON.stringify(allConnections)};
+        connections.forEach(conn => {
+          const pEl = document.getElementById(conn.parent);
+          const cEl = document.getElementById(conn.child);
+          if (pEl && cEl && pEl.offsetParent !== null && cEl.offsetParent !== null) {
+            addPath(getCenterBottom(pEl), getCenterTop(cEl));
+          }
+        });
       }
 
+      window.drawConnectors = drawConnectors;
       setTimeout(drawConnectors, 100);
       window.addEventListener('resize', drawConnectors);
     })();
     </script>
   `;
 }
-
-const plaintext = renderTree(data);
 
 async function encrypt(pwd, text) {
   const enc = new TextEncoder();
@@ -331,13 +416,15 @@ async function encrypt(pwd, text) {
   };
 }
 
+const plaintext = renderUnifiedTree(dornData, lucasData);
 const payload = await encrypt(password, plaintext);
+const SESSION_KEY = 'unified_family_tree_session_v1';
 
 const pageHtml = `---
 layout: default
-title: "Dorn Family Tree"
-permalink: /dorn-family-tree.html
-description: "Interactive & Zoomable Dorn Family Tree."
+title: "Family Tree"
+permalink: /family-tree.html
+description: "Interactive & Zoomable Dorn and Lucas Family Tree."
 ---
 
 <article class="post shell wide">
@@ -345,7 +432,7 @@ description: "Interactive & Zoomable Dorn Family Tree."
     <div class="post-meta-bar">
       <span class="post-kicker-badge"><span class="signal-dot"></span> Private Lineage</span>
     </div>
-    <h1 class="post-title">Dorn Family Tree</h1>
+    <h1 class="post-title">Family Tree</h1>
   </header>
 
   <div class="post-content">
@@ -357,7 +444,7 @@ description: "Interactive & Zoomable Dorn Family Tree."
         </svg>
       </div>
       <h2>Protected Family Tree</h2>
-      <p class="gate-subtitle">Enter password to view the interactive Dorn family tree.</p>
+      <p class="gate-subtitle">Enter password to view the interactive family tree.</p>
       
       <form id="password-form" class="gate-form" onsubmit="return handleUnlock(event)">
         <div class="gate-input-group">
@@ -417,11 +504,42 @@ ${JSON.stringify(payload)}
 /* Interactive Family Tree Layout */
 .family-tree-container { display: flex; flex-direction: column; gap: 15px; }
 .ft-header-bar { text-align: center; }
-.ft-back-link { margin-bottom: 10px; font-size: 0.9rem; }
-.ft-back-link a { color: var(--accent); font-weight: 600; text-decoration: none; }
-.ft-back-link a:hover { text-decoration: underline; }
 .ft-title { font-family: var(--font-serif-display); font-size: 2.2rem; margin: 0 0 4px; color: var(--ink); }
-.ft-subtitle { color: var(--muted); font-size: 0.95rem; margin-bottom: 15px; }
+.ft-subtitle { color: var(--muted); font-size: 0.95rem; margin-bottom: 18px; }
+
+/* Segmented Lineage Toggle */
+.ft-branch-toggle-group {
+  display: inline-flex;
+  background: var(--paper-subtle, #f0ede6);
+  border: 1px solid var(--line, #e3dfd6);
+  border-radius: 30px;
+  padding: 4px;
+  margin-bottom: 20px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.ft-toggle-btn {
+  border: none;
+  background: transparent;
+  padding: 8px 22px;
+  font-family: var(--font-sans, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--muted, #61665d);
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ft-toggle-btn.active {
+  background: var(--surface-card, #ffffff);
+  color: var(--accent, #b84b29);
+  box-shadow: var(--shadow-sm, 0 2px 8px rgba(0,0,0,0.08));
+}
+
+.ft-toggle-btn:hover:not(.active) {
+  color: var(--ink, #1f2421);
+}
 
 .ft-viewport-wrapper {
   position: relative;
@@ -527,7 +645,7 @@ ${JSON.stringify(payload)}
 
 <script>
 (function() {
-  const SESSION_KEY = 'dorn_tree_diagram_session_v2';
+  const SESSION_KEY = '${SESSION_KEY}';
 
   window.handleUnlock = async function(e) {
     if (e) e.preventDefault();
@@ -621,7 +739,20 @@ ${JSON.stringify(payload)}
   if (cached) {
     try {
       const data = JSON.parse(cached);
-      if (data.decryptedHtml) renderDecrypted(data.decryptedHtml);
+      if (data.password) {
+        const payloadEl = document.getElementById('encrypted-payload');
+        const payload = JSON.parse(payloadEl.textContent);
+        decryptPayload(data.password, payload).then(decryptedHtml => {
+          if (decryptedHtml) {
+            renderDecrypted(decryptedHtml);
+            sessionStorage.setItem(SESSION_KEY, JSON.stringify({ password: data.password, decryptedHtml }));
+          }
+        }).catch(() => {
+          sessionStorage.removeItem(SESSION_KEY);
+        });
+      } else if (data.decryptedHtml) {
+        renderDecrypted(data.decryptedHtml);
+      }
     } catch (e) {
       sessionStorage.removeItem(SESSION_KEY);
     }
@@ -631,4 +762,4 @@ ${JSON.stringify(payload)}
 `;
 
 fs.writeFileSync(targetPage, pageHtml, 'utf-8');
-console.log(`Successfully built zoomable family tree into ${targetPage}`);
+console.log(`Successfully built unified interactive family tree into ${targetPage}`);

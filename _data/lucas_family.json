@@ -1,13 +1,13 @@
 {
-  "title": "Dorn Family Tree",
+  "title": "Lucas Family Tree",
   "generations": [
     {
       "label": "Great-Grandparents",
-      "description": "Grandparents of Chris Dorn",
+      "description": "Grandparents of Elyse Lucas",
       "couples": [
         {
-          "id": "allan_dorn_parents",
-          "branch": "Chris Dorn - Paternal Grandparents (Allan Dorn's Parents)",
+          "id": "john_lucas_parents",
+          "branch": "Elyse Lucas - Paternal Grandparents (John Lucas's Parents)",
           "married_date": null,
           "married_year": null,
           "person1": {
@@ -30,8 +30,8 @@
           }
         },
         {
-          "id": "teschner_parents",
-          "branch": "Chris Dorn - Maternal Grandparents (Karen Teschner's Parents)",
+          "id": "leta_parents",
+          "branch": "Elyse Lucas - Maternal Grandparents (Leta Lucas's Parents)",
           "married_date": null,
           "married_year": null,
           "person1": {
@@ -57,62 +57,62 @@
     },
     {
       "label": "Grandparents",
-      "description": "Parents of Chris Dorn",
+      "description": "Parents of Elyse Lucas",
       "couples": [
         {
-          "id": "dorn_parents",
-          "branch": "Chris Dorn's Parents",
-          "parent_couple_1": "allan_dorn_parents",
-          "parent_couple_2": "teschner_parents",
+          "id": "lucas_parents",
+          "branch": "Elyse Lucas's Parents",
+          "parent_couple_1": "john_lucas_parents",
+          "parent_couple_2": "leta_parents",
           "married_date": null,
           "married_year": null,
           "person1": {
-            "name": "Allan Dorn",
+            "name": "John Lucas",
+            "maiden": null,
+            "birthdate": null,
+            "birth_year": 1949,
+            "death_date": null,
+            "death_year": null,
+            "photo": null,
+            "parent_couple": "john_lucas_parents"
+          },
+          "person2": {
+            "name": "Leta Lucas",
             "maiden": null,
             "birthdate": null,
             "birth_year": null,
             "death_date": null,
             "death_year": null,
             "photo": null,
-            "parent_couple": "allan_dorn_parents"
-          },
-          "person2": {
-            "name": "Karen Dorn",
-            "maiden": "Teschner",
-            "birthdate": null,
-            "birth_year": 1949,
-            "death_date": null,
-            "death_year": null,
-            "photo": null,
-            "parent_couple": "teschner_parents"
+            "parent_couple": "leta_parents"
           }
         }
       ]
     },
     {
       "label": "Parents",
-      "description": "Chris Dorn & Elyse Lucas",
+      "description": "Elyse Lucas & Chris Dorn",
       "couples": [
         {
           "id": "chris_elyse",
-          "parent_couple_1": "dorn_parents",
+          "parent_couple_1": "lucas_parents",
           "married_date": null,
           "married_year": 2018,
           "person1": {
-            "name": "Chris Dorn",
-            "maiden": null,
-            "birthdate": "1987-09-03",
-            "birth_year": 1987,
-            "death_date": null,
-            "death_year": null,
-            "photo": null,
-            "parent_couple": "dorn_parents"
-          },
-          "person2": {
             "name": "Elyse Lucas",
             "maiden": null,
             "birthdate": null,
             "birth_year": 1988,
+            "death_date": null,
+            "death_year": null,
+            "photo": null,
+            "parent_couple": "lucas_parents"
+          },
+          "person2": {
+            "name": "Chris Dorn",
+            "maiden": null,
+            "birthdate": "1987-09-03",
+            "birth_year": 1987,
             "death_date": null,
             "death_year": null,
             "photo": null
@@ -139,3 +139,4 @@
     }
   ]
 }
+

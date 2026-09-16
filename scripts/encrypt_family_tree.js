@@ -229,7 +229,7 @@ ${JSON.stringify(payload)}
 
 <script>
 (function() {
-  const SESSION_KEY = 'family_tree_hub_session_v2';
+  const SESSION_KEY = 'family_tree_hub_session_v3';
 
   window.handleUnlock = async function(e) {
     if (e) e.preventDefault();
