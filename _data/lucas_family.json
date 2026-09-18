@@ -17,8 +17,7 @@
             "birth_year": null,
             "death_date": null,
             "death_year": null,
-            "photo": null,
-            "siblings": []
+            "photo": null
           },
           "person2": {
             "name": null,
@@ -27,8 +26,7 @@
             "birth_year": null,
             "death_date": null,
             "death_year": null,
-            "photo": null,
-            "siblings": []
+            "photo": null
           }
         },
         {
@@ -43,8 +41,7 @@
             "birth_year": null,
             "death_date": null,
             "death_year": null,
-            "photo": null,
-            "siblings": []
+            "photo": null
           },
           "person2": {
             "name": null,
@@ -53,8 +50,7 @@
             "birth_year": null,
             "death_date": null,
             "death_year": null,
-            "photo": null,
-            "siblings": []
+            "photo": null
           }
         }
       ]
@@ -79,22 +75,8 @@
             "death_year": null,
             "photo": null,
             "parent_couple": "john_lucas_parents",
-            "siblings": [
-              {
-                "name": "John Lucas",
-                "children": [
-                  {
-                    "name": "John Lucas"
-                  }
-                ]
-              },
-              {
-                "name": "Charlotte Sorci"
-              },
-              {
-                "name": "David Lucas"
-              }
-            ]
+            "sibling_group_id": "mark_siblings",
+            "sibling_count": 3
           },
           "person2": {
             "name": "Leta Lucas",
@@ -105,34 +87,103 @@
             "death_year": null,
             "photo": null,
             "parent_couple": "leta_parents",
-            "siblings": [
-              {
-                "name": "Peter A Marino",
-                "birth_year": "1940",
-                "spouse": {
-                  "name": "Judy Marino"
-                }
-              },
-              {
-                "name": "Mary Ann Marino"
-              },
-              {
-                "name": "Pat Musante",
-                "maiden": "Marino",
-                "spouse": {
-                  "name": "Al Musante"
-                },
-                "children": [
-                  {
-                    "name": "Alexis Musante"
-                  },
-                  {
-                    "name": "Brian Musante"
-                  }
-                ]
-              }
-            ]
+            "sibling_group_id": "leta_siblings",
+            "sibling_count": 3
           }
+        },
+        {
+          "id": "sib_leta_peter_couple",
+          "is_sibling": true,
+          "sibling_group": "leta_siblings",
+          "parent_couple": "leta_parents",
+          "person1": {
+            "name": "Peter A Marino",
+            "maiden": null,
+            "birthdate": "abt 1940",
+            "birth_year": "1940",
+            "death_date": null,
+            "death_year": null
+          },
+          "person2": {
+            "name": "Judy Marino",
+            "maiden": null,
+            "birthdate": null,
+            "birth_year": null,
+            "death_date": null,
+            "death_year": null
+          }
+        },
+        {
+          "id": "sib_leta_pat_couple",
+          "is_sibling": true,
+          "sibling_group": "leta_siblings",
+          "parent_couple": "leta_parents",
+          "person1": {
+            "name": "Pat Musante",
+            "maiden": "Marino",
+            "birthdate": null,
+            "birth_year": null,
+            "death_date": null,
+            "death_year": null
+          },
+          "person2": {
+            "name": "Al Musante",
+            "maiden": null,
+            "birthdate": null,
+            "birth_year": null,
+            "death_date": null,
+            "death_year": null
+          }
+        }
+      ],
+      "individuals": [
+        {
+          "id": "sib_mark_john",
+          "name": "John Lucas",
+          "maiden": null,
+          "birthdate": null,
+          "birth_year": null,
+          "death_date": null,
+          "death_year": null,
+          "is_sibling": true,
+          "sibling_group": "mark_siblings",
+          "parent_couple": "john_lucas_parents"
+        },
+        {
+          "id": "sib_mark_charlotte",
+          "name": "Charlotte Sorci",
+          "maiden": "Lucas",
+          "birthdate": null,
+          "birth_year": null,
+          "death_date": null,
+          "death_year": null,
+          "is_sibling": true,
+          "sibling_group": "mark_siblings",
+          "parent_couple": "john_lucas_parents"
+        },
+        {
+          "id": "sib_mark_david",
+          "name": "David Lucas",
+          "maiden": null,
+          "birthdate": null,
+          "birth_year": null,
+          "death_date": null,
+          "death_year": null,
+          "is_sibling": true,
+          "sibling_group": "mark_siblings",
+          "parent_couple": "john_lucas_parents"
+        },
+        {
+          "id": "sib_leta_maryann",
+          "name": "Mary Ann Marino",
+          "maiden": "Marino",
+          "birthdate": null,
+          "birth_year": null,
+          "death_date": null,
+          "death_year": null,
+          "is_sibling": true,
+          "sibling_group": "leta_siblings",
+          "parent_couple": "leta_parents"
         }
       ]
     },
@@ -154,39 +205,8 @@
             "death_year": null,
             "photo": null,
             "parent_couple": "lucas_parents",
-            "siblings": [
-              {
-                "name": "Matthew Lucas",
-                "birthdate": "1985-09-13",
-                "birth_year": "1985",
-                "spouse": {
-                  "name": "Taylor Janine Barcelow",
-                  "birth_year": "1986"
-                },
-                "children": [
-                  {
-                    "name": "Runa Lucas"
-                  },
-                  {
-                    "name": "Mads Lucas"
-                  },
-                  {
-                    "name": "Berit Lucas"
-                  },
-                  {
-                    "name": "Solveig Lucas"
-                  }
-                ]
-              },
-              {
-                "name": "Justine Lucas",
-                "children": [
-                  {
-                    "name": "Huck Lucas"
-                  }
-                ]
-              }
-            ]
+            "sibling_group_id": "elyse_siblings",
+            "sibling_count": 2
           },
           "person2": {
             "name": "Chris Dorn",
@@ -197,6 +217,42 @@
             "death_year": null,
             "photo": null
           }
+        },
+        {
+          "id": "sib_elyse_matthew_couple",
+          "is_sibling": true,
+          "sibling_group": "elyse_siblings",
+          "parent_couple": "lucas_parents",
+          "person1": {
+            "name": "Matthew Lucas",
+            "maiden": null,
+            "birthdate": "1985-09-13",
+            "birth_year": "1985",
+            "death_date": null,
+            "death_year": null
+          },
+          "person2": {
+            "name": "Taylor Janine Barcelow",
+            "maiden": "Barcelow",
+            "birthdate": "1986",
+            "birth_year": "1986",
+            "death_date": null,
+            "death_year": null
+          }
+        }
+      ],
+      "individuals": [
+        {
+          "id": "sib_elyse_justine",
+          "name": "Justine Lucas",
+          "maiden": "Lucas",
+          "birthdate": null,
+          "birth_year": null,
+          "death_date": null,
+          "death_year": null,
+          "is_sibling": true,
+          "sibling_group": "elyse_siblings",
+          "parent_couple": "lucas_parents"
         }
       ]
     },
