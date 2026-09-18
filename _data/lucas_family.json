@@ -85,12 +85,148 @@
             "death_year": null
           }
         }
+      ],
+      "items": [
+        {
+          "id": "john_lucas_paternal_parents",
+          "branch": "Elyse Lucas - Paternal-Paternal Great-Grandparents (John Lucas's Parents)",
+          "person1": {
+            "name": "Unknown Lucas",
+            "maiden": null,
+            "birthdate": null,
+            "birth_year": null,
+            "death_date": null,
+            "death_year": null
+          },
+          "person2": {
+            "name": "Unknown",
+            "maiden": null,
+            "birthdate": null,
+            "birth_year": null,
+            "death_date": null,
+            "death_year": null
+          }
+        },
+        {
+          "id": "sykes_parents",
+          "branch": "Elyse Lucas - Paternal-Maternal Great-Grandparents (John S. Sykes & Anna Syles)",
+          "person1": {
+            "name": "John S. Sykes",
+            "maiden": null,
+            "birthdate": null,
+            "birth_year": null,
+            "death_date": null,
+            "death_year": null
+          },
+          "person2": {
+            "name": "Anna A. Sykes",
+            "maiden": "Syles",
+            "birthdate": "abt 1900",
+            "birth_year": "1900",
+            "death_date": null,
+            "death_year": null
+          }
+        },
+        {
+          "id": "pietro_marino_maria",
+          "branch": "Elyse Lucas - Maternal-Paternal Great-Grandparents (Pietro Marino & Maria Azzara)",
+          "person1": {
+            "name": "Pietro Marino",
+            "maiden": null,
+            "birthdate": "1874-11-14",
+            "birth_year": "1874",
+            "death_date": "1918-10-24",
+            "death_year": "1918"
+          },
+          "person2": {
+            "name": "Maria \"Marie\" Marino",
+            "maiden": "Azzara",
+            "birthdate": "1874-01-01",
+            "birth_year": "1874",
+            "death_date": "1948-08-06",
+            "death_year": "1948"
+          }
+        },
+        {
+          "id": "bublis_parents",
+          "branch": "Elyse Lucas - Maternal-Maternal Great-Grandparents (Ianae Bublis & Anna Bublis)",
+          "person1": {
+            "name": "Ianae Bublis",
+            "maiden": null,
+            "birthdate": "1875",
+            "birth_year": "1875",
+            "death_date": null,
+            "death_year": null
+          },
+          "person2": {
+            "name": "Anna Bublis",
+            "maiden": null,
+            "birthdate": "1881",
+            "birth_year": "1881",
+            "death_date": null,
+            "death_year": null
+          }
+        }
       ]
     },
     {
       "label": "Great-Grandparents",
       "description": "Grandparents of Elyse Lucas",
       "couples": [
+        {
+          "id": "john_lucas_parents",
+          "branch": "Elyse Lucas - Paternal Grandparents (John Lucas & Catherine Sykes)",
+          "parent_couple_1": "john_lucas_paternal_parents",
+          "parent_couple_2": "sykes_parents",
+          "person1": {
+            "name": "John Lucas",
+            "maiden": null,
+            "birthdate": "abt 1917",
+            "birth_year": "1917",
+            "death_date": "Abt 2005",
+            "death_year": "2005",
+            "photo": null,
+            "parent_couple": "john_lucas_paternal_parents"
+          },
+          "person2": {
+            "name": "Catherine S. Lucas",
+            "maiden": "Sykes",
+            "birthdate": "1920-04-02",
+            "birth_year": "1920",
+            "death_date": "2000-11-19",
+            "death_year": "2000",
+            "photo": null,
+            "parent_couple": "sykes_parents"
+          }
+        },
+        {
+          "id": "marino_parents",
+          "branch": "Elyse Lucas - Maternal Grandparents (Alexander Marino & Ann Bublis)",
+          "parent_couple_1": "pietro_marino_maria",
+          "parent_couple_2": "bublis_parents",
+          "person1": {
+            "name": "Alexander F. Marino",
+            "maiden": null,
+            "birthdate": "abt 1922",
+            "birth_year": "1922",
+            "death_date": "Abt 1975",
+            "death_year": "1975",
+            "photo": null,
+            "parent_couple": "pietro_marino_maria"
+          },
+          "person2": {
+            "name": "Ann H. Marino",
+            "maiden": "Bublis",
+            "birthdate": "1911-12-27",
+            "birth_year": "1911",
+            "death_date": "2008-09-11",
+            "death_year": "2008",
+            "photo": null,
+            "parent_couple": "bublis_parents"
+          }
+        }
+      ],
+      "items": [
         {
           "id": "john_lucas_parents",
           "branch": "Elyse Lucas - Paternal Grandparents (John Lucas & Catherine Sykes)",
@@ -245,6 +381,102 @@
           "sibling_group": "leta_siblings",
           "parent_couple": "marino_parents"
         }
+      ],
+      "items": [
+        {
+          "id": "sib_mark_john",
+          "name": "John Lucas",
+          "is_sibling": true,
+          "sibling_group": "mark_siblings",
+          "parent_couple": "john_lucas_parents",
+          "has_children": true,
+          "children_group_id": "john_lucas_children",
+          "children_count": 1
+        },
+        {
+          "id": "sib_mark_charlotte",
+          "name": "Charlotte Sorci",
+          "maiden": "Lucas",
+          "is_sibling": true,
+          "sibling_group": "mark_siblings",
+          "parent_couple": "john_lucas_parents"
+        },
+        {
+          "id": "sib_mark_david",
+          "name": "David Lucas",
+          "is_sibling": true,
+          "sibling_group": "mark_siblings",
+          "parent_couple": "john_lucas_parents"
+        },
+        {
+          "id": "lucas_parents",
+          "branch": "Elyse Lucas's Parents (Mark Lucas & Leta Marino)",
+          "parent_couple_1": "john_lucas_parents",
+          "parent_couple_2": "marino_parents",
+          "married_date": null,
+          "married_year": null,
+          "person1": {
+            "name": "Mark Lucas",
+            "maiden": null,
+            "birthdate": "1952-03-12",
+            "birth_year": "1952",
+            "death_date": null,
+            "death_year": null,
+            "photo": null,
+            "parent_couple": "john_lucas_parents",
+            "sibling_group_id": "mark_siblings",
+            "sibling_count": 3
+          },
+          "person2": {
+            "name": "Leta Lucas",
+            "maiden": "Marino",
+            "birthdate": null,
+            "birth_year": null,
+            "death_date": null,
+            "death_year": null,
+            "photo": null,
+            "parent_couple": "marino_parents",
+            "sibling_group_id": "leta_siblings",
+            "sibling_count": 3
+          }
+        },
+        {
+          "id": "sib_leta_peter_couple",
+          "is_sibling": true,
+          "sibling_group": "leta_siblings",
+          "parent_couple": "marino_parents",
+          "person1": {
+            "name": "Peter A Marino",
+            "birth_year": "1940"
+          },
+          "person2": {
+            "name": "Judy Marino"
+          }
+        },
+        {
+          "id": "sib_leta_pat_couple",
+          "is_sibling": true,
+          "sibling_group": "leta_siblings",
+          "parent_couple": "marino_parents",
+          "has_children": true,
+          "children_group_id": "pat_musante_children",
+          "children_count": 2,
+          "person1": {
+            "name": "Pat Musante",
+            "maiden": "Marino"
+          },
+          "person2": {
+            "name": "Al Musante"
+          }
+        },
+        {
+          "id": "sib_leta_maryann",
+          "name": "Mary Ann Marino",
+          "maiden": "Marino",
+          "is_sibling": true,
+          "sibling_group": "leta_siblings",
+          "parent_couple": "marino_parents"
+        }
       ]
     },
     {
@@ -323,6 +555,78 @@
           "sibling_group": "john_lucas_children",
           "parent_couple": "sib_mark_john"
         }
+      ],
+      "items": [
+        {
+          "id": "sib_child_john_lucas_jr",
+          "name": "John Lucas",
+          "is_sibling": true,
+          "sibling_group": "john_lucas_children",
+          "parent_couple": "sib_mark_john"
+        },
+        {
+          "id": "sib_elyse_matthew_couple",
+          "is_sibling": true,
+          "sibling_group": "elyse_siblings",
+          "parent_couple": "lucas_parents",
+          "has_children": true,
+          "children_group_id": "matthew_lucas_children",
+          "children_count": 4,
+          "person1": {
+            "name": "Matthew Lucas",
+            "birthdate": "1985-09-13",
+            "birth_year": "1985"
+          },
+          "person2": {
+            "name": "Taylor Janine Barcelow",
+            "maiden": "Barcelow",
+            "birth_year": "1986"
+          }
+        },
+        {
+          "id": "sib_elyse_justine",
+          "name": "Justine Lucas",
+          "maiden": "Lucas",
+          "is_sibling": true,
+          "sibling_group": "elyse_siblings",
+          "parent_couple": "lucas_parents",
+          "has_children": true,
+          "children_group_id": "justine_lucas_children",
+          "children_count": 1
+        },
+        {
+          "id": "chris_elyse",
+          "parent_couple_1": "lucas_parents",
+          "married_year": 2018,
+          "person1": {
+            "name": "Elyse Lucas",
+            "maiden": "Lucas",
+            "birthdate": "1988-05-05",
+            "birth_year": "1988",
+            "sibling_group_id": "elyse_siblings",
+            "sibling_count": 2
+          },
+          "person2": {
+            "name": "Chris Dorn",
+            "birthdate": "1987-09-03",
+            "birth_year": "1987"
+          }
+        },
+        {
+          "id": "sib_child_alexis_musante",
+          "name": "Alexis Musante",
+          "maiden": "Musante",
+          "is_sibling": true,
+          "sibling_group": "pat_musante_children",
+          "parent_couple": "sib_leta_pat_couple"
+        },
+        {
+          "id": "sib_child_brian_musante",
+          "name": "Brian Musante",
+          "is_sibling": true,
+          "sibling_group": "pat_musante_children",
+          "parent_couple": "sib_leta_pat_couple"
+        }
       ]
     },
     {
@@ -373,6 +677,53 @@
           "is_sibling": true,
           "sibling_group": "justine_lucas_children",
           "parent_couple": "sib_elyse_justine"
+        }
+      ],
+      "items": [
+        {
+          "id": "sib_child_huck_lucas",
+          "name": "Huck Lucas",
+          "is_sibling": true,
+          "sibling_group": "justine_lucas_children",
+          "parent_couple": "sib_elyse_justine"
+        },
+        {
+          "id": "sib_child_runa_lucas",
+          "name": "Runa Lucas",
+          "maiden": "Lucas",
+          "is_sibling": true,
+          "sibling_group": "matthew_lucas_children",
+          "parent_couple": "sib_elyse_matthew_couple"
+        },
+        {
+          "id": "sib_child_mads_lucas",
+          "name": "Mads Lucas",
+          "is_sibling": true,
+          "sibling_group": "matthew_lucas_children",
+          "parent_couple": "sib_elyse_matthew_couple"
+        },
+        {
+          "id": "sib_child_berit_lucas",
+          "name": "Berit Lucas",
+          "is_sibling": true,
+          "sibling_group": "matthew_lucas_children",
+          "parent_couple": "sib_elyse_matthew_couple"
+        },
+        {
+          "id": "sib_child_solveig_lucas",
+          "name": "Solveig Lucas",
+          "maiden": "Lucas",
+          "is_sibling": true,
+          "sibling_group": "matthew_lucas_children",
+          "parent_couple": "sib_elyse_matthew_couple"
+        },
+        {
+          "id": "auggie",
+          "name": "August Dorn",
+          "nickname": "Auggie",
+          "birthdate": "2021-04-03",
+          "birth_year": 2021,
+          "parent_couple": "chris_elyse"
         }
       ]
     }

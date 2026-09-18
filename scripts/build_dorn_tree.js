@@ -65,31 +65,68 @@ function renderPersonCard(person) {
   `;
 }
 
+function getGenCards(gen) {
+  if (Array.isArray(gen.items)) {
+    return gen.items;
+  }
+  return [...(gen.couples || []), ...(gen.individuals || [])];
+}
+
+function renderCard(item, prefix) {
+  if (!item) return '';
+  const isCouple = Boolean(item.person1 && item.person2);
+  const childBtn = item.has_children && item.children_group_id && item.children_count
+    ? `
+      <div class="ft-card-action-bar">
+        <button type="button" class="ft-child-pill-btn" onclick="toggleSiblingGroup(event, '${item.children_group_id}')" data-target-group="${item.children_group_id}" title="Toggle children">
+          <span class="ft-pill-icon">▸</span> ${item.children_count} Child${item.children_count > 1 ? 'ren' : ''}
+        </button>
+      </div>
+    `
+    : '';
+
+  if (isCouple) {
+    return `
+      <div class="ft-couple-card${item.id === 'chris_elyse' ? ' main-couple' : ''}${item.is_sibling ? ' ft-sibling-card' : ''}"
+           id="card-${prefix}-${item.id.replace(/_/g, '-')}"
+           ${item.sibling_group ? `data-sibling-group="${item.sibling_group}" style="display: none;"` : ''}>
+        ${item.is_sibling ? '<span class="ft-sibling-tag">Branch</span>' : ''}
+        ${renderPersonCard(item.person1)}
+        <div class="ft-heart">&amp;</div>
+        ${renderPersonCard(item.person2)}
+        ${childBtn}
+      </div>
+    `;
+  } else {
+    const person = item.person1 || item;
+    return `
+      <div class="ft-individual-card${item.is_sibling ? ' ft-sibling-card' : ''}"
+           id="card-${prefix}-${item.id.replace(/_/g, '-')}"
+           ${item.sibling_group ? `data-sibling-group="${item.sibling_group}" style="display: none;"` : ''}>
+        ${item.is_sibling ? '<span class="ft-sibling-tag">Branch</span>' : ''}
+        ${renderPersonCard(person)}
+        ${childBtn}
+      </div>
+    `;
+  }
+}
+
 function getConnections(treeData, prefix) {
   const conns = [];
   treeData.generations.forEach(gen => {
-    if (gen.couples) {
-      gen.couples.forEach(c => {
-        const childId = `card-${prefix}-${c.id.replace(/_/g, '-')}`;
-        if (c.parent_couple_1) {
-          conns.push({ parent: `card-${prefix}-${c.parent_couple_1.replace(/_/g, '-')}`, child: childId });
-        }
-        if (c.parent_couple_2) {
-          conns.push({ parent: `card-${prefix}-${c.parent_couple_2.replace(/_/g, '-')}`, child: childId });
-        }
-        if (c.parent_couple) {
-          conns.push({ parent: `card-${prefix}-${c.parent_couple.replace(/_/g, '-')}`, child: childId });
-        }
-      });
-    }
-    if (gen.individuals) {
-      gen.individuals.forEach(ind => {
-        const childId = `card-${prefix}-${ind.id.replace(/_/g, '-')}`;
-        if (ind.parent_couple) {
-          conns.push({ parent: `card-${prefix}-${ind.parent_couple.replace(/_/g, '-')}`, child: childId });
-        }
-      });
-    }
+    const cards = getGenCards(gen);
+    cards.forEach(c => {
+      const childId = `card-${prefix}-${c.id.replace(/_/g, '-')}`;
+      if (c.parent_couple_1) {
+        conns.push({ parent: `card-${prefix}-${c.parent_couple_1.replace(/_/g, '-')}`, child: childId });
+      }
+      if (c.parent_couple_2) {
+        conns.push({ parent: `card-${prefix}-${c.parent_couple_2.replace(/_/g, '-')}`, child: childId });
+      }
+      if (c.parent_couple) {
+        conns.push({ parent: `card-${prefix}-${c.parent_couple.replace(/_/g, '-')}`, child: childId });
+      }
+    });
   });
   return conns;
 }
@@ -103,51 +140,7 @@ function renderBranchTree(treeData, prefix) {
           
           <!-- Cards Row for Couples & Individuals -->
           <div class="ft-cards-row">
-            ${gen.couples ? gen.couples.map(c => {
-              const childBtn = c.has_children && c.children_group_id && c.children_count
-                ? `
-                  <div class="ft-card-action-bar">
-                    <button type="button" class="ft-child-pill-btn" onclick="toggleSiblingGroup(event, '${c.children_group_id}')" data-target-group="${c.children_group_id}" title="Toggle children">
-                      <span class="ft-pill-icon">▸</span> ${c.children_count} Child${c.children_count > 1 ? 'ren' : ''}
-                    </button>
-                  </div>
-                `
-                : '';
-
-              return `
-                <div class="ft-couple-card${c.id === 'chris_elyse' ? ' main-couple' : ''}${c.is_sibling ? ' ft-sibling-card' : ''}"
-                     id="card-${prefix}-${c.id.replace(/_/g, '-')}"
-                     ${c.sibling_group ? `data-sibling-group="${c.sibling_group}" style="display: none;"` : ''}>
-                  ${c.is_sibling ? '<span class="ft-sibling-tag">Branch</span>' : ''}
-                  ${renderPersonCard(c.person1)}
-                  <div class="ft-heart">&amp;</div>
-                  ${renderPersonCard(c.person2)}
-                  ${childBtn}
-                </div>
-              `;
-            }).join('') : ''}
-            
-            ${gen.individuals ? gen.individuals.map(ind => {
-              const childBtn = ind.has_children && ind.children_group_id && ind.children_count
-                ? `
-                  <div class="ft-card-action-bar">
-                    <button type="button" class="ft-child-pill-btn" onclick="toggleSiblingGroup(event, '${ind.children_group_id}')" data-target-group="${ind.children_group_id}" title="Toggle children">
-                      <span class="ft-pill-icon">▸</span> ${ind.children_count} Child${ind.children_count > 1 ? 'ren' : ''}
-                    </button>
-                  </div>
-                `
-                : '';
-
-              return `
-                <div class="ft-individual-card${ind.is_sibling ? ' ft-sibling-card' : ''}"
-                     id="card-${prefix}-${ind.id.replace(/_/g, '-')}"
-                     ${ind.sibling_group ? `data-sibling-group="${ind.sibling_group}" style="display: none;"` : ''}>
-                  ${ind.is_sibling ? '<span class="ft-sibling-tag">Branch</span>' : ''}
-                  ${renderPersonCard(ind)}
-                  ${childBtn}
-                </div>
-              `;
-            }).join('') : ''}
+            ${getGenCards(gen).map(item => renderCard(item, prefix)).join('')}
           </div>
         </div>
       `).join('')}
