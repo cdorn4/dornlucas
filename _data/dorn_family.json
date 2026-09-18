@@ -17,7 +17,8 @@
             "birth_year": "1866",
             "death_date": "1943-09-20",
             "death_year": "1943",
-            "photo": null
+            "photo": null,
+            "siblings": []
           },
           "person2": {
             "name": "Fredericka Dorn",
@@ -26,7 +27,8 @@
             "birth_year": "1873",
             "death_date": "1953-12-18",
             "death_year": "1953",
-            "photo": null
+            "photo": null,
+            "siblings": []
           }
         },
         {
@@ -41,7 +43,8 @@
             "birth_year": "1854",
             "death_date": "1918-12-07",
             "death_year": "1918",
-            "photo": null
+            "photo": null,
+            "siblings": []
           },
           "person2": {
             "name": "Elizabeth Schaefer",
@@ -50,7 +53,8 @@
             "birth_year": "1863",
             "death_date": "1933-01-07",
             "death_year": "1933",
-            "photo": null
+            "photo": null,
+            "siblings": []
           }
         },
         {
@@ -65,7 +69,8 @@
             "birth_year": "1896",
             "death_date": "1945-05-25",
             "death_year": "1945",
-            "photo": null
+            "photo": null,
+            "siblings": []
           },
           "person2": {
             "name": "Helen Jane Teschner",
@@ -74,7 +79,8 @@
             "birth_year": "1901",
             "death_date": "1993-11-06",
             "death_year": "1993",
-            "photo": null
+            "photo": null,
+            "siblings": []
           }
         },
         {
@@ -89,7 +95,8 @@
             "birth_year": "1877",
             "death_date": "1954-07-02",
             "death_year": "1954",
-            "photo": null
+            "photo": null,
+            "siblings": []
           },
           "person2": {
             "name": "Wilma Lee Malmstone",
@@ -98,7 +105,8 @@
             "birth_year": "1887",
             "death_date": "1970-12-19",
             "death_year": "1970",
-            "photo": null
+            "photo": null,
+            "siblings": []
           }
         }
       ]
@@ -122,7 +130,8 @@
             "death_date": "1984-06-04",
             "death_year": "1984",
             "photo": null,
-            "parent_couple": "michael_dorn_fredericka"
+            "parent_couple": "michael_dorn_fredericka",
+            "siblings": []
           },
           "person2": {
             "name": "Louise Dorn",
@@ -132,7 +141,8 @@
             "death_date": "1976-06-14",
             "death_year": "1976",
             "photo": null,
-            "parent_couple": "peter_schaefer_elizabeth"
+            "parent_couple": "peter_schaefer_elizabeth",
+            "siblings": []
           }
         },
         {
@@ -150,7 +160,120 @@
             "death_date": "1987",
             "death_year": "1987",
             "photo": null,
-            "parent_couple": "paul_teschner_helen"
+            "parent_couple": "paul_teschner_helen",
+            "siblings": [
+              {
+                "name": "Pat Veenstra",
+                "maiden": "Teschner",
+                "birthdate": "abt 1927",
+                "birth_year": "1927",
+                "death_date": null,
+                "death_year": null,
+                "children": [
+                  {
+                    "name": "Mark Veenstra",
+                    "spouse": {
+                      "name": "Debra Veenstra"
+                    },
+                    "children": [
+                      {
+                        "name": "Jeff Veenstra"
+                      },
+                      {
+                        "name": "Quinn Veenstra"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "MariPat Veenstra"
+                  }
+                ]
+              },
+              {
+                "name": "Helen Jane Walker",
+                "maiden": "Teschner",
+                "birthdate": "abt 1930",
+                "birth_year": "1930",
+                "death_date": null,
+                "death_year": null,
+                "children": [
+                  {
+                    "name": "LeeAnn Walker",
+                    "spouse": {
+                      "name": "Tom Walker"
+                    },
+                    "children": [
+                      {
+                        "name": "Alex Walker"
+                      },
+                      {
+                        "name": "Lisa Walker"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "James Peter Teschner",
+                "birthdate": "abt 1931",
+                "birth_year": "1931",
+                "death_date": null,
+                "death_year": null
+              },
+              {
+                "name": "Thomas L Teschner",
+                "birthdate": "abt 1934",
+                "birth_year": "1934",
+                "death_date": null,
+                "death_year": null
+              },
+              {
+                "name": "John S Teschner",
+                "birthdate": "abt 1935",
+                "birth_year": "1935",
+                "death_date": null,
+                "death_year": null
+              },
+              {
+                "name": "Susan M Teschner",
+                "birthdate": "abt 1939",
+                "birth_year": "1939",
+                "death_date": null,
+                "death_year": null
+              },
+              {
+                "name": "Sara Lee Amrein",
+                "maiden": "Teschner",
+                "birthdate": "abt 1939",
+                "birth_year": "1939",
+                "death_date": null,
+                "death_year": null,
+                "children": [
+                  {
+                    "name": "Sara Amrein",
+                    "spouse": {
+                      "name": "John Amrein"
+                    },
+                    "children": [
+                      {
+                        "name": "Julie Krutsch",
+                        "spouse": {
+                          "name": "Kurt Krutsch"
+                        },
+                        "children": [
+                          {
+                            "name": "Andra Krutsch"
+                          },
+                          {
+                            "name": "Logan Krutsch"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           "person2": {
             "name": "Barbara Teschner",
@@ -160,7 +283,8 @@
             "death_date": "1976-01-31",
             "death_year": "1976",
             "photo": null,
-            "parent_couple": "francis_malmstone_wilma"
+            "parent_couple": "francis_malmstone_wilma",
+            "siblings": []
           }
         }
       ]
@@ -184,7 +308,72 @@
             "death_date": null,
             "death_year": null,
             "photo": null,
-            "parent_couple": "allan_dorn_parents"
+            "parent_couple": "allan_dorn_parents",
+            "siblings": [
+              {
+                "name": "Phyllis Dorothy Dorn",
+                "birthdate": "1930-11-13",
+                "birth_year": "1930",
+                "death_date": "1982-03",
+                "death_year": "1982"
+              },
+              {
+                "name": "Ralph Lawrence Dorn",
+                "birthdate": "1931-12-31",
+                "birth_year": "1931",
+                "death_date": "2009-09-30",
+                "death_year": "2009"
+              },
+              {
+                "name": "Mary Ann Dorn Mengel",
+                "maiden": "Dorn",
+                "birthdate": "1933-06-04",
+                "birth_year": "1933",
+                "death_date": "2013-02-25",
+                "death_year": "2013",
+                "spouse": {
+                  "name": "Le Roy Mengel"
+                },
+                "children": [
+                  {
+                    "name": "Kathleen Mengel Flesch",
+                    "birthdate": "1955-10-03",
+                    "birth_year": "1955",
+                    "spouse": {
+                      "name": "Michael David Flesch",
+                      "birth_year": "1957",
+                      "married_year": "1981"
+                    }
+                  },
+                  {
+                    "name": "Matthew Leroy Mengel",
+                    "birthdate": "1964-01",
+                    "birth_year": "1964"
+                  },
+                  {
+                    "name": "Jane Mengel"
+                  },
+                  {
+                    "name": "Mark Mengel"
+                  }
+                ]
+              },
+              {
+                "name": "Gordon Herman Dorn",
+                "birthdate": "1935-03-04",
+                "birth_year": "1935",
+                "death_date": "2016-05-10",
+                "death_year": "2016"
+              },
+              {
+                "name": "Margaret \"Peggy\" Diedrich",
+                "maiden": "Dorn",
+                "birthdate": "1942-01-08",
+                "birth_year": "1942",
+                "death_date": null,
+                "death_year": null
+              }
+            ]
           },
           "person2": {
             "name": "Karen Dorn",
@@ -194,7 +383,37 @@
             "death_date": null,
             "death_year": null,
             "photo": null,
-            "parent_couple": "teschner_parents"
+            "parent_couple": "teschner_parents",
+            "siblings": [
+              {
+                "name": "Paul A Teschner III",
+                "birthdate": "abt 1958",
+                "birth_year": "1958",
+                "death_date": null,
+                "death_year": null
+              },
+              {
+                "name": "Patxi Delgado Rodriguez / Tamara Jane Teschner",
+                "maiden": "Teschner",
+                "birthdate": "1965",
+                "birth_year": "1965",
+                "death_date": null,
+                "death_year": null,
+                "spouse": {
+                  "name": "Patxi Delgado Rodriguez",
+                  "birth_year": "1953",
+                  "married_year": "1996"
+                },
+                "children": [
+                  {
+                    "name": "Aidan Teschner Delgado"
+                  },
+                  {
+                    "name": "Dylan Teschner Delgado"
+                  }
+                ]
+              }
+            ]
           }
         }
       ]
@@ -216,16 +435,18 @@
             "death_date": null,
             "death_year": null,
             "photo": null,
-            "parent_couple": "dorn_parents"
+            "parent_couple": "dorn_parents",
+            "siblings": []
           },
           "person2": {
             "name": "Elyse Lucas",
             "maiden": null,
-            "birthdate": null,
+            "birthdate": "1988-05-05",
             "birth_year": 1988,
             "death_date": null,
             "death_year": null,
-            "photo": null
+            "photo": null,
+            "siblings": []
           }
         }
       ]

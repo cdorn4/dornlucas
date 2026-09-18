@@ -17,7 +17,8 @@
             "birth_year": null,
             "death_date": null,
             "death_year": null,
-            "photo": null
+            "photo": null,
+            "siblings": []
           },
           "person2": {
             "name": null,
@@ -26,7 +27,8 @@
             "birth_year": null,
             "death_date": null,
             "death_year": null,
-            "photo": null
+            "photo": null,
+            "siblings": []
           }
         },
         {
@@ -41,7 +43,8 @@
             "birth_year": null,
             "death_date": null,
             "death_year": null,
-            "photo": null
+            "photo": null,
+            "siblings": []
           },
           "person2": {
             "name": null,
@@ -50,7 +53,8 @@
             "birth_year": null,
             "death_date": null,
             "death_year": null,
-            "photo": null
+            "photo": null,
+            "siblings": []
           }
         }
       ]
@@ -67,24 +71,67 @@
           "married_date": null,
           "married_year": null,
           "person1": {
-            "name": "John Lucas",
+            "name": "Mark Lucas",
             "maiden": null,
-            "birthdate": null,
-            "birth_year": 1949,
+            "birthdate": "1952-03-12",
+            "birth_year": 1952,
             "death_date": null,
             "death_year": null,
             "photo": null,
-            "parent_couple": "john_lucas_parents"
+            "parent_couple": "john_lucas_parents",
+            "siblings": [
+              {
+                "name": "John Lucas",
+                "children": [
+                  {
+                    "name": "John Lucas"
+                  }
+                ]
+              },
+              {
+                "name": "Charlotte Sorci"
+              },
+              {
+                "name": "David Lucas"
+              }
+            ]
           },
           "person2": {
-            "name": "Leta Marino",
+            "name": "Leta Lucas",
             "maiden": "Marino",
             "birthdate": null,
             "birth_year": null,
             "death_date": null,
             "death_year": null,
             "photo": null,
-            "parent_couple": "leta_parents"
+            "parent_couple": "leta_parents",
+            "siblings": [
+              {
+                "name": "Peter A Marino",
+                "birth_year": "1940",
+                "spouse": {
+                  "name": "Judy Marino"
+                }
+              },
+              {
+                "name": "Mary Ann Marino"
+              },
+              {
+                "name": "Pat Musante",
+                "maiden": "Marino",
+                "spouse": {
+                  "name": "Al Musante"
+                },
+                "children": [
+                  {
+                    "name": "Alexis Musante"
+                  },
+                  {
+                    "name": "Brian Musante"
+                  }
+                ]
+              }
+            ]
           }
         }
       ]
@@ -106,7 +153,40 @@
             "death_date": null,
             "death_year": null,
             "photo": null,
-            "parent_couple": "lucas_parents"
+            "parent_couple": "lucas_parents",
+            "siblings": [
+              {
+                "name": "Matthew Lucas",
+                "birthdate": "1985-09-13",
+                "birth_year": "1985",
+                "spouse": {
+                  "name": "Taylor Janine Barcelow",
+                  "birth_year": "1986"
+                },
+                "children": [
+                  {
+                    "name": "Runa Lucas"
+                  },
+                  {
+                    "name": "Mads Lucas"
+                  },
+                  {
+                    "name": "Berit Lucas"
+                  },
+                  {
+                    "name": "Solveig Lucas"
+                  }
+                ]
+              },
+              {
+                "name": "Justine Lucas",
+                "children": [
+                  {
+                    "name": "Huck Lucas"
+                  }
+                ]
+              }
+            ]
           },
           "person2": {
             "name": "Chris Dorn",
@@ -139,4 +219,3 @@
     }
   ]
 }
-

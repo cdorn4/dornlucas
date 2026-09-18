@@ -20,7 +20,71 @@ if (!fs.existsSync(dornFile) || !fs.existsSync(lucasFile)) {
 const dornData = JSON.parse(fs.readFileSync(dornFile, 'utf-8'));
 const lucasData = JSON.parse(fs.readFileSync(lucasFile, 'utf-8'));
 
-function renderPersonCard(person) {
+function formatYears(b, by, d, dy) {
+  const formatYear = (dt, yr) => {
+    if (yr) return yr;
+    if (!dt) return '';
+    const m = String(dt).match(/\b\d{4}\b/);
+    return m ? m[0] : dt;
+  };
+  const bText = formatYear(b, by);
+  const dText = formatYear(d, dy);
+  return (bText || dText) ? `${bText}${dText ? '–' + dText : ''}` : '';
+}
+
+function renderSiblingItem(sib) {
+  if (!sib) return '';
+  const years = formatYears(sib.birthdate, sib.birth_year, sib.death_date, sib.death_year);
+  const maiden = sib.maiden ? `<span class="ft-sib-maiden">(${sib.maiden})</span>` : '';
+  const spouseText = sib.spouse && sib.spouse.name
+    ? `<div class="ft-sib-spouse">&amp; ${sib.spouse.name}${sib.spouse.birth_year ? ` <span class="ft-sib-years">(${sib.spouse.birth_year})</span>` : ''}</div>`
+    : '';
+
+  let childrenHtml = '';
+  if (sib.children && sib.children.length > 0) {
+    childrenHtml = `
+      <div class="ft-sib-children">
+        <div class="ft-sib-children-title">↳ Children:</div>
+        <ul class="ft-sib-children-list">
+          ${sib.children.map(ch => {
+            const chYears = formatYears(ch.birthdate, ch.birth_year, ch.death_date, ch.death_year);
+            const chSpouse = ch.spouse && ch.spouse.name ? ` <span class="ft-sib-spouse-inline">&amp; ${ch.spouse.name}</span>` : '';
+            let grandChildrenHtml = '';
+            if (ch.children && ch.children.length > 0) {
+              grandChildrenHtml = `
+                <ul class="ft-sib-grandchildren-list">
+                  ${ch.children.map(gch => `<li>${gch.name || 'Unknown'}</li>`).join('')}
+                </ul>
+              `;
+            }
+            return `
+              <li>
+                <span class="ft-sib-child-name">${ch.name || 'Unknown'}</span>
+                ${chYears ? `<span class="ft-sib-years">(${chYears})</span>` : ''}
+                ${chSpouse}
+                ${grandChildrenHtml}
+              </li>
+            `;
+          }).join('')}
+        </ul>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="ft-sibling-card">
+      <div class="ft-sib-header">
+        <span class="ft-sib-bullet">•</span>
+        <span class="ft-sib-name">${sib.name || 'Unknown'} ${maiden}</span>
+        ${years ? `<span class="ft-sib-years">(${years})</span>` : ''}
+      </div>
+      ${spouseText}
+      ${childrenHtml}
+    </div>
+  `;
+}
+
+function renderPersonCard(person, panelId) {
   if (!person) return '';
   const initial = person.name ? person.name.trim().charAt(0).toUpperCase() : '?';
   const photoHtml = person.photo
@@ -28,28 +92,44 @@ function renderPersonCard(person) {
     : `<div class="ft-avatar-placeholder">${initial}</div>`;
 
   const maidenText = person.maiden ? `<span class="ft-maiden">(${person.maiden})</span>` : '';
-
-  const formatYear = (d, y) => {
-    if (y) return y;
-    if (!d) return '';
-    const m = String(d).match(/\b\d{4}\b/);
-    return m ? m[0] : d;
-  };
-  const bText = formatYear(person.birthdate || person.birth_date, person.birth_year);
-  const dText = formatYear(person.death_date || person.deathdate, person.death_year);
-  const yearsText = (bText || dText)
-    ? `<div class="ft-years">${bText}${dText ? '–' + dText : ''}</div>`
-    : '';
+  const years = formatYears(person.birthdate || person.birth_date, person.birth_year, person.death_date || person.deathdate, person.death_year);
+  const yearsText = years ? `<div class="ft-years">${years}</div>` : '';
 
   const displayName = person.name
     ? `${person.name} ${maidenText}`
     : `<span style="color:var(--muted);font-style:italic;">Unknown</span> ${maidenText}`;
+
+  const hasSiblings = person.siblings && person.siblings.length > 0;
+  const sibCount = hasSiblings ? person.siblings.length : 0;
+  const sibToggleBtn = hasSiblings
+    ? `
+      <button type="button" class="ft-sib-toggle-btn" onclick="toggleSiblingPanel(event, '${panelId}')" title="Toggle siblings and family members">
+        <span class="ft-sib-toggle-icon">▸</span> ${sibCount} Sibling${sibCount > 1 ? 's' : ''} &amp; Family
+      </button>
+    `
+    : '';
+
+  const siblingsPanel = hasSiblings
+    ? `
+      <div class="ft-sibling-panel" id="${panelId}" style="display: none;">
+        <div class="ft-sibling-panel-header">
+          <span>Siblings of ${person.name ? person.name.split(' ')[0] : 'Person'}</span>
+          <button type="button" class="ft-sib-close-btn" onclick="toggleSiblingPanel(event, '${panelId}')">&times;</button>
+        </div>
+        <div class="ft-sibling-panel-content">
+          ${person.siblings.map(sib => renderSiblingItem(sib)).join('')}
+        </div>
+      </div>
+    `
+    : '';
 
   return `
     <div class="ft-person">
       ${photoHtml}
       <div class="ft-name">${displayName}</div>
       ${yearsText}
+      ${sibToggleBtn}
+      ${siblingsPanel}
     </div>
   `;
 }
@@ -86,25 +166,25 @@ function getConnections(treeData, prefix) {
 function renderBranchTree(treeData, prefix) {
   return `
     <div class="ft-diagram-tree ft-branch-view" id="ft-diagram-tree-${prefix}">
-      ${treeData.generations.map((gen) => `
+      ${treeData.generations.map((gen, gIdx) => `
         <div class="ft-gen" id="gen-${prefix}-${gen.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">
           <div class="ft-gen-label">${gen.label}</div>
           ${gen.couples ? `
             <div class="ft-couples-row">
-              ${gen.couples.map(c => `
+              ${gen.couples.map((c, cIdx) => `
                 <div class="ft-couple-card${c.id === 'chris_elyse' ? ' main-couple' : ''}" id="card-${prefix}-${c.id.replace(/_/g, '-')}">
-                  ${renderPersonCard(c.person1)}
+                  ${renderPersonCard(c.person1, `sib-${prefix}-g${gIdx}-c${cIdx}-p1`)}
                   <div class="ft-heart">&amp;</div>
-                  ${renderPersonCard(c.person2)}
+                  ${renderPersonCard(c.person2, `sib-${prefix}-g${gIdx}-c${cIdx}-p2`)}
                 </div>
               `).join('')}
             </div>
           ` : ''}
           ${gen.individuals ? `
             <div class="ft-individuals-row">
-              ${gen.individuals.map(ind => `
+              ${gen.individuals.map((ind, iIdx) => `
                 <div class="ft-individual-card" id="card-${prefix}-${ind.id.replace(/_/g, '-')}">
-                  ${renderPersonCard(ind)}
+                  ${renderPersonCard(ind, `sib-${prefix}-g${gIdx}-ind${iIdx}`)}
                 </div>
               `).join('')}
             </div>
@@ -124,7 +204,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
     <div class="family-tree-container">
       <div class="ft-header-bar">
         <h2 class="ft-title">Family Tree</h2>
-        <p class="ft-subtitle">Select a lineage branch below. Drag or use mouse wheel to navigate.</p>
+        <p class="ft-subtitle">Interactive family tree with ancestors, siblings, and extended family.</p>
 
         <!-- Segmented Branch Toggle -->
         <div class="ft-branch-toggle-group">
@@ -138,12 +218,14 @@ function renderUnifiedTree(dornTree, lucasTree) {
       </div>
 
       <div class="ft-viewport-wrapper">
-        <!-- Floating Zoom Toolbar -->
+        <!-- Floating Zoom & Action Toolbar -->
         <div class="ft-toolbar">
           <button type="button" class="ft-btn" id="ft-zoom-in" title="Zoom In">+</button>
           <button type="button" class="ft-btn" id="ft-zoom-out" title="Zoom Out">&minus;</button>
           <button type="button" class="ft-btn" id="ft-zoom-reset" title="Reset View">&#x21bb;</button>
           <button type="button" class="ft-btn" id="ft-zoom-fit" title="Fit to Screen">&#x26F6;</button>
+          <div class="ft-toolbar-divider"></div>
+          <button type="button" class="ft-btn" id="ft-toggle-all-sib" onclick="toggleAllSiblings()" title="Expand/Collapse All Siblings">▾</button>
         </div>
 
         <!-- Pan / Zoom Canvas Viewport -->
@@ -171,6 +253,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
       let startX = 0;
       let startY = 0;
       let currentBranch = 'dorn';
+      let allSiblingsExpanded = false;
 
       // Initialize initial branch view display
       const dornView = document.getElementById('ft-diagram-tree-dorn');
@@ -205,13 +288,69 @@ function renderUnifiedTree(dornTree, lucasTree) {
         setTimeout(drawConnectors, 60);
       };
 
+      // Toggle individual sibling panel
+      window.toggleSiblingPanel = function(e, panelId) {
+        if (e) {
+          e.stopPropagation();
+          e.preventDefault();
+        }
+        const panel = document.getElementById(panelId);
+        if (!panel) return;
+        const isHidden = panel.style.display === 'none';
+        panel.style.display = isHidden ? 'block' : 'none';
+
+        // Update toggle button state
+        const btn = panel.previousElementSibling;
+        if (btn && btn.classList.contains('ft-sib-toggle-btn')) {
+          const icon = btn.querySelector('.ft-sib-toggle-icon');
+          if (icon) icon.textContent = isHidden ? '▾' : '▸';
+          if (isHidden) {
+            btn.classList.add('open');
+          } else {
+            btn.classList.remove('open');
+          }
+        }
+
+        setTimeout(drawConnectors, 80);
+      };
+
+      // Expand / Collapse all siblings globally
+      window.toggleAllSiblings = function() {
+        allSiblingsExpanded = !allSiblingsExpanded;
+        const activeTree = document.getElementById(\`ft-diagram-tree-\${currentBranch}\`);
+        if (!activeTree) return;
+        const panels = activeTree.querySelectorAll('.ft-sibling-panel');
+        const buttons = activeTree.querySelectorAll('.ft-sib-toggle-btn');
+
+        panels.forEach(p => {
+          p.style.display = allSiblingsExpanded ? 'block' : 'none';
+        });
+
+        buttons.forEach(btn => {
+          const icon = btn.querySelector('.ft-sib-toggle-icon');
+          if (icon) icon.textContent = allSiblingsExpanded ? '▾' : '▸';
+          if (allSiblingsExpanded) {
+            btn.classList.add('open');
+          } else {
+            btn.classList.remove('open');
+          }
+        });
+
+        const toggleAllBtn = document.getElementById('ft-toggle-all-sib');
+        if (toggleAllBtn) {
+          toggleAllBtn.classList.toggle('active', allSiblingsExpanded);
+        }
+
+        setTimeout(drawConnectors, 100);
+      };
+
       function updateTransform() {
         content.style.transform = \`translate(\${panX}px, \${panY}px) scale(\${scale})\`;
       }
 
       // Mouse Drag Panning
       viewport.addEventListener('mousedown', (e) => {
-        if (e.target.closest('.ft-btn') || e.target.closest('.ft-toggle-btn')) return;
+        if (e.target.closest('.ft-btn') || e.target.closest('.ft-toggle-btn') || e.target.closest('.ft-sib-toggle-btn') || e.target.closest('.ft-sibling-panel')) return;
         isDragging = true;
         startX = e.clientX - panX;
         startY = e.clientY - panY;
@@ -234,6 +373,9 @@ function renderUnifiedTree(dornTree, lucasTree) {
 
       // Wheel Zooming centered on cursor
       viewport.addEventListener('wheel', (e) => {
+        // Allow wheel scroll inside expanded panels if pointer is over panel
+        if (e.target.closest('.ft-sibling-panel-content')) return;
+
         e.preventDefault();
         const zoomFactor = 1.1;
         const rect = viewport.getBoundingClientRect();
@@ -244,7 +386,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
         if (e.deltaY < 0) {
           scale = Math.min(scale * zoomFactor, 3);
         } else {
-          scale = Math.max(scale / zoomFactor, 0.4);
+          scale = Math.max(scale / zoomFactor, 0.35);
         }
 
         panX = mouseX - (mouseX - panX) * (scale / oldScale);
@@ -258,6 +400,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
 
       viewport.addEventListener('touchstart', (e) => {
         if (e.touches.length === 1) {
+          if (e.target.closest('.ft-sibling-panel') || e.target.closest('.ft-sib-toggle-btn')) return;
           isDragging = true;
           startX = e.touches[0].clientX - panX;
           startY = e.touches[0].clientY - panY;
@@ -282,7 +425,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
             e.touches[0].clientY - e.touches[1].clientY
           );
           if (initialPinchDist > 0) {
-            scale = Math.min(Math.max(initialScale * (dist / initialPinchDist), 0.4), 3);
+            scale = Math.min(Math.max(initialScale * (dist / initialPinchDist), 0.35), 3);
             updateTransform();
           }
         }
@@ -299,7 +442,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
       });
 
       document.getElementById('ft-zoom-out')?.addEventListener('click', () => {
-        scale = Math.max(scale / 1.25, 0.4);
+        scale = Math.max(scale / 1.25, 0.35);
         updateTransform();
       });
 
@@ -315,10 +458,10 @@ function renderUnifiedTree(dornTree, lucasTree) {
         const activeTree = document.getElementById(\`ft-diagram-tree-\${currentBranch}\`);
         if (!activeTree) return;
         const treeRect = activeTree.getBoundingClientRect();
-        const scaleX = (vpRect.width - 40) / treeRect.width;
-        const scaleY = (vpRect.height - 40) / treeRect.height;
-        scale = Math.min(Math.max(Math.min(scaleX, scaleY), 0.5), 1.5);
-        panX = (vpRect.width - treeRect.width * scale) / 2;
+        const scaleX = (vpRect.width - 40) / (treeRect.width / scale);
+        const scaleY = (vpRect.height - 40) / (treeRect.height / scale);
+        scale = Math.min(Math.max(Math.min(scaleX, scaleY), 0.4), 1.3);
+        panX = (vpRect.width - (treeRect.width / (scale / 1)) * scale) / 2;
         panY = 20;
         updateTransform();
       });
@@ -418,13 +561,13 @@ async function encrypt(pwd, text) {
 
 const plaintext = renderUnifiedTree(dornData, lucasData);
 const payload = await encrypt(password, plaintext);
-const SESSION_KEY = 'unified_family_tree_session_v3';
+const SESSION_KEY = 'unified_family_tree_session_v4';
 
 const pageHtml = `---
 layout: default
 title: "Family Tree"
 permalink: /family-tree.html
-description: "Interactive & Zoomable Dorn and Lucas Family Tree."
+description: "Interactive & Zoomable Dorn and Lucas Family Tree with Siblings & Extended Family."
 ---
 
 <article class="post shell wide">
@@ -544,7 +687,7 @@ ${JSON.stringify(payload)}
 .ft-viewport-wrapper {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 650px;
   background: var(--paper-subtle, #f9f8f6);
   border: 1px solid var(--line, #e3dfd6);
   border-radius: var(--radius-md, 12px);
@@ -564,15 +707,22 @@ ${JSON.stringify(payload)}
   box-shadow: var(--shadow-sm, 0 4px 12px rgba(0,0,0,0.08));
 }
 
+.ft-toolbar-divider {
+  height: 1px;
+  background: var(--line, #e3dfd6);
+  margin: 2px 4px;
+}
+
 .ft-btn {
   width: 34px; height: 34px;
   border: none; background: transparent;
-  color: var(--ink); font-size: 1.2rem; font-weight: bold;
+  color: var(--ink); font-size: 1.1rem; font-weight: bold;
   border-radius: 6px; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   transition: background 0.2s;
 }
 .ft-btn:hover { background: var(--paper-subtle, #f0ede6); color: var(--accent); }
+.ft-btn.active { background: rgba(184, 75, 41, 0.12); color: var(--accent); }
 
 .ft-canvas-viewport {
   width: 100%; height: 100%;
@@ -609,9 +759,9 @@ ${JSON.stringify(payload)}
   border: 1px solid var(--line);
 }
 
-.ft-couples-row, .ft-individuals-row { display: flex; gap: 40px; justify-content: center; flex-wrap: nowrap; }
+.ft-couples-row, .ft-individuals-row { display: flex; gap: 36px; justify-content: center; flex-wrap: nowrap; align-items: flex-start; }
 .ft-couple-card {
-  display: flex; align-items: center; gap: 14px;
+  display: flex; align-items: flex-start; gap: 14px;
   background: var(--surface-card); border: 1px solid var(--line);
   border-radius: var(--radius-md, 12px); padding: 18px 24px;
   box-shadow: var(--shadow-sm, 0 4px 14px rgba(0,0,0,0.05));
@@ -628,7 +778,7 @@ ${JSON.stringify(payload)}
 }
 .ft-individual-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
 
-.ft-person { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.ft-person { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 220px; }
 .ft-avatar { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); margin-bottom: 8px; }
 .ft-avatar-placeholder {
   width: 64px; height: 64px; border-radius: 50%;
@@ -637,10 +787,120 @@ ${JSON.stringify(payload)}
   display: flex; align-items: center; justify-content: center;
   border: 2px solid var(--line); margin-bottom: 8px;
 }
-.ft-name { font-weight: 600; font-size: 1rem; color: var(--ink); }
-.ft-maiden { font-size: 0.88rem; color: var(--muted); font-weight: normal; }
+.ft-name { font-weight: 600; font-size: 0.98rem; color: var(--ink); line-height: 1.3; }
+.ft-maiden { font-size: 0.85rem; color: var(--muted); font-weight: normal; }
 .ft-years { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
-.ft-heart { font-family: var(--font-serif-display); font-style: italic; color: var(--accent); font-size: 1.3rem; font-weight: bold; }
+.ft-heart { font-family: var(--font-serif-display); font-style: italic; color: var(--accent); font-size: 1.3rem; font-weight: bold; margin-top: 22px; }
+
+/* Sibling Toggle & Collapsible Panel */
+.ft-sib-toggle-btn {
+  margin-top: 8px;
+  background: rgba(184, 75, 41, 0.08);
+  color: var(--accent, #b84b29);
+  border: 1px solid rgba(184, 75, 41, 0.25);
+  border-radius: 12px;
+  padding: 3px 10px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+.ft-sib-toggle-btn:hover, .ft-sib-toggle-btn.open {
+  background: var(--accent, #b84b29);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+.ft-sib-toggle-icon { font-size: 0.72rem; }
+
+.ft-sibling-panel {
+  margin-top: 10px;
+  background: var(--surface, #ffffff);
+  border: 1px solid var(--line, #e3dfd6);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  width: 240px;
+  text-align: left;
+  overflow: hidden;
+  z-index: 10;
+}
+.ft-sibling-panel-header {
+  background: var(--paper-subtle, #f0ede6);
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted, #61665d);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+.ft-sib-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0 2px;
+}
+.ft-sib-close-btn:hover { color: var(--ink); }
+
+.ft-sibling-panel-content {
+  padding: 8px 10px;
+  max-height: 240px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ft-sibling-card {
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--line, #e3dfd6);
+}
+.ft-sibling-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.ft-sib-header {
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+.ft-sib-bullet { color: var(--accent); margin-right: 4px; font-weight: bold; }
+.ft-sib-name { font-weight: 600; color: var(--ink); }
+.ft-sib-maiden { font-size: 0.75rem; color: var(--muted); }
+.ft-sib-years { font-size: 0.74rem; color: var(--muted); }
+.ft-sib-spouse { font-size: 0.76rem; color: var(--muted); margin-left: 10px; font-style: italic; }
+.ft-sib-spouse-inline { font-size: 0.75rem; color: var(--muted); font-style: italic; }
+
+.ft-sib-children {
+  margin-top: 4px;
+  margin-left: 10px;
+  padding-left: 6px;
+  border-left: 2px solid rgba(184, 75, 41, 0.2);
+}
+.ft-sib-children-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.ft-sib-children-list {
+  list-style: none;
+  padding: 0;
+  margin: 2px 0 0 4px;
+  font-size: 0.76rem;
+  color: var(--ink);
+  line-height: 1.35;
+}
+.ft-sib-grandchildren-list {
+  list-style: disc;
+  padding-left: 14px;
+  margin: 2px 0;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
 </style>
 
 <script>
