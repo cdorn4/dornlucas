@@ -49,7 +49,7 @@ function renderPersonCard(person) {
 
   const sibBtn = person.sibling_group_id && person.sibling_count
     ? `
-      <button type="button" class="ft-sib-pill-btn" onclick="toggleSiblingGroup(event, '${person.sibling_group_id}')" data-target-group="${person.sibling_group_id}">
+      <button type="button" class="ft-sib-pill-btn" onclick="toggleSiblingGroup(event, '${person.sibling_group_id}')" data-target-group="${person.sibling_group_id}" title="Toggle siblings">
         <span class="ft-pill-icon">▸</span> ${person.sibling_count} Sibling${person.sibling_count > 1 ? 's' : ''}
       </button>
     `
@@ -101,27 +101,53 @@ function renderBranchTree(treeData, prefix) {
         <div class="ft-gen" id="gen-${prefix}-${gen.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">
           <div class="ft-gen-label">${gen.label}</div>
           
-          <!-- Main & Sibling Cards Row -->
+          <!-- Cards Row for Couples & Individuals -->
           <div class="ft-cards-row">
-            ${gen.couples ? gen.couples.map(c => `
-              <div class="ft-couple-card${c.id === 'chris_elyse' ? ' main-couple' : ''}${c.is_sibling ? ' ft-sibling-card' : ''}"
-                   id="card-${prefix}-${c.id.replace(/_/g, '-')}"
-                   ${c.sibling_group ? `data-sibling-group="${c.sibling_group}" style="display: none;"` : ''}>
-                ${c.is_sibling ? '<span class="ft-sibling-tag">Sibling</span>' : ''}
-                ${renderPersonCard(c.person1)}
-                <div class="ft-heart">&amp;</div>
-                ${renderPersonCard(c.person2)}
-              </div>
-            `).join('') : ''}
+            ${gen.couples ? gen.couples.map(c => {
+              const childBtn = c.has_children && c.children_group_id && c.children_count
+                ? `
+                  <div class="ft-card-action-bar">
+                    <button type="button" class="ft-child-pill-btn" onclick="toggleSiblingGroup(event, '${c.children_group_id}')" data-target-group="${c.children_group_id}" title="Toggle children">
+                      <span class="ft-pill-icon">▸</span> ${c.children_count} Child${c.children_count > 1 ? 'ren' : ''}
+                    </button>
+                  </div>
+                `
+                : '';
+
+              return `
+                <div class="ft-couple-card${c.id === 'chris_elyse' ? ' main-couple' : ''}${c.is_sibling ? ' ft-sibling-card' : ''}"
+                     id="card-${prefix}-${c.id.replace(/_/g, '-')}"
+                     ${c.sibling_group ? `data-sibling-group="${c.sibling_group}" style="display: none;"` : ''}>
+                  ${c.is_sibling ? '<span class="ft-sibling-tag">Family Branch</span>' : ''}
+                  ${renderPersonCard(c.person1)}
+                  <div class="ft-heart">&amp;</div>
+                  ${renderPersonCard(c.person2)}
+                  ${childBtn}
+                </div>
+              `;
+            }).join('') : ''}
             
-            ${gen.individuals ? gen.individuals.map(ind => `
-              <div class="ft-individual-card${ind.is_sibling ? ' ft-sibling-card' : ''}"
-                   id="card-${prefix}-${ind.id.replace(/_/g, '-')}"
-                   ${ind.sibling_group ? `data-sibling-group="${ind.sibling_group}" style="display: none;"` : ''}>
-                ${ind.is_sibling ? '<span class="ft-sibling-tag">Sibling</span>' : ''}
-                ${renderPersonCard(ind)}
-              </div>
-            `).join('') : ''}
+            ${gen.individuals ? gen.individuals.map(ind => {
+              const childBtn = ind.has_children && ind.children_group_id && ind.children_count
+                ? `
+                  <div class="ft-card-action-bar">
+                    <button type="button" class="ft-child-pill-btn" onclick="toggleSiblingGroup(event, '${ind.children_group_id}')" data-target-group="${ind.children_group_id}" title="Toggle children">
+                      <span class="ft-pill-icon">▸</span> ${ind.children_count} Child${ind.children_count > 1 ? 'ren' : ''}
+                    </button>
+                  </div>
+                `
+                : '';
+
+              return `
+                <div class="ft-individual-card${ind.is_sibling ? ' ft-sibling-card' : ''}"
+                     id="card-${prefix}-${ind.id.replace(/_/g, '-')}"
+                     ${ind.sibling_group ? `data-sibling-group="${ind.sibling_group}" style="display: none;"` : ''}>
+                  ${ind.is_sibling ? '<span class="ft-sibling-tag">Family Branch</span>' : ''}
+                  ${renderPersonCard(ind)}
+                  ${childBtn}
+                </div>
+              `;
+            }).join('') : ''}
           </div>
         </div>
       `).join('')}
@@ -138,7 +164,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
     <div class="family-tree-container">
       <div class="ft-header-bar">
         <h2 class="ft-title">Family Tree</h2>
-        <p class="ft-subtitle">Interactive family tree with collapsible sibling cards. Drag or zoom to explore.</p>
+        <p class="ft-subtitle">Interactive family tree with expandable sibling cards, spouses, and children.</p>
 
         <!-- Segmented Branch Toggle -->
         <div class="ft-branch-toggle-group">
@@ -159,7 +185,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
           <button type="button" class="ft-btn" id="ft-zoom-reset" title="Reset View">&#x21bb;</button>
           <button type="button" class="ft-btn" id="ft-zoom-fit" title="Fit to Screen">&#x26F6;</button>
           <div class="ft-toolbar-divider"></div>
-          <button type="button" class="ft-btn" id="ft-toggle-all-cards" onclick="toggleAllSiblingCards()" title="Expand / Collapse All Sibling Cards">
+          <button type="button" class="ft-btn" id="ft-toggle-all-cards" onclick="toggleAllSiblingCards()" title="Expand / Collapse All Extended Family">
             <span id="ft-all-icon">👥</span>
           </button>
         </div>
@@ -223,7 +249,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
         setTimeout(drawConnectors, 60);
       };
 
-      // Toggle individual sibling group cards
+      // Toggle individual group cards (siblings or children)
       window.toggleSiblingGroup = function(e, groupId) {
         if (e) {
           e.stopPropagation();
@@ -241,7 +267,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
           card.style.display = isCurrentlyHidden ? (card.classList.contains('ft-couple-card') ? 'flex' : 'block') : 'none';
         });
 
-        // Update pill buttons
+        // Update trigger buttons
         const btns = activeTree.querySelectorAll(\`[data-target-group="\${groupId}"]\`);
         btns.forEach(btn => {
           const icon = btn.querySelector('.ft-pill-icon');
@@ -252,14 +278,14 @@ function renderUnifiedTree(dornTree, lucasTree) {
         setTimeout(drawConnectors, 80);
       };
 
-      // Global toggle for all sibling cards
+      // Global toggle for all extended cards
       window.toggleAllSiblingCards = function() {
         allExpanded = !allExpanded;
         const activeTree = document.getElementById(\`ft-diagram-tree-\${currentBranch}\`);
         if (!activeTree) return;
 
         const cards = activeTree.querySelectorAll('[data-sibling-group]');
-        const btns = activeTree.querySelectorAll('.ft-sib-pill-btn');
+        const btns = activeTree.querySelectorAll('.ft-sib-pill-btn, .ft-child-pill-btn');
 
         cards.forEach(card => {
           card.style.display = allExpanded ? (card.classList.contains('ft-couple-card') ? 'flex' : 'block') : 'none';
@@ -285,7 +311,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
 
       // Mouse Drag Panning
       viewport.addEventListener('mousedown', (e) => {
-        if (e.target.closest('.ft-btn') || e.target.closest('.ft-toggle-btn') || e.target.closest('.ft-sib-pill-btn')) return;
+        if (e.target.closest('.ft-btn') || e.target.closest('.ft-toggle-btn') || e.target.closest('.ft-sib-pill-btn') || e.target.closest('.ft-child-pill-btn')) return;
         isDragging = true;
         startX = e.clientX - panX;
         startY = e.clientY - panY;
@@ -318,7 +344,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
         if (e.deltaY < 0) {
           scale = Math.min(scale * zoomFactor, 3);
         } else {
-          scale = Math.max(scale / zoomFactor, 0.3);
+          scale = Math.max(scale / zoomFactor, 0.25);
         }
 
         panX = mouseX - (mouseX - panX) * (scale / oldScale);
@@ -332,7 +358,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
 
       viewport.addEventListener('touchstart', (e) => {
         if (e.touches.length === 1) {
-          if (e.target.closest('.ft-sib-pill-btn') || e.target.closest('.ft-btn') || e.target.closest('.ft-toggle-btn')) return;
+          if (e.target.closest('.ft-sib-pill-btn') || e.target.closest('.ft-child-pill-btn') || e.target.closest('.ft-btn') || e.target.closest('.ft-toggle-btn')) return;
           isDragging = true;
           startX = e.touches[0].clientX - panX;
           startY = e.touches[0].clientY - panY;
@@ -357,7 +383,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
             e.touches[0].clientY - e.touches[1].clientY
           );
           if (initialPinchDist > 0) {
-            scale = Math.min(Math.max(initialScale * (dist / initialPinchDist), 0.3), 3);
+            scale = Math.min(Math.max(initialScale * (dist / initialPinchDist), 0.25), 3);
             updateTransform();
           }
         }
@@ -374,7 +400,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
       });
 
       document.getElementById('ft-zoom-out')?.addEventListener('click', () => {
-        scale = Math.max(scale / 1.25, 0.3);
+        scale = Math.max(scale / 1.25, 0.25);
         updateTransform();
       });
 
@@ -392,7 +418,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
         const treeRect = activeTree.getBoundingClientRect();
         const scaleX = (vpRect.width - 40) / (treeRect.width / scale);
         const scaleY = (vpRect.height - 40) / (treeRect.height / scale);
-        scale = Math.min(Math.max(Math.min(scaleX, scaleY), 0.35), 1.2);
+        scale = Math.min(Math.max(Math.min(scaleX, scaleY), 0.25), 1.2);
         panX = (vpRect.width - (treeRect.width / (scale / 1)) * scale) / 2;
         panY = 20;
         updateTransform();
@@ -494,13 +520,13 @@ async function encrypt(pwd, text) {
 
 const plaintext = renderUnifiedTree(dornData, lucasData);
 const payload = await encrypt(password, plaintext);
-const SESSION_KEY = 'unified_family_tree_session_v5';
+const SESSION_KEY = 'unified_family_tree_session_v6';
 
 const pageHtml = `---
 layout: default
 title: "Family Tree"
 permalink: /family-tree.html
-description: "Interactive & Zoomable Dorn and Lucas Family Tree with Expandable Sibling Cards."
+description: "Interactive & Zoomable Dorn and Lucas Family Tree with Expandable Sibling and Children Cards."
 ---
 
 <article class="post shell wide">
@@ -620,7 +646,7 @@ ${JSON.stringify(payload)}
 .ft-viewport-wrapper {
   position: relative;
   width: 100%;
-  height: 680px;
+  height: 700px;
   background: var(--paper-subtle, #f9f8f6);
   border: 1px solid var(--line, #e3dfd6);
   border-radius: var(--radius-md, 12px);
@@ -694,7 +720,7 @@ ${JSON.stringify(payload)}
 
 .ft-cards-row {
   display: flex;
-  gap: 30px;
+  gap: 28px;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: nowrap;
@@ -702,19 +728,35 @@ ${JSON.stringify(payload)}
 
 .ft-couple-card {
   position: relative;
-  display: flex; align-items: flex-start; gap: 14px;
+  display: flex; flex-direction: column; align-items: center;
   background: var(--surface-card); border: 1px solid var(--line);
-  border-radius: var(--radius-md, 12px); padding: 18px 22px;
+  border-radius: var(--radius-md, 12px); padding: 18px 20px;
   box-shadow: var(--shadow-sm, 0 4px 14px rgba(0,0,0,0.05));
   transition: transform 0.2s, box-shadow 0.2s;
+}
+.ft-couple-card > .ft-person, .ft-couple-card > .ft-heart {
+  display: flex;
 }
 .ft-couple-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .ft-couple-card.main-couple { border: 2px solid var(--accent); background: var(--surface); }
 
+/* Horizontal inner layout for couple cards */
+.ft-couple-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+}
+
 .ft-individual-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: var(--surface-card); border: 1px solid var(--line);
-  border-radius: var(--radius-md, 12px); padding: 18px 24px;
+  border-radius: var(--radius-md, 12px); padding: 18px 22px;
   box-shadow: var(--shadow-sm);
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -723,7 +765,7 @@ ${JSON.stringify(payload)}
 /* Sibling Card Accent */
 .ft-sibling-card {
   border: 1px dashed rgba(184, 75, 41, 0.45);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
 }
 .ft-sibling-tag {
   position: absolute;
@@ -732,37 +774,44 @@ ${JSON.stringify(payload)}
   background: var(--paper-subtle, #f0ede6);
   border: 1px solid var(--line, #d4cfc4);
   color: var(--muted, #61665d);
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  padding: 1px 7px;
+  padding: 1px 6px;
   border-radius: 8px;
 }
 
-.ft-person { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 170px; }
-.ft-avatar { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); margin-bottom: 8px; }
+.ft-person { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 160px; }
+.ft-avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); margin-bottom: 8px; }
 .ft-avatar-placeholder {
-  width: 60px; height: 60px; border-radius: 50%;
+  width: 56px; height: 56px; border-radius: 50%;
   background: var(--paper-subtle); color: var(--accent);
-  font-family: var(--font-serif-display); font-size: 1.4rem; font-weight: 700;
+  font-family: var(--font-serif-display); font-size: 1.35rem; font-weight: 700;
   display: flex; align-items: center; justify-content: center;
   border: 2px solid var(--line); margin-bottom: 8px;
 }
-.ft-name { font-weight: 600; font-size: 0.92rem; color: var(--ink); line-height: 1.25; }
-.ft-maiden { font-size: 0.82rem; color: var(--muted); font-weight: normal; }
-.ft-years { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
-.ft-heart { font-family: var(--font-serif-display); font-style: italic; color: var(--accent); font-size: 1.2rem; font-weight: bold; margin-top: 20px; }
+.ft-name { font-weight: 600; font-size: 0.9rem; color: var(--ink); line-height: 1.25; }
+.ft-maiden { font-size: 0.8rem; color: var(--muted); font-weight: normal; }
+.ft-years { font-size: 0.76rem; color: var(--muted); margin-top: 2px; }
+.ft-heart { font-family: var(--font-serif-display); font-style: italic; color: var(--accent); font-size: 1.2rem; font-weight: bold; margin-top: 18px; }
 
-/* Sibling Pill Button */
-.ft-sib-pill-btn {
+/* Action Buttons on Cards */
+.ft-card-action-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.ft-sib-pill-btn, .ft-child-pill-btn {
   margin-top: 8px;
   background: rgba(184, 75, 41, 0.08);
   color: var(--accent, #b84b29);
   border: 1px solid rgba(184, 75, 41, 0.3);
   border-radius: 14px;
   padding: 3px 10px;
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 600;
   cursor: pointer;
   display: inline-flex;
@@ -770,11 +819,22 @@ ${JSON.stringify(payload)}
   gap: 4px;
   transition: all 0.2s ease;
 }
+.ft-child-pill-btn {
+  background: rgba(74, 114, 94, 0.09);
+  color: #3b6b55;
+  border-color: rgba(74, 114, 94, 0.35);
+}
 .ft-sib-pill-btn:hover, .ft-sib-pill-btn.active {
   background: var(--accent, #b84b29);
   color: #ffffff;
   border-color: var(--accent);
   box-shadow: 0 2px 6px rgba(184, 75, 41, 0.25);
+}
+.ft-child-pill-btn:hover, .ft-child-pill-btn.active {
+  background: #3b6b55;
+  color: #ffffff;
+  border-color: #3b6b55;
+  box-shadow: 0 2px 6px rgba(74, 114, 94, 0.25);
 }
 .ft-pill-icon { font-size: 0.7rem; }
 </style>
@@ -898,4 +958,4 @@ ${JSON.stringify(payload)}
 `;
 
 fs.writeFileSync(targetPage, pageHtml, 'utf-8');
-console.log(`Successfully built unified interactive family tree with card-based siblings into ${targetPage}`);
+console.log(`Successfully built unified interactive family tree with multi-level sibling/children cards into ${targetPage}`);

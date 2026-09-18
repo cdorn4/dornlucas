@@ -7,50 +7,22 @@
       "couples": [
         {
           "id": "john_lucas_parents",
-          "branch": "Elyse Lucas - Paternal Grandparents (John Lucas's Parents)",
-          "married_date": null,
-          "married_year": null,
+          "branch": "Elyse Lucas - Paternal Grandparents",
           "person1": {
-            "name": null,
-            "maiden": null,
-            "birthdate": null,
-            "birth_year": null,
-            "death_date": null,
-            "death_year": null,
-            "photo": null
+            "name": null
           },
           "person2": {
-            "name": null,
-            "maiden": null,
-            "birthdate": null,
-            "birth_year": null,
-            "death_date": null,
-            "death_year": null,
-            "photo": null
+            "name": null
           }
         },
         {
           "id": "leta_parents",
-          "branch": "Elyse Lucas - Maternal Grandparents (Leta Lucas's Parents)",
-          "married_date": null,
-          "married_year": null,
+          "branch": "Elyse Lucas - Maternal Grandparents",
           "person1": {
-            "name": null,
-            "maiden": null,
-            "birthdate": null,
-            "birth_year": null,
-            "death_date": null,
-            "death_year": null,
-            "photo": null
+            "name": null
           },
           "person2": {
-            "name": null,
-            "maiden": null,
-            "birthdate": null,
-            "birth_year": null,
-            "death_date": null,
-            "death_year": null,
-            "photo": null
+            "name": null
           }
         }
       ]
@@ -61,32 +33,18 @@
       "couples": [
         {
           "id": "lucas_parents",
-          "branch": "Elyse Lucas's Parents",
           "parent_couple_1": "john_lucas_parents",
           "parent_couple_2": "leta_parents",
-          "married_date": null,
-          "married_year": null,
           "person1": {
             "name": "Mark Lucas",
-            "maiden": null,
             "birthdate": "1952-03-12",
             "birth_year": 1952,
-            "death_date": null,
-            "death_year": null,
-            "photo": null,
-            "parent_couple": "john_lucas_parents",
             "sibling_group_id": "mark_siblings",
             "sibling_count": 3
           },
           "person2": {
             "name": "Leta Lucas",
             "maiden": "Marino",
-            "birthdate": null,
-            "birth_year": null,
-            "death_date": null,
-            "death_year": null,
-            "photo": null,
-            "parent_couple": "leta_parents",
             "sibling_group_id": "leta_siblings",
             "sibling_count": 3
           }
@@ -98,19 +56,10 @@
           "parent_couple": "leta_parents",
           "person1": {
             "name": "Peter A Marino",
-            "maiden": null,
-            "birthdate": "abt 1940",
-            "birth_year": "1940",
-            "death_date": null,
-            "death_year": null
+            "birth_year": "1940"
           },
           "person2": {
-            "name": "Judy Marino",
-            "maiden": null,
-            "birthdate": null,
-            "birth_year": null,
-            "death_date": null,
-            "death_year": null
+            "name": "Judy Marino"
           }
         },
         {
@@ -118,21 +67,15 @@
           "is_sibling": true,
           "sibling_group": "leta_siblings",
           "parent_couple": "leta_parents",
+          "has_children": true,
+          "children_group_id": "pat_musante_children",
+          "children_count": 2,
           "person1": {
             "name": "Pat Musante",
-            "maiden": "Marino",
-            "birthdate": null,
-            "birth_year": null,
-            "death_date": null,
-            "death_year": null
+            "maiden": "Marino"
           },
           "person2": {
-            "name": "Al Musante",
-            "maiden": null,
-            "birthdate": null,
-            "birth_year": null,
-            "death_date": null,
-            "death_year": null
+            "name": "Al Musante"
           }
         }
       ],
@@ -140,23 +83,17 @@
         {
           "id": "sib_mark_john",
           "name": "John Lucas",
-          "maiden": null,
-          "birthdate": null,
-          "birth_year": null,
-          "death_date": null,
-          "death_year": null,
           "is_sibling": true,
           "sibling_group": "mark_siblings",
-          "parent_couple": "john_lucas_parents"
+          "parent_couple": "john_lucas_parents",
+          "has_children": true,
+          "children_group_id": "john_lucas_children",
+          "children_count": 1
         },
         {
           "id": "sib_mark_charlotte",
           "name": "Charlotte Sorci",
           "maiden": "Lucas",
-          "birthdate": null,
-          "birth_year": null,
-          "death_date": null,
-          "death_year": null,
           "is_sibling": true,
           "sibling_group": "mark_siblings",
           "parent_couple": "john_lucas_parents"
@@ -164,11 +101,6 @@
         {
           "id": "sib_mark_david",
           "name": "David Lucas",
-          "maiden": null,
-          "birthdate": null,
-          "birth_year": null,
-          "death_date": null,
-          "death_year": null,
           "is_sibling": true,
           "sibling_group": "mark_siblings",
           "parent_couple": "john_lucas_parents"
@@ -177,10 +109,6 @@
           "id": "sib_leta_maryann",
           "name": "Mary Ann Marino",
           "maiden": "Marino",
-          "birthdate": null,
-          "birth_year": null,
-          "death_date": null,
-          "death_year": null,
           "is_sibling": true,
           "sibling_group": "leta_siblings",
           "parent_couple": "leta_parents"
@@ -194,28 +122,19 @@
         {
           "id": "chris_elyse",
           "parent_couple_1": "lucas_parents",
-          "married_date": null,
           "married_year": 2018,
           "person1": {
             "name": "Elyse Lucas",
             "maiden": "Lucas",
             "birthdate": "1988-05-05",
             "birth_year": 1988,
-            "death_date": null,
-            "death_year": null,
-            "photo": null,
-            "parent_couple": "lucas_parents",
             "sibling_group_id": "elyse_siblings",
             "sibling_count": 2
           },
           "person2": {
             "name": "Chris Dorn",
-            "maiden": null,
             "birthdate": "1987-09-03",
-            "birth_year": 1987,
-            "death_date": null,
-            "death_year": null,
-            "photo": null
+            "birth_year": 1987
           }
         },
         {
@@ -223,21 +142,18 @@
           "is_sibling": true,
           "sibling_group": "elyse_siblings",
           "parent_couple": "lucas_parents",
+          "has_children": true,
+          "children_group_id": "matthew_lucas_children",
+          "children_count": 4,
           "person1": {
             "name": "Matthew Lucas",
-            "maiden": null,
             "birthdate": "1985-09-13",
-            "birth_year": "1985",
-            "death_date": null,
-            "death_year": null
+            "birth_year": "1985"
           },
           "person2": {
             "name": "Taylor Janine Barcelow",
             "maiden": "Barcelow",
-            "birthdate": "1986",
-            "birth_year": "1986",
-            "death_date": null,
-            "death_year": null
+            "birth_year": "1986"
           }
         }
       ],
@@ -246,13 +162,34 @@
           "id": "sib_elyse_justine",
           "name": "Justine Lucas",
           "maiden": "Lucas",
-          "birthdate": null,
-          "birth_year": null,
-          "death_date": null,
-          "death_year": null,
           "is_sibling": true,
           "sibling_group": "elyse_siblings",
-          "parent_couple": "lucas_parents"
+          "parent_couple": "lucas_parents",
+          "has_children": true,
+          "children_group_id": "justine_lucas_children",
+          "children_count": 1
+        },
+        {
+          "id": "sib_child_alexis_musante",
+          "name": "Alexis Musante",
+          "maiden": "Musante",
+          "is_sibling": true,
+          "sibling_group": "pat_musante_children",
+          "parent_couple": "sib_leta_pat_couple"
+        },
+        {
+          "id": "sib_child_brian_musante",
+          "name": "Brian Musante",
+          "is_sibling": true,
+          "sibling_group": "pat_musante_children",
+          "parent_couple": "sib_leta_pat_couple"
+        },
+        {
+          "id": "sib_child_john_lucas_jr",
+          "name": "John Lucas",
+          "is_sibling": true,
+          "sibling_group": "john_lucas_children",
+          "parent_couple": "sib_mark_john"
         }
       ]
     },
@@ -266,10 +203,44 @@
           "nickname": "Auggie",
           "birthdate": "2021-04-03",
           "birth_year": 2021,
-          "death_date": null,
-          "death_year": null,
-          "photo": null,
           "parent_couple": "chris_elyse"
+        },
+        {
+          "id": "sib_child_runa_lucas",
+          "name": "Runa Lucas",
+          "maiden": "Lucas",
+          "is_sibling": true,
+          "sibling_group": "matthew_lucas_children",
+          "parent_couple": "sib_elyse_matthew_couple"
+        },
+        {
+          "id": "sib_child_mads_lucas",
+          "name": "Mads Lucas",
+          "is_sibling": true,
+          "sibling_group": "matthew_lucas_children",
+          "parent_couple": "sib_elyse_matthew_couple"
+        },
+        {
+          "id": "sib_child_berit_lucas",
+          "name": "Berit Lucas",
+          "is_sibling": true,
+          "sibling_group": "matthew_lucas_children",
+          "parent_couple": "sib_elyse_matthew_couple"
+        },
+        {
+          "id": "sib_child_solveig_lucas",
+          "name": "Solveig Lucas",
+          "maiden": "Lucas",
+          "is_sibling": true,
+          "sibling_group": "matthew_lucas_children",
+          "parent_couple": "sib_elyse_matthew_couple"
+        },
+        {
+          "id": "sib_child_huck_lucas",
+          "name": "Huck Lucas",
+          "is_sibling": true,
+          "sibling_group": "justine_lucas_children",
+          "parent_couple": "sib_elyse_justine"
         }
       ]
     }
