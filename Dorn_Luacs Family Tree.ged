@@ -1,0 +1,6080 @@
+0 HEAD
+1 SUBM @SUBM1@
+1 SOUR Ancestry.com Family Trees
+2 NAME Ancestry.com Member Trees
+2 VERS 2025.08
+2 _TREE Dorn/Luacs Family Tree
+3 RIN 212491211
+3 _ENV prd
+2 CORP Ancestry.com
+3 PHON 801-705-7000
+3 WWW www.ancestry.com
+3 ADDR 1300 West Traverse Parkway
+4 CONT Lehi, UT  84043
+4 CONT USA
+1 DATE 18 Sep 2026
+2 TIME 15:42:59
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+0 @SUBM1@ SUBM
+1 NAME Ancestry.com Member Trees Submitter
+0 @I272801598920@ INDI
+1 NAME Christopher /Dorn/
+2 GIVN Christopher
+2 SURN Dorn
+1 SEX M
+1 FAMC @F2@
+1 FAMS @F70@
+1 BIRT
+2 DATE 1987
+0 @I272801598976@ INDI
+1 NAME Karen /Teschner/
+2 GIVN Karen
+2 SURN Teschner
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1965
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::226167532
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Central High School; Year: 1966
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::569420972
+3 _APID 1,1265::1142122547
+2 SOUR @S982582586@
+3 PAGE The Times; Publication Date: 7 Jan 1951; Publication Place: Munster, Indiana, USA; URL: https://www.newspapers.com/image/305263295/?article=e6e2beee-ec10-4635-bb78-8b1eccb75ade&xid=5498&terms=Karen_Janet_Teschner
+3 DATA
+4 WWW https://www.newspapers.com/image/305263295/?article=e6e2beee-ec10-4635-bb78-8b1eccb75ade&xid=5498&terms=Karen_Janet_Teschner
+3 _APID 1,50039::5678390678
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 27 May 1987; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+3 _APID 1,61843::287514299
+1 SEX F
+1 FAMC @F8@
+1 FAMS @F2@
+1 BIRT
+2 DATE 1950
+2 PLAC Hinsdale, Cook, Illinois, USA
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1965
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::226167532
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Central High School; Year: 1966
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::569420972
+3 _APID 1,1265::1142122547
+1 RESI
+2 DATE 7 Jan 1951
+2 PLAC Munster, Indiana, USA
+2 SOUR @S982582586@
+3 PAGE The Times; Publication Date: 7 Jan 1951; Publication Place: Munster, Indiana, USA; URL: https://www.newspapers.com/image/305263295/?article=e6e2beee-ec10-4635-bb78-8b1eccb75ade&xid=5498&terms=Karen_Janet_Teschner
+3 DATA
+4 WWW https://www.newspapers.com/image/305263295/?article=e6e2beee-ec10-4635-bb78-8b1eccb75ade&xid=5498&terms=Karen_Janet_Teschner
+3 _APID 1,50039::5678390678
+1 RESI
+2 DATE 1965
+2 PLAC Hinsdale, Illinois, USA
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1965
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::226167532
+1 RESI
+2 DATE 1966
+2 PLAC Hinsdale, Illinois, USA
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Central High School; Year: 1966
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::569420972
+3 _APID 1,1265::1142122547
+1 RESI
+2 PLAC Hinsdale, Cook, Illinois, USA
+1 SOUR @S982582582@
+2 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1965
+2 DATA
+3 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+2 _APID 1,1265::226167532
+1 SOUR @S982582582@
+2 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Central High School; Year: 1966
+2 DATA
+3 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+2 _APID 1,1265::569420972
+2 _APID 1,1265::1142122547
+1 SOUR @S982582586@
+2 PAGE The Times; Publication Date: 7 Jan 1951; Publication Place: Munster, Indiana, USA; URL: https://www.newspapers.com/image/305263295/?article=e6e2beee-ec10-4635-bb78-8b1eccb75ade&xid=5498&terms=Karen_Janet_Teschner
+2 DATA
+3 WWW https://www.newspapers.com/image/305263295/?article=e6e2beee-ec10-4635-bb78-8b1eccb75ade&xid=5498&terms=Karen_Janet_Teschner
+2 _APID 1,50039::5678390678
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 27 May 1987; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+2 _APID 1,61843::287514299
+1 OBJE @O42@
+2 _PRIM Y
+2 _CROP
+3 _LEFT 65
+3 _TOP 80
+3 _WDTH 258
+3 _HGHT 319
+3 _TYPE primary
+0 @I272801599018@ INDI
+1 NAME Allan /Dorn/
+2 GIVN Allan
+2 SURN Dorn
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Steinmetz Academic Centre; Year: 1954
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::452764899
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Wisconsin State College; Year: 1964
+3 _APID 1,1265::1359096118
+2 SOUR @S982582581@
+3 PAGE Fond Du Lac Commonwealth Reporter; Publication Date: 14 Jun 1976; Publication Place: Fond Du Lac, Wisconsin, USA; URL: https://www.newspapers.com/image/285196539/?article=5137422f-8727-4c05-a83d-259840d29ec1&focus=0.3968612,0.27716804,0.51237744,0.
+4 CONC 52976537
+3 DATA
+4 WWW https://www.newspapers.com/image/285196539/?article=5137422f-8727-4c05-a83d-259840d29ec1&focus=0.3968612,0.27716804,0.51237744,0.52976537&xid=3355
+3 _APID 1,61843::176577193
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175817
+1 SEX M
+1 FAMC @F63@
+1 FAMS @F2@
+1 BIRT
+2 DATE 1938
+2 PLAC Arlington Heights, Cook, Illinois, USA
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Steinmetz Academic Centre; Year: 1954
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::452764899
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175817
+1 RESI
+2 DATE 1950
+2 PLAC Marshfield, Fond du Lac, Wisconsin, USA
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175817
+2 NOTE Relation to Head of House: Son; Marital Status: Never Married
+1 RESI
+2 DATE 1954
+2 PLAC Chicago, Illinois
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Steinmetz Academic Centre; Year: 1954
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::452764899
+1 RESI
+2 DATE 1964
+2 PLAC Oshkosh, Wisconsin, USA
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Wisconsin State College; Year: 1964
+3 _APID 1,1265::1359096118
+1 RESI
+2 PLAC Arlington Heights, Cook, Illinois, USA
+1 RESI
+2 PLAC Marshfield, Fond Du Lac, Wisconsin
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175817
+1 SOUR @S982582582@
+2 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Steinmetz Academic Centre; Year: 1954
+2 DATA
+3 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+2 _APID 1,1265::452764899
+1 SOUR @S982582582@
+2 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Wisconsin State College; Year: 1964
+2 _APID 1,1265::1359096118
+1 SOUR @S982582581@
+2 PAGE Fond Du Lac Commonwealth Reporter; Publication Date: 14 Jun 1976; Publication Place: Fond Du Lac, Wisconsin, USA; URL: https://www.newspapers.com/image/285196539/?article=5137422f-8727-4c05-a83d-259840d29ec1&focus=0.3968612,0.27716804,0.51237744,0.
+3 CONC 52976537
+2 DATA
+3 WWW https://www.newspapers.com/image/285196539/?article=5137422f-8727-4c05-a83d-259840d29ec1&focus=0.3968612,0.27716804,0.51237744,0.52976537&xid=3355
+2 _APID 1,61843::176577193
+1 SOUR @S982582572@
+2 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+2 _APID 1,62308::119175817
+1 OBJE @O25@
+2 _PRIM Y
+2 _CROP
+3 _LEFT 121
+3 _TOP 152
+3 _WDTH 485
+3 _HGHT 606
+3 _TYPE primary
+0 @I272801599158@ INDI
+1 NAME Mary Ann Dorn /Mengel/
+2 GIVN Mary Ann Dorn
+2 SURN Mengel
+2 SOUR @S982598409@
+3 PAGE Publication Date: 27/ Feb/ 2013; Publication Place: Oshkosh, Washington, USA; URL: http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+3 DATA
+4 WWW http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+3 _APID 1,7545::201246392
+2 SOUR @S982582581@
+3 PAGE The Oshkosh Northwestern; Publication Date: 27 Feb 2013; Publication Place: Oshkosh, Wisconsin, USA; URL: https://www.newspapers.com/image/362350297/?article=1d2347b9-6d04-473e-8b48-b6ed2ed7176c&focus=0.023270503,0.5154805,0.34591892,0.9680868&xid=
+4 CONC 3355
+3 DATA
+4 WWW https://www.newspapers.com/image/362350297/?article=1d2347b9-6d04-473e-8b48-b6ed2ed7176c&focus=0.023270503,0.5154805,0.34591892,0.9680868&xid=3355
+3 _APID 1,61843::653746082
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175815
+1 SEX F
+1 FAMC @F63@
+1 FAMS @F49@
+1 BIRT
+2 DATE 4 Jun 1933
+2 PLAC Mount Calvary, Fond du Lac, Wisconsin, USA
+2 SOUR @S982598409@
+3 PAGE Publication Date: 27/ Feb/ 2013; Publication Place: Oshkosh, Washington, USA; URL: http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+3 DATA
+4 WWW http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+3 _APID 1,7545::201246392
+2 SOUR @S982582581@
+3 PAGE The Oshkosh Northwestern; Publication Date: 27 Feb 2013; Publication Place: Oshkosh, Wisconsin, USA; URL: https://www.newspapers.com/image/362350297/?article=1d2347b9-6d04-473e-8b48-b6ed2ed7176c&focus=0.023270503,0.5154805,0.34591892,0.9680868&xid=
+4 CONC 3355
+3 DATA
+4 WWW https://www.newspapers.com/image/362350297/?article=1d2347b9-6d04-473e-8b48-b6ed2ed7176c&focus=0.023270503,0.5154805,0.34591892,0.9680868&xid=3355
+3 _APID 1,61843::653746082
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175815
+1 RESI
+2 DATE 1950
+2 PLAC Marshfield, Fond du Lac, Wisconsin, USA
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175815
+2 NOTE Relation to Head of House: Daughter; Marital Status: Never Married
+1 RESI
+2 PLAC Oshkosh
+2 SOUR @S982598409@
+3 PAGE Publication Date: 27/ Feb/ 2013; Publication Place: Oshkosh, Washington, USA; URL: http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+3 DATA
+4 WWW http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+3 _APID 1,7545::201246392
+1 RESI
+2 PLAC Pebbles
+2 SOUR @S982582581@
+3 PAGE The Oshkosh Northwestern; Publication Date: 27 Feb 2013; Publication Place: Oshkosh, Wisconsin, USA; URL: https://www.newspapers.com/image/362350297/?article=1d2347b9-6d04-473e-8b48-b6ed2ed7176c&focus=0.023270503,0.5154805,0.34591892,0.9680868&xid=
+4 CONC 3355
+3 DATA
+4 WWW https://www.newspapers.com/image/362350297/?article=1d2347b9-6d04-473e-8b48-b6ed2ed7176c&focus=0.023270503,0.5154805,0.34591892,0.9680868&xid=3355
+3 _APID 1,61843::653746082
+1 DEAT
+2 DATE 25 Feb 2013
+2 SOUR @S982582581@
+3 PAGE The Oshkosh Northwestern; Publication Date: 27 Feb 2013; Publication Place: Oshkosh, Wisconsin, USA; URL: https://www.newspapers.com/image/362350297/?article=1d2347b9-6d04-473e-8b48-b6ed2ed7176c&focus=0.023270503,0.5154805,0.34591892,0.9680868&xid=
+4 CONC 3355
+3 DATA
+4 WWW https://www.newspapers.com/image/362350297/?article=1d2347b9-6d04-473e-8b48-b6ed2ed7176c&focus=0.023270503,0.5154805,0.34591892,0.9680868&xid=3355
+3 _APID 1,61843::653746082
+1 SOUR @S982598409@
+2 PAGE Publication Date: 27/ Feb/ 2013; Publication Place: Oshkosh, Washington, USA; URL: http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+2 DATA
+3 WWW http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+2 _APID 1,7545::201246392
+1 SOUR @S982582581@
+2 PAGE The Oshkosh Northwestern; Publication Date: 27 Feb 2013; Publication Place: Oshkosh, Wisconsin, USA; URL: https://www.newspapers.com/image/362350297/?article=1d2347b9-6d04-473e-8b48-b6ed2ed7176c&focus=0.023270503,0.5154805,0.34591892,0.9680868&xid=
+3 CONC 3355
+2 DATA
+3 WWW https://www.newspapers.com/image/362350297/?article=1d2347b9-6d04-473e-8b48-b6ed2ed7176c&focus=0.023270503,0.5154805,0.34591892,0.9680868&xid=3355
+2 _APID 1,61843::653746082
+1 SOUR @S982582572@
+2 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+2 _APID 1,62308::119175815
+0 @I272801599160@ INDI
+1 NAME Gordon Herman /Dorn/
+2 GIVN Gordon Herman
+2 SURN Dorn
+2 SOUR @S982607309@
+3 PAGE U.S., Department of Veterans Affairs; United States; U.S., Department of Veterans Affairs Birls Death File, 1850-2022; URL: https://www.va.gov/
+3 DATA
+4 WWW https://www.va.gov/
+3 _APID 1,2441::25149497
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149478
+2 SOUR @S982582744@
+3 _APID 1,62209::288011456
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175816
+1 SEX M
+1 FAMC @F63@
+1 BIRT
+2 DATE 4 Mar 1935
+2 PLAC Wisconsin
+2 SOUR @S982607309@
+3 PAGE U.S., Department of Veterans Affairs; United States; U.S., Department of Veterans Affairs Birls Death File, 1850-2022; URL: https://www.va.gov/
+3 DATA
+4 WWW https://www.va.gov/
+3 _APID 1,2441::25149497
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149478
+2 SOUR @S982582744@
+3 _APID 1,62209::288011456
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175816
+1 RESI
+2 DATE 1935
+2 PLAC Marshfield, Fond du Lac, Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149478
+1 RESI
+2 DATE 1940
+2 PLAC Marshfield Town, Marshfield, Fond du Lac, Wisconsin, USA
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149478
+2 NOTE Marital Status: Single; Relation to Head of House: Son
+1 RESI
+2 DATE 1950
+2 PLAC Marshfield, Fond du Lac, Wisconsin, USA
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175816
+2 NOTE Relation to Head of House: Son; Marital Status: Never Married
+1 RESI
+2 DATE 1993-2020
+2 PLAC Menomonee Falls, Wisconsin, USA
+2 SOUR @S982582744@
+3 _APID 1,62209::288011456
+1 RESI
+2 DATE 2001
+2 PLAC Menomonee Falls, Wisconsin, USA
+2 SOUR @S982582744@
+3 _APID 1,62209::288011456
+1 DEAT
+2 DATE 10 May 2016
+2 SOUR @S982607309@
+3 PAGE U.S., Department of Veterans Affairs; United States; U.S., Department of Veterans Affairs Birls Death File, 1850-2022; URL: https://www.va.gov/
+3 DATA
+4 WWW https://www.va.gov/
+3 _APID 1,2441::25149497
+1 SOUR @S982607309@
+2 PAGE U.S., Department of Veterans Affairs; United States; U.S., Department of Veterans Affairs Birls Death File, 1850-2022; URL: https://www.va.gov/
+2 DATA
+3 WWW https://www.va.gov/
+2 _APID 1,2441::25149497
+1 SOUR @S982598277@
+2 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+2 _APID 1,2442::76149478
+1 SOUR @S982582744@
+2 _APID 1,62209::288011456
+1 SOUR @S982582572@
+2 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+2 _APID 1,62308::119175816
+0 @I272801599161@ INDI
+1 NAME Margaret "Peggy" /Diedrich/
+2 GIVN Margaret "Peggy"
+2 SURN Diedrich
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Lowell P Goodrich High School; Year: 1960
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::446709474
+2 SOUR @S982582947@
+3 _APID 1,1788::138397524
+2 SOUR @S982582744@
+3 _APID 1,62209::285891754
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175818
+1 SEX F
+1 FAMC @F63@
+1 BIRT
+2 DATE 8 Jan 1942
+2 PLAC Wisconsin
+2 SOUR @S982582947@
+3 _APID 1,1788::138397524
+2 SOUR @S982582744@
+3 _APID 1,62209::285891754
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175818
+1 RESI
+2 DATE 1950
+2 PLAC Marshfield, Fond du Lac, Wisconsin, USA
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175818
+2 NOTE Relation to Head of House: Daughter; Marital Status: Never Married
+1 RESI
+2 DATE 1960
+2 PLAC Fond du Lac, Wisconsin, USA
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Lowell P Goodrich High School; Year: 1960
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::446709474
+1 RESI
+2 DATE 1988
+2 PLAC Mount Calvary, WI
+2 SOUR @S982582947@
+3 _APID 1,1788::138397524
+1 RESI
+2 DATE 2000-2020
+2 PLAC Fond Du Lac, Wisconsin, USA
+2 SOUR @S982582744@
+3 _APID 1,62209::285891754
+1 RESI
+2 DATE 2003-2020
+2 PLAC Mount Calvary, Wisconsin, USA
+2 SOUR @S982582744@
+3 _APID 1,62209::285891754
+1 SOUR @S982582582@
+2 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Lowell P Goodrich High School; Year: 1960
+2 DATA
+3 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+2 _APID 1,1265::446709474
+1 SOUR @S982582947@
+2 _APID 1,1788::138397524
+1 SOUR @S982582744@
+2 _APID 1,62209::285891754
+1 SOUR @S982582572@
+2 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+2 _APID 1,62308::119175818
+1 OBJE @O57@
+2 _PRIM Y
+2 _CROP
+3 _LEFT 91
+3 _TOP 123
+3 _WDTH 363
+3 _HGHT 490
+3 _TYPE primary
+0 @I272801599162@ INDI
+1 NAME Herman John /Dorn/
+2 GIVN Herman John
+2 SURN Dorn
+2 SOUR @S982582659@
+3 PAGE Ancestry Family Tree
+2 SOUR @S982607356@
+3 PAGE National Archives at St. Louis; St. Louis, Missouri; Draft Registration Cards For Wisconsin, 10/16/1940-03/31/1947; Record Group: Records of the Selective Service System, 147; Box: 156
+3 _APID 1,2238::199038531
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149473
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859767
+2 SOUR @S982607361@
+3 _APID 1,60901::634572426
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175813
+1 SEX M
+1 FAMC @F56@
+1 FAMS @F63@
+1 BIRT
+2 DATE 25 Nov 1905
+2 PLAC New Holstein, Calumet, Wisconsin, USA
+2 SOUR @S982582659@
+3 PAGE Ancestry Family Tree
+2 SOUR @S982607356@
+3 PAGE National Archives at St. Louis; St. Louis, Missouri; Draft Registration Cards For Wisconsin, 10/16/1940-03/31/1947; Record Group: Records of the Selective Service System, 147; Box: 156
+3 _APID 1,2238::199038531
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149473
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859767
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175813
+1 RESI
+2 DATE 1910
+2 PLAC New Holstein, Calumet, Wisconsin, USA
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859767
+2 NOTE Marital Status: Single; Relation to Head of House: Son
+1 RESI
+2 DATE 1935
+2 PLAC Marshfield, Fond du Lac, Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149473
+1 RESI
+2 DATE 1940
+2 PLAC Marshfield Town, Marshfield, Fond du Lac, Wisconsin, USA
+2 SOUR @S982607356@
+3 PAGE National Archives at St. Louis; St. Louis, Missouri; Draft Registration Cards For Wisconsin, 10/16/1940-03/31/1947; Record Group: Records of the Selective Service System, 147; Box: 156
+3 _APID 1,2238::199038531
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149473
+2 NOTE Occupation: Barber; Marital Status: Married; Relation to Head of House: Head
+1 RESI
+2 DATE 1950
+2 PLAC Marshfield, Fond du Lac, Wisconsin, USA
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175813
+2 NOTE Occupation: Barber; Relation to Head of House: Head; Marital Status: Married
+1 DEAT
+2 DATE 4 Jun 1984
+2 PLAC Mount Calvary, Fond du Lac, Wisconsin, USA
+1 SOUR @S982582659@
+2 PAGE Ancestry Family Tree
+2 _APID 202310735113:1030:2496732
+1 SOUR @S982607356@
+2 PAGE National Archives at St. Louis; St. Louis, Missouri; Draft Registration Cards For Wisconsin, 10/16/1940-03/31/1947; Record Group: Records of the Selective Service System, 147; Box: 156
+2 _APID 1,2238::199038531
+1 SOUR @S982598277@
+2 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+2 _APID 1,2442::76149473
+1 SOUR @S982607346@
+2 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+2 _APID 1,7884::169859767
+1 SOUR @S982607361@
+2 _APID 1,60901::634572426
+1 SOUR @S982582572@
+2 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+2 _APID 1,62308::119175813
+0 @I272801599163@ INDI
+1 NAME Louise /Dorn/
+2 GIVN Louise
+2 SURN Dorn
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149474
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175814
+1 SEX F
+1 FAMC @F72@
+1 FAMS @F63@
+1 BIRT
+2 DATE abt 1913
+2 PLAC Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149474
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175814
+1 RESI
+2 DATE 1935
+2 PLAC Marshfield, Fond du Lac, Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149474
+1 RESI
+2 DATE 1940
+2 PLAC Marshfield Town, Marshfield, Fond du Lac, Wisconsin, USA
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149474
+2 NOTE Marital Status: Married; Relation to Head of House: Wife
+1 RESI
+2 DATE 1950
+2 PLAC Marshfield, Fond du Lac, Wisconsin, USA
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+3 _APID 1,62308::119175814
+2 NOTE Relation to Head of House: Wife; Marital Status: Married
+1 DEAT
+2 DATE 14 Jun 1976
+2 PLAC Fond du Lac, Fond du Lac, Wisconsin, USA
+1 SOUR @S982582659@
+2 PAGE Ancestry Family Tree
+2 _APID 202310735137:1030:2496732
+1 SOUR @S982598277@
+2 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+2 _APID 1,2442::76149474
+1 SOUR @S982582572@
+2 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: 892; Page: 42; Enumeration District: 20-67
+2 _APID 1,62308::119175814
+0 @I272801599242@ INDI
+1 NAME Patxi Delgado /Rodriguez/
+2 GIVN Patxi Delgado
+2 SURN Rodriguez
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1982
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::652833452
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1983
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::653514740
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1980
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::656224323
+2 SOUR @S982582735@
+3 _APID 1,8744::1044581
+2 SOUR @S982598857@
+3 PAGE Wisconsin Historical Society; Madison, WI, USA; Wisconsin Marriage Records 1979-1997
+3 _APID 1,61484::90100727
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 27 May 1987; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+3 _APID 1,61843::287722116
+2 SOUR @S982598860@
+3 PAGE The Capital Times; Publication Date: 31/ May/ 1997; Publication Place: Madison, Wisconsin, USA; URL: https://www.newspapers.com/image/522741139/?article=d001fe56-4713-4b44-a85f-dbd2d3ad4579&xid=3398
+3 DATA
+4 WWW https://www.newspapers.com/image/522741139/?article=d001fe56-4713-4b44-a85f-dbd2d3ad4579&xid=3398
+3 _APID 1,62116::86648003
+2 SOUR @S982582744@
+3 _APID 1,62209::97513025
+1 SEX F
+1 FAMC @F8@
+1 FAMS @F6@
+1 FAMS @F7@
+1 BIRT
+2 DATE 1965
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1982
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::652833452
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1983
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::653514740
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1980
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::656224323
+2 SOUR @S982582735@
+3 _APID 1,8744::1044581
+2 SOUR @S982582744@
+3 _APID 1,62209::97513025
+1 RESI
+2 DATE 1980
+2 PLAC Hinsdale, Illinois, USA
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1980
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::656224323
+1 RESI
+2 DATE 1982
+2 PLAC Hinsdale, Illinois, USA
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1982
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::652833452
+1 RESI
+2 DATE 1983
+2 PLAC Hinsdale, Illinois, USA
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1983
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::653514740
+1 RESI
+2 DATE 1986-1990
+2 PLAC Appleton, Wisconsin, USA
+2 SOUR @S982582744@
+3 _APID 1,62209::97513025
+1 RESI
+2 DATE 1986-2020
+2 PLAC Arlington Heights, Illinois, USA
+2 SOUR @S982582744@
+3 _APID 1,62209::97513025
+1 RESI
+2 DATE 1990-2019
+2 PLAC Madison, Wisconsin, USA
+2 SOUR @S982582744@
+3 _APID 1,62209::97513025
+1 SOUR @S982582582@
+2 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1982
+2 DATA
+3 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+2 _APID 1,1265::652833452
+1 SOUR @S982582582@
+2 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1983
+2 DATA
+3 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+2 _APID 1,1265::653514740
+1 SOUR @S982582582@
+2 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1980
+2 DATA
+3 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+2 _APID 1,1265::656224323
+1 SOUR @S982582735@
+2 _APID 1,8744::1044581
+1 SOUR @S982598857@
+2 PAGE Wisconsin Historical Society; Madison, WI, USA; Wisconsin Marriage Records 1979-1997
+2 _APID 1,61484::90100727
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 27 May 1987; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+2 _APID 1,61843::287722116
+1 SOUR @S982598860@
+2 PAGE The Capital Times; Publication Date: 31/ May/ 1997; Publication Place: Madison, Wisconsin, USA; URL: https://www.newspapers.com/image/522741139/?article=d001fe56-4713-4b44-a85f-dbd2d3ad4579&xid=3398
+2 DATA
+3 WWW https://www.newspapers.com/image/522741139/?article=d001fe56-4713-4b44-a85f-dbd2d3ad4579&xid=3398
+2 _APID 1,62116::86648003
+1 SOUR @S982582744@
+2 _APID 1,62209::97513025
+1 OBJE @O5@
+2 _PRIM Y
+2 _CROP
+3 _LEFT 59
+3 _TOP 75
+3 _WDTH 236
+3 _HGHT 301
+3 _TYPE primary
+0 @I272801599243@ INDI
+1 NAME Paul A /Teschner/ III
+2 GIVN Paul A
+2 SURN Teschner
+2 NSFX III
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1973
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::655069083
+3 _APID 1,1265::1299402119
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1974
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::1244447976
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 27 May 1987; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+3 _APID 1,61843::287865201
+2 SOUR @S982582744@
+3 _APID 1,62209::97492855
+1 SEX M
+1 FAMC @F8@
+1 BIRT
+2 DATE abt 1958
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1973
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::655069083
+3 _APID 1,1265::1299402119
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1974
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::1244447976
+2 SOUR @S982582744@
+3 _APID 1,62209::97492855
+1 RESI
+2 DATE 1973
+2 PLAC Hinsdale, Illinois, USA
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1973
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::655069083
+3 _APID 1,1265::1299402119
+1 RESI
+2 DATE 1974
+2 PLAC Hinsdale, Illinois, USA
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1974
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::1244447976
+1 RESI
+2 DATE 1988-2020
+2 PLAC Hinsdale, Illinois, USA
+2 SOUR @S982582744@
+3 _APID 1,62209::97492855
+1 SOUR @S982582582@
+2 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1973
+2 DATA
+3 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+2 _APID 1,1265::655069083
+2 _APID 1,1265::1299402119
+1 SOUR @S982582582@
+2 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Hinsdale Township High School Central; Year: 1974
+2 DATA
+3 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+2 _APID 1,1265::1244447976
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 27 May 1987; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+2 _APID 1,61843::287865201
+1 SOUR @S982582744@
+2 _APID 1,62209::97492855
+1 OBJE @O28@
+2 _PRIM Y
+2 _CROP
+3 _LEFT 57
+3 _TOP 78
+3 _WDTH 227
+3 _HGHT 310
+3 _TYPE primary
+0 @I272801599244@ INDI
+1 NAME Paul A. /Teschner/ Jr.
+2 GIVN Paul A.
+2 SURN Teschner
+2 NSFX Jr.
+2 SOUR @S982607356@
+3 PAGE National Archives at St. Louis; St. Louis, Missouri; Wwii Draft Registration Cards For Illinois, 10/16/1940-03/31/1947; Record Group: Records of the Selective Service System, 147; Box: 1800
+3 _APID 1,2238::40508738
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040103
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 27 May 1987; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+3 _APID 1,61843::580677920
+1 SEX M
+1 FAMC @F45@
+1 FAMS @F8@
+1 BIRT
+2 DATE 20 Jun 1925
+2 PLAC Green Bay, Wisconsin, USA
+2 SOUR @S982607356@
+3 PAGE National Archives at St. Louis; St. Louis, Missouri; Wwii Draft Registration Cards For Illinois, 10/16/1940-03/31/1947; Record Group: Records of the Selective Service System, 147; Box: 1800
+3 _APID 1,2238::40508738
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040103
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 27 May 1987; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+3 _APID 1,61843::580677920
+1 RESI
+2 DATE 1935
+2 PLAC Milwaukee, Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040103
+1 RESI
+2 DATE 1940
+2 PLAC Illin York, Elmhurst, DuPage, Illinois, USA
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040103
+2 NOTE Marital Status: Single; Relation to Head of House: Son
+1 RESI
+2 PLAC Elmhurst, Dupage, Illinois, USA
+2 SOUR @S982607356@
+3 PAGE National Archives at St. Louis; St. Louis, Missouri; Wwii Draft Registration Cards For Illinois, 10/16/1940-03/31/1947; Record Group: Records of the Selective Service System, 147; Box: 1800
+3 _APID 1,2238::40508738
+2 NOTE Relation to Head of House: Self
+1 RESI
+2 PLAC Hinsdale, Cook, Illinois, USA
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 27 May 1987; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+3 _APID 1,61843::580677920
+1 DEAT
+2 DATE Abt 1987
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 27 May 1987; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+3 _APID 1,61843::580677920
+1 SOUR @S982582659@
+2 PAGE Ancestry Family Tree
+2 _APID 42283885199:1030:73869806
+1 SOUR @S982607356@
+2 PAGE National Archives at St. Louis; St. Louis, Missouri; Wwii Draft Registration Cards For Illinois, 10/16/1940-03/31/1947; Record Group: Records of the Selective Service System, 147; Box: 1800
+2 _APID 1,2238::40508738
+1 SOUR @S982598277@
+2 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+2 _APID 1,2442::142040103
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 27 May 1987; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+2 _APID 1,61843::580677920
+0 @I272801599245@ INDI
+1 NAME Barbera /Malmstone/
+2 GIVN Barbera
+2 SURN Malmstone
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 27 May 1987; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+3 _APID 1,61843::287210346
+1 SEX F
+1 FAMC @F42@
+1 FAMS @F8@
+1 BIRT
+2 DATE 1928
+2 PLAC Illinois, USA
+1 DEAT
+2 DATE Jan 31, 1976
+2 PLAC Elmhurst, Du Page, Illinois, USA
+1 SOUR @S982582659@
+2 PAGE Ancestry Family Tree
+2 _APID 42283890588:1030:73869806
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 27 May 1987; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/388924883/?article=c5079a4e-2a13-4569-b272-153d95814e02&focus=0.02224997,0.44165808,0.18096706,0.5850196&xid=3355
+2 _APID 1,61843::287210346
+0 @I272801599370@ INDI
+1 NAME Paul August Carl /Teschner/
+2 GIVN Paul August Carl
+2 SURN Teschner
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040093
+1 SEX M
+1 FAMC @F50@
+1 FAMS @F45@
+1 BIRT
+2 DATE 10 Okt 1896
+2 PLAC Berlin, Berlin, Deutschland
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040093
+1 RESI
+2 DATE 1935
+2 PLAC Milwaukee, Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040093
+1 RESI
+2 DATE 1940
+2 PLAC Illin York, Elmhurst, DuPage, Illinois, USA
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040093
+2 NOTE Occupation: Doctor; Marital Status: Married; Relation to Head of House: Head
+1 DEAT
+2 DATE May 25, 1945
+2 PLAC Elmhurst, Du Page, Illinois, USA
+1 SOUR @S982598277@
+2 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+2 _APID 1,2442::142040093
+1 OBJE @O39@
+2 _PRIM Y
+0 @I272801599391@ INDI
+1 NAME Helen Jane /Boyington/
+2 GIVN Helen Jane
+2 SURN Boyington
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040098
+1 SEX F
+1 FAMC @F59@
+1 FAMS @F45@
+1 BIRT
+2 DATE Sep 13, 1901
+2 PLAC Monroe, Wisconsin, USA
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040098
+1 RESI
+2 DATE 1935
+2 PLAC Milwaukee, Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040098
+1 RESI
+2 DATE 1940
+2 PLAC Illin York, Elmhurst, DuPage, Illinois, USA
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040098
+2 NOTE Marital Status: Married; Relation to Head of House: Wife
+1 DEAT
+2 DATE Nov 06, 1993
+2 PLAC Glen Ellyn, Du Page, Illinois, USA
+1 SOUR @S982598277@
+2 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+2 _APID 1,2442::142040098
+0 @I272801599661@ INDI
+1 NAME Michael "Mike" /Dorn/
+2 GIVN Michael "Mike"
+2 SURN Dorn
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::30581763
+1 SEX M
+1 FAMC @F71@
+1 FAMS @F56@
+1 FAMS @F82@
+1 BIRT
+2 DATE 10 October 1866
+2 PLAC Saint Anna, Calumet County, Wisconsin, United States of America
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::30581763
+1 RESI
+2 DATE 1910
+2 PLAC New Holstein, Calumet, Wisconsin, USA
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::30581763
+2 NOTE Marital Status: Married; Relation to Head of House: Head
+1 DEAT
+2 DATE 20 September 1943
+2 PLAC Saint Anna, Calumet County, Wisconsin, United States of America
+1 SOUR @S982607346@
+2 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+2 _APID 1,7884::30581763
+1 OBJE @O11@
+2 _PRIM Y
+0 @I272801599675@ INDI
+1 NAME Fredericka /Laures/
+2 GIVN Fredericka
+2 SURN Laures
+1 SEX F
+1 FAMC @F78@
+1 FAMS @F56@
+1 BIRT
+2 DATE 16 Sep 1873
+2 PLAC New Holstein, Wisconsin
+1 DEAT
+2 DATE 18 Dec 1953
+2 PLAC Saint Anna, Calumet, Wisconsin, USA
+0 @I272801599693@ INDI
+1 NAME Peter /Schaefer/
+2 GIVN Peter
+2 SURN Schaefer
+1 SEX M
+1 FAMC @F53@
+1 FAMS @F72@
+1 BIRT
+2 DATE 24 Jul 1854
+2 PLAC JOHNSBURG, Fond du Lac, Wisconsin, United States
+1 DEAT
+2 DATE 7 Dec 1918
+2 PLAC Mount Calvary, Fond du Lac County, Wisconsin, USA
+0 @I272801599699@ INDI
+1 NAME Elizabeth "Lizzie" /Reiden/
+2 GIVN Elizabeth "Lizzie"
+2 SURN Reiden
+1 SEX F
+1 FAMC @F33@
+1 FAMS @F72@
+1 BIRT
+2 DATE 16 Dec 1863
+2 PLAC Mt. Calvary, Fond du Lac, Wisconsin, USA
+1 DEAT
+2 DATE 07 Jan 1933
+2 PLAC Mt Calvary, Fond du Lac, Wisconsin, USA
+0 @I272801599870@ INDI
+1 NAME Francis August /Malmsten Malmstone/
+2 GIVN Francis August
+2 SURN Malmsten Malmstone
+1 SEX M
+1 FAMC @F36@
+1 FAMS @F42@
+1 BIRT
+2 DATE 09 Feb 1877
+2 PLAC Gary, Lake, Indiana, USA
+1 DEAT
+2 DATE 2 Jul 1954
+2 PLAC Paris, Paris, Ile-de-France, France
+1 OBJE @O34@
+2 _PRIM Y
+0 @I272801599875@ INDI
+1 NAME Wilma Lee /Woods/
+2 GIVN Wilma Lee
+2 SURN Woods
+1 SEX F
+1 FAMC @F44@
+1 FAMS @F42@
+1 BIRT
+2 DATE 8 Jul 1887
+2 PLAC Crown Point, Lake, Indiana
+1 DEAT
+2 DATE 19 Dec 1970
+2 PLAC Griffith, Lake, Indiana
+1 OBJE @O32@
+2 _PRIM Y
+0 @I272801599903@ INDI
+1 NAME Adolf Bruno /Teschner/
+2 GIVN Adolf Bruno
+2 SURN Teschner
+1 SEX M
+1 FAMC @F20@
+1 FAMS @F50@
+1 BIRT
+2 DATE 1 DEC 1859
+2 PLAC Lubbenau, Oberspreewald-Lausitz, Germany
+1 DEAT
+2 DATE Jul 01, 1952
+2 PLAC Los Angeles, California, USA
+0 @I272801599914@ INDI
+1 NAME Thekla Josephine /Rewa/
+2 GIVN Thekla Josephine
+2 SURN Rewa
+1 SEX F
+1 FAMC @F69@
+1 FAMS @F50@
+1 BIRT
+2 DATE Aug 27, 1869
+2 PLAC Jarocin, Warminsko-Mazurskie, Poland
+1 DEAT
+2 DATE Aug 02, 1928
+2 PLAC Milwaukee, Milwaukee, Wisconsin, USA
+0 @I272801599924@ INDI
+1 NAME William Lewis /Boyington/
+2 GIVN William Lewis
+2 SURN Boyington
+1 SEX M
+1 FAMC @F10@
+1 FAMS @F59@
+1 BIRT
+2 DATE May 16, 1868
+2 PLAC Whitewater, Wisconsin
+1 DEAT
+2 DATE 16 Jun 1949
+2 PLAC Yakima, Yakima, Washington
+1 OBJE @O48@
+2 _PRIM Y
+0 @I272801599934@ INDI
+1 NAME Zubie May /Crandall/
+2 GIVN Zubie May
+2 SURN Crandall
+1 SEX F
+1 FAMC @F57@
+1 FAMS @F59@
+1 BIRT
+2 DATE Jan 1871
+2 PLAC Tomah, Monroe, Wisconsin, USA
+1 DEAT
+2 DATE 14 Jan 1904
+2 PLAC Valley Junction, Monroe, Wisconsin, USA
+0 @I272801600208@ INDI
+1 NAME Elyse /Lucas/
+2 GIVN Elyse
+2 SURN Lucas
+1 SEX F
+1 FAMC @F26@
+1 FAMS @F70@
+1 BIRT
+2 DATE 05/05/1988
+2 PLAC Illinois
+0 @I272801600242@ INDI
+1 NAME Mark /Lucas/
+2 GIVN Mark
+2 SURN Lucas
+2 SOUR @S982582944@
+3 _APID 1,1732::56935879
+2 SOUR @S982582947@
+3 _APID 1,1788::375304806
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 24 Jan 2005; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 _APID 1,61843::481123693
+1 SEX M
+1 FAMC @F15@
+1 FAMS @F26@
+1 BIRT
+2 DATE 12 Mar 1952
+2 SOUR @S982582944@
+3 _APID 1,1732::56935879
+2 SOUR @S982582947@
+3 _APID 1,1788::375304806
+1 RESI
+2 DATE 1987
+2 PLAC Lake Zurich, IL
+2 SOUR @S982582947@
+3 _APID 1,1788::375304806
+1 RESI
+2 DATE 1989
+2 PLAC Woodstock, IL
+2 SOUR @S982582947@
+3 _APID 1,1788::375304806
+1 RESI
+2 PLAC Chicago, Illinois, USA
+2 SOUR @S982582944@
+3 _APID 1,1732::56935879
+1 RESI
+2 PLAC Glenview, IL
+2 SOUR @S982582947@
+3 _APID 1,1788::375304806
+1 SOUR @S982582944@
+2 _APID 1,1732::56935879
+1 SOUR @S982582947@
+2 _APID 1,1788::375304806
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 24 Jan 2005; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+2 _APID 1,61843::481123693
+0 @I272801600318@ INDI
+1 NAME Leta /Marino/
+2 GIVN Leta
+2 SURN Marino
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 28 Jun 1975; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 _APID 1,61843::172825703
+1 SEX F
+1 FAMC @F81@
+1 FAMS @F26@
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 28 Jun 1975; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+2 _APID 1,61843::172825703
+0 @I272801600458@ INDI
+1 NAME Wolfgang /Dorn/
+2 GIVN Wolfgang
+2 SURN Dorn
+1 SEX M
+1 FAMS @F71@
+1 BIRT
+2 DATE 5 Mar 1815
+2 PLAC Nürnberg, Nürnberg, Bayern, Germany
+1 DEAT
+2 DATE 12 Nov 1905
+2 PLAC Calumet, Wisconsin, USA
+1 OBJE @O52@
+2 _PRIM Y
+2 _CROP
+3 _LEFT 1728
+3 _TOP 797
+3 _WDTH 284
+3 _HGHT 284
+3 _TYPE primary
+0 @I272801600460@ INDI
+1 NAME Kunigunde /Mausner/
+2 GIVN Kunigunde
+2 SURN Mausner
+1 SEX F
+1 FAMS @F71@
+1 BIRT
+2 DATE 01 May 1824
+2 PLAC Speikem, , Bayern, Germany
+1 DEAT
+2 DATE 03 September 1907
+2 PLAC Saint Anna, Calumet County, Wisconsin, United States of America
+1 OBJE @O52@
+2 _PRIM Y
+0 @I272801600478@ INDI
+1 NAME Charles /Laures/
+2 GIVN Charles
+2 SURN Laures
+1 SEX M
+1 FAMC @F54@
+1 FAMS @F78@
+1 BIRT
+2 DATE 1842
+2 PLAC Suez, Belgium
+1 DEAT
+2 DATE 1937
+2 PLAC Oneonta, Otsego, New York, USA
+0 @I272801600484@ INDI
+1 NAME Anna /Roeder/
+2 GIVN Anna
+2 SURN Roeder
+1 SEX F
+1 FAMC @F43@
+1 FAMS @F78@
+1 BIRT
+2 DATE 25 Sept. 1847
+2 PLAC Prussia
+1 DEAT
+2 DATE 23 Feb 1891
+2 PLAC Oshkosh, Winnebago, Wisconsin, USA
+0 @I272801600561@ INDI
+1 NAME Ernst Adolph /Teschner/
+2 GIVN Ernst Adolph
+2 SURN Teschner
+1 SEX M
+1 FAMS @F20@
+1 BIRT
+2 DATE Jan 13, 1830
+2 PLAC Lübbenau, Oberspreewald-Lausitz, Brandenburg, Germany
+0 @I272801600566@ INDI
+1 NAME Maria Luise /Gast/
+2 GIVN Maria Luise
+2 SURN Gast
+1 SEX F
+1 FAMS @F20@
+1 BIRT
+2 DATE Dec 31, 1834
+2 PLAC Meissen, Sachsen, Germany
+1 DEAT
+2 DATE Apr 05, 1908
+2 PLAC Berlin, Berlin, Germany
+0 @I272801600696@ INDI
+1 NAME Matthew /Lucas/
+2 GIVN Matthew
+2 SURN Lucas
+1 SEX M
+1 FAMC @F26@
+1 FAMS @F62@
+1 BIRT
+2 DATE 13 Sep 1985
+0 @I272801600724@ INDI
+1 NAME Justine /Lucas/
+2 GIVN Justine
+2 SURN Lucas
+1 SEX F
+1 FAMC @F26@
+1 FAMS @F85@
+0 @I272801600911@ INDI
+1 NAME Patxi /Delgado Rodriguez/
+2 GIVN Patxi
+2 SURN Delgado Rodriguez
+2 SOUR @S982582735@
+3 _APID 1,8744::95605
+2 SOUR @S982598857@
+3 PAGE Wisconsin Historical Society; Madison, WI, USA; Wisconsin Marriage Records 1979-1997
+3 _APID 1,61484::100727
+1 SEX M
+1 FAMS @F6@
+1 BIRT
+2 DATE 1953
+2 SOUR @S982582735@
+3 _APID 1,8744::95605
+1 SOUR @S982582735@
+2 _APID 1,8744::95605
+1 SOUR @S982598857@
+2 PAGE Wisconsin Historical Society; Madison, WI, USA; Wisconsin Marriage Records 1979-1997
+2 _APID 1,61484::100727
+0 @I272801601045@ INDI
+1 NAME George Andress /Boyington/
+2 GIVN George Andress
+2 SURN Boyington
+1 SEX M
+1 FAMC @F34@
+1 FAMS @F10@
+1 BIRT
+2 DATE Jul 28, 1835
+2 PLAC Caneadea, Alleghany, New York, USA
+1 DEAT
+2 DATE 26 November 1901
+2 PLAC Byron, Monroe, Wisconsin, USA
+0 @I272801601059@ INDI
+1 NAME Lucinda /Marsh/
+2 GIVN Lucinda
+2 SURN Marsh
+1 SEX F
+1 FAMC @F79@
+1 FAMS @F10@
+1 BIRT
+2 DATE 29 March 1839
+2 PLAC Ohio, USA
+1 DEAT
+2 DATE 24 November 1913
+0 @I272801601118@ INDI
+1 NAME Asahel /Boyington/
+2 GIVN Asahel
+2 SURN Boyington
+1 SEX M
+1 FAMC @F41@
+1 FAMS @F34@
+1 BIRT
+2 DATE 15 Jan 1799
+2 PLAC New York, United States
+1 DEAT
+2 DATE 28 Feb 1879
+2 PLAC Fort Atkinson, Jefferson, Wisconsin, United States
+0 @I272801601126@ INDI
+1 NAME Esther  S /Sanford/
+2 GIVN Esther  S
+2 SURN Sanford
+1 SEX F
+1 FAMS @F34@
+1 BIRT
+2 DATE 29 Jul 1800
+2 PLAC Sturdevant, Steuben, New York, United States
+1 DEAT
+2 DATE 9 Feb 1893
+2 PLAC Fort Atkinson, Jefferson, Wisconsin, United States
+0 @I272801601148@ INDI
+1 NAME Esther /Prentice/
+2 GIVN Esther
+2 SURN Prentice
+1 SEX F
+1 FAMC @F87@
+1 FAMS @F41@
+1 BIRT
+2 DATE 1776
+2 PLAC Wendell, Franklin, Massachusetts, United States
+1 DEAT
+2 DATE 1850
+2 PLAC Jefferson, Jefferson, Wisconsin, United States
+0 @I272801601186@ INDI
+1 NAME Sebastian /Schaefer/
+2 GIVN Sebastian
+2 SURN Schaefer
+1 SEX M
+1 FAMS @F53@
+1 BIRT
+2 DATE 28 Jan 1821
+2 PLAC Kempenich, Rheinland-Pfalz, Germany
+1 DEAT
+2 DATE 13 June 1905
+2 PLAC Mount Calvary, Fond du Lac County, Wisconsin, United States of America
+0 @I272801601196@ INDI
+1 NAME Christina /(Frein) Schaefer/
+2 GIVN Christina
+2 SURN (Frein) Schaefer
+1 SEX F
+1 FAMS @F53@
+1 BIRT
+2 DATE 5 March 1820
+2 PLAC Mayen, Mayen-Koblenz, Rheinland Pfalz, Allemagne
+1 DEAT
+2 DATE 9 October 1913
+2 PLAC Mount Calvary, Fond du Lac, Wisconsin USA, Wisconsin, USA
+0 @I272801601225@ INDI
+1 NAME Carl /Rewa/
+2 GIVN Carl
+2 SURN Rewa
+1 SEX M
+1 FAMS @F69@
+1 BIRT
+2 DATE abt 1821
+1 DEAT
+2 DATE 21 Sept 1906
+2 PLAC Zoppot, Polen
+0 @I272801601243@ INDI
+1 NAME Marcianna /Rewa/
+2 GIVN Marcianna
+2 SURN Rewa
+1 SEX F
+1 FAMS @F69@
+1 BIRT
+2 DATE Abt.  1825
+2 PLAC Poland
+0 @I272801601254@ INDI
+1 NAME Jonathan /Marsh/ Dr.
+2 GIVN Jonathan
+2 SURN Marsh
+2 NSFX Dr.
+1 SEX M
+1 FAMC @F68@
+1 FAMS @F79@
+1 BIRT
+2 DATE 8 Oct 1794
+2 PLAC Norwich, New London, Connecticut, USA
+1 DEAT
+2 DATE 7 Mar 1869
+2 PLAC Hebron, Jefferson, Wisconsin, USA
+0 @I272801601261@ INDI
+1 NAME Mary "Polly" /Dayton/
+2 GIVN Mary "Polly"
+2 SURN Dayton
+1 SEX F
+1 FAMC @F91@
+1 FAMS @F79@
+1 BIRT
+2 DATE 30 Mar 1801
+2 PLAC Suffolk County, New York, USA
+1 DEAT
+2 DATE 4 Jun 1883
+2 PLAC Cleveland, Cuyahoga, Ohio, USA
+1 OBJE @O43@
+2 _PRIM Y
+0 @I272801601414@ INDI
+1 NAME Marguerite Margaretha /Fliesse/ *
+2 GIVN Marguerite Margaretha
+2 SURN Fliesse
+2 NSFX *
+1 SEX F
+1 FAMS @F43@
+1 BIRT
+2 DATE 9 January 1813
+2 PLAC Rodemack, Moselle, Lorraine, France
+1 DEAT
+2 DATE 12 January 1887
+2 PLAC New Holstein, Calumet, Wisconsin, USA
+1 OBJE @O18@
+2 _PRIM Y
+0 @I272801601425@ INDI
+1 NAME Nicholas /Roeder/ *
+2 GIVN Nicholas
+2 SURN Roeder
+2 NSFX *
+1 SEX M
+1 FAMS @F43@
+1 BIRT
+2 DATE 9 December 1811
+2 PLAC Rodemack, Moselle, Lorraine, France
+1 DEAT
+2 DATE 22 July 1890
+2 PLAC New Holstein, Calumet, Wisconsin, USA
+1 OBJE @O12@
+2 _PRIM Y
+0 @I272801601445@ INDI
+1 NAME Elisabeth* /Gedart, Goedart/
+2 GIVN Elisabeth*
+2 SURN Gedart, Goedart
+1 SEX F
+1 FAMC @F27@
+1 FAMS @F54@
+1 BIRT
+2 DATE Abt. 1798
+2 PLAC Belgium
+1 DEAT
+2 DATE 17 Sep 1866
+2 PLAC Sheldon, Wyoming, New York, USA
+1 OBJE @O44@
+2 _PRIM Y
+0 @I272801601460@ INDI
+1 NAME Jean Baptiste /Laures/
+2 GIVN Jean Baptiste
+2 SURN Laures
+1 SEX M
+1 FAMC @F76@
+1 FAMS @F54@
+1 BIRT
+2 DATE 26 Jun 1805
+2 PLAC Sampont, Hachy, Luxembourg
+1 DEAT
+2 DATE 19 Aug 1895
+2 PLAC Sheldon, Wyoming, New York, USA
+1 OBJE @O38@
+2 _PRIM Y
+2 _CROP
+3 _LEFT 16
+3 _TOP 17
+3 _WDTH 459
+3 _HGHT 459
+3 _TYPE primary
+0 @I272801601486@ INDI
+1 NAME Nicolas /Laures/
+2 GIVN Nicolas
+2 SURN Laures
+1 SEX M
+1 FAMC @F30@
+1 FAMS @F76@
+1 BIRT
+2 DATE 21 Jul 1755
+2 PLAC Boulaide, Wiltz, Diekirch, Luxembourg
+1 DEAT
+2 DATE 26 Feb 1805
+2 PLAC Hachy, Luxembourg
+1 OBJE @O23@
+2 _PRIM Y
+2 _CROP
+3 _LEFT 27
+3 _TOP 283
+3 _WDTH 437
+3 _HGHT 437
+3 _TYPE primary
+0 @I272801601496@ INDI
+1 NAME Catherine /Freyman/
+2 GIVN Catherine
+2 SURN Freyman
+1 SEX F
+1 FAMS @F76@
+1 BIRT
+2 DATE 19 Apr 1765
+2 PLAC Sampont, Hachy, Luxembourg
+1 DEAT
+2 DATE Aft. 1808
+2 PLAC Luxembourg
+1 OBJE @O50@
+2 _PRIM Y
+2 _CROP
+3 _LEFT 889
+3 _TOP 229
+3 _WDTH 311
+3 _HGHT 311
+3 _TYPE primary
+0 @I272801601598@ INDI
+1 NAME Nicolaus /Goedert/
+2 GIVN Nicolaus
+2 SURN Goedert
+1 SEX M
+1 FAMS @F27@
+0 @I272801601605@ INDI
+1 NAME Margarite* /Thibes/
+2 GIVN Margarite*
+2 SURN Thibes
+1 SEX F
+1 FAMS @F27@
+1 BIRT
+2 DATE Abt. 1775
+2 PLAC Schockville, Luxembourg, Belgium
+0 @I272801601624@ INDI
+1 NAME Nicolas /Laures/
+2 GIVN Nicolas
+2 SURN Laures
+1 SEX M
+1 FAMS @F30@
+1 BIRT
+2 DATE 1715
+2 PLAC Boulaide, Wiltz, Diekirch, Luxembourg
+0 @I272801601631@ INDI
+1 NAME Barbara /Francois/
+2 GIVN Barbara
+2 SURN Francois
+1 SEX F
+1 FAMS @F30@
+1 BIRT
+2 DATE 1730
+2 PLAC Habergy, Luxembourg
+1 DEAT
+2 DATE 29 Nov 1792
+2 PLAC Hachy, Luxembourg
+0 @I272801602468@ INDI
+1 NAME E;izabeth /Rowland/
+2 GIVN E;izabeth
+2 SURN Rowland
+1 SEX F
+1 FAMS @F87@
+1 BIRT
+2 DATE 1736
+2 PLAC Bradford, Essex, Massachusetts, USA
+1 DEAT
+2 DATE 1835
+2 PLAC ,,New York, USA
+0 @I272801602485@ INDI
+1 NAME David S /Boyington/
+2 GIVN David S
+2 SURN Boyington
+1 SEX M
+1 FAMC @F16@
+1 FAMS @F41@
+1 BIRT
+2 DATE 1768
+2 PLAC Hanover, Grafton, New Hampshire, United States
+1 DEAT
+2 DATE 1850
+2 PLAC Jefferson, Jefferson, Wisconsin, United States
+0 @I272801602498@ INDI
+1 NAME Joseph /Marsh/
+2 GIVN Joseph
+2 SURN Marsh
+1 SEX M
+1 FAMS @F68@
+1 BIRT
+2 DATE 6 Mar 1762
+2 PLAC Norwich, CT
+1 DEAT
+2 DATE 30 Sep 1829*
+2 PLAC Norwich, New London, CT, USA*
+0 @I272801602510@ INDI
+1 NAME Eunice /Huxley/
+2 GIVN Eunice
+2 SURN Huxley
+1 SEX F
+1 FAMS @F68@
+1 BIRT
+2 DATE 1768
+2 PLAC Norwich, New London, Connecticut, USA
+1 DEAT
+2 DATE 13 Apr 1844
+2 PLAC Norwich, New London, Connecticut, USA
+0 @I272801602525@ INDI
+1 NAME Mary Gardiner /Goodwin/
+2 GIVN Mary Gardiner
+2 SURN Goodwin
+1 SEX F
+1 FAMS @F91@
+1 BIRT
+2 DATE 8 Jan 1777
+2 PLAC Southold, Suffolk Co., New York, USA
+1 DEAT
+2 DATE 17 Dec 1825
+2 PLAC Cuba, Allegany Co., New York, USA
+0 @I272801602598@ INDI
+1 NAME Sgt. Andrew F /Boynton, RWS./
+2 GIVN Sgt. Andrew F
+2 SURN Boynton, RWS.
+1 SEX M
+1 FAMC @F35@
+1 FAMS @F16@
+1 BIRT
+2 DATE 10 May 1736
+2 PLAC Bradford
+1 DEAT
+2 DATE 28 Jul 1835
+2 PLAC Angelica, Allegany, New York, United States
+0 @I272801602616@ INDI
+1 NAME Elizabeth /Hancock/
+2 GIVN Elizabeth
+2 SURN Hancock
+1 SEX F
+1 FAMC @F51@
+1 FAMS @F16@
+1 BIRT
+2 DATE Nov 20, 1737
+2 PLAC Medford, Massachusetts, United States
+1 DEAT
+2 DATE 1835
+2 PLAC New York, United States
+1 OBJE @O4@
+2 _PRIM Y
+0 @I272801602657@ INDI
+1 NAME Andrew /Boynton/ 14972
+2 GIVN Andrew
+2 SURN Boynton
+2 NSFX 14972
+1 SEX M
+1 FAMS @F35@
+1 BIRT
+2 DATE 10 Jan 1718
+2 PLAC Bradford, Essex, Massachusetts, United States
+1 DEAT
+2 DATE 12 Sept 1746
+2 PLAC Boston, Suffolk, Massachusetts
+1 OBJE @O30@
+2 _PRIM Y
+0 @I272801602668@ INDI
+1 NAME Elezebeth /Hazeltine/
+2 GIVN Elezebeth
+2 SURN Hazeltine
+1 SEX F
+1 FAMS @F35@
+1 BIRT
+2 DATE 10 Jan 1718
+2 PLAC Bradford
+1 DEAT
+2 PLAC , , Massachusetts, USA
+1 OBJE @O58@
+2 _PRIM Y
+0 @I272801602721@ INDI
+1 NAME Solomon /Hancock/
+2 GIVN Solomon
+2 SURN Hancock
+1 SEX M
+1 FAMC @F66@
+1 FAMS @F51@
+1 BIRT
+2 DATE 18 Jun 1704
+2 PLAC Lexington, Middlesex Co. Massachusetts
+1 DEAT
+2 DATE 20 Sep 1756
+2 PLAC Cambridge, Middlesex, Massachusetts, USA
+0 @I272801602732@ INDI
+1 NAME Hannah /Tufts \ Hancock \ Richardson/
+2 GIVN Hannah
+2 SURN Tufts \ Hancock \ Richardson
+1 SEX F
+1 FAMS @F51@
+1 BIRT
+2 DATE 1707
+2 PLAC Piscataqua, New Hampshire, USA
+1 DEAT
+2 DATE 20 May 1804
+2 PLAC Marlborough, Cheshire, New Hampshire, USA
+0 @I272801602749@ INDI
+1 NAME Nathaniel /Hancock/ III
+2 GIVN Nathaniel
+2 SURN Hancock
+2 NSFX III
+1 SEX M
+1 FAMS @F66@
+1 BIRT
+2 DATE 29 October 1668
+2 PLAC Cambridge, Middlesex County, Massachusetts, USA
+1 DEAT
+2 DATE 10 May 1755
+2 PLAC Cambridge, Middlesex County, Massachusetts, USA
+1 OBJE @O56@
+2 _PRIM Y
+0 @I272801602778@ INDI
+1 NAME Prudence /Russell/
+2 GIVN Prudence
+2 SURN Russell
+1 SEX F
+1 FAMS @F66@
+1 BIRT
+2 DATE 30 May 1670
+2 PLAC Cambridge, Middlesex County, Massachusetts, United States of America
+1 DEAT
+2 DATE 15 July 1742
+2 PLAC Cambridge, Middlesex County, Massachusetts, United States of America
+1 OBJE @O27@
+2 _PRIM Y
+0 @I272801603055@ INDI
+1 NAME Peter A /Marino/
+2 GIVN Peter A
+2 SURN Marino
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Saint George High School; Year: 1956
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::389189317
+3 _APID 1,1265::389189346
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Saint George High School; Year: 1955
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::407758474
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Chicago, Cook, Illinois; Roll: m-t0627-01006; Page: 3B; Enumeration District: 103-2708
+3 _APID 1,2442::147722848
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 28 Jun 1975; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 _APID 1,61843::172346908
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Chicago, Cook, Illinois; Roll: 6126; Page: 18; Enumeration District: 103-5022
+3 _APID 1,62308::223034840
+1 SEX M
+1 FAMC @F81@
+1 FAMS @F80@
+1 BIRT
+2 DATE abt 1940
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Saint George High School; Year: 1956
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::389189317
+3 _APID 1,1265::389189346
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Saint George High School; Year: 1955
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::407758474
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Chicago, Cook, Illinois; Roll: m-t0627-01006; Page: 3B; Enumeration District: 103-2708
+3 _APID 1,2442::147722848
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Chicago, Cook, Illinois; Roll: 6126; Page: 18; Enumeration District: 103-5022
+3 _APID 1,62308::223034840
+1 RESI
+2 DATE 1940
+2 PLAC Chicago, Cook, Illinois, USA
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Chicago, Cook, Illinois; Roll: m-t0627-01006; Page: 3B; Enumeration District: 103-2708
+3 _APID 1,2442::147722848
+2 NOTE Marital Status: Single; Relation to Head of House: Head
+1 RESI
+2 DATE 1950
+2 PLAC Chicago, Cook, Illinois, USA
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Chicago, Cook, Illinois; Roll: 6126; Page: 18; Enumeration District: 103-5022
+3 _APID 1,62308::223034840
+2 NOTE Relation to Head of House: Son; Marital Status: Never Married
+1 RESI
+2 DATE 1955
+2 PLAC Evanston, Illinois, USA
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Saint George High School; Year: 1955
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::407758474
+1 RESI
+2 DATE 1956
+2 PLAC Evanston, Illinois, USA
+2 SOUR @S982582582@
+3 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Saint George High School; Year: 1956
+3 DATA
+4 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+3 _APID 1,1265::389189317
+3 _APID 1,1265::389189346
+1 SOUR @S982582582@
+2 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Saint George High School; Year: 1956
+2 DATA
+3 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+2 _APID 1,1265::389189317
+2 _APID 1,1265::389189346
+1 SOUR @S982582582@
+2 PAGE "U.S., School Yearbooks, 1880-2012"; School Name: Saint George High School; Year: 1955
+2 DATA
+3 WWW https://www.classmates.com/yearbooks/?page=1&s=81166&utm_source=ancestry&utm_medium=unpaid&utm_campaign=partnerships&utm_term=yearbook&utm_content=81166
+2 _APID 1,1265::407758474
+1 SOUR @S982598277@
+2 PAGE Year: 1940; Census Place: Chicago, Cook, Illinois; Roll: m-t0627-01006; Page: 3B; Enumeration District: 103-2708
+2 _APID 1,2442::147722848
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 28 Jun 1975; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+2 _APID 1,61843::172346908
+1 SOUR @S982582572@
+2 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Chicago, Cook, Illinois; Roll: 6126; Page: 18; Enumeration District: 103-5022
+2 _APID 1,62308::223034840
+1 OBJE @O22@
+2 _PRIM Y
+2 _CROP
+3 _LEFT 123
+3 _TOP 100
+3 _WDTH 491
+3 _HGHT 601
+3 _TYPE primary
+0 @I272801603056@ INDI
+1 NAME Mary Ann /Marino/
+2 GIVN Mary Ann
+2 SURN Marino
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 28 Jun 1975; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 _APID 1,61843::172573853
+1 SEX F
+1 FAMC @F81@
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 28 Jun 1975; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+2 _APID 1,61843::172573853
+0 @I272801603057@ INDI
+1 NAME Pat /Musante/
+2 GIVN Pat
+2 SURN Musante
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 28 Jun 1975; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 _APID 1,61843::172727349
+1 SEX F
+1 FAMC @F81@
+1 FAMS @F19@
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 28 Jun 1975; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+2 _APID 1,61843::172727349
+0 @I272801603058@ INDI
+1 NAME Alexander F. /Marino/
+2 GIVN Alexander F.
+2 SURN Marino
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 28 Jun 1975; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 _APID 1,61843::547569493
+1 SEX M
+1 FAMC @F17@
+1 FAMS @F81@
+1 BIRT
+2 DATE abt 1922
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 28 Jun 1975; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 _APID 1,61843::547569493
+1 RESI
+2 PLAC Chicago, Cook, Illinois, USA
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 28 Jun 1975; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 _APID 1,61843::547569493
+1 DEAT
+2 DATE Abt 1975
+2 PLAC Miami Beach, Miami-dade, Florida, USA
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 28 Jun 1975; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 _APID 1,61843::547569493
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 28 Jun 1975; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+2 _APID 1,61843::547569493
+0 @I272801603059@ INDI
+1 NAME Ann H. /Marino/
+2 GIVN Ann H.
+2 SURN Marino
+2 SOUR @S982582928@
+3 PAGE Social Security Administration; Washington D.C., USA; Social Security Death Index, Master File
+3 _APID 1,3693::83301690
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 28 Jun 1975; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+3 _APID 1,61843::172000896
+1 SEX F
+1 FAMC @F23@
+1 FAMS @F81@
+1 BIRT
+2 DATE 27 Dec 1911
+2 SOUR @S982582928@
+3 PAGE Social Security Administration; Washington D.C., USA; Social Security Death Index, Master File
+3 _APID 1,3693::83301690
+1 RESI
+2 DATE Before 1951
+2 PLAC Illinois
+2 SOUR @S982582928@
+3 PAGE Social Security Administration; Washington D.C., USA; Social Security Death Index, Master File
+3 _APID 1,3693::83301690
+1 DEAT
+2 DATE 11 Sep 2008
+2 SOUR @S982582928@
+3 PAGE Social Security Administration; Washington D.C., USA; Social Security Death Index, Master File
+3 _APID 1,3693::83301690
+1 SOUR @S982582928@
+2 PAGE Social Security Administration; Washington D.C., USA; Social Security Death Index, Master File
+2 _APID 1,3693::83301690
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 28 Jun 1975; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/382238862/?article=76dfaea7-674a-426e-8497-2b7d179a0763&focus=0.28963608,0.3616484,0.516089,0.61049676&xid=3355
+2 _APID 1,61843::172000896
+0 @I272801603878@ INDI
+1 NAME Pietro /Marino/
+2 GIVN Pietro
+2 SURN Marino
+1 SEX M
+1 FAMC @F38@
+1 FAMS @F17@
+1 BIRT
+2 DATE 14 November 1874
+2 PLAC Italy
+1 DEAT
+2 DATE 24 October 1918
+2 PLAC Chicago, Cook County, Illinois, United States of America
+1 OBJE @O1@
+2 _PRIM Y
+0 @I272801603894@ INDI
+1 NAME Maria "Marie" /Azzara/
+2 GIVN Maria "Marie"
+2 SURN Azzara
+1 SEX F
+1 FAMC @F61@
+1 FAMS @F17@
+1 BIRT
+2 DATE 1 Jan 1874
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 DEAT
+2 DATE 6 Aug 1948
+2 PLAC Chicago, Cook, Illinois, USA
+1 OBJE @O7@
+2 _PRIM Y
+0 @I272801604968@ INDI
+1 NAME Grazia /Cipolla/
+2 GIVN Grazia
+2 SURN Cipolla
+1 SEX F
+1 FAMC @F67@
+1 FAMS @F38@
+1 BIRT
+2 DATE 17 Jan 1841
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 DEAT
+2 DATE 1925
+2 PLAC Sambuca, Sicilia, Italy
+0 @I272801604997@ INDI
+1 NAME Gaspero /Marino/
+2 GIVN Gaspero
+2 SURN Marino
+1 SEX M
+1 FAMC @F55@
+1 FAMS @F38@
+1 BIRT
+2 DATE 4 Mar 1830
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 DEAT
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 OBJE @O31@
+2 _PRIM Y
+0 @I272801605049@ INDI
+1 NAME Giuseppe Stefano /Azzara/
+2 GIVN Giuseppe Stefano
+2 SURN Azzara
+1 SEX M
+1 FAMC @F37@
+1 FAMS @F61@
+1 BIRT
+2 DATE 15 Mar 1837
+2 PLAC Montevago, Agrigento, Sicilia, Italy
+1 DEAT
+2 DATE Aft. 1894
+0 @I272801605053@ INDI
+1 NAME Audenzia /Pumilia/
+2 GIVN Audenzia
+2 SURN Pumilia
+1 SEX F
+1 FAMC @F28@
+1 FAMS @F61@
+1 BIRT
+2 DATE 8 Apr 1841
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 OBJE @O21@
+2 _PRIM Y
+0 @I272801612110@ INDI
+1 NAME Gaspare Stefano /Pumilia/
+2 GIVN Gaspare Stefano
+2 SURN Pumilia
+1 SEX M
+1 FAMC @F39@
+1 FAMS @F28@
+1 BIRT
+2 DATE 21 Aug 1816
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 OBJE @O2@
+2 _PRIM Y
+0 @I272801612117@ INDI
+1 NAME Francesca /Cacioppo/
+2 GIVN Francesca
+2 SURN Cacioppo
+1 SEX F
+1 FAMC @F32@
+1 FAMS @F28@
+1 BIRT
+2 DATE 18 Oct 1818
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 OBJE @O2@
+2 _PRIM Y
+0 @I272801612135@ INDI
+1 NAME Diego /Azzara/
+2 GIVN Diego
+2 SURN Azzara
+1 SEX M
+1 FAMC @F46@
+1 FAMS @F37@
+1 BIRT
+2 DATE 1795
+2 PLAC Montevago, Agrigento, Sicilia, Italy
+1 DEAT
+2 DATE 28 Oct 1837
+2 PLAC Montevago, Agrigento, Sicilia, Italy
+0 @I272801612149@ INDI
+1 NAME Grazia /La Rocca/
+2 GIVN Grazia
+2 SURN La Rocca
+1 SEX F
+1 FAMC @F64@
+1 FAMS @F37@
+1 BIRT
+2 DATE 7 Nov 1805
+2 PLAC Montevago, Agrigento, Sicilia, Italy
+1 DEAT
+2 DATE 19 Jun 1880
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+0 @I272801612194@ INDI
+1 NAME Audenzia /Gulotta/
+2 GIVN Audenzia
+2 SURN Gulotta
+1 SEX F
+1 FAMS @F32@
+1 BIRT
+2 DATE 1781
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 DEAT
+2 DATE 1 Apr 1841
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+0 @I272801612218@ INDI
+1 NAME Caterina /Mazzotta/
+2 GIVN Caterina
+2 SURN Mazzotta
+1 SEX F
+1 FAMS @F64@
+1 BIRT
+2 PLAC Montevago, Agrigento, Italy
+0 @I272801612233@ INDI
+1 NAME Antonino /LaRocca/
+2 GIVN Antonino
+2 SURN LaRocca
+1 SEX M
+1 FAMS @F64@
+1 BIRT
+2 PLAC Montevago, Agrigento, Italy
+0 @I272801612283@ INDI
+1 NAME Taylor Janine /Barcelow/
+2 GIVN Taylor Janine
+2 SURN Barcelow
+2 SOUR @S982582744@
+3 _APID 1,62209::136511650
+2 SOUR @S982598257@
+3 PAGE North Carolina State Board of Elections; Raleigh, North Carolina; North Carolina Voter Registration Records 1872-2023
+3 _APID 1,62895::5462327
+1 SEX F
+1 FAMS @F62@
+1 BIRT
+2 DATE 1986
+2 PLAC Minnesota
+2 SOUR @S982582744@
+3 _APID 1,62209::136511650
+2 SOUR @S982598257@
+3 PAGE North Carolina State Board of Elections; Raleigh, North Carolina; North Carolina Voter Registration Records 1872-2023
+3 _APID 1,62895::5462327
+1 RESI
+2 DATE 2005-2006
+2 PLAC Minneapolis, Minnesota, USA
+2 SOUR @S982582744@
+3 _APID 1,62209::136511650
+1 RESI
+2 DATE 2011-2020
+2 PLAC Marshall, North Carolina, USA
+2 SOUR @S982582744@
+3 _APID 1,62209::136511650
+1 RESI
+2 PLAC Marshall, North Carolina
+2 SOUR @S982598257@
+3 PAGE North Carolina State Board of Elections; Raleigh, North Carolina; North Carolina Voter Registration Records 1872-2023
+3 _APID 1,62895::5462327
+1 SOUR @S982582744@
+2 _APID 1,62209::136511650
+1 SOUR @S982598257@
+2 PAGE North Carolina State Board of Elections; Raleigh, North Carolina; North Carolina Voter Registration Records 1872-2023
+2 _APID 1,62895::5462327
+0 @I272801612859@ INDI
+1 NAME Huck /Lucas/
+2 GIVN Huck
+2 SURN Lucas
+1 SEX M
+1 FAMC @F85@
+0 @I272801612892@ INDI
+1 NAME Stefano /Cacioppo/
+2 GIVN Stefano
+2 SURN Cacioppo
+1 SEX M
+1 FAMS @F32@
+1 BIRT
+2 DATE 1767-1768
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 DEAT
+2 DATE 15 Apr 1833
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+0 @I272801612914@ INDI
+1 NAME Pietro /Pumilia/
+2 GIVN Pietro
+2 SURN Pumilia
+1 SEX M
+1 FAMS @F39@
+1 BIRT
+2 DATE 1759-1778
+1 DEAT
+2 DATE 9 Jun 1849
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+0 @I272801612923@ INDI
+1 NAME Audenzia /Stabile/
+2 GIVN Audenzia
+2 SURN Stabile
+1 SEX F
+1 FAMS @F39@
+1 BIRT
+2 DATE abt 1787
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 DEAT
+2 DATE 12 Jul 1837
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 OBJE @O26@
+2 _PRIM Y
+0 @I272801612942@ INDI
+1 NAME Crescenzia /Mazzotta/
+2 GIVN Crescenzia
+2 SURN Mazzotta
+1 SEX F
+1 FAMC @F21@
+1 FAMC @F22@
+1 FAMS @F46@
+1 BIRT
+2 DATE 1763
+2 PLAC Menfi, Agrigento, Sicilia, Italy
+1 DEAT
+2 DATE 16 Aug 1837
+2 PLAC Montevago, Agrigento, Sicilia, Italy
+0 @I272801612968@ INDI
+1 NAME Calogero /Azzara/
+2 GIVN Calogero
+2 SURN Azzara
+1 SEX M
+1 FAMC @F40@
+1 FAMS @F46@
+1 BIRT
+2 DATE 1770
+2 PLAC Montevago, Agrigento, Sicilia, Italy
+1 DEAT
+2 DATE 17 Mar 1840
+2 PLAC Montevago, Agrigento, Sicilia, Italy
+0 @I272801613111@ INDI
+1 NAME Domenica /Lamberta/
+2 GIVN Domenica
+2 SURN Lamberta
+1 SEX F
+1 FAMS @F21@
+1 FAMS @F22@
+1 BIRT
+2 DATE Abt. 1740
+2 PLAC Montevago, Agrigento, Italy
+1 DEAT
+2 DATE before 1838
+2 PLAC Montevago, Agrigento, Italy
+0 @I272801613131@ INDI
+1 NAME Diego /Mazzotta/
+2 GIVN Diego
+2 SURN Mazzotta
+1 SEX M
+1 FAMS @F21@
+1 BIRT
+2 DATE Abt. 1740
+2 PLAC Montevago, Agrigento, Italy
+1 DEAT
+2 DATE before 1838
+0 @I272801613138@ INDI
+1 NAME Diego /Mazzotta/
+2 GIVN Diego
+2 SURN Mazzotta
+1 SEX M
+1 FAMS @F22@
+1 BIRT
+2 DATE Abt. 1740
+2 PLAC Montevago, Agrigento, Italy
+1 DEAT
+2 DATE before 1838
+0 @I272801613177@ INDI
+1 NAME Saverio /Azzara/
+2 GIVN Saverio
+2 SURN Azzara
+1 SEX M
+1 FAMS @F40@
+1 BIRT
+2 DATE Abt. 1740
+2 PLAC Montevago, Agrigento, Sicilia, Italy
+1 DEAT
+2 DATE 7 May 1812
+2 PLAC Montevago, Agrigento, Sicilia, Italy
+0 @I272801613210@ INDI
+1 NAME Benigna /Libassi/
+2 GIVN Benigna
+2 SURN Libassi
+1 SEX F
+1 FAMS @F40@
+1 BIRT
+2 DATE 16 Dec 1740
+2 PLAC Santa Margherita di Belice, Agrigento, Sicilia, Italy
+1 DEAT
+2 DATE 14 August 1799
+2 PLAC Montevago, Agrigento, Sicilia, Italy
+0 @I272801613348@ INDI
+1 NAME John /Lucas/
+2 GIVN John
+2 SURN Lucas
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 24 Jan 2005; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 _APID 1,61843::480743167
+1 SEX U
+1 FAMC @F15@
+1 FAMS @F88@
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 24 Jan 2005; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+2 _APID 1,61843::480743167
+0 @I272801613349@ INDI
+1 NAME Charlotte /Sorci/
+2 GIVN Charlotte
+2 SURN Sorci
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 24 Jan 2005; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 _APID 1,61843::480958266
+1 FAMC @F15@
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 24 Jan 2005; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+2 _APID 1,61843::480958266
+0 @I272801613350@ INDI
+1 NAME David /Lucas/
+2 GIVN David
+2 SURN Lucas
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 24 Jan 2005; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 _APID 1,61843::481230732
+1 FAMC @F15@
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 24 Jan 2005; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+2 _APID 1,61843::481230732
+0 @I272801613351@ INDI
+1 NAME John /Lucas/
+2 GIVN John
+2 SURN Lucas
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 24 Jan 2005; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 _APID 1,61843::638853140
+1 SEX M
+1 FAMS @F15@
+1 BIRT
+2 DATE abt 1917
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 24 Jan 2005; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 _APID 1,61843::638853140
+1 RESI
+2 PLAC Schaumburg, Cook, Illinois, USA
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 24 Jan 2005; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 _APID 1,61843::638853140
+1 DEAT
+2 DATE Abt 2005
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 24 Jan 2005; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 _APID 1,61843::638853140
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 24 Jan 2005; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+2 _APID 1,61843::638853140
+0 @I272801613352@ INDI
+1 NAME Catherine S /Lucas/
+2 GIVN Catherine S
+2 SURN Lucas
+2 SOUR @S982607361@
+3 _APID 1,60901::20298871
+2 SOUR @S982582581@
+3 PAGE Chicago Tribune; Publication Date: 24 Jan 2005; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 DATA
+4 WWW https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+3 _APID 1,61843::480453332
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Chicago, Cook, Illinois; Roll: 1903; Page: 7; Enumeration District: 103-2856
+3 _APID 1,62308::217889285
+1 SEX F
+1 FAMC @F83@
+1 FAMC @F84@
+1 FAMS @F15@
+1 BIRT
+2 DATE 2 Apr 1920
+2 PLAC Chicago, Illinois
+2 SOUR @S982607361@
+3 _APID 1,60901::20298871
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Chicago, Cook, Illinois; Roll: 1903; Page: 7; Enumeration District: 103-2856
+3 _APID 1,62308::217889285
+1 RESI
+2 DATE 1950
+2 PLAC Chicago, Cook, Illinois, USA
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Chicago, Cook, Illinois; Roll: 1903; Page: 7; Enumeration District: 103-2856
+3 _APID 1,62308::217889285
+2 NOTE Relation to Head of House: Wife; Marital Status: Married
+1 RESI
+2 PLAC Chicago, Cook, Illinois
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Chicago, Cook, Illinois; Roll: 1903; Page: 7; Enumeration District: 103-2856
+3 _APID 1,62308::217889285
+1 DEAT
+2 DATE 19 Nov 2000
+2 SOUR @S982607361@
+3 _APID 1,60901::20298871
+1 SOUR @S982607361@
+2 _APID 1,60901::20298871
+1 SOUR @S982582581@
+2 PAGE Chicago Tribune; Publication Date: 24 Jan 2005; Publication Place: Chicago, Illinois, USA; URL: https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+2 DATA
+3 WWW https://www.newspapers.com/image/232420527/?article=73a6421f-7ad4-4f9e-933b-327309baa4ce&focus=0.32308495,0.49081832,0.40084895,0.56836545&xid=3355
+2 _APID 1,61843::480453332
+1 SOUR @S982582572@
+2 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Chicago, Cook, Illinois; Roll: 1903; Page: 7; Enumeration District: 103-2856
+2 _APID 1,62308::217889285
+0 @I272801613464@ INDI
+1 NAME John /Lucas/
+2 GIVN John
+2 SURN Lucas
+1 SEX M
+1 FAMC @F88@
+0 @I272801613665@ INDI
+1 NAME Claus Cläes Johan /Malmsten/
+2 GIVN Claus Cläes Johan
+2 SURN Malmsten
+1 SEX M
+1 FAMC @F52@
+1 FAMS @F36@
+1 BIRT
+2 DATE 4 Feb 1836
+2 PLAC Korpebo, Malmbäck, Jönköping, Sweden
+1 DEAT
+2 DATE 14 Feb 1906
+2 PLAC Donaldson, Marshall County, Indiana, USA
+1 OBJE @O36@
+2 _PRIM Y
+0 @I272801613683@ INDI
+1 NAME Anna Greta /Magnusdotter/
+2 GIVN Anna Greta
+2 SURN Magnusdotter
+1 SEX F
+1 FAMC @F4@
+1 FAMS @F36@
+1 BIRT
+2 DATE 27 Oct 1836
+2 PLAC Norra Ljunga, (Smäland), Sweden
+1 DEAT
+2 DATE 15 May 1915
+2 PLAC Portage, Porter, Indiana, USA
+1 OBJE @O53@
+2 _PRIM Y
+0 @I272801613705@ INDI
+1 NAME Samuel Bartlett /Woods/
+2 GIVN Samuel Bartlett
+2 SURN Woods
+1 SEX M
+1 FAMC @F73@
+1 FAMS @F44@
+1 BIRT
+2 DATE 7 January 1856
+2 PLAC Ross, Lake, Indiana, USA
+1 DEAT
+2 DATE Jan 1956
+2 PLAC Griffith, Lake, Indiana
+1 OBJE @O20@
+2 _PRIM Y
+0 @I272801613709@ INDI
+1 NAME Melluegena C /Vilmer/
+2 GIVN Melluegena C
+2 SURN Vilmer
+1 SEX F
+1 FAMC @F11@
+1 FAMS @F44@
+1 BIRT
+2 DATE 26 Jun 1857
+2 PLAC Center, Crown Point, Lake, Indiana, USA
+1 DEAT
+2 DATE 18 Feb 1936
+2 PLAC Griffith, Lake, Indiana, USA
+1 OBJE @O41@
+2 _PRIM Y
+0 @I272801613729@ INDI
+1 NAME Johannes /Malmsten/
+2 GIVN Johannes
+2 SURN Malmsten
+1 SEX M
+1 FAMC @F13@
+1 FAMS @F52@
+1 BIRT
+2 DATE 14 Apr 1816
+2 PLAC Korpebo, Malmbäck, Jönköping, Sweden
+1 DEAT
+2 DATE 28 Mar 1892
+2 PLAC Skogsberg u Lämmarp, Bringetofta, Jönköping [F].
+1 OBJE @O16@
+2 _PRIM Y
+0 @I272801613740@ INDI
+1 NAME Lisa /Göransdotter/
+2 GIVN Lisa
+2 SURN Göransdotter
+1 SEX F
+1 FAMC @F9@
+1 FAMS @F52@
+1 BIRT
+2 DATE 1 feb 1814
+2 PLAC Bringetofta, Jonkoping, Sweden
+1 DEAT
+2 DATE 26 jan 1897
+2 PLAC Bringetofta, Jonkoping, Sweden
+1 OBJE @O19@
+2 _PRIM Y
+0 @I272801613773@ INDI
+1 NAME Bartlett /Woods/
+2 GIVN Bartlett
+2 SURN Woods
+1 SEX M
+1 FAMC @F14@
+1 FAMS @F73@
+1 BIRT
+2 DATE 15 Jul 1818
+2 PLAC Winchelsea, Rother District, East Sussex, England
+1 DEAT
+2 DATE 1 May 1903
+2 PLAC Ross, Lake, Indiana, USA
+1 OBJE @O33@
+2 _PRIM Y
+0 @I272801613778@ INDI
+1 NAME Ann Elisa /Sigler/
+2 GIVN Ann Elisa
+2 SURN Sigler
+1 SEX F
+1 FAMC @F24@
+1 FAMS @F73@
+1 BIRT
+2 DATE 02 Apr 1827
+2 PLAC Clarksburg, Harrison, West Virginia, United States
+1 DEAT
+2 DATE Oct 06, 1900
+2 PLAC Crown Point , Lake, Indiana
+1 OBJE @O3@
+2 _PRIM Y
+0 @I272801613816@ INDI
+1 NAME Göran /Nilsson/
+2 GIVN Göran
+2 SURN Nilsson
+1 SEX M
+1 FAMS @F9@
+1 BIRT
+2 DATE 25 Nov 1778
+2 PLAC Fämtinge, Bringetofta, Jönköping, (Småland) Sweden
+1 DEAT
+2 DATE 30 Jul 1854
+2 PLAC Strete, Bringetofta, Jönköping
+0 @I272801613843@ INDI
+1 NAME Märta "Maria" /Svensdotter*/
+2 GIVN Märta "Maria"
+2 SURN Svensdotter*
+1 SEX F
+1 FAMS @F9@
+1 BIRT
+2 DATE 28 Feb 1778
+2 PLAC Norra Ljunga (Sävsjö), Jönköping, Sweden
+1 DEAT
+2 DATE 20 Oct 1870
+2 PLAC Strete, Bringetofta, Jönköping
+1 OBJE @O14@
+2 _PRIM Y
+0 @I272801613860@ INDI
+1 NAME Stina /Hansdotter/
+2 GIVN Stina
+2 SURN Hansdotter
+1 SEX F
+1 FAMS @F13@
+1 BIRT
+2 DATE 29 nov 1779
+2 PLAC Gölstorp, Malmbäck, Jönköping, Sweden
+1 DEAT
+2 DATE 9 Sep 1848
+2 PLAC Korpebo, Malmbäck, Jönköping, Sweden
+1 OBJE @O51@
+2 _PRIM Y
+0 @I272801613872@ INDI
+1 NAME Johannes /Larsson/
+2 GIVN Johannes
+2 SURN Larsson
+1 SEX M
+1 FAMS @F13@
+1 BIRT
+2 DATE 29 Jul 1772
+2 PLAC Rommenås, Malmbäck, Jönköping, Sweden
+1 DEAT
+2 DATE JANUARY 14,1827
+2 PLAC Korpebo, Malmbäck, Jönköping, Sweden
+1 OBJE @O51@
+2 _PRIM Y
+0 @I272801613880@ INDI
+1 NAME Samuel Adams /Sigler/
+2 GIVN Samuel Adams
+2 SURN Sigler
+1 SEX M
+1 FAMC @F25@
+1 FAMS @F24@
+1 BIRT
+2 DATE 01 Sep 1788
+2 PLAC Cumberland, Allegany, Maryland, USA
+1 DEAT
+2 DATE 16 Mar 1864
+2 PLAC Hebron, Porter, Indiana, USA
+1 OBJE @O13@
+2 _PRIM Y
+0 @I272801613895@ INDI
+1 NAME Ann Nancy /Taylor/
+2 GIVN Ann Nancy
+2 SURN Taylor
+1 SEX F
+1 FAMC @F29@
+1 FAMS @F24@
+1 BIRT
+2 DATE 10 Nov 1788
+2 PLAC Hampshire, West Virginia, United States
+1 DEAT
+2 DATE 27 Feb 1861
+2 PLAC Hebron, Porter, Indiana, United States
+0 @I272801613919@ INDI
+1 NAME Johann Josef 'Joseph' /Rieden/
+2 GIVN Johann Josef 'Joseph'
+2 SURN Rieden
+1 SEX M
+1 FAMC @F1@
+1 FAMS @F33@
+1 BIRT
+2 DATE 03 May 1829
+2 PLAC Hauroth, Cochem-Zell, Rheinland-Pfalz, Germany
+1 DEAT
+2 DATE 24 June 1912
+2 PLAC Mount Calvary, Fond du Lac County, Wisconsin, USA
+1 OBJE @O37@
+2 _PRIM Y
+0 @I272801613930@ INDI
+1 NAME Anna Maria /Woelver/ Rieden*
+2 GIVN Anna Maria
+2 SURN Woelver
+2 NSFX Rieden*
+1 SEX F
+1 FAMC @F74@
+1 FAMS @F33@
+1 BIRT
+2 DATE 15 June 1833
+2 PLAC Masburg, Cochem-Zell, Rheinland-Pfalz, Germany
+1 DEAT
+2 DATE 28 Jan 1916
+2 PLAC Mt. Calvary, Fond du Lac, Wisconsin
+1 OBJE @O29@
+2 _PRIM Y
+0 @I272801614225@ INDI
+1 NAME Jane /Mengel/
+2 GIVN Jane
+2 SURN Mengel
+2 SOUR @S982598409@
+3 PAGE Publication Date: 27/ Feb/ 2013; Publication Place: Oshkosh, Washington, USA; URL: http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+3 DATA
+4 WWW http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+3 _APID 1,7545::110926742
+1 FAMC @F49@
+1 SOUR @S982598409@
+2 PAGE Publication Date: 27/ Feb/ 2013; Publication Place: Oshkosh, Washington, USA; URL: http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+2 DATA
+3 WWW http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+2 _APID 1,7545::110926742
+0 @I272801614226@ INDI
+1 NAME Matthew Leroy /Mengel/
+2 GIVN Matthew Leroy
+2 SURN Mengel
+2 SOUR @S982598409@
+3 PAGE Publication Date: 27/ Feb/ 2013; Publication Place: Oshkosh, Washington, USA; URL: http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+3 DATA
+4 WWW http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+3 _APID 1,7545::207617926
+2 SOUR @S982582744@
+3 _APID 1,62209::40975201
+1 FAMC @F49@
+1 BIRT
+2 DATE Jan 1964
+2 SOUR @S982582744@
+3 _APID 1,62209::40975201
+1 RESI
+2 DATE 2003-2013
+2 PLAC Oshkosh, Wisconsin, USA
+2 SOUR @S982582744@
+3 _APID 1,62209::40975201
+1 SOUR @S982598409@
+2 PAGE Publication Date: 27/ Feb/ 2013; Publication Place: Oshkosh, Washington, USA; URL: http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+2 DATA
+3 WWW http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+2 _APID 1,7545::207617926
+1 SOUR @S982582744@
+2 _APID 1,62209::40975201
+0 @I272801614227@ INDI
+1 NAME Kathleen Mengel /Flesch/
+2 GIVN Kathleen Mengel
+2 SURN Flesch
+2 SOUR @S982582947@
+3 _APID 1,1788::150162723
+2 SOUR @S982598409@
+3 PAGE Publication Date: 27/ Feb/ 2013; Publication Place: Oshkosh, Washington, USA; URL: http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+3 DATA
+4 WWW http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+3 _APID 1,7545::228132173
+2 SOUR @S982582735@
+3 _APID 1,8744::997702
+2 SOUR @S982582744@
+3 _APID 1,62209::299846050
+1 FAMC @F49@
+1 FAMS @F48@
+1 BIRT
+2 DATE 3 Oct 1955
+2 SOUR @S982582947@
+3 _APID 1,1788::150162723
+2 SOUR @S982582735@
+3 _APID 1,8744::997702
+2 SOUR @S982582744@
+3 _APID 1,62209::299846050
+1 RESI
+2 DATE 1993
+2 PLAC Neenah, WI
+2 SOUR @S982582947@
+3 _APID 1,1788::150162723
+1 RESI
+2 DATE 1994-2020
+2 PLAC Neenah, Wisconsin, USA
+2 SOUR @S982582744@
+3 _APID 1,62209::299846050
+1 RESI
+2 DATE 2017-2020
+2 PLAC Lakewood Ranch, Florida, USA
+2 SOUR @S982582744@
+3 _APID 1,62209::299846050
+1 RESI
+2 PLAC Winnebago
+2 SOUR @S982582735@
+3 _APID 1,8744::997702
+1 SOUR @S982582947@
+2 _APID 1,1788::150162723
+1 SOUR @S982598409@
+2 PAGE Publication Date: 27/ Feb/ 2013; Publication Place: Oshkosh, Washington, USA; URL: http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+2 DATA
+3 WWW http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+2 _APID 1,7545::228132173
+1 SOUR @S982582735@
+2 _APID 1,8744::997702
+1 SOUR @S982582744@
+2 _APID 1,62209::299846050
+0 @I272801614228@ INDI
+1 NAME Mark /Mengel/
+2 GIVN Mark
+2 SURN Mengel
+2 SOUR @S982598409@
+3 PAGE Publication Date: 27/ Feb/ 2013; Publication Place: Oshkosh, Washington, USA; URL: http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+3 DATA
+4 WWW http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+3 _APID 1,7545::234862731
+1 FAMC @F49@
+1 SOUR @S982598409@
+2 PAGE Publication Date: 27/ Feb/ 2013; Publication Place: Oshkosh, Washington, USA; URL: http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+2 DATA
+3 WWW http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+2 _APID 1,7545::234862731
+0 @I272801614229@ INDI
+1 NAME Le Roy /Mengel/
+2 GIVN Le Roy
+2 SURN Mengel
+2 SOUR @S982598409@
+3 PAGE Publication Date: 27/ Feb/ 2013; Publication Place: Oshkosh, Washington, USA; URL: http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+3 DATA
+4 WWW http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+3 _APID 1,7545::147504359
+1 SEX M
+1 FAMS @F49@
+1 SOUR @S982598409@
+2 PAGE Publication Date: 27/ Feb/ 2013; Publication Place: Oshkosh, Washington, USA; URL: http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+2 DATA
+3 WWW http://www.legacy.com/obituaries/thenorthwestern/obituary.aspx?n=mary-ann-mengel&amp;pid=163331007
+2 _APID 1,7545::147504359
+0 @I272801614444@ INDI
+1 NAME Phyllis Dorothy /Dorn/
+2 GIVN Phyllis Dorothy
+2 SURN Dorn
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149475
+2 SOUR @S982607361@
+3 _APID 1,60901::34572426
+1 SEX F
+1 FAMC @F63@
+1 BIRT
+2 DATE 13 Nov 1930
+2 PLAC Milwaukee, Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149475
+2 SOUR @S982607361@
+3 _APID 1,60901::34572426
+1 RESI
+2 DATE 1935
+2 PLAC Marshfield, Fond du Lac, Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149475
+1 RESI
+2 DATE 1940
+2 PLAC Marshfield Town, Marshfield, Fond du Lac, Wisconsin, USA
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149475
+2 NOTE Marital Status: Single; Relation to Head of House: Daughter
+1 DEAT
+2 DATE Mar 1982
+2 SOUR @S982607361@
+3 _APID 1,60901::34572426
+1 SOUR @S982598277@
+2 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+2 _APID 1,2442::76149475
+1 SOUR @S982607361@
+2 _APID 1,60901::34572426
+0 @I272801614445@ INDI
+1 NAME Ralph Lawrence /Dorn/
+2 GIVN Ralph Lawrence
+2 SURN Dorn
+2 SOUR @S982607309@
+3 PAGE U.S., Department of Veterans Affairs; United States; U.S., Department of Veterans Affairs Birls Death File, 1850-2022; URL: https://www.va.gov/
+3 DATA
+4 WWW https://www.va.gov/
+3 _APID 1,2441::24995249
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149476
+2 SOUR @S982582744@
+3 _APID 1,62209::287992694
+1 SEX M
+1 FAMC @F63@
+1 BIRT
+2 DATE 31 Dec 1931
+2 PLAC Wisconsin
+2 SOUR @S982607309@
+3 PAGE U.S., Department of Veterans Affairs; United States; U.S., Department of Veterans Affairs Birls Death File, 1850-2022; URL: https://www.va.gov/
+3 DATA
+4 WWW https://www.va.gov/
+3 _APID 1,2441::24995249
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149476
+2 SOUR @S982582744@
+3 _APID 1,62209::287992694
+1 RESI
+2 DATE 1935
+2 PLAC Marshfield, Fond du Lac, Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149476
+1 RESI
+2 DATE 1940
+2 PLAC Marshfield Town, Marshfield, Fond du Lac, Wisconsin, USA
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+3 _APID 1,2442::76149476
+2 NOTE Marital Status: Single; Relation to Head of House: Son
+1 RESI
+2 DATE 1994-2020
+2 PLAC Men Fls, Wisconsin, USA
+2 SOUR @S982582744@
+3 _APID 1,62209::287992694
+1 RESI
+2 DATE 1994-2020
+2 PLAC Menomonee Falls, Wisconsin, USA
+2 SOUR @S982582744@
+3 _APID 1,62209::287992694
+1 RESI
+2 DATE 2010
+2 PLAC Menomonee Falls, Wisconsin, USA
+2 SOUR @S982582744@
+3 _APID 1,62209::287992694
+1 DEAT
+2 DATE 30 Sep 2009
+2 SOUR @S982607309@
+3 PAGE U.S., Department of Veterans Affairs; United States; U.S., Department of Veterans Affairs Birls Death File, 1850-2022; URL: https://www.va.gov/
+3 DATA
+4 WWW https://www.va.gov/
+3 _APID 1,2441::24995249
+1 SOUR @S982607309@
+2 PAGE U.S., Department of Veterans Affairs; United States; U.S., Department of Veterans Affairs Birls Death File, 1850-2022; URL: https://www.va.gov/
+2 DATA
+3 WWW https://www.va.gov/
+2 _APID 1,2441::24995249
+1 SOUR @S982598277@
+2 PAGE Year: 1940; Census Place: Marshfield, Fond du Lac, Wisconsin; Roll: m-t0627-04480; Page: 11A; Enumeration District: 20-40
+2 _APID 1,2442::76149476
+1 SOUR @S982582744@
+2 _APID 1,62209::287992694
+0 @I272801614540@ INDI
+1 NAME Anna Maria /Justen/
+2 GIVN Anna Maria
+2 SURN Justen
+1 SEX F
+1 FAMS @F74@
+1 BIRT
+2 DATE 18.10.1788
+2 PLAC Masburg, Cochem-Zell, Rheinland-Pfalz, Deutschland
+1 DEAT
+2 DATE 18 Oct 1878
+0 @I272801614555@ INDI
+1 NAME Matthias /Woelver/
+2 GIVN Matthias
+2 SURN Woelver
+1 SEX M
+1 FAMS @F74@
+1 BIRT
+2 DATE 1799
+2 PLAC Hauroth, Cochem-Zell, Rheinland-Pfalz, Germany
+1 DEAT
+2 DATE Jan 1841
+2 PLAC Hauroth, Cochem-Zell, Rheinland-Pfalz, Germany
+0 @I272801614590@ INDI
+1 NAME Catharina /Hoffmann/
+2 GIVN Catharina
+2 SURN Hoffmann
+1 SEX F
+1 FAMS @F1@
+1 BIRT
+2 DATE 21 Apr 1801
+2 PLAC Hauroth, Cochem-Zell, Rheinland-Pfalz, Deutschland
+1 DEAT
+2 DATE 16 Jul 1849
+2 PLAC Hauroth, Cochem-Zell, Rheinland-Pfalz, Deutschland
+1 OBJE @O45@
+2 _PRIM Y
+0 @I272801614593@ INDI
+1 NAME Joannes Nicolaus /Rieden/
+2 GIVN Joannes Nicolaus
+2 SURN Rieden
+1 SEX M
+1 FAMS @F1@
+1 BIRT
+2 DATE 10 May 1788
+2 PLAC Hauroth, Cochem-Zell, Rheinland-Pfalz, Germany
+1 DEAT
+2 DATE 11 Aug 1836
+2 PLAC Hauroth, Cochem-Zell, Rheinland-Pfalz, Germany
+0 @I272801614628@ INDI
+1 NAME Charlotte "Sally" /Tompsett/
+2 GIVN Charlotte "Sally"
+2 SURN Tompsett
+1 SEX F
+1 FAMS @F14@
+1 BIRT
+2 DATE 9 Sep 1787
+2 PLAC Wadhurst, Sussex, England
+1 DEAT
+2 DATE 22 Sep 1870
+2 PLAC Hastings, Sussex, England
+0 @I272801614636@ INDI
+1 NAME John /Woods/ , Postmaster of Hastings
+2 GIVN John
+2 SURN Woods
+2 NSFX , Postmaster of Hastings
+1 SEX M
+1 FAMC @F5@
+1 FAMS @F14@
+1 BIRT
+2 DATE 16 May 1788
+2 PLAC Salehurst, Sussex, England
+1 DEAT
+2 DATE 25 Feb 1867
+2 PLAC Hastings, Sussex, England
+0 @I272801614655@ INDI
+1 NAME Adam Matthias /Sigler/ Rev
+2 GIVN Adam Matthias
+2 SURN Sigler
+2 NSFX Rev
+1 SEX M
+1 FAMC @F65@
+1 FAMS @F25@
+1 BIRT
+2 DATE 30 Aug 1759
+2 PLAC British Colonial America, Loudoun, Virginia
+1 DEAT
+2 DATE Sep 1847
+2 PLAC Cumberland, Allegany, Maryland, USA
+0 @I272801614668@ INDI
+1 NAME Elizabeth /Michael\ Sigler/
+2 GIVN Elizabeth
+2 SURN Michael\ Sigler
+1 SEX F
+1 FAMS @F25@
+1 BIRT
+2 DATE 3 Jul 1763
+2 PLAC now Loudon, Virginia, United States
+1 DEAT
+2 DATE 10 Sep 1843
+2 PLAC Maryland, Meigs, Ohio, United States
+1 OBJE @O9@
+2 _PRIM Y
+0 @I272801614678@ INDI
+1 NAME Daniel David /Taylor  */
+2 GIVN Daniel David
+2 SURN Taylor  *
+1 SEX M
+1 FAMS @F29@
+1 BIRT
+2 DATE 1 February 1758
+2 PLAC Kingwood, Hunterdon County, New Jersey, United States of America
+1 DEAT
+2 DATE 30 May 1844
+2 PLAC Reeses Mills, Hampshire County, West Virginia, USA
+1 OBJE @O17@
+2 _PRIM Y
+0 @I272801614685@ INDI
+1 NAME Margaret /Thatcher  */
+2 GIVN Margaret
+2 SURN Thatcher  *
+1 SEX F
+1 FAMC @F47@
+1 FAMS @F29@
+1 BIRT
+2 DATE 19 January 1760
+2 PLAC Kingwood, Hunterdon County, New Jersey, USA
+1 DEAT
+2 DATE 20 September 1804
+2 PLAC Mineral County, West Virginia, United States of America
+1 OBJE @O46@
+2 _PRIM Y
+0 @I272801614737@ INDI
+1 NAME William /Thatcher  */
+2 GIVN William
+2 SURN Thatcher  *
+1 SEX M
+1 FAMS @F47@
+1 BIRT
+2 DATE 1716
+2 PLAC Arnwell, Kingwood Township, Hunterdon County, New Jersey, USA
+1 DEAT
+2 DATE 7 Jan 1803
+2 PLAC Kingwood, Hunterdon County, New Jersey, USA
+1 OBJE @O54@
+2 _PRIM Y
+0 @I272801614745@ INDI
+1 NAME Margaret /Taylor/
+2 GIVN Margaret
+2 SURN Taylor
+1 SEX F
+1 FAMS @F47@
+1 BIRT
+2 DATE abt 1718
+2 PLAC Kingwood, Hunterdon, New Jersey, USA
+1 DEAT
+2 DATE 23 Sep 1810
+2 PLAC Hunterdon, New Jersey, USA
+0 @I272801614778@ INDI
+1 NAME Elizabeth Barbara /Kurtz/
+2 GIVN Elizabeth Barbara
+2 SURN Kurtz
+1 SEX F
+1 FAMS @F65@
+1 BIRT
+2 DATE 1735
+2 PLAC Loudon, Virginia, United States
+1 DEAT
+2 DATE 1829
+2 PLAC Allegany County, Maryland, United States of America
+1 OBJE @O47@
+2 _PRIM Y
+0 @I272801614780@ INDI
+1 NAME John /Sigler/ Sr.
+2 GIVN John
+2 SURN Sigler
+2 NSFX Sr.
+1 SEX M
+1 FAMS @F65@
+1 BIRT
+2 DATE 2 Apr 1740
+2 PLAC Loudoun, Virginia, United States
+1 DEAT
+2 DATE 1816
+2 PLAC Westernport, Allegany, Maryland, United States
+0 @I272801614844@ INDI
+1 NAME Magnus /Jonsson/
+2 GIVN Magnus
+2 SURN Jonsson
+1 SEX M
+1 FAMS @F4@
+1 BIRT
+2 DATE 8 Mar 1798
+2 PLAC Swedenin Svenarum, Jönköping, Sweden
+1 DEAT
+2 DATE 29 Nov 1874
+2 PLAC Sävsjö, Källäng, Norra Ljunga, Jönköping, Sverige was listed as crofter
+0 @I272801614855@ INDI
+1 NAME Greta Stina /Abrahamsdotter/
+2 GIVN Greta Stina
+2 SURN Abrahamsdotter
+1 SEX F
+1 FAMS @F4@
+1 BIRT
+2 DATE 11 Aug 1799
+2 PLAC Spången Vallsjö Jönköping Sverige
+1 DEAT
+2 DATE 14 Jan 1877
+2 PLAC Sävsjö, Säteri, Norra Ljunga, Jönköping, Sverige
+0 @I272801614868@ INDI
+1 NAME Edward William /Vilmer/
+2 GIVN Edward William
+2 SURN Vilmer
+1 SEX M
+1 FAMS @F11@
+1 DEAT
+2 DATE ABT 1860
+0 @I272801614906@ INDI
+1 NAME Margaret Catherine /Herlitz/
+2 GIVN Margaret Catherine
+2 SURN Herlitz
+1 SEX F
+1 FAMC @F12@
+1 FAMS @F11@
+1 BIRT
+2 DATE 21 FEB 1839
+2 PLAC Ann Arbor, Washtenaw, Michigan, USA
+1 DEAT
+2 DATE 28 MAY 1914
+2 PLAC Center, Lake, Indiana, United States
+1 OBJE @O40@
+2 _PRIM Y
+0 @I272801615159@ INDI
+1 NAME Ianae /Bublis/
+2 GIVN Ianae
+2 SURN Bublis
+1 SEX M
+1 FAMS @F23@
+1 BIRT
+2 DATE 1875
+2 PLAC Russia
+0 @I272801615171@ INDI
+1 NAME Anna /Bublis/
+2 GIVN Anna
+2 SURN Bublis
+1 SEX F
+1 FAMS @F23@
+1 BIRT
+2 DATE 1881
+2 PLAC Russia
+0 @I272801615276@ INDI
+1 NAME Harris Linwood /Crandall/
+2 GIVN Harris Linwood
+2 SURN Crandall
+1 SEX M
+1 FAMC @F75@
+1 FAMS @F57@
+1 BIRT
+2 DATE Mar 1834
+2 PLAC Essex, New York, USA
+1 DEAT
+2 DATE 1916
+2 PLAC Wisconsin Rapids, Wood, Wisconsin, USA
+0 @I272801615281@ INDI
+1 NAME Jane Ann "Jennie" /Jordan/
+2 GIVN Jane Ann "Jennie"
+2 SURN Jordan
+1 SEX F
+1 FAMC @F3@
+1 FAMS @F57@
+1 BIRT
+2 DATE 10 Feb 1841
+2 PLAC Pittsford, Monroe, New York, USA
+1 DEAT
+2 DATE 25 December 1913
+2 PLAC Fond du Lac County, Wisconsin, United States of America
+0 @I272801615311@ INDI
+1 NAME Barton "Dodge" /Crandall/
+2 GIVN Barton "Dodge"
+2 SURN Crandall
+1 SEX M
+1 FAMC @F77@
+1 FAMS @F75@
+1 BIRT
+2 DATE 06 Apr 1804
+2 PLAC Bristol, Ontario, New York, USA
+1 DEAT
+2 DATE 02 May 1869
+2 PLAC Pleasant Grove, Olmsted, Minnesota, USA
+0 @I272801615313@ INDI
+1 NAME Susan /Curtis/
+2 GIVN Susan
+2 SURN Curtis
+1 SEX F
+1 FAMS @F75@
+1 BIRT
+2 DATE 1805
+2 PLAC Bristol, Ontario, New York, USA
+1 DEAT
+2 DATE Aft. 1880
+2 PLAC Rubicon, Dodge, Wisconsin, USA
+0 @I272801615368@ INDI
+1 NAME Charles /Woods/
+2 GIVN Charles
+2 SURN Woods
+1 SEX M
+1 FAMS @F5@
+1 BIRT
+2 DATE abt 1760
+2 PLAC England
+1 DEAT
+2 DATE Bef. 02 Apr 1818
+2 PLAC Salehurst, Sussex, England
+0 @I272801615373@ INDI
+1 NAME Jane /Bartlett/
+2 GIVN Jane
+2 SURN Bartlett
+1 SEX F
+1 FAMS @F5@
+1 BIRT
+2 DATE 1743
+2 PLAC Ewhurst, Sussex, England
+1 DEAT
+2 DATE October 1862
+2 PLAC Lewes, Sussex
+0 @I272801619136@ INDI
+1 NAME Aidan Teschner /Delgado/
+2 GIVN Aidan Teschner
+2 SURN Delgado
+1 SEX M
+1 FAMC @F6@
+0 @I272801619179@ INDI
+1 NAME Dylan Teschner /Delgado/
+2 GIVN Dylan Teschner
+2 SURN Delgado
+1 SEX M
+1 FAMC @F6@
+0 @I272801619287@ INDI
+1 NAME Tammy /Teschner/
+2 GIVN Tammy
+2 SURN Teschner
+2 SOUR @S982598860@
+3 PAGE The Capital Times; Publication Date: 31/ May/ 1997; Publication Place: Madison, Wisconsin, USA; URL: https://www.newspapers.com/image/522741139/?article=d001fe56-4713-4b44-a85f-dbd2d3ad4579&xid=3398
+3 DATA
+4 WWW https://www.newspapers.com/image/522741139/?article=d001fe56-4713-4b44-a85f-dbd2d3ad4579&xid=3398
+3 _APID 1,62116::25502140
+1 SEX F
+1 FAMS @F7@
+1 SOUR @S982598860@
+2 PAGE The Capital Times; Publication Date: 31/ May/ 1997; Publication Place: Madison, Wisconsin, USA; URL: https://www.newspapers.com/image/522741139/?article=d001fe56-4713-4b44-a85f-dbd2d3ad4579&xid=3398
+2 DATA
+3 WWW https://www.newspapers.com/image/522741139/?article=d001fe56-4713-4b44-a85f-dbd2d3ad4579&xid=3398
+2 _APID 1,62116::25502140
+0 @I272801619421@ INDI
+1 NAME Michael David /Flesch/
+2 GIVN Michael David
+2 SURN Flesch
+2 SOUR @S982582735@
+3 _APID 1,8744::48726
+1 SEX M
+1 FAMS @F48@
+1 BIRT
+2 DATE 1957
+2 SOUR @S982582735@
+3 _APID 1,8744::48726
+1 RESI
+2 PLAC Winnebago
+2 SOUR @S982582735@
+3 _APID 1,8744::48726
+1 SOUR @S982582735@
+2 _APID 1,8744::48726
+0 @I272801619672@ INDI
+1 NAME Pardon C /Crandall/
+2 GIVN Pardon C
+2 SURN Crandall
+1 SEX M
+1 FAMS @F77@
+1 BIRT
+2 DATE 08 Jan 1761
+2 PLAC Hopkinton, Kings, Rhode Island Colony, British Colonial Amer, Offaly {Kings}, Leinster, Ireland
+1 DEAT
+2 DATE 24 March 1837
+2 PLAC Lake George, Warren County, New York, United States of America
+1 OBJE @O35@
+2 _PRIM Y
+0 @I272801619687@ INDI
+1 NAME Marguerite "Martha" "Polly" /Lebaron (Crandall)/
+2 GIVN Marguerite "Martha" "Polly"
+2 SURN Lebaron (Crandall)
+1 SEX F
+1 FAMS @F77@
+1 BIRT
+2 DATE 1781
+2 PLAC Hopkinton, Washington, Rhode Island, United States
+1 DEAT
+2 DATE 9 Jul 1826
+2 PLAC Warrensburg, Warren, New York, United States
+1 OBJE @O15@
+2 _PRIM Y
+0 @I272801619716@ INDI
+1 NAME Isaac /Jordon/
+2 GIVN Isaac
+2 SURN Jordon
+1 SEX M
+1 FAMS @F3@
+1 BIRT
+2 DATE 18 AUG 1816
+2 PLAC England
+1 DEAT
+2 DATE 23 February 1879
+2 PLAC Rochester, Monroe, New York
+1 OBJE @O24@
+2 _PRIM Y
+0 @I272801619725@ INDI
+1 NAME Susanna M. /Priestley/
+2 GIVN Susanna M.
+2 SURN Priestley
+1 SEX F
+1 FAMS @F3@
+1 BIRT
+2 DATE 21 Aug 1817
+2 PLAC Pittsford, Monroe, New York
+1 DEAT
+2 DATE 30 Dec 1903
+2 PLAC Hamlin, Monroe, New York, USA
+1 OBJE @O6@
+2 _PRIM Y
+0 @I272801619990@ INDI
+1 NAME Louis E. /Herlitz/
+2 GIVN Louis E.
+2 SURN Herlitz
+1 SEX M
+1 FAMS @F12@
+1 BIRT
+2 DATE 1806
+2 PLAC Germany
+1 DEAT
+2 DATE 1869
+0 @I272801619998@ INDI
+1 NAME Anna Gesche /Berger/
+2 GIVN Anna Gesche
+2 SURN Berger
+1 SEX F
+1 FAMS @F12@
+1 BIRT
+2 DATE 1810
+2 PLAC Lamstedt,Hannover, Niedersachsen, Germany
+1 DEAT
+2 DATE 1875
+2 PLAC West Creek, Lake, Indiana
+1 OBJE @O10@
+2 _PRIM Y
+0 @I272801620133@ INDI
+1 NAME Gaspare /Marino/
+2 GIVN Gaspare
+2 SURN Marino
+1 SEX M
+1 FAMS @F55@
+1 BIRT
+2 DATE 1776-1779
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 DEAT
+2 DATE 14 Dec 1829
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 OBJE @O49@
+2 _PRIM Y
+0 @I272801620138@ INDI
+1 NAME Grazia /Sparacino/
+2 GIVN Grazia
+2 SURN Sparacino
+1 SEX F
+1 FAMS @F55@
+1 BIRT
+2 DATE 1793-1800
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 DEAT
+2 DATE 29 Apr 1866
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 OBJE @O49@
+2 _PRIM Y
+0 @I272801620163@ INDI
+1 NAME Nicolo' /Cipolla/
+2 GIVN Nicolo'
+2 SURN Cipolla
+1 SEX M
+1 FAMS @F67@
+1 BIRT
+2 DATE abt 1811
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 DEAT
+2 DATE 23 Jul 1845
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 OBJE @O55@
+2 _PRIM Y
+0 @I272801620185@ INDI
+1 NAME Maria Antonia\Antonina /Moscona/
+2 GIVN Maria Antonia\Antonina
+2 SURN Moscona
+1 SEX F
+1 FAMS @F67@
+1 BIRT
+2 DATE 29 Nov 1819
+2 PLAC Sambuca di Sicilia, Agrigento, Sicilia, Italy
+1 DEAT
+2 DATE aft 1881
+1 OBJE @O8@
+2 _PRIM Y
+0 @I272801710895@ INDI
+1 NAME Al /Musante/
+2 GIVN Al
+2 SURN Musante
+1 SEX M
+1 FAMS @F19@
+0 @I272801711373@ INDI
+1 NAME Walter /Dorn/
+2 GIVN Walter
+2 SURN Dorn
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859763
+1 SEX M
+1 FAMC @F82@
+1 BIRT
+2 DATE 1897
+2 PLAC Wisconsin
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859763
+1 RESI
+2 DATE 1910
+2 PLAC New Holstein, Calumet, Wisconsin, USA
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859763
+2 NOTE Marital Status: Single; Relation to Head of House: Son
+1 SOUR @S982607346@
+2 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+2 _APID 1,7884::169859763
+0 @I272801711374@ INDI
+1 NAME Katie /Dorn/
+2 GIVN Katie
+2 SURN Dorn
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859764
+1 SEX F
+1 FAMC @F82@
+1 BIRT
+2 DATE 1899
+2 PLAC Wisconsin
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859764
+1 RESI
+2 DATE 1910
+2 PLAC New Holstein, Calumet, Wisconsin, USA
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859764
+2 NOTE Marital Status: Single; Relation to Head of House: Daughter
+1 SOUR @S982607346@
+2 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+2 _APID 1,7884::169859764
+0 @I272801711375@ INDI
+1 NAME Martha /Dorn/
+2 GIVN Martha
+2 SURN Dorn
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859765
+1 SEX F
+1 FAMC @F82@
+1 BIRT
+2 DATE 1901
+2 PLAC Wisconsin
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859765
+1 RESI
+2 DATE 1910
+2 PLAC New Holstein, Calumet, Wisconsin, USA
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859765
+2 NOTE Marital Status: Single; Relation to Head of House: Daughter
+1 SOUR @S982607346@
+2 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+2 _APID 1,7884::169859765
+0 @I272801711376@ INDI
+1 NAME Ida /Dorn/
+2 GIVN Ida
+2 SURN Dorn
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859766
+1 SEX F
+1 FAMC @F82@
+1 BIRT
+2 DATE 1904
+2 PLAC Wisconsin
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859766
+1 RESI
+2 DATE 1910
+2 PLAC New Holstein, Calumet, Wisconsin, USA
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859766
+2 NOTE Marital Status: Single; Relation to Head of House: Daughter
+1 SOUR @S982607346@
+2 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+2 _APID 1,7884::169859766
+0 @I272801711377@ INDI
+1 NAME Hugo /Dorn/
+2 GIVN Hugo
+2 SURN Dorn
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859768
+1 SEX M
+1 FAMC @F82@
+1 BIRT
+2 DATE 1910
+2 PLAC Wisconsin
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859768
+1 RESI
+2 DATE 1910
+2 PLAC New Holstein, Calumet, Wisconsin, USA
+2 SOUR @S982607346@
+3 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+3 _APID 1,7884::169859768
+2 NOTE Occupation: Farmer; Marital Status: Single; Relation to Head of House: Son
+1 SOUR @S982607346@
+2 PAGE Year: 1910; Census Place: New Holstein, Calumet, Wisconsin; Roll: T624_1703; Page: 7a; Enumeration District: 0008; FHL microfilm: 1375716
+2 _APID 1,7884::169859768
+0 @I272802136921@ INDI
+1 NAME Alexis /Musante/
+2 GIVN Alexis
+2 SURN Musante
+1 SEX F
+1 FAMC @F19@
+0 @I272802136931@ INDI
+1 NAME Brian /Musante/
+2 GIVN Brian
+2 SURN Musante
+1 SEX M
+1 FAMC @F19@
+0 @I272802136962@ INDI
+1 NAME Judy /Marino/
+2 GIVN Judy
+2 SURN Marino
+1 SEX F
+1 FAMS @F80@
+0 @I272802136997@ INDI
+1 NAME Runa /Lucas/
+2 GIVN Runa
+2 SURN Lucas
+1 SEX F
+1 FAMC @F62@
+0 @I272802137018@ INDI
+1 NAME Mads /Lucas/
+2 GIVN Mads
+2 SURN Lucas
+1 SEX M
+1 FAMC @F62@
+0 @I272802137041@ INDI
+1 NAME Berit /Lucas/
+2 GIVN Berit
+2 SURN Lucas
+1 SEX M
+1 FAMC @F62@
+0 @I272802137118@ INDI
+1 NAME Solveig /Lucas/
+2 GIVN Solveig
+2 SURN Lucas
+1 SEX F
+1 FAMC @F62@
+0 @I272802137185@ INDI
+1 NAME August /Dorn/
+2 GIVN August
+2 SURN Dorn
+1 SEX M
+1 FAMC @F70@
+0 @I272802137237@ INDI
+1 NAME Anna A /Syles/
+2 GIVN Anna A
+2 SURN Syles
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Chicago, Cook, Illinois; Roll: 1903; Page: 7; Enumeration District: 103-2856
+3 _APID 1,62308::217889288
+1 SEX F
+1 FAMS @F83@
+1 BIRT
+2 DATE abt 1900
+2 PLAC Illinois
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Chicago, Cook, Illinois; Roll: 1903; Page: 7; Enumeration District: 103-2856
+3 _APID 1,62308::217889288
+1 RESI
+2 DATE 1950
+2 PLAC Chicago, Cook, Illinois, USA
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Chicago, Cook, Illinois; Roll: 1903; Page: 7; Enumeration District: 103-2856
+3 _APID 1,62308::217889288
+2 NOTE Occupation: Supply Clerk; Relation to Head of House: Mother-in-law; Marital Status: Widowed
+1 SOUR @S982582572@
+2 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Chicago, Cook, Illinois; Roll: 1903; Page: 7; Enumeration District: 103-2856
+2 _APID 1,62308::217889288
+0 @I272802137263@ INDI
+1 NAME John S /Sykes/
+2 GIVN John S
+2 SURN Sykes
+2 SOUR @S982607361@
+3 _APID 1,60901::620298871
+1 SEX M
+1 FAMS @F84@
+1 SOUR @S982607361@
+2 _APID 1,60901::620298871
+0 @I272802137809@ INDI
+1 NAME Pat /Veenstra/
+2 GIVN Pat
+2 SURN Veenstra
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040109
+1 SEX F
+1 FAMC @F45@
+1 FAMS @F90@
+1 BIRT
+2 DATE abt 1927
+2 PLAC Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040109
+1 RESI
+2 DATE 1935
+2 PLAC Milwaukee, Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040109
+1 RESI
+2 DATE 1940
+2 PLAC Illin York, Elmhurst, DuPage, Illinois, USA
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040109
+2 NOTE Marital Status: Single; Relation to Head of House: Daughter
+1 SOUR @S982598277@
+2 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+2 _APID 1,2442::142040109
+0 @I272802137862@ INDI
+1 NAME James Peter /Teschner/
+2 GIVN James Peter
+2 SURN Teschner
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040117
+1 SEX M
+1 FAMC @F45@
+1 BIRT
+2 DATE abt 1931
+2 PLAC Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040117
+1 RESI
+2 DATE 1935
+2 PLAC Milwaukee, Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040117
+1 RESI
+2 DATE 1940
+2 PLAC Illin York, Elmhurst, DuPage, Illinois, USA
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040117
+2 NOTE Marital Status: Single; Relation to Head of House: Son
+1 SOUR @S982598277@
+2 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+2 _APID 1,2442::142040117
+0 @I272802137872@ INDI
+1 NAME Helen Jane /Teschner/
+2 GIVN Helen Jane
+2 SURN Teschner
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040112
+1 SEX F
+1 FAMC @F45@
+1 FAMS @F86@
+1 BIRT
+2 DATE abt 1930
+2 PLAC Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040112
+1 RESI
+2 DATE 1935
+2 PLAC Milwaukee, Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040112
+1 RESI
+2 DATE 1940
+2 PLAC Illin York, Elmhurst, DuPage, Illinois, USA
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040112
+2 NOTE Marital Status: Single; Relation to Head of House: Daughter
+1 SOUR @S982598277@
+2 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+2 _APID 1,2442::142040112
+0 @I272802137885@ INDI
+1 NAME Thomas L /Teschner/
+2 GIVN Thomas L
+2 SURN Teschner
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040121
+1 SEX M
+1 FAMC @F45@
+1 BIRT
+2 DATE abt 1934
+2 PLAC Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040121
+1 RESI
+2 DATE 1935
+2 PLAC Milwaukee, Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040121
+1 RESI
+2 DATE 1940
+2 PLAC Illin York, Elmhurst, DuPage, Illinois, USA
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040121
+2 NOTE Marital Status: Single; Relation to Head of House: Son
+1 SOUR @S982598277@
+2 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+2 _APID 1,2442::142040121
+0 @I272802137900@ INDI
+1 NAME John S /Teschner/
+2 GIVN John S
+2 SURN Teschner
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040126
+1 SEX M
+1 FAMC @F45@
+1 BIRT
+2 DATE abt 1935
+2 PLAC Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040126
+1 RESI
+2 DATE 1935
+2 PLAC Milwaukee, Wisconsin
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040126
+1 RESI
+2 DATE 1940
+2 PLAC Illin York, Elmhurst, DuPage, Illinois, USA
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040126
+2 NOTE Marital Status: Single; Relation to Head of House: Son
+1 SOUR @S982598277@
+2 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+2 _APID 1,2442::142040126
+0 @I272802137911@ INDI
+1 NAME Susan M /Teschner/
+2 GIVN Susan M
+2 SURN Teschner
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040127
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Elmhurst, DuPage, Illinois; Roll: 1039; Page: 5; Enumeration District: 22-6
+3 _APID 1,62308::218828826
+1 SEX F
+1 FAMC @F45@
+1 BIRT
+2 DATE abt 1939
+2 PLAC Illinois
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040127
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Elmhurst, DuPage, Illinois; Roll: 1039; Page: 5; Enumeration District: 22-6
+3 _APID 1,62308::218828826
+1 RESI
+2 DATE 1940
+2 PLAC Illin York, Elmhurst, DuPage, Illinois, USA
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040127
+2 NOTE Marital Status: Single; Relation to Head of House: Daughter
+1 RESI
+2 DATE 1950
+2 PLAC Elmhurst, DuPage, Illinois, USA
+2 SOUR @S982582572@
+3 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Elmhurst, DuPage, Illinois; Roll: 1039; Page: 5; Enumeration District: 22-6
+3 _APID 1,62308::218828826
+2 NOTE Relation to Head of House: Daughter; Marital Status: Never Married
+1 SOUR @S982598277@
+2 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+2 _APID 1,2442::142040127
+1 SOUR @S982582572@
+2 PAGE National Archives at Washington, DC; Washington, D.C.; Seventeenth Census of the United States, 1950; Year: 1950; Census Place: Elmhurst, DuPage, Illinois; Roll: 1039; Page: 5; Enumeration District: 22-6
+2 _APID 1,62308::218828826
+0 @I272802137928@ INDI
+1 NAME Sara Lee /Teschner/
+2 GIVN Sara Lee
+2 SURN Teschner
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040132
+1 SEX F
+1 FAMC @F45@
+1 FAMS @F89@
+1 BIRT
+2 DATE abt 1939
+2 PLAC Illinois
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040132
+1 RESI
+2 DATE 1940
+2 PLAC Illin York, Elmhurst, DuPage, Illinois, USA
+2 SOUR @S982598277@
+3 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+3 _APID 1,2442::142040132
+2 NOTE Marital Status: Single; Relation to Head of House: Daughter
+1 SOUR @S982598277@
+2 PAGE Year: 1940; Census Place: Elmhurst, DuPage, Illinois; Roll: m-t0627-00796; Page: 4B; Enumeration District: 22-1
+2 _APID 1,2442::142040132
+0 @I272802138380@ INDI
+1 NAME LeeAnn /Walker/
+2 GIVN LeeAnn
+2 SURN Walker
+1 SEX F
+1 FAMC @F86@
+1 FAMS @F31@
+0 @I272802138400@ INDI
+1 NAME Tom /Walker/
+2 GIVN Tom
+2 SURN Walker
+1 SEX M
+1 FAMS @F31@
+0 @I272802138420@ INDI
+1 NAME Alex /Walker/
+2 GIVN Alex
+2 SURN Walker
+1 SEX M
+1 FAMC @F31@
+0 @I272802138429@ INDI
+1 NAME Lisa /Walker/
+2 GIVN Lisa
+2 SURN Walker
+1 SEX F
+1 FAMC @F31@
+0 @I272802138519@ INDI
+1 NAME Mark /Veenstra/
+2 GIVN Mark
+2 SURN Veenstra
+1 SEX M
+1 FAMC @F90@
+1 FAMS @F58@
+0 @I272802138537@ INDI
+1 NAME MariPat /Veenstra/
+2 GIVN MariPat
+2 SURN Veenstra
+1 SEX F
+1 FAMC @F90@
+0 @I272802138571@ INDI
+1 NAME Debra /Veenstra/
+2 GIVN Debra
+2 SURN Veenstra
+1 SEX F
+1 FAMS @F58@
+0 @I272802138591@ INDI
+1 NAME Jeff /Veenstra/
+2 GIVN Jeff
+2 SURN Veenstra
+1 SEX M
+1 FAMC @F58@
+0 @I272802138606@ INDI
+1 NAME Quinn /Veenstra/
+2 GIVN Quinn
+2 SURN Veenstra
+1 SEX M
+1 FAMC @F58@
+0 @I272802138801@ INDI
+1 NAME Sara /Amrein/
+2 GIVN Sara
+2 SURN Amrein
+1 SEX F
+1 FAMC @F89@
+1 FAMS @F60@
+0 @I272802138830@ INDI
+1 NAME John /Amrein/
+2 GIVN John
+2 SURN Amrein
+1 SEX M
+1 FAMS @F60@
+0 @I272802138861@ INDI
+1 NAME Julie /Krutsch/
+2 GIVN Julie
+2 SURN Krutsch
+1 SEX F
+1 FAMC @F60@
+1 FAMS @F18@
+0 @I272802138961@ INDI
+1 NAME Kurt /Krutsch/
+2 GIVN Kurt
+2 SURN Krutsch
+1 SEX M
+1 FAMS @F18@
+0 @I272802138999@ INDI
+1 NAME Andra /Krutsch/
+2 GIVN Andra
+2 SURN Krutsch
+1 SEX F
+1 FAMC @F18@
+0 @I272802139011@ INDI
+1 NAME Logan /Krutsch/
+2 GIVN Logan
+2 SURN Krutsch
+1 SEX M
+1 FAMC @F18@
+0 @F1@ FAM
+1 HUSB @I272801614593@
+1 WIFE @I272801614590@
+1 CHIL @I272801613919@
+0 @F2@ FAM
+1 HUSB @I272801599018@
+1 WIFE @I272801598976@
+1 CHIL @I272801598920@
+0 @F3@ FAM
+1 HUSB @I272801619716@
+1 WIFE @I272801619725@
+1 CHIL @I272801615281@
+0 @F4@ FAM
+1 HUSB @I272801614844@
+1 WIFE @I272801614855@
+1 CHIL @I272801613683@
+0 @F5@ FAM
+1 HUSB @I272801615368@
+1 WIFE @I272801615373@
+1 CHIL @I272801614636@
+0 @F6@ FAM
+1 HUSB @I272801600911@
+1 WIFE @I272801599242@
+1 CHIL @I272801619136@
+1 CHIL @I272801619179@
+1 MARR
+2 DATE 14 Dec 1996
+2 PLAC Dane, Wisconsin, USA
+2 SOUR @S982582735@
+3 _HPID 1,8744::95605
+3 _WPID 1,8744::1044581
+2 SOUR @S982598857@
+3 PAGE Wisconsin Historical Society; Madison, WI, USA; Wisconsin Marriage Records 1979-1997
+3 _HPID 1,61484::100727
+3 _WPID 1,61484::90100727
+0 @F7@ FAM
+1 HUSB @I272801619287@
+1 WIFE @I272801599242@
+1 MARR
+2 DATE 14 Dec 1997
+2 SOUR @S982598860@
+3 PAGE The Capital Times; Publication Date: 31/ May/ 1997; Publication Place: Madison, Wisconsin, USA; URL: https://www.newspapers.com/image/522741139/?article=d001fe56-4713-4b44-a85f-dbd2d3ad4579&xid=3398
+3 DATA
+4 WWW https://www.newspapers.com/image/522741139/?article=d001fe56-4713-4b44-a85f-dbd2d3ad4579&xid=3398
+3 _HPID 1,62116::25502140
+3 _WPID 1,62116::86648003
+0 @F8@ FAM
+1 HUSB @I272801599244@
+1 WIFE @I272801599245@
+1 CHIL @I272801598976@
+1 CHIL @I272801599243@
+1 CHIL @I272801599242@
+1 MARR
+2 DATE Jun 12, 1948
+2 PLAC Lake, Indiana, United States
+0 @F9@ FAM
+1 HUSB @I272801613816@
+1 WIFE @I272801613843@
+1 CHIL @I272801613740@
+0 @F10@ FAM
+1 HUSB @I272801601045@
+1 WIFE @I272801601059@
+1 CHIL @I272801599924@
+0 @F11@ FAM
+1 HUSB @I272801614868@
+1 WIFE @I272801614906@
+1 CHIL @I272801613709@
+0 @F12@ FAM
+1 HUSB @I272801619990@
+1 WIFE @I272801619998@
+1 CHIL @I272801614906@
+0 @F13@ FAM
+1 HUSB @I272801613872@
+1 WIFE @I272801613860@
+1 CHIL @I272801613729@
+0 @F14@ FAM
+1 HUSB @I272801614636@
+1 WIFE @I272801614628@
+1 CHIL @I272801613773@
+0 @F15@ FAM
+1 HUSB @I272801613351@
+1 WIFE @I272801613352@
+1 CHIL @I272801600242@
+1 CHIL @I272801613348@
+1 CHIL @I272801613349@
+1 CHIL @I272801613350@
+0 @F16@ FAM
+1 HUSB @I272801602598@
+1 WIFE @I272801602616@
+1 CHIL @I272801602485@
+0 @F17@ FAM
+1 HUSB @I272801603878@
+1 WIFE @I272801603894@
+1 CHIL @I272801603058@
+0 @F18@ FAM
+1 HUSB @I272802138961@
+1 WIFE @I272802138861@
+1 CHIL @I272802138999@
+1 CHIL @I272802139011@
+0 @F19@ FAM
+1 HUSB @I272801710895@
+1 WIFE @I272801603057@
+1 CHIL @I272802136921@
+1 CHIL @I272802136931@
+0 @F20@ FAM
+1 HUSB @I272801600561@
+1 WIFE @I272801600566@
+1 CHIL @I272801599903@
+0 @F21@ FAM
+1 HUSB @I272801613131@
+1 WIFE @I272801613111@
+1 CHIL @I272801612942@
+0 @F22@ FAM
+1 HUSB @I272801613138@
+1 WIFE @I272801613111@
+1 CHIL @I272801612942@
+0 @F23@ FAM
+1 HUSB @I272801615159@
+1 WIFE @I272801615171@
+1 CHIL @I272801603059@
+0 @F24@ FAM
+1 HUSB @I272801613880@
+1 WIFE @I272801613895@
+1 CHIL @I272801613778@
+0 @F25@ FAM
+1 HUSB @I272801614655@
+1 WIFE @I272801614668@
+1 CHIL @I272801613880@
+0 @F26@ FAM
+1 HUSB @I272801600242@
+1 WIFE @I272801600318@
+1 CHIL @I272801600696@
+1 CHIL @I272801600208@
+1 CHIL @I272801600724@
+0 @F27@ FAM
+1 HUSB @I272801601598@
+1 WIFE @I272801601605@
+1 CHIL @I272801601445@
+0 @F28@ FAM
+1 HUSB @I272801612110@
+1 WIFE @I272801612117@
+1 CHIL @I272801605053@
+0 @F29@ FAM
+1 HUSB @I272801614678@
+1 WIFE @I272801614685@
+1 CHIL @I272801613895@
+0 @F30@ FAM
+1 HUSB @I272801601624@
+1 WIFE @I272801601631@
+1 CHIL @I272801601486@
+0 @F31@ FAM
+1 HUSB @I272802138400@
+1 WIFE @I272802138380@
+1 CHIL @I272802138420@
+1 CHIL @I272802138429@
+0 @F32@ FAM
+1 HUSB @I272801612892@
+1 WIFE @I272801612194@
+1 CHIL @I272801612117@
+0 @F33@ FAM
+1 HUSB @I272801613919@
+1 WIFE @I272801613930@
+1 CHIL @I272801599699@
+0 @F34@ FAM
+1 HUSB @I272801601118@
+1 WIFE @I272801601126@
+1 CHIL @I272801601045@
+0 @F35@ FAM
+1 HUSB @I272801602657@
+1 WIFE @I272801602668@
+1 CHIL @I272801602598@
+0 @F36@ FAM
+1 HUSB @I272801613665@
+1 WIFE @I272801613683@
+1 CHIL @I272801599870@
+0 @F37@ FAM
+1 HUSB @I272801612135@
+1 WIFE @I272801612149@
+1 CHIL @I272801605049@
+0 @F38@ FAM
+1 HUSB @I272801604997@
+1 WIFE @I272801604968@
+1 CHIL @I272801603878@
+0 @F39@ FAM
+1 HUSB @I272801612914@
+1 WIFE @I272801612923@
+1 CHIL @I272801612110@
+0 @F40@ FAM
+1 HUSB @I272801613177@
+1 WIFE @I272801613210@
+1 CHIL @I272801612968@
+0 @F41@ FAM
+1 HUSB @I272801602485@
+1 WIFE @I272801601148@
+1 CHIL @I272801601118@
+0 @F42@ FAM
+1 HUSB @I272801599870@
+1 WIFE @I272801599875@
+1 CHIL @I272801599245@
+0 @F43@ FAM
+1 HUSB @I272801601425@
+1 WIFE @I272801601414@
+1 CHIL @I272801600484@
+0 @F44@ FAM
+1 HUSB @I272801613705@
+1 WIFE @I272801613709@
+1 CHIL @I272801599875@
+0 @F45@ FAM
+1 HUSB @I272801599370@
+1 WIFE @I272801599391@
+1 CHIL @I272801599244@
+1 CHIL @I272802137809@
+1 CHIL @I272802137872@
+1 CHIL @I272802137862@
+1 CHIL @I272802137885@
+1 CHIL @I272802137900@
+1 CHIL @I272802137911@
+1 CHIL @I272802137928@
+0 @F46@ FAM
+1 HUSB @I272801612968@
+1 WIFE @I272801612942@
+1 CHIL @I272801612135@
+0 @F47@ FAM
+1 HUSB @I272801614737@
+1 WIFE @I272801614745@
+1 CHIL @I272801614685@
+0 @F48@ FAM
+1 HUSB @I272801619421@
+1 WIFE @I272801614227@
+1 MARR
+2 DATE 10 Oct 1981
+2 PLAC Fond du Lac, Wisconsin
+2 SOUR @S982582735@
+3 _HPID 1,8744::48726
+3 _WPID 1,8744::997702
+0 @F49@ FAM
+1 HUSB @I272801614229@
+1 WIFE @I272801599158@
+1 CHIL @I272801614227@
+1 CHIL @I272801614226@
+1 CHIL @I272801614225@
+1 CHIL @I272801614228@
+0 @F50@ FAM
+1 HUSB @I272801599903@
+1 WIFE @I272801599914@
+1 CHIL @I272801599370@
+0 @F51@ FAM
+1 HUSB @I272801602721@
+1 WIFE @I272801602732@
+1 CHIL @I272801602616@
+0 @F52@ FAM
+1 HUSB @I272801613729@
+1 WIFE @I272801613740@
+1 CHIL @I272801613665@
+0 @F53@ FAM
+1 HUSB @I272801601186@
+1 WIFE @I272801601196@
+1 CHIL @I272801599693@
+0 @F54@ FAM
+1 HUSB @I272801601460@
+1 WIFE @I272801601445@
+1 CHIL @I272801600478@
+0 @F55@ FAM
+1 HUSB @I272801620133@
+1 WIFE @I272801620138@
+1 CHIL @I272801604997@
+0 @F56@ FAM
+1 HUSB @I272801599661@
+1 WIFE @I272801599675@
+1 CHIL @I272801599162@
+0 @F57@ FAM
+1 HUSB @I272801615276@
+1 WIFE @I272801615281@
+1 CHIL @I272801599934@
+0 @F58@ FAM
+1 HUSB @I272802138519@
+1 WIFE @I272802138571@
+1 CHIL @I272802138591@
+1 CHIL @I272802138606@
+0 @F59@ FAM
+1 HUSB @I272801599924@
+1 WIFE @I272801599934@
+1 CHIL @I272801599391@
+0 @F60@ FAM
+1 HUSB @I272802138830@
+1 WIFE @I272802138801@
+1 CHIL @I272802138861@
+0 @F61@ FAM
+1 HUSB @I272801605049@
+1 WIFE @I272801605053@
+1 CHIL @I272801603894@
+0 @F62@ FAM
+1 HUSB @I272801600696@
+1 WIFE @I272801612283@
+1 CHIL @I272802136997@
+1 CHIL @I272802137018@
+1 CHIL @I272802137041@
+1 CHIL @I272802137118@
+0 @F63@ FAM
+1 HUSB @I272801599162@
+1 WIFE @I272801599163@
+1 CHIL @I272801614444@
+1 CHIL @I272801614445@
+1 CHIL @I272801599158@
+1 CHIL @I272801599160@
+1 CHIL @I272801599018@
+1 CHIL @I272801599161@
+1 MARR
+2 DATE 24 Jun 1929
+2 PLAC Milwaukee, Milwaukee, Wisconsin, USA
+2 NOTE St. Agnes
+0 @F64@ FAM
+1 HUSB @I272801612233@
+1 WIFE @I272801612218@
+1 CHIL @I272801612149@
+0 @F65@ FAM
+1 HUSB @I272801614780@
+1 WIFE @I272801614778@
+1 CHIL @I272801614655@
+0 @F66@ FAM
+1 HUSB @I272801602749@
+1 WIFE @I272801602778@
+1 CHIL @I272801602721@
+0 @F67@ FAM
+1 HUSB @I272801620163@
+1 WIFE @I272801620185@
+1 CHIL @I272801604968@
+0 @F68@ FAM
+1 HUSB @I272801602498@
+1 WIFE @I272801602510@
+1 CHIL @I272801601254@
+0 @F69@ FAM
+1 HUSB @I272801601225@
+1 WIFE @I272801601243@
+1 CHIL @I272801599914@
+0 @F70@ FAM
+1 HUSB @I272801598920@
+1 WIFE @I272801600208@
+1 CHIL @I272802137185@
+1 MARR
+2 DATE 21 Jul 2018
+2 PLAC Appleton, Outagamie, Wisconsin, USA
+0 @F71@ FAM
+1 HUSB @I272801600458@
+1 WIFE @I272801600460@
+1 CHIL @I272801599661@
+0 @F72@ FAM
+1 HUSB @I272801599693@
+1 WIFE @I272801599699@
+1 CHIL @I272801599163@
+0 @F73@ FAM
+1 HUSB @I272801613773@
+1 WIFE @I272801613778@
+1 CHIL @I272801613705@
+0 @F74@ FAM
+1 HUSB @I272801614555@
+1 WIFE @I272801614540@
+1 CHIL @I272801613930@
+0 @F75@ FAM
+1 HUSB @I272801615311@
+1 WIFE @I272801615313@
+1 CHIL @I272801615276@
+0 @F76@ FAM
+1 HUSB @I272801601486@
+1 WIFE @I272801601496@
+1 CHIL @I272801601460@
+0 @F77@ FAM
+1 HUSB @I272801619672@
+1 WIFE @I272801619687@
+1 CHIL @I272801615311@
+0 @F78@ FAM
+1 HUSB @I272801600478@
+1 WIFE @I272801600484@
+1 CHIL @I272801599675@
+0 @F79@ FAM
+1 HUSB @I272801601254@
+1 WIFE @I272801601261@
+1 CHIL @I272801601059@
+0 @F80@ FAM
+1 HUSB @I272801603055@
+1 WIFE @I272802136962@
+0 @F81@ FAM
+1 HUSB @I272801603058@
+1 WIFE @I272801603059@
+1 CHIL @I272801603055@
+1 CHIL @I272801600318@
+1 CHIL @I272801603056@
+1 CHIL @I272801603057@
+0 @F82@ FAM
+1 HUSB @I272801599661@
+1 CHIL @I272801711373@
+1 CHIL @I272801711374@
+1 CHIL @I272801711375@
+1 CHIL @I272801711376@
+1 CHIL @I272801711377@
+0 @F83@ FAM
+1 WIFE @I272802137237@
+1 CHIL @I272801613352@
+0 @F84@ FAM
+1 HUSB @I272802137263@
+1 CHIL @I272801613352@
+0 @F85@ FAM
+1 WIFE @I272801600724@
+1 CHIL @I272801612859@
+0 @F86@ FAM
+1 WIFE @I272802137872@
+1 CHIL @I272802138380@
+0 @F87@ FAM
+1 WIFE @I272801602468@
+1 CHIL @I272801601148@
+0 @F88@ FAM
+1 HUSB @I272801613348@
+1 CHIL @I272801613464@
+0 @F89@ FAM
+1 WIFE @I272802137928@
+1 CHIL @I272802138801@
+0 @F90@ FAM
+1 WIFE @I272802137809@
+1 CHIL @I272802138519@
+1 CHIL @I272802138537@
+0 @F91@ FAM
+1 WIFE @I272801602525@
+1 CHIL @I272801601261@
+0 @O1@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE jpeg
+3 _SIZE 17964
+3 _WDTH 250
+3 _HGHT 333
+2 TITL Pietro Marino 
+1 _OID 0409368b-4dee-4d72-9142-d4bd8ba1e947
+1 DATE 24 Oct 1918
+1 PLAC Hillside, Cook County, Illinois, USA
+1 _CREA 2026-09-14 16:51:04.797
+1 _USER pc73MnZAECT/GLXNOaKJNT5GCz1k0p+hwoqEeQIw2Q3azTS6IMC9WdSZXIWS97w6Dzn9bFWL/segp81TSj6hSA==
+2 _ENCR 1
+1 _CLON
+2 _TID 191038062
+2 _PID 282590464388
+2 _OID a4770730-3a34-4358-a4c1-a04b11690038
+2 _USER 8a5/RPdB/+zfXmljij5VeErqa972qAWAaKa9xnGWMXRYgvxrQyMRFgbMcUKfU3wwUHUJIen6UCdcqBu/8wHGWA==
+3 _ENCR 1
+2 _DATE 2024-07-06 19:40:06.777
+1 _ORIG u
+2 _URL https://www.findagrave.com/memorial/12721157/pietro-marino
+1 _MSER
+2 _LKID a4770730-3a34-4358-a4c1-a04b11690038
+1 _ATL N
+0 @O2@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE jpeg
+3 _SIZE 313189
+3 _WDTH 2175
+3 _HGHT 1695
+2 TITL Gaspare Stefano Pumilia & Francesca Cacioppo marr 1838 allegati 4 (Gaspare Stefano Pumilia bap_ Francesca Cacioppo bap)
+1 _OID 05bc2cfe-e696-4fc6-be5f-a9c932bab3d7
+1 _META <metadataxml><transcription></transcription></metadataxml>
+1 _CREA 2026-09-14 18:27:47.428
+1 _USER Ez1kN54wB1lE9Ti9JfqbsqqVqljRnVM5OFnzUnUcEinPnYvAxUukhnAdLrczY3mLUYcZAoaAL1u2uVycsGKscQ==
+2 _ENCR 1
+1 _CLON
+2 _TID 52611790
+2 _PID 302009174681
+2 _OID 0bb202e0-2d93-446f-bba2-7f8497b39ed8
+2 _USER pYaGgiQVNMrjHJoIiPUTI4T3lq8Z50lu7GOLhafJ/Hur4KBvABQukDRBUSUI67OR87x1IAreAxx6DloDAQZI1g==
+3 _ENCR 1
+2 _DATE 2018-06-02 13:41:56.781
+1 _ORIG u
+1 _MSER
+2 _LKID 0bb202e0-2d93-446f-bba2-7f8497b39ed8
+1 _ATL N
+0 @O3@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 6252
+3 _WDTH 97
+3 _HGHT 160
+2 TITL Ann Eliza Sigler
+1 _OID 069547ad-a34c-4afb-a068-168f44a8edc8
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 18:47:09.388
+1 _USER OAVvxNzxlCB69b1H3DSrjUpROH3t3hg/rRfJPh+f9ZL8P0GFFDiQn2lwxoNk3QWJ1184NTOk03RhyBPsdRpIyw==
+2 _ENCR 1
+1 _CLON
+2 _TID 14887822
+2 _PID 28109720968
+2 _OID beb3da79-05ea-411a-81d1-ba3a23df3d01
+2 _USER GGFMvbOQouWD/DsgIVJL7ORTqbO6DT29eaxT736Yvg93Fm8bWkv/+2ZNh75ICn7WkTeciyC0iOmzxlGLU4mcDg==
+3 _ENCR 1
+2 _DATE 2014-03-11 22:51:22.000
+1 _ORIG u
+1 _MSER
+2 _LKID beb3da79-05ea-411a-81d1-ba3a23df3d01
+1 _ATL N
+0 @O4@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpg
+3 _SIZE 427450
+3 _WDTH 1232
+3 _HGHT 825
+2 TITL Photo
+1 _OID 0779b1e7-caba-48d7-b9ce-48299d21bc90
+1 DATE 13 Aug 2021
+1 _CREA 2026-09-14 16:40:30.120
+1 _USER 7i8I7Q8x5ZLuiBwAbsD96SMbAzJ4gSVaTffXxNM3o9r3II8N89o1Yi8oer260QFOn1PDvnrzUr86vE1l9UrLUg==
+2 _ENCR 1
+1 _CLON
+2 _TID 106661383
+2 _PID 272306658753
+2 _OID edf8a3e7-6d54-4a78-b3ba-e5b66ca5fb83
+2 _USER HSQGiZeeKlxlTwIWb5GeHYICrTH+52q1w/sJ888kchoe0mhw6167EA2mSntXll4p0qxyyFYhA2Q/uhLD1kqUpw==
+3 _ENCR 1
+2 _DATE 2021-08-14 01:10:20.000
+1 _ORIG u
+1 _MSER
+2 _LKID edf8a3e7-6d54-4a78-b3ba-e5b66ca5fb83
+1 _ATL N
+0 @O5@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 22845
+3 _WDTH 354
+3 _HGHT 451
+2 TITL Tamara Jane Teschner
+1 _OID 08a2cd12-3c13-45df-b24c-1574b20e0552
+1 _DSCR Ancestry.com. U.S., School Yearbooks, 1900-2016 [database on-line]. Lehi, UT, USA: Ancestry.com Operations, Inc., 2010.
+1 _META <metadataxml><record_source_gid>656224323:1265</record_source_gid></metadataxml>
+1 _CREA 2026-09-14 16:18:00.166
+1 _USER B2L2W5G2Y+UsokEZzs4ZqaAYCG926Qc0XNqnCikJh9Z7Vf+2kp758h09UYFNGoLmeHnThQu9YvbAxmR7R18t9A==
+2 _ENCR 1
+1 _ORIG u
+1 _ATL Y
+0 @O6@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE jpeg
+3 _SIZE 92551
+3 _WDTH 640
+3 _HGHT 853
+2 TITL George Willson's will
+1 _OID 0bb3b0ad-0ff8-46e2-a00e-59fa635eba73
+1 DATE 1878
+1 PLAC Brighton, NY
+1 _DSCR Rochester Evening Express. $70,000 is 1.7 million dollars in 2020 money.
+1 _META <metadataxml><transcription /></metadataxml>
+1 _CREA 2026-09-14 19:59:09.700
+1 _USER C5LhqwHcCvYmUdA/K67rsWHgatZbFFvOu7R+wcHJIDPxUvG/3FnEbcG+9i9UDa3rttiik3K9wEW+PH05qELldg==
+2 _ENCR 1
+1 _CLON
+2 _TID 111739959
+2 _PID 232124442222
+2 _OID ff436dc2-10ae-47d1-bf3f-4f5146259822
+2 _USER KXKMJDM0NBqHLB+FzMM4fyKFkjwHKcvU4qELDJdd6Nwx65Kb6XSFmxpGciXC7hDlewqe9PdPc5Bn0ATzMXo/pg==
+3 _ENCR 1
+2 _DATE 2020-04-22 19:51:42.000
+1 _ORIG u
+1 _MSER
+2 _LKID ff436dc2-10ae-47d1-bf3f-4f5146259822
+1 _ATL N
+0 @O7@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE jpeg
+3 _SIZE 335029
+3 _WDTH 1196
+3 _HGHT 1594
+2 TITL Maria Azzara bap1874
+1 _OID 1111ce9e-1647-42fb-b71a-99fe298cae5f
+1 DATE 1874
+1 PLAC Sambuca
+1 _META <metadataxml><transcription></transcription></metadataxml>
+1 _CREA 2026-09-14 16:51:13.853
+1 _USER dx75Vv1OXUEt0QRCaHLJZ/cqkcUbVkZg5leowpyhg2wa9L79MnSVLbJzvPfMaBTerHLzLnoMc0pCHsXFL0of2A==
+2 _ENCR 1
+1 _CLON
+2 _TID 52611790
+2 _PID 302009175291
+2 _OID dfc76d2c-7071-41dd-ba91-7680cb306f6a
+2 _USER mjSdrihzXf5gm8k1eyZj/ZE2lFZoh3s+tk/N6xXw2wNwXsqh0TszURhaT423KPcUcV8cVuprJqHVRaruAX3EMQ==
+3 _ENCR 1
+2 _DATE 2023-07-05 17:15:22.855
+1 _ORIG u
+1 _MSER
+2 _LKID dfc76d2c-7071-41dd-ba91-7680cb306f6a
+1 _ATL N
+0 @O8@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE jpeg
+3 _SIZE 361419
+3 _WDTH 2382
+3 _HGHT 2128
+2 TITL Pietro Scibona & Antonina Moscona marr 1850 allegati 5 (Antonina Moscana bap 1819_Aloisio Moscana death 1806)
+1 _OID 12eecc37-268a-4532-8314-65bfc051ade3
+1 _META <metadataxml><transcription></transcription></metadataxml>
+1 _CREA 2026-09-14 20:04:25.064
+1 _USER 6dHQn1f023XQm9MRBg9b2Y+ryxCmZAJzWrVj+jd9wStAB9vEetQRMGHRKshEtZZ7DYzg95VkFhDlIehQqzyLeQ==
+2 _ENCR 1
+1 _CLON
+2 _TID 52611790
+2 _PID 302283997418
+2 _OID 0bf5fa39-ed17-49c4-a132-f998f79d33e2
+2 _USER tyc18kcTqdslrLAFeVgZaFqb1rsPXBD/SwuzwXzkIrMFBVtCOOPxpW6NDNVjVvPgZ97erp305pDyRT7Vfg16Tw==
+3 _ENCR 1
+2 _DATE 2021-05-01 13:03:24.000
+1 _ORIG u
+1 _MSER
+2 _LKID 0bf5fa39-ed17-49c4-a132-f998f79d33e2
+1 _ATL N
+0 @O9@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 12591
+3 _WDTH 200
+3 _HGHT 229
+2 TITL DNA match to marilynn_halling
+1 _OID 2120fae7-c9e6-413c-b4d6-cd92f441f24c
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 18:56:27.212
+1 _USER FOXrhROwNn44jlaa58JeZ6ffySdxE6k4T9H6s642vcs9cQTQ0QrDp5rTzlASOXfZCxyaHrpknoKQohZ6K7aqLQ==
+2 _ENCR 1
+1 _CLON
+2 _TID 77007942
+2 _PID 34432461611
+2 _OID 8a19d518-a614-4c23-af0f-327665dfb316
+2 _USER vh2aVOtIro9CvH9/04kvdjjIuI5+GtLiw3CUW6P5lIYQYPYyh7La0mGIEIHCNRZZBapXRpZQq4aluPGFtWZqxw==
+3 _ENCR 1
+2 _DATE 2016-02-24 05:22:10.960
+1 _ORIG u
+1 _MSER
+2 _LKID 8a19d518-a614-4c23-af0f-327665dfb316
+1 _ATL N
+0 @O10@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _STYPE jpeg
+3 _SIZE 86675
+3 _WDTH 473
+3 _HGHT 624
+2 TITL Lewis E Herlitz - Wife Anna
+1 _OID 21631e9e-d1e5-4c14-a1d1-ba3ed8f22c63
+1 DATE 8/7/2012 9:33:02 PM
+1 _CREA 2026-09-14 20:02:33.390
+1 _USER 56DpP/LQ9Qmzt6lVOju3HTyCUKD9fAvjcc0GFQ3/3LosAg0UpWwHDZU+oaoqh1EDiIPoDL8sHanpSSzaGtmRyg==
+2 _ENCR 1
+1 _CLON
+2 _TID 24969104
+2 _PID 1586416069
+2 _OID 3523f094-ff86-4a02-b033-b170475b6e5c
+2 _USER nfk0uWWzZHrB32C2Hl1+lnyLMqQPbDdsBx5ZyGwHCTqgFRl/ImCYspx94nm1s5eI4P1u4gQSeeTlEh614U1TtA==
+3 _ENCR 1
+2 _DATE 2012-08-08 02:44:34.000
+1 _ORIG u
+1 _MSER
+2 _LKID 3523f094-ff86-4a02-b033-b170475b6e5c
+1 _ATL N
+0 @O11@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _STYPE jpeg
+3 _SIZE 7289
+3 _WDTH 160
+3 _HGHT 125
+2 TITL Wolfgang Dorn Family.jpg
+1 _OID 2a72618e-29dd-41c6-97eb-fe48935cf411
+1 DATE 3/23/2012 9:48:54 AM
+1 _CREA 2026-09-14 16:00:23.882
+1 _USER LBrCbrmmnPNIPW1BAXhJ6WZJYH4pAUKIDlr2qs9qo7J77w2RKqgjsW59rJ6yLv+eyL34SAMZy42zvEaVNVauCQ==
+2 _ENCR 1
+1 _CLON
+2 _TID 33529035
+2 _PID 19263758963
+2 _OID 74d36fd8-c5c4-481f-b2ba-941c35d31518
+2 _USER ak3FXhDzbTaiwU1tGIQZNm8soZerne6nkrLKCEPsymago/aQmcSSd6J7eXoTWkB7vYC5XNPIYrj/DrYw/vz37Q==
+3 _ENCR 1
+2 _DATE 2012-03-23 16:42:31.000
+1 _ORIG u
+1 _MSER
+2 _LKID 74d36fd8-c5c4-481f-b2ba-941c35d31518
+1 _ATL N
+0 @O12@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 123539
+3 _WDTH 640
+3 _HGHT 480
+2 TITL Roeder's Grave
+1 _OID 2e1321c1-2e1d-4ab5-8a74-90d6ca9c5286
+1 _DSCR Both grave markers for Margaretha Roeder and Nicholas Roeder are visible in the front center and middle left center of this photo.
+1 _CREA 2026-09-14 16:24:09.826
+1 _USER yzdoQuCvyQAnJt2yD5H+YUZSDiXW9a2XqpLY2hfHawEw7HOd5EdV58zfLicdtaDxb/d2TcNT7MExynnm9v6VLw==
+2 _ENCR 1
+1 _CLON
+2 _TID 26435733
+2 _PID 12551551115
+2 _OID f8e137bd-8547-49a7-a2cc-d654221b643a
+2 _USER U+6Hg3X7Zk3zJy5Q58AlDmtfBwccLfae3BA23c3FqbOe3bwmrW2RA6I1c+pehH1zwK8CWnBLoWHv4Dy/g51aew==
+3 _ENCR 1
+2 _DATE 2013-07-18 20:20:50.000
+1 _ORIG u
+1 _MSER
+2 _LKID f8e137bd-8547-49a7-a2cc-d654221b643a
+1 _ATL N
+0 @O13@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _STYPE jpeg
+3 _SIZE 35855
+3 _WDTH 250
+3 _HGHT 358
+2 TITL Samuel Sigler
+1 _OID 310af7c2-e4cf-4f1e-acc6-a448f7f14666
+1 DATE 3/22/2013 6:44:03 AM
+1 _CREA 2026-09-14 18:47:58.102
+1 _USER SII/okuaEpjP99ReNfYmYzCUR54hYarnD7OcUP6BNYtPRtjUYT5qtCCX5AzaGRiCoyDaRQfrf2YPejeR2vSeOA==
+2 _ENCR 1
+1 _CLON
+2 _TID 84220107
+2 _PID 44501026089
+2 _OID a42b0b88-d0d8-4122-bb54-e1870053b0d0
+2 _USER 8usi5XsWJvXRuJO/58bnVTMRnhQVNHRkbY80TnOW7U/JTRLhFmq9Qv2bNg2d9n8q8fRWIcttHvuss0ugqCITBw==
+3 _ENCR 1
+2 _DATE 2015-10-05 15:19:51.570
+1 _ORIG u
+1 _MSER
+2 _LKID a42b0b88-d0d8-4122-bb54-e1870053b0d0
+1 _ATL N
+0 @O14@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE pjpeg
+3 _SIZE 1562291
+3 _WDTH 2338
+3 _HGHT 1700
+2 TITL Göran Nilsson family (2)
+1 _OID 3133d995-7cb7-428f-9e0d-66bed8d960af
+1 DATE 2010
+1 PLAC Bringetofta, Jönköping
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 18:47:32.192
+1 _USER FIesredLeEs9Y+jf2dZPZy8SfNXieP4keyY5epP26T+vkSxlxyQDqy6TVZLGYbS60rTbWZNvu6OQmtHnOsW6Gg==
+2 _ENCR 1
+1 _CLON
+2 _TID 7680272
+2 _PID -373265814
+2 _OID 8e7cc4bb-e149-4b01-b73f-8213323aa91a
+2 _USER ZUTVdl1Cf5Di8K3c3ixVV8yK/UpvFfNajJel0NXuyKQ40qbZKydwM6pQySEMdcTJsMWpJMFBa7bN94kq0IRhJg==
+3 _ENCR 1
+2 _DATE 2010-02-26 21:18:06.000
+1 _ORIG u
+1 _MSER
+2 _LKID 8e7cc4bb-e149-4b01-b73f-8213323aa91a
+1 _ATL N
+0 @O15@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE headstone
+3 _STYPE jpeg
+3 _SIZE 144849
+3 _WDTH 480
+3 _HGHT 480
+2 TITL Martha LeBaron Crandall
+1 _OID 348ab746-61b7-41f5-b0f1-86218bb45ecf
+1 DATE Aug 2012
+1 PLAC Lake George, Warren, New York
+1 _DSCR photo by Thomas Mone uwp
+1 _META <metadataxml><cemetery>North Caldwell Cemetery</cemetery><transcription /><personas><persona><pname>Martha Crandall</pname><bdate>1781</bdate><bplace /><ddate>1826</ddate><dplace /></persona></personas></metadataxml>
+1 _CREA 2026-09-14 19:58:40.870
+1 _USER sJTcIrg285syt7ifEJI1jSn5n/BxmT2DLOh/n9lUi2dULokSVm8Q1BirezaMyvuWYaDIjH84g6dVJEXWwddPuw==
+2 _ENCR 1
+1 _CLON
+2 _TID 10070055
+2 _PID -702617054
+2 _OID 5aea691e-1389-4eff-824b-d12d2d6bbb42
+2 _USER KulH1+c4mO1E9mebHyfS9rMtzXDMdihDLYJoin96XADfaaQMYqyPzKUQTUz8niKdpzHx8zgPY85Ao4YEA2FwQQ==
+3 _ENCR 1
+2 _DATE 2012-08-07 14:10:36.700
+1 _ORIG u
+1 _MSER
+2 _LKID 5aea691e-1389-4eff-824b-d12d2d6bbb42
+1 _ATL N
+0 @O16@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 1429091
+3 _WDTH 2291
+3 _HGHT 1526
+2 TITL Johannes Malmsten and Lisa Göransdotter Marriage-Bringetofta
+1 _OID 360faa18-c8bd-4d23-bea0-42b51015f7e0
+1 _DSCR provided by Elisabeth Thorsell, ET Genealogy
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 18:46:38.506
+1 _USER rSorPqhhqVL++owmH+nqImiW+DrQ3l0UNluCzu20H2yWlg3ZQ1hzD6eEuaEzrrBZKm+S6mau1xr2Q9Ss8WtUag==
+2 _ENCR 1
+1 _CLON
+2 _TID 7680272
+2 _PID -1054134755
+2 _OID c130a1db-be40-4ca5-b109-5c1362c493fb
+2 _USER hf9h5+hHcB8yitkHFqeLUKEsocOP6KzIfgQ0SpiG1BjZo7AhNBhGKPFFG8jNNO5LAVp5jlH9tWwXM/0cF8m8SA==
+3 _ENCR 1
+2 _DATE 2011-03-03 18:34:22.880
+1 _ORIG u
+1 _MSER
+2 _LKID c130a1db-be40-4ca5-b109-5c1362c493fb
+1 _ATL N
+0 @O17@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _STYPE jpeg
+3 _SIZE 147047
+3 _WDTH 557
+3 _HGHT 800
+2 TITL Daniel Taylor
+1 _OID 39c59e5b-60d6-4fd2-a191-5a65ca0a0042
+1 _DSCR Headstone
+1 _CREA 2026-09-14 18:56:37.996
+1 _USER 9m5Xnnr2aRrwnwEXrg/4KPPgDyICqPkGwO45POPqOw8J6j20HcRtSTxLOWKbdgmFner4G83Eag5rS1lEQI3pIg==
+2 _ENCR 1
+1 _CLON
+2 _TID 109308560
+2 _PID 320074316838
+2 _OID 540ca0a4-0e78-4c88-a908-a77ab0713428
+2 _USER RtC1oKluXehBdXTwz87Qe9aFsBWUdWMv4f1f3m5wvuH3X3XlY+/D9quuNRfY8cWSookKcVtXLIXwYAe4zGIoxQ==
+3 _ENCR 1
+2 _DATE 2017-03-05 01:38:14.075
+1 _ORIG u
+1 _MSER
+2 _LKID 540ca0a4-0e78-4c88-a908-a77ab0713428
+1 _ATL N
+0 @O18@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 152167
+3 _WDTH 480
+3 _HGHT 640
+2 TITL Nicholas Roeder
+1 _OID 39d1a876-3094-4694-bc06-6ae2c5d45301
+1 _DSCR Another child of Nicolas and Marguerite Roeder was Elizabeth Roeder Baivier Liffering, who is also shown in the glass negatives. Nicolas Roeder was born on Dec. 10, 1811 in Belgium (in Europe) and died on July 22, 1890 in the Town of New Holstein
+2 CONC , Calumet County. He is buried at St. Anna Cemetery. His wife was Marguerite Flies. It is claimed she was also born on Dec. 10, 1811 in Belgium. She died on Jan. 12, 1887 in the Town of New Holstein and is buried at St. Anna Cemetery, Town of New H
+2 CONC olstein.
+1 _CREA 2026-09-14 16:24:00.912
+1 _USER 5cQaC8G8J2MzXJAqwk8snPsuSwVjLaUt8R8nXkBWZfUTqxgLTxAaarbeqAicYgoCAyDf1F6/twP5pUN53FU0fA==
+2 _ENCR 1
+1 _CLON
+2 _TID 26435733
+2 _PID 12551551115
+2 _OID f6fb56d9-a0fe-402a-8deb-7ec68cd61992
+2 _USER X5i3qlHWm8lFUOTDc8FiRChIqvHrYeKyIKkbR80CWW5kgH7Qy3FmG0g7ZfltWpsxtwR6RHDVLPMAfhc+n7Eltg==
+3 _ENCR 1
+2 _DATE 2013-07-18 13:55:38.000
+1 _ORIG u
+1 _MSER
+2 _LKID f6fb56d9-a0fe-402a-8deb-7ec68cd61992
+1 _ATL N
+0 @O19@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 1458316
+3 _WDTH 2078
+3 _HGHT 1605
+2 TITL Johannes Malmsten family 1832-1838
+1 _OID 3a9b3062-be2f-4ec9-b13f-85c040e24e90
+1 DATE 1838
+1 PLAC Korpebo, Jönköping, Sweden
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 18:46:47.141
+1 _USER FbZmN5Es7lsa+HScQz6JZit7CcGg59tWrb0Bs+E70qXlViCX4y7zlQW2N2/MEXMpRJgZDM+ai4o0Tahy0E4Iiw==
+2 _ENCR 1
+1 _CLON
+2 _TID 7680272
+2 _PID -957896138
+2 _OID bdb248fe-364e-466c-8057-50b0c68641af
+2 _USER XQoHB4Z2cUbHINTJA+kd10IJ/LJx6eeqM1zSTxR3sby//egp0S/q9JtCvtSIJmoFD3EZf2bdNhvQHZ0LpbL2Ag==
+3 _ENCR 1
+2 _DATE 2011-04-05 18:26:55.000
+1 _ORIG u
+1 _MSER
+2 _LKID bdb248fe-364e-466c-8057-50b0c68641af
+1 _ATL N
+0 @O20@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _STYPE jpeg
+3 _SIZE 138530
+3 _WDTH 650
+3 _HGHT 445
+2 TITL Sanual Bartlett Woods - 1956 - 100yrs old
+1 _OID 3ed2d7f2-5f10-4509-9ce7-504aeeb20d8a
+1 DATE 8/12/2012 7:09:32 AM
+1 _CREA 2026-09-14 18:46:18.940
+1 _USER jdE9i3Avu3A5Vxi8tNcmCJKLUC1dmslUWnoDy2Q44o7I7JSblY4YxOqtqlNiQnykhmsIRbaNIGjwvDgP17rj2A==
+2 _ENCR 1
+1 _CLON
+2 _TID 24969104
+2 _PID 1586416054
+2 _OID 3f4c5f97-246a-4408-8732-f8841f2f1247
+2 _USER HiJtEhiOJJR6evFx/cfNWnMlHacGo1QMRu5lRaVImcriaZm3XknVeqOTm6n1osSsgjFVEpSexYXPamIrEXJBrA==
+3 _ENCR 1
+2 _DATE 2012-08-12 12:15:30.000
+1 _ORIG u
+1 _MSER
+2 _LKID 3f4c5f97-246a-4408-8732-f8841f2f1247
+1 _ATL N
+0 @O21@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE jpeg
+3 _SIZE 330353
+3 _WDTH 2280
+3 _HGHT 2068
+2 TITL Giuseppe Azzara & Audenzia Pumilia marr 1861 allegati 4  (Audenzia Pumilia birth 1841)
+1 _OID 44257302-6fe7-4bb1-8df3-d6ef5b555d46
+1 _META <metadataxml><transcription></transcription></metadataxml>
+1 _CREA 2026-09-14 17:06:42.707
+1 _USER C9Ha3T1i06MX9QGx1w0f+zWJW9l5D34bzRbxNWv0kueA7PECXczTwHqzqq4sTTT3IkNpN23ccTraI7RCvj/0OQ==
+2 _ENCR 1
+1 _CLON
+2 _TID 52611790
+2 _PID 302009174946
+2 _OID 443c9537-5971-4289-ac6b-b1453474dde9
+2 _USER Ik0qxd+TeB56ACgK+Cv3Gofj43jL0x2kI5Kpgc/03+tBXuN8s7DJtADcGHeRfRhkVVeuv7fMwQ6I8zf0dF//KA==
+3 _ENCR 1
+2 _DATE 2018-06-03 05:12:55.218
+1 _ORIG u
+1 _MSER
+2 _LKID 443c9537-5971-4289-ac6b-b1453474dde9
+1 _ATL N
+0 @O22@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 95364
+3 _WDTH 737
+3 _HGHT 851
+2 TITL Peter Marino
+1 _OID 45f63c05-01f5-420e-a95a-d2b417f3a7a7
+1 _DSCR Ancestry.com. U.S., School Yearbooks, 1900-2016 [database on-line]. Lehi, UT, USA: Ancestry.com Operations, Inc., 2010.
+1 _META <metadataxml><record_source_gid>389189346:1265</record_source_gid></metadataxml>
+1 _CREA 2026-09-14 18:32:29.344
+1 _USER ye1k+3xZEteg/rkRB9ciJk+W2uppBdrrAVfvHOalPVl0OFv2grGapg6V3gE3m/fzmShRvsw7MSl2FT75m1+jaA==
+2 _ENCR 1
+1 _ORIG u
+1 _ATL Y
+0 @O23@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE png
+3 _SIZE 415631
+3 _WDTH 1920
+3 _HGHT 956
+2 TITL Nicolas Laures death
+1 _OID 47604cb6-abbe-4543-bae4-e71fd936e1e0
+1 DATE Feb 1805
+1 PLAC Hachy, Luxembourg
+1 _DSCR Hachy civil registrations
+1 _META <metadataxml><transcription></transcription></metadataxml>
+1 _CREA 2026-09-14 16:24:59.205
+1 _USER FiOt0t+MBr1rdkLrSlr3XU4e8splBQaFuFt3cvW+JgShuP3mYezPbH4sxoUmhHmPEVzYQmjb2R4d2pglfIUqLQ==
+2 _ENCR 1
+1 _CLON
+2 _TID 111739959
+2 _PID 232435298033
+2 _OID c4ea05a7-a765-48c9-b9e7-79ee1b6119d9
+2 _USER OiwUhk/CKPMFCwnB5c1N3A1H99asm0dV976+8dz+aK1AnsXl2zORMkDDNccxmvqpGNap6CY9kHLpRDfsgJF+bw==
+3 _ENCR 1
+2 _DATE 2022-11-12 17:54:17.991
+1 _ORIG u
+1 _MSER
+2 _LKID c4ea05a7-a765-48c9-b9e7-79ee1b6119d9
+1 _ATL N
+0 @O24@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 29358
+3 _WDTH 416
+3 _HGHT 621
+2 TITL Isaac Jordan
+1 _OID 4a22cac7-1556-499b-a2e0-6ba1dc797ee4
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 19:59:02.325
+1 _USER dEFPYr4jp3SOih7Omt+zFitRFqk7qGsLt8mjb0tQaO6z4xlhuwZm+65g1A/nb4E6u/GB+0fpxCMnw24hCBTYeg==
+2 _ENCR 1
+1 _CLON
+2 _TID 36854253
+2 _PID 18998139380
+2 _OID f708c38c-cd36-49d8-b944-99ed8cf86f5e
+2 _USER QBtJS2L3WGKtNEtuqefpFkA8FKZ2//19b9Rqm97NnYyFF02ae0Cz/g7NUB6kparq6CdYPM6zCM1PmKKwZXzupA==
+3 _ENCR 1
+2 _DATE 2012-03-23 00:31:46.000
+1 _ORIG u
+1 _MSER
+2 _LKID f708c38c-cd36-49d8-b944-99ed8cf86f5e
+1 _ATL N
+0 @O25@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 147239
+3 _WDTH 727
+3 _HGHT 910
+2 TITL Allan Dorn
+1 _OID 5dd86d38-ddc1-433b-ab5f-acba23e974cf
+1 _DSCR Ancestry.com. U.S., School Yearbooks, 1900-2016 [database on-line]. Lehi, UT, USA: Ancestry.com Operations, Inc., 2010.
+1 _META <metadataxml><record_source_gid>1359096118:1265</record_source_gid></metadataxml>
+1 _CREA 2026-09-14 15:57:46.389
+1 _USER 0zPAGv0eAllY2s/+T0a0qcZLc7TMjMdCUMbjxoDz2amUmRXgIh0A2qHkuSzmkADoHWlPYrfOoW0tEEqTM3k2Ew==
+2 _ENCR 1
+1 _ORIG u
+1 _ATL Y
+0 @O26@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE jpeg
+3 _SIZE 284927
+3 _WDTH 2148
+3 _HGHT 1664
+2 TITL Gaspare Stefano Pumilia & Francesca Cacioppo marr 1838 allegati 5 (Audenzia Stabile death 1837)
+1 _OID 5e7fcfca-c70b-4196-98f3-2843310cdd3d
+1 _META <metadataxml><transcription></transcription></metadataxml>
+1 _CREA 2026-09-14 18:36:56.506
+1 _USER hW96ieAQPlPPYFOPRWp8iO5/+dOh7MhTQHrHBi6x/OcxoyK6wt6oiwgByjvawIdd5edAI0MxZot+ktwrMAKEBA==
+2 _ENCR 1
+1 _CLON
+2 _TID 52611790
+2 _PID 302009174726
+2 _OID c22c4e80-418e-42f5-a7c4-d93aa460b40b
+2 _USER swnQtWQrNqqFPwGsLQ8MLXnd/6KSQccDxXdYSrr3e8gnujhjPFavJ0/RzSFEXaQ+VLAenblN0lJVRqa+MdDE5w==
+3 _ENCR 1
+2 _DATE 2018-06-02 13:44:25.259
+1 _ORIG u
+1 _MSER
+2 _LKID c22c4e80-418e-42f5-a7c4-d93aa460b40b
+1 _ATL N
+0 @O27@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE pjpeg
+3 _SIZE 51602
+3 _WDTH 400
+3 _HGHT 441
+2 TITL Prudence Russell Hancock
+1 _OID 668425d0-b92d-4200-b389-0d289d5bec9c
+1 _DSCR Old Burying Ground  Cambridge, Middlesex, Massachusetts  "Here lyes Buried ye Body of Mrs. Prudence Hancock Wife to Mr. Nathaniel Hancock Who Departed this life July 15th Anno Domi. 1742 Aged 72 Years.    Parents: Joseph Russell & Mary Belcher
+2 CONT 
+2 CONT Photo & Transcription: Find a Grave/ Contributor "the moo"
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 16:42:36.810
+1 _USER 1erQOB5sSuJia5Ntn3mo+Vt9O0YpfXyf2fdEC4Xy6MvSBxUIUu3nUZ58egU+wC8QsDRq4QRwZbpuLo3u05jzYQ==
+2 _ENCR 1
+1 _CLON
+2 _TID 1063337
+2 _PID -706948901
+2 _OID 1ddaca7c-6ff2-4571-b05b-c6377d733594
+2 _USER I829ASd8GAYMua1Ekw5Tik4IVRqkSyWlcAt7UfcpwmP6WtS0psq5avPIfxl8fp0iERBP+mOyx+vXIWSYDjbCww==
+3 _ENCR 1
+2 _DATE 2009-03-01 05:15:23.000
+1 _ORIG u
+1 _MSER
+2 _LKID 1ddaca7c-6ff2-4571-b05b-c6377d733594
+1 _ATL N
+0 @O28@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 29485
+3 _WDTH 341
+3 _HGHT 466
+2 TITL Paul A. 3
+1 _OID 67e8e729-b849-47de-8cea-1af0533fb99c
+1 _DSCR Ancestry.com. U.S., School Yearbooks, 1900-2016 [database on-line]. Lehi, UT, USA: Ancestry.com Operations, Inc., 2010.
+1 _META <metadataxml><record_source_gid>655069083:1265</record_source_gid></metadataxml>
+1 _CREA 2026-09-14 16:16:36.739
+1 _USER RS+AQudTV1diMEDI8M+mD9xbZw3QDeqXceTxkhPImZuWGATL+1v29+Zy4uSDiQcfz84grRz0Y7oC+CAVmTLWpw==
+2 _ENCR 1
+1 _ORIG u
+1 _ATL Y
+0 @O29@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 4055
+3 _WDTH 150
+3 _HGHT 197
+2 TITL AWR-pic2
+1 _OID 6b687df6-5b18-4d98-bf96-f00966d28542
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 18:48:36.412
+1 _USER oqVD4M9AVTQUJOeiLVHCQYajg+csbGoAQbJCGTlKgUM6ou8f8z+TdRp5sH8JZHg4TCGSLhh1LkicmY+8I7QmYQ==
+2 _ENCR 1
+1 _CLON
+2 _TID 25145908
+2 _OID 76dcd40d-b44b-43b4-871f-3a953e8fe2a0
+2 _USER Er0LCd90B64cRH3wGxYVgCuJ8WHTGNWQOcXcDKV25LbGXXA5bqcEslSS0Tkz4pugphs2zec1RgDiYpitKz/oWQ==
+3 _ENCR 1
+2 _DATE 2011-07-26 12:41:05.000
+1 _ORIG u
+1 _MSER
+2 _LKID 76dcd40d-b44b-43b4-871f-3a953e8fe2a0
+1 _ATL N
+0 @O30@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _STYPE png
+3 _SIZE 319741
+3 _WDTH 1668
+3 _HGHT 2224
+2 TITL IMG_1264
+1 _OID 713d57e2-e641-4769-9f88-09446e2105fc
+1 _CREA 2026-09-14 16:41:19.674
+1 _USER sCpox3234BP2zPuQOiMkF/8TGYDFKbQWtyLEQSwzwN8lEjdBNmui0KfCANidoO1iQQaWNkHzlN/YYoEJMIlKOg==
+2 _ENCR 1
+1 _CLON
+2 _TID 10943282
+2 _PID 182563595255
+2 _OID 576a0af7-788a-4976-a55e-4ed87968dde6
+2 _USER 4xgWC0vA9B0ra+3CzjWm9b8mvK7M5oP0vdsdcr6eytdS0AmXqqMOY/mwureGON7zicuve+D67+Q8uOwRPUcwRA==
+3 _ENCR 1
+2 _DATE 2025-03-12 00:57:29.116
+1 _ORIG acom
+1 _MSER
+2 _LKID 576a0af7-788a-4976-a55e-4ed87968dde6
+1 _ATL N
+0 @O31@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE jpeg
+3 _SIZE 230451
+3 _WDTH 2406
+3 _HGHT 2047
+2 TITL Gaspare Marino & Grazia Cipolla marr 1860 allegati 8 (marr bann II)
+1 _OID 83913f35-e50d-4539-926e-c6f1e045cbc3
+1 _META <metadataxml><transcription></transcription></metadataxml>
+1 _CREA 2026-09-14 17:05:55.346
+1 _USER 2VxFzh98LS3W29D+xoPLmoK4Jjf3jrU8yTo1vARieC0TJU2+r5BV2BgobGajyeTBSnsG04rJTawstwo/WwhU7Q==
+2 _ENCR 1
+1 _CLON
+2 _TID 52611790
+2 _PID 58000170341
+2 _OID e1784362-9a0b-4382-9dd1-c5510e3e221c
+2 _USER LN/UR7Rg/FlqUgPaFYVgsl/6ZISf24tQcq80tx7gRIKjt5vaEzxJeNu+d5H7WOpMP7vVMv8XPCdutkPj70K9hA==
+3 _ENCR 1
+2 _DATE 2018-03-03 07:27:14.000
+1 _ORIG u
+1 _MSER
+2 _LKID e1784362-9a0b-4382-9dd1-c5510e3e221c
+1 _ATL N
+0 @O32@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _STYPE jpeg
+3 _SIZE 86119
+3 _WDTH 370
+3 _HGHT 571
+2 TITL Chester Clark - Margaret Woods Clark - Wilma Woods Malmstone - Dr Francis Malmstone
+1 _OID 864bb16a-9b15-4a71-b850-b0afa8985a26
+1 DATE 2/10/2013 5:50:00 PM
+1 _CREA 2026-09-14 16:03:24.287
+1 _USER 8BjMXCuN6G/FaJpTRmIpwxRME2RkAkE5G93+E33bVcN3JjI7eBV1KXpRCs6Xmu+L8nZ1SphMlKhmCOr5CaT0Ug==
+2 _ENCR 1
+1 _CLON
+2 _OID a3c2fb50-9175-4bf0-b023-fea1fedcb6d7
+2 _USER CZxP5drjMIPSUdqqdG5k0WaJIFeDJm+2j2BG+jQ5/vsGBkTzIeglBqKjCMsZODQSU7vu0N6w/P0glQYZ6RftwQ==
+3 _ENCR 1
+2 _DATE 2013-02-11 12:08:52.000
+1 _ORIG u
+1 _MSER
+2 _LKID a3c2fb50-9175-4bf0-b023-fea1fedcb6d7
+1 _ATL N
+0 @O33@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _STYPE jpeg
+3 _SIZE 55726
+3 _WDTH 343
+3 _HGHT 584
+2 TITL Bartlett Woods - year unknown
+1 _OID 88e0d364-4113-4986-8460-ee17e6517e8b
+1 DATE 2/4/2011 4:10:16 PM
+1 _CREA 2026-09-14 18:46:59.721
+1 _USER qZPWkxhj0hCUrGLY1zqyW4Zt76OW+MtF1sZnUdmDpuwgETBRfHopE5CDbvpWcj/IZxerZx5Bl6QCUOO5eFdNxQ==
+2 _ENCR 1
+1 _CLON
+2 _TID 24969104
+2 _PID 1586416052
+2 _OID d9bda138-030b-4926-8c37-c895cd3a97ef
+2 _USER iFHIRVttSwtQ4JDrziv26goztI+GYMB9Q+oBA3ZWq+wAfB+8AlMP3I9A/nroCiQ4wKw/HlTcK3u0cTrJr0dW/Q==
+3 _ENCR 1
+2 _DATE 2012-08-05 13:22:30.000
+1 _ORIG u
+1 _MSER
+2 _LKID d9bda138-030b-4926-8c37-c895cd3a97ef
+1 _ATL N
+0 @O34@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 418617
+3 _WDTH 1286
+3 _HGHT 2192
+2 TITL F A Malmstone
+1 _OID 893f1046-4fee-4c05-a013-719308beaa98
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 16:03:17.849
+1 _USER lo9JM/uCRVRfJAtPH7tUc7mjkaJWU076sImLRDI9PlDYtSxYaYHshSO5Luy3A/ch7rc2rCANmNqvf00z5jNLdg==
+2 _ENCR 1
+1 _CLON
+2 _TID 34923713
+2 _PID 29792666142
+2 _OID d8ead551-9c59-419c-afe3-57e2f83deff0
+2 _USER yVD8uQ4giWnvBP6bcIpTlnt8UnCPI6rplG3BVPuw0ePnomrWUPahuWz0hjzG7m7ePLuZ99pUjN902knjtorfRw==
+3 _ENCR 1
+2 _DATE 2015-03-19 03:48:27.000
+1 _ORIG u
+1 _MSER
+2 _LKID d8ead551-9c59-419c-afe3-57e2f83deff0
+1 _ATL N
+0 @O35@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _STYPE jpeg
+3 _SIZE 63898
+3 _WDTH 640
+3 _HGHT 480
+2 TITL North Caldwell Cemtery
+1 _OID 8ebe58d2-0007-40da-bc74-6a49e2325544
+1 PLAC Lake George, Warren County, New York
+1 _CREA 2026-09-14 19:58:34.120
+1 _USER Lwj5yL8zmxqjHGcl2CEi91KX4oZKjhsPNh2+QJkjD36YK6QsIy4iZLxBj0fvNVs1SrcsN5EfzH/DsGNyGal4Gw==
+2 _ENCR 1
+1 _CLON
+2 _TID 5701591
+2 _PID 390000505384
+2 _OID bd09d5d2-0228-4cad-99ab-a58d4baa7a4a
+2 _USER nIWjm/x4Bd4BKrVKILciKwM66gbqaUcpCHI4KDPHDmOWaSdhXNIzrY6JgWUsp0PakRzAHL5oRhZt/Ophb9nA5A==
+3 _ENCR 1
+2 _DATE 2016-05-05 20:45:00.000
+1 _ORIG u
+1 _MSER
+2 _LKID bd09d5d2-0228-4cad-99ab-a58d4baa7a4a
+1 _ATL N
+0 @O36@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 994092
+3 _WDTH 2496
+3 _HGHT 3300
+2 TITL Claus & Anna Malmsten
+1 _OID 9316521d-34f5-4d6e-a64a-28763c104552
+1 DATE 1890
+1 PLAC Porter County, Indiana, USA
+1 _DSCR  Date and location are a guess
+1 _META <metadataxml><acountry></acountry><branch></branch><cemetery></cemetery><country></country><directions></directions><ingredients></ingredients><institution></institution><job></job><ocountry></ocountry><school></school><transcription></transcriptio
+2 CONC n><personas><persona><pname></pname><bdate></bdate><bplace></bplace><ddate></ddate><dplace></dplace></persona></personas></metadataxml>
+1 _CREA 2026-09-14 18:45:55.038
+1 _USER lDG/qpszbgbvJ44FQQfkZiSUOTqblxSFnG3TDcuwjFcI2UdsMTuF7zdqOwQhGDbP6zHA8JWiqTqTzZMKcVaCWw==
+2 _ENCR 1
+1 _CLON
+2 _TID 7680272
+2 _PID -1054304247
+2 _OID bd147652-14ed-4141-a7ff-e16d09e21d56
+2 _USER CS8iEgOdV0SactI/HKLr61SbUm/MOfTGhqo8dACGVLB5dTXTbv8iDdKumD3DnNar59VynnNiG319zIbeKNtTHw==
+3 _ENCR 1
+2 _DATE 2015-06-09 17:40:39.067
+1 _ORIG u
+1 _MSER
+2 _LKID bd147652-14ed-4141-a7ff-e16d09e21d56
+1 _ATL N
+0 @O37@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE other
+3 _STYPE jpeg
+3 _SIZE 434302
+3 _WDTH 1458
+3 _HGHT 1165
+2 TITL Devonshire
+1 _OID 9e4d0492-7b37-4011-9a78-b783c7dd0299
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 18:48:29.057
+1 _USER Yuj5xtFCtL7JnedjiKWbsnEQSWID3RCO91M9ZB1y3TUKpisMBOuBha6fpZZSYe7h2ADAYG17FjqxUlea1kXnLA==
+2 _ENCR 1
+1 _CLON
+2 _TID 64993570
+2 _PID 30351930075
+2 _OID ee4165ba-8606-4c45-b123-cbe80327dd45
+2 _USER bHWlLiPZaPEluU3xfSDXmtnNxSkAHTPS2IEYauP2U4IWVRI/cJh9JCXoA1slOqHsLoIGTU+coixpZ779bnKaWA==
+3 _ENCR 1
+2 _DATE 2015-01-27 16:47:01.000
+1 _ORIG u
+1 _MSER
+2 _LKID ee4165ba-8606-4c45-b123-cbe80327dd45
+1 _ATL N
+0 @O38@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE png
+3 _SIZE 398198
+3 _WDTH 1920
+3 _HGHT 956
+2 TITL Jean Baptiste Laures birth
+1 _OID a157f276-3368-4ed5-9404-5437f7ceb5c2
+1 DATE Jun 1805
+1 PLAC Hachy, Luxembourg
+1 _DSCR Hachy civil registrations
+1 _META <metadataxml><transcription></transcription></metadataxml>
+1 _CREA 2026-09-14 16:24:37.932
+1 _USER tcD0ctN/UHO4BTPKrEYmmPU8Dki/C3/c0W4Mz0oXe4SYFvjrwBL55ggEcb82K4hLkPfF4Vvb3og0A3w+oPqLmQ==
+2 _ENCR 1
+1 _CLON
+2 _TID 111739959
+2 _PID 232433118132
+2 _OID 8c7018b8-3834-4687-9922-6c86a7b87e38
+2 _USER osAZEuWbEkMReCa/mALvOklNaC97qg+sh/iBXoJOKoSqs942O1IqG/YGXujuAECUoCjo7TOuxsxQzPn5u+n4zA==
+3 _ENCR 1
+2 _DATE 2022-11-12 17:48:48.298
+1 _ORIG u
+1 _MSER
+2 _LKID 8c7018b8-3834-4687-9922-6c86a7b87e38
+1 _ATL N
+0 @O39@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE jpeg
+3 _SIZE 34376
+3 _WDTH 400
+3 _HGHT 400
+2 TITL Paul Teschner and wife living in Cecil, WI, 1925
+1 _OID a65da329-6da6-48bc-9cc4-eddc679fb68f
+1 DATE 1 Aug 1925
+1 PLAC Oshkosh, Wisconsin
+1 _CREA 2026-09-14 15:56:08.895
+1 _USER nWt+djvF2Z4wZw+lhOdEbaGcZsLvPGgd+nWfj4to3+Mb2zBqwpTL9EbUkRTzx8O1lvvrktnB4ZsJXs0wKwUENQ==
+2 _ENCR 1
+1 _CLON
+2 _TID 73869806
+2 _PID 42283887075
+2 _OID 1ccfe0af-9cb2-4a0b-b793-6606d8f0f568
+2 _USER UNvdSrwhyB7uunKwmibas2PcibwuYCQb0FclSTymELkkSporKYqmEG0K32E8ZY7fAjWoLP0tTsLb4ml4EQhnCw==
+3 _ENCR 1
+2 _DATE 2022-10-23 20:41:39.733
+1 _ORIG newspapers
+2 _URL https://www.newspapers.com/clip/111866775/paul-teschner-and-wife-living-in-cecil/?xid=865
+1 _MSER
+2 _LKID 1ccfe0af-9cb2-4a0b-b793-6606d8f0f568
+1 _ATL N
+0 @O40@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _STYPE jpeg
+3 _SIZE 59018
+3 _WDTH 387
+3 _HGHT 541
+2 TITL Margaret Herlitz Vilmer
+1 _OID a95357cd-b167-4399-83b4-aa17defeb13a
+1 DATE 8/8/2012 9:34:35 PM
+1 _CREA 2026-09-14 18:59:16.250
+1 _USER 2l1gqbhdX+knUoOGLsLX1VGYd9oTeoQDh15koZcUq3YhSkQMGuoAm4vgJcaMljunKbZFUFBPfe+cCsK44uvPRQ==
+2 _ENCR 1
+1 _CLON
+2 _TID 24969104
+2 _PID 1586416299
+2 _OID a0c5c4d4-30d7-41ab-8415-ce20c70f3047
+2 _USER 3SzJK0/Rs+rUVc+Q5VY5otQINEK6JfpUAIGB3nL7VXcpv9KqaRosAgRNIaqThcmQWapLpK5MK2RZtsSaXrf5pg==
+3 _ENCR 1
+2 _DATE 2012-08-09 02:36:35.997
+1 _ORIG u
+1 _MSER
+2 _LKID a0c5c4d4-30d7-41ab-8415-ce20c70f3047
+1 _ATL N
+0 @O41@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 7379
+3 _WDTH 106
+3 _HGHT 160
+2 TITL Melluyma C. Vilmer
+1 _OID aec2a58e-61ce-43a4-8d38-7f67ea82aec9
+1 PLAC Indiana, USA
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 18:46:26.341
+1 _USER 6tsf7V4CsY8MqLoEwzt1zXYkLUe+/A9zZwyFLLZk2ifptBWuH6nhwO/KV2srEPpJlTHKmquniyOKZPTTxCiyNw==
+2 _ENCR 1
+1 _CLON
+2 _TID 14887822
+2 _PID 28109722257
+2 _OID ce0b6dc4-bb91-4fcd-8234-40f6bb266bcf
+2 _USER yB/3dUyhMK4pIKHET+TiZMbo+0WuTvXQGmKGZv/kD5aqPzMfxS3IsS+xAGX2PFgJ76Z/kNiCZ8+DAgH03QfAfw==
+3 _ENCR 1
+2 _DATE 2014-03-11 22:43:37.000
+1 _ORIG u
+1 _MSER
+2 _LKID ce0b6dc4-bb91-4fcd-8234-40f6bb266bcf
+1 _ATL N
+0 @O42@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 36328
+3 _WDTH 388
+3 _HGHT 479
+2 TITL Karen Teschner
+1 _OID affe22f0-f28e-417d-9c00-bd3406d9a17c
+1 _DSCR Ancestry.com. U.S., School Yearbooks, 1900-2016 [database on-line]. Lehi, UT, USA: Ancestry.com Operations, Inc., 2010.
+1 _META <metadataxml><record_source_gid>226167532:1265</record_source_gid></metadataxml>
+1 _CREA 2026-09-14 15:54:26.152
+1 _USER AWpXMyPPGFw6rGBH2U5T5KyEv18ftT8w6By34as5sbkHQynzCExPZdnM/+GDAPk9GbZITZvcHwSsdQR2QOZHaA==
+2 _ENCR 1
+1 _ORIG u
+1 _ATL Y
+0 @O43@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE headstone
+3 _STYPE bmp
+3 _SIZE 1518741
+3 _WDTH 1600
+3 _HGHT 1200
+2 TITL Mary Polly Marsh Headstone
+1 _OID baa6d4e5-0839-4c4e-bc80-3438c6185898
+1 PLAC M.E. Church Cemetary Jefferson Wis.
+1 _DSCR "Pooly Marsh" wife of Jonathan Marsh 
+2 CONT died July 1 1883 
+2 CONT Aged 82yrs 2M
+1 _META <metadataxml><cemetery>M.E.Church Cemetery </cemetery><transcription /><personas><persona><pname>Pooly Marsh </pname><bdate /><bplace /><ddate>1883</ddate><dplace>Cleveland Ohio</dplace></persona></personas></metadataxml>
+1 _CREA 2026-09-14 16:22:18.908
+1 _USER Ak7cL7aPwgZ2xRZF7lr2rCLbOAWIi7ikLwN33zOz3QDa2RiyIi5ATKwnal8cNxT2RSVs5VC1sPwaItXnJIFPWA==
+2 _ENCR 1
+1 _CLON
+2 _TID 14706864
+2 _PID 150780611
+2 _OID 52a6b0a3-839f-4583-a646-98eafc2b0ffe
+2 _USER gBdRCSVJplOmUdw1HlqOEDpWmZhLhL/K0Y6ZL9EhuvrvHs/Ppp9csdxK2MGdCdmPDIDJQvt5hIoEZim7eN/0zw==
+3 _ENCR 1
+2 _DATE 2010-01-19 15:56:40.000
+1 _ORIG u
+1 _MSER
+2 _LKID 52a6b0a3-839f-4583-a646-98eafc2b0ffe
+1 _ATL N
+0 @O44@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 161300
+3 _WDTH 350
+3 _HGHT 640
+2 TITL laures
+1 _OID c5221e54-1ee3-4458-913f-53284d78b7a5
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 16:24:23.759
+1 _USER o+bFWTnA52vd4AMVPod+Yoz1WUqpQESY80jJcsBechnsaXCNHOXttLDDvbEEyMy5TXcb8VlPfiQUI5m1UsyfPA==
+2 _ENCR 1
+1 _CLON
+2 _TID 13294411
+2 _PID 1277974298
+2 _OID d90f7d6f-a9cd-4ec7-99d0-7b565c3e6db3
+2 _USER /qPbeBn4dka19Glb5mYvSuF09n/XQTWprtarwmhRoLIryeFxmkMD0ovuxcYYbX5CMbjlTYt7QZNH8qLxfVlzog==
+3 _ENCR 1
+2 _DATE 2013-11-28 20:32:02.000
+1 _ORIG u
+1 _MSER
+2 _LKID d90f7d6f-a9cd-4ec7-99d0-7b565c3e6db3
+1 _ATL N
+0 @O45@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 3670963
+3 _WDTH 6600
+3 _HGHT 5100
+2 TITL 1819nr-chMarriageGer-002
+1 _OID c73c6fb2-899c-4b4d-a45f-75ec232aa0a2
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 18:55:32.638
+1 _USER 3Sputs3F+cgLe4mTH+4uzl7efIKLhmEZHpphPQij8YMiGNfvL0Acd8eGFsFhZkR5aeH90uHeUWXdHUipXv2szg==
+2 _ENCR 1
+1 _CLON
+2 _TID 25145908
+2 _OID 0b81c23c-71b4-4208-a4de-35470b7ee3c9
+2 _USER Ct+R0nyMJ0m3stBsMtPs+armvIZWZIcs8QSC2GEa4LNj81XVapN50/MQO2/NiY2NS/pxU/AuY77J3+Qn7Lb43Q==
+3 _ENCR 1
+2 _DATE 2012-11-11 01:32:53.000
+1 _ORIG u
+1 _MSER
+2 _LKID 0b81c23c-71b4-4208-a4de-35470b7ee3c9
+1 _ATL N
+0 @O46@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE other
+3 _STYPE jpeg
+3 _SIZE 118843
+3 _WDTH 581
+3 _HGHT 800
+2 TITL CopyDan'lTaylorBiblePgA
+1 _OID c9123d87-093d-46dd-a585-70ae27a4d979
+1 _DSCR Marriage record
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 18:56:45.368
+1 _USER g9EeC0KD1ZBY/aPRwxKlKwqXpB+WlMsP0HzQ3TNuvgfcyszUbJQI4zGrHj4bE2hbb+8fzksIQhkYrZXUQ5dggQ==
+2 _ENCR 1
+1 _CLON
+2 _TID 29677703
+2 _PID 12207365416
+2 _OID 9e92f75b-6302-4c75-a2ae-34176f9c8e65
+2 _USER eyIlea9Eo1EKfyiO5T7Hp87zU3a0Ou9VHw0zYGRg/Ed3AxumKGjacjH4OS1ffo+xNbQup6Is0EFqhV0VOlSxwA==
+3 _ENCR 1
+2 _DATE 2013-10-17 03:31:33.000
+1 _ORIG u
+1 _MSER
+2 _LKID 9e92f75b-6302-4c75-a2ae-34176f9c8e65
+1 _ATL N
+0 @O47@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _STYPE jpeg
+3 _SIZE 24121
+3 _WDTH 719
+3 _HGHT 723
+2 TITL Colonia lWoman silhouette
+1 _OID ccbba640-6264-4d48-8869-1b57ac66efed
+1 _CREA 2026-09-14 18:57:49.029
+1 _USER zH9awE3CaT9EDb1owyo0rvvBN/Bn3MBRio+ahlepLloyo5Y4G8uco/fOBZqqdCMSoA7UtsGhjeLj6uC9xsaYKg==
+2 _ENCR 1
+1 _CLON
+2 _TID 26868971
+2 _OID 073f42ad-69c3-4137-82d2-ba19c6870af3
+3 _ENCR 1
+2 _DATE 2020-05-08 23:40:11.000
+1 _ORIG u
+1 _MSER
+2 _LKID 073f42ad-69c3-4137-82d2-ba19c6870af3
+1 _ATL N
+0 @O48@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE jpeg
+3 _SIZE 16594
+3 _WDTH 250
+3 _HGHT 188
+2 TITL William L Boyington 
+1 _OID d0e721e4-1791-4610-8dcf-5f9452a91cf5
+1 DATE 16 Jun 1949
+1 PLAC Yakima, Yakima County, Washington, USA
+1 _CREA 2026-09-14 16:04:11.045
+1 _USER enCO/ka+htENPLEETn5VUTqSMtiit9loIgED+BfWYhSFVrMb92tucsyDsoWVFdzxUPQj8VHfp979E7rbBPBqvQ==
+2 _ENCR 1
+1 _CLON
+2 _TID 3051391
+2 _PID 372606670600
+2 _OID cd4bc302-ec48-4077-8c2a-3c42c7113f90
+2 _USER D/PvCFtg9yV4qZq2HTmTJ0nLnX/PH9vEy7+ILDz7s63IwjTibGnZEK4tohmTowS56W3tVfXzGV2o6G49Ocgejw==
+3 _ENCR 1
+2 _DATE 2024-08-25 18:49:28.272
+1 _ORIG u
+2 _URL https://www.findagrave.com/memorial/174081745/william_l-boyington
+1 _MSER
+2 _LKID cd4bc302-ec48-4077-8c2a-3c42c7113f90
+1 _ATL N
+0 @O49@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE jpeg
+3 _SIZE 378956
+3 _WDTH 1196
+3 _HGHT 1594
+2 TITL Gaspare Marino&Grazia Sparacino_Gaspare Sparacino&Teresa Sponsile(1)  m1810
+1 _OID d2f9ddfa-0ca2-493f-b555-10028b8823bf
+1 DATE 1810
+1 PLAC Sambuca
+1 _META <metadataxml><transcription></transcription></metadataxml>
+1 _CREA 2026-09-14 20:03:55.592
+1 _USER ly+JFuj6HJD3fVFIYIGHcnMzbK06v5qHf2NekGWNK8soQdLjuY2l/mXJrMW0XtX5vbe7rnYRTRsNiYGOkhkbeg==
+2 _ENCR 1
+1 _CLON
+2 _TID 52611790
+2 _PID 58000169530
+2 _OID e54c3a5b-a5fa-48e2-89d2-ae445b2144c5
+2 _USER xXfvXLlorwC6u4OON3pqIKrb6wXVxm5g6aOAWcnhA3IwxMDJywvbqiNZAWV07EezZ0kCe3h1aSMnJdwrS8hrbA==
+3 _ENCR 1
+2 _DATE 2022-10-08 10:39:01.212
+1 _ORIG u
+1 _MSER
+2 _LKID e54c3a5b-a5fa-48e2-89d2-ae445b2144c5
+1 _ATL N
+0 @O50@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE png
+3 _SIZE 445688
+3 _WDTH 1920
+3 _HGHT 959
+2 TITL Catherine Freyman baptism
+1 _OID e1c5c18e-9df0-418a-b2cc-f02a20ac34e5
+1 DATE 19 Apr 1765
+1 PLAC Sampont, Luxembourg
+1 _DSCR Roman Catholic parish registers
+1 _META <metadataxml><transcription></transcription></metadataxml>
+1 _CREA 2026-09-14 16:25:06.001
+1 _USER mpQ/UGC9pU+4nfvKapH3xD1MsaVZqknyZ4KP41vFsaJ4JPjZinIUxs4RtF/YkAFE2/W1JkiQdnSBXYa0Dwq7Yg==
+2 _ENCR 1
+1 _CLON
+2 _TID 111739959
+2 _PID 232435295648
+2 _OID 6429a6e2-ac5c-426f-8aec-0552d0a632ed
+2 _USER W0i+FIBAv3WXuu49wXL5WGuZAphNfOYpB07IfvzDdogL+8v3qT9RXWmXm79RHZ+mP0lyjmFh8Xbj9ev4/oW0Fg==
+3 _ENCR 1
+2 _DATE 2023-02-03 12:38:25.180
+1 _ORIG u
+1 _MSER
+2 _LKID 6429a6e2-ac5c-426f-8aec-0552d0a632ed
+1 _ATL N
+0 @O51@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE pjpeg
+3 _SIZE 650746
+3 _WDTH 1472
+3 _HGHT 2136
+2 TITL Malmsten ET Genealogy 4
+1 _OID e3dda393-c284-4b22-bd96-56227a3e6798
+1 DATE 2010
+1 PLAC Sweden
+1 _DSCR Genealogist Elizabeth Thorsell, ET Genealogy, Sweden
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 18:47:41.744
+1 _USER qWtBbcD1l0OxxO2sogju9lrFzsRJVZ7DaqdavEWrV7XmwXo2C3JRaMyuh2LQIEAVTqhOFT5VD9YV4MYBdXmsyg==
+2 _ENCR 1
+1 _CLON
+2 _TID 7680272
+2 _PID -694921500
+2 _OID a3cbc69e-4550-4d26-b6de-4994aa216e32
+2 _USER g/90S9xs3ZPKQNVMGYDuMIP6MeWJ5m5p7fmZizIymdft3HDoc9ZCHhT5uJw5fnSXIAQVsBb530xlTO4AAx4i3g==
+3 _ENCR 1
+2 _DATE 2010-02-26 02:43:22.313
+1 _ORIG u
+1 _MSER
+2 _LKID a3cbc69e-4550-4d26-b6de-4994aa216e32
+1 _ATL N
+0 @O52@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE pjpeg
+3 _SIZE 1708732
+3 _WDTH 2842
+3 _HGHT 2218
+2 TITL Wolfgang Dorn & Family
+1 _OID e7a5bd39-3c6e-47b5-866a-50660d9a1aca
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 16:11:54.037
+1 _USER NhojH0noWSZr+2GQabr41XxzHDRdOQjBGWskYOUS7WH/XpJV+ThqcY46WsBpcagM+JOoJ2e8RvWmooTPge8NYw==
+2 _ENCR 1
+1 _CLON
+2 _TID 11731828
+2 _PID -89729909
+2 _OID a029d3e3-3a7a-42e0-8219-f8b307882b39
+2 _USER utPgYwPLBcbkebh1teKCvfCkK2a+U+Xh46m4c3NNqWImdwNOTxVkfiws9zZHboEusr1OpXyrAVvi8Dk5LTwuUw==
+3 _ENCR 1
+2 _DATE 2010-03-11 17:39:59.000
+1 _ORIG u
+1 _MSER
+2 _LKID a029d3e3-3a7a-42e0-8219-f8b307882b39
+1 _ATL N
+0 @O53@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 18967
+3 _WDTH 250
+3 _HGHT 188
+2 TITL Johannes Malmsten
+1 _OID e94545f4-9e27-40e7-8bfc-c33469c097b8
+1 _META <metadataxml><cemetery /><transcription /></metadataxml>
+1 _CREA 2026-09-14 18:46:04.873
+1 _USER 3ojJCnYIwYxjlPzQugykSHvOfG7ei1+NQw7wBOhkSp6XuN51G9FAEmvvxwIVI+U93QkQxQIWSQ2toKy95aOOmg==
+2 _ENCR 1
+1 _CLON
+2 _TID 7680272
+2 _PID -957886826
+2 _OID aaa60444-bdc9-49e0-a457-1ad3281fdc66
+2 _USER Z5zZ9IAUbgSs9jWF0OS9C6G4vVVkGamrQm6suq9P7NcI2NN4Zk2CU5TArraUHZWDPxJIglaFJfHHmOouNeUlVg==
+3 _ENCR 1
+2 _DATE 2010-12-02 13:27:44.097
+1 _ORIG u
+1 _MSER
+2 _LKID aaa60444-bdc9-49e0-a457-1ad3281fdc66
+1 _ATL N
+0 @O54@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _STYPE jpeg
+3 _SIZE 686222
+3 _WDTH 1554
+3 _HGHT 2625
+2 TITL New Jersey, Abstract of Wills, 1670-1817
+1 _OID eaf55300-3083-444a-a860-7a979d2460f3
+1 _CREA 2026-09-14 18:57:26.283
+1 _USER mhmAUgpEBoSBceW9mVBqjLbreEfp2p4Phyxyf0ktoDIo0kDdd96lVP/nvoohhIdx5lnSGTMltyK+IwCkY3QTyQ==
+2 _ENCR 1
+1 _CLON
+2 _TID 77477376
+2 _PID 42365158669
+2 _OID 715d3c0a-5745-4310-bfa5-b03eb2ef4794
+2 _USER 1o8jPQQXpWqbzT1cxAlAZPByEc7bkX6aNG/0Oa8bZltAmulVn+daQRJauOPoy43joxcL6SAHRV3WElTjC4nNeA==
+3 _ENCR 1
+2 _DATE 2015-02-16 02:30:37.923
+1 _ORIG u
+1 _MSER
+2 _LKID 715d3c0a-5745-4310-bfa5-b03eb2ef4794
+1 _ATL N
+0 @O55@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE jpeg
+3 _SIZE 284701
+3 _WDTH 2371
+3 _HGHT 2006
+2 TITL Gaspare Marino & Grazia Cipolla marr 1860 allegati 5 (Nicolo' Cipolla death 1845)
+1 _OID f1952b54-71bc-460f-a7a0-62a0b041e0a5
+1 _META <metadataxml><transcription></transcription></metadataxml>
+1 _CREA 2026-09-14 20:04:17.167
+1 _USER GB2pg2eSg51gRHMXkVOfZzij1zNOxjhkRq7DMHW5q6pIXdhF9RAKfGCdVbcUV9HMYY7R3qUZ7GW4sIWw6v1/PA==
+2 _ENCR 1
+1 _CLON
+2 _TID 52611790
+2 _PID 300186292824
+2 _OID b87c4bfd-89e4-408c-b2f5-5f9ed1b1421e
+2 _USER rL2Tn//hh3BlNIFTaLhrOg99sOv+ZwFxFttEMjKwJssEzp1blg43sEXico4Zuw0lSl6o6f8gB2bH2hulHrsISg==
+3 _ENCR 1
+2 _DATE 2018-03-03 06:41:34.791
+1 _ORIG u
+1 _MSER
+2 _LKID b87c4bfd-89e4-408c-b2f5-5f9ed1b1421e
+1 _ATL N
+0 @O56@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE jpeg
+3 _SIZE 40682
+3 _WDTH 250
+3 _HGHT 333
+2 TITL  Nathaniel Hancock
+1 _OID f300df9d-272e-4971-82e0-3a9b9e5a2d92
+1 DATE 10 May 1755
+1 PLAC Cambridge, Middlesex County, Massachusetts, USA
+1 _CREA 2026-09-14 16:42:28.412
+1 _USER /GArwoWbVZZ+zzvxnroucDpHZwNWv3JqUJdk0N968njvaMVYfi/Vo31+r5/JkA2BM+CFzLsHPuPWQvFaF08/Ag==
+2 _ENCR 1
+1 _CLON
+2 _TID 74445343
+2 _PID 412094449420
+2 _OID 421846b3-1721-4963-87d9-e937c1d265b4
+2 _USER OTY1c+9gloplq254MB0FCkKo9FUkoDi3ndWM2ELP5S4v0lYDffgWWQbo9ZxZ6IRBm2VJoW+5Xy7soT0KbtOkIA==
+3 _ENCR 1
+2 _DATE 2019-04-08 03:09:04.000
+1 _ORIG u
+2 _URL https://www.findagrave.com/memorial/20896798/nathaniel-hancock
+1 _MSER
+2 _LKID 421846b3-1721-4963-87d9-e937c1d265b4
+1 _ATL N
+0 @O57@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE portrait
+3 _STYPE jpeg
+3 _SIZE 119556
+3 _WDTH 545
+3 _HGHT 736
+2 TITL Margaret L Diedrich
+1 _OID fce0483f-bea9-4a10-aebe-b5b5d6b9af2d
+1 _DSCR Ancestry.com. U.S., School Yearbooks, 1900-2016 [database on-line]. Lehi, UT, USA: Ancestry.com Operations, Inc., 2010.
+1 _META <metadataxml><record_source_gid>446709474:1265</record_source_gid></metadataxml>
+1 _CREA 2026-09-14 18:49:49.585
+1 _USER 30p2kJS8/e5GLTNLlUuGxKXi2IM2NMbHJeuuFOrxM1IFVBzD6FabP/knPbPQWFEX+OOoPhgM0/Hc+6kCPUJF1A==
+2 _ENCR 1
+1 _ORIG u
+1 _ATL Y
+0 @O58@ OBJE
+1 FILE
+2 FORM jpg
+3 TYPE image
+3 _MTYPE document
+3 _STYPE png
+3 _SIZE 449409
+3 _WDTH 2224
+3 _HGHT 1668
+2 TITL Elizabeth Haseltine Boynton
+1 _OID ff06ae08-1370-4f4e-8a4b-718996ab0f8b
+1 _META <metadataxml><transcription /></metadataxml>
+1 _CREA 2026-09-14 16:41:28.080
+1 _USER WZWR86P43XUgZkGiJgLBf9GTLMun/r8SvXQgZxaW6lV/JO1BB/yo+jmVAOZrv2Duh7JOsbpxTklSH1RPvyb5PQ==
+2 _ENCR 1
+1 _CLON
+2 _TID 10943282
+2 _PID 182563595255
+2 _OID a1fcf471-7d98-480c-8824-cd9a987db1c3
+2 _USER yF2yKgx3iDI9eeIxVYYu2rPC+SN77oKoeU/P9YMSReHw4XvfarTVpMbjVkdIIwzDHayC72xkWZ9mRAPxQ8ZKlQ==
+3 _ENCR 1
+2 _DATE 2021-12-21 20:50:52.000
+1 _ORIG u
+1 _MSER
+2 _LKID a1fcf471-7d98-480c-8824-cd9a987db1c3
+1 _ATL N
+0 @S982582572@ SOUR
+1 TITL 1950 United States Federal Census
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations, Inc.
+2 DATE 2022
+2 PLAC Lehi, UT, USA
+1 _APID 1,62308::0
+1 REPO @R856241090@
+0 @S982582581@ SOUR
+1 TITL U.S., Newspapers.com™ Obituary Index, 1800s-current
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations Inc
+2 DATE 2019
+2 PLAC Lehi, UT, USA
+1 _APID 1,61843::0
+1 REPO @R856241090@
+0 @S982582582@ SOUR
+1 TITL U.S., School Yearbooks, 1900-2016
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations, Inc.
+2 DATE 2010
+2 PLAC Lehi, UT, USA
+1 _APID 1,1265::0
+1 REPO @R856241090@
+0 @S982582586@ SOUR
+1 TITL Indiana, U.S., Newspapers.com™ Stories and Events Index, 1800's-current
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations Inc
+2 DATE 2023
+2 PLAC Lehi, UT, USA
+1 _APID 1,50039::0
+1 REPO @R856241090@
+0 @S982582659@ SOUR
+1 TITL Ancestry Family Tree
+1 PUBL
+2 PLAC Online publication - Provo, UT, USA: Ancestry.com.  Original data:  Family Tree files submitted by Ancestry members.
+1 _APID 1,1030::0
+1 REPO @R856241090@
+0 @S982582735@ SOUR
+1 TITL Wisconsin, U.S., Marriage Index, 1973-1997
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations Inc
+2 DATE 2005
+2 PLAC Provo, UT, USA
+1 _APID 1,8744::0
+1 REPO @R856241090@
+0 @S982582744@ SOUR
+1 TITL U.S., Index to Public Records, 1994-2019
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations, Inc.
+2 DATE 2020
+2 PLAC Lehi, UT, USA
+1 _APID 1,62209::0
+1 REPO @R856241090@
+0 @S982582928@ SOUR
+1 TITL U.S., Social Security Death Index, 1935-2014
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations Inc
+2 DATE 2014
+2 PLAC Provo, UT, USA
+1 _APID 1,3693::0
+1 REPO @R856241090@
+0 @S982582944@ SOUR
+1 TITL U.S., Public Records Index, 1950-1993, Volume 2
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations, Inc.
+2 DATE 2010
+2 PLAC Lehi, UT, USA
+1 _APID 1,1732::0
+1 REPO @R856241090@
+0 @S982582947@ SOUR
+1 TITL U.S., Public Records Index, 1950-1993, Volume 1
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations, Inc.
+2 DATE 2010
+2 PLAC Lehi, UT, USA
+1 _APID 1,1788::0
+1 REPO @R856241090@
+0 @S982598257@ SOUR
+1 TITL North Carolina, U.S., Voter Registration Records, 1900-2023
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations Inc
+2 DATE 2023
+2 PLAC Lehi, UT, USA
+1 _APID 1,62895::0
+1 REPO @R856241090@
+0 @S982598277@ SOUR
+1 TITL 1940 United States Federal Census
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations, Inc.
+2 DATE 2012
+2 PLAC Provo, UT, USA
+1 _APID 1,2442::0
+1 REPO @R856241090@
+0 @S982598409@ SOUR
+1 TITL U.S., Obituary Collection, 1930-Current
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations Inc
+2 DATE 2006
+2 PLAC Lehi, UT, USA
+1 _APID 1,7545::0
+1 REPO @R856241090@
+0 @S982598857@ SOUR
+1 TITL Wisconsin, U.S., Marriage Records, 1820-2015
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations, Inc.
+2 DATE 2022
+2 PLAC Lehi, UT, USA
+1 _APID 1,61484::0
+1 REPO @R856241090@
+0 @S982598860@ SOUR
+1 TITL U.S., Newspapers.com™ Marriage Index, 1800s-current
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations Inc
+2 DATE 2020
+2 PLAC Lehi, UT, USA
+1 _APID 1,62116::0
+1 REPO @R856241090@
+0 @S982607309@ SOUR
+1 TITL U.S., Department of Veterans Affairs BIRLS Death File, 1850-2020
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations, Inc.
+2 DATE 2011
+2 PLAC Provo, UT, USA
+1 _APID 1,2441::0
+1 REPO @R856241090@
+0 @S982607346@ SOUR
+1 TITL 1910 United States Federal Census
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations Inc
+2 DATE 2006
+2 PLAC Lehi, UT, USA
+1 _APID 1,7884::0
+1 REPO @R856241090@
+0 @S982607356@ SOUR
+1 TITL U.S., World War II Draft Cards Young Men, 1940-1947
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations, Inc.
+2 DATE 2011
+2 PLAC Lehi, UT, USA
+1 _APID 1,2238::0
+1 REPO @R856241090@
+0 @S982607361@ SOUR
+1 TITL U.S., Social Security Applications and Claims Index, 1936-2007
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations, Inc.
+2 DATE 2015
+2 PLAC Provo, UT, USA
+1 _APID 1,60901::0
+1 REPO @R856241090@
+0 @R856241090@ REPO
+1 NAME Ancestry.com
+0 TRLR

@@ -2,55 +2,165 @@
   "title": "Dorn Family Tree",
   "generations": [
     {
+      "label": "Great-Great-Grandparents",
+      "description": "Great-Grandparents of Chris Dorn",
+      "couples": [
+        {
+          "id": "michael_dorn_fredericka",
+          "branch": "Chris Dorn - Paternal-Paternal Great-Grandparents (Michael Dorn & Fredericka Laures)",
+          "married_date": null,
+          "married_year": null,
+          "person1": {
+            "name": "Michael Dorn",
+            "maiden": null,
+            "birthdate": "1866-10-10",
+            "birth_year": "1866",
+            "death_date": "1943-09-20",
+            "death_year": "1943",
+            "photo": null
+          },
+          "person2": {
+            "name": "Fredericka Dorn",
+            "maiden": "Laures",
+            "birthdate": "1873-09-16",
+            "birth_year": "1873",
+            "death_date": "1953-12-18",
+            "death_year": "1953",
+            "photo": null
+          }
+        },
+        {
+          "id": "peter_schaefer_elizabeth",
+          "branch": "Chris Dorn - Paternal-Maternal Great-Grandparents (Peter Schaefer & Elizabeth Reiden)",
+          "married_date": null,
+          "married_year": null,
+          "person1": {
+            "name": "Peter Schaefer",
+            "maiden": null,
+            "birthdate": "1854-07-24",
+            "birth_year": "1854",
+            "death_date": "1918-12-07",
+            "death_year": "1918",
+            "photo": null
+          },
+          "person2": {
+            "name": "Elizabeth Schaefer",
+            "maiden": "Reiden",
+            "birthdate": "1863-12-16",
+            "birth_year": "1863",
+            "death_date": "1933-01-07",
+            "death_year": "1933",
+            "photo": null
+          }
+        },
+        {
+          "id": "paul_teschner_helen",
+          "branch": "Chris Dorn - Maternal-Paternal Great-Grandparents (Paul A. C. Teschner & Helen Boyington)",
+          "married_date": null,
+          "married_year": null,
+          "person1": {
+            "name": "Paul August Carl Teschner",
+            "maiden": null,
+            "birthdate": "1896-10-10",
+            "birth_year": "1896",
+            "death_date": "1945-05-25",
+            "death_year": "1945",
+            "photo": null
+          },
+          "person2": {
+            "name": "Helen Jane Teschner",
+            "maiden": "Boyington",
+            "birthdate": "1901-09-13",
+            "birth_year": "1901",
+            "death_date": "1993-11-06",
+            "death_year": "1993",
+            "photo": null
+          }
+        },
+        {
+          "id": "francis_malmstone_wilma",
+          "branch": "Chris Dorn - Maternal-Maternal Great-Grandparents (Dr. Francis Malmstone & Wilma Woods)",
+          "married_date": null,
+          "married_year": null,
+          "person1": {
+            "name": "Dr. Francis August Malmstone",
+            "maiden": null,
+            "birthdate": "1877-02-09",
+            "birth_year": "1877",
+            "death_date": "1954-07-02",
+            "death_year": "1954",
+            "photo": null
+          },
+          "person2": {
+            "name": "Wilma Lee Malmstone",
+            "maiden": "Woods",
+            "birthdate": "1887-07-08",
+            "birth_year": "1887",
+            "death_date": "1970-12-19",
+            "death_year": "1970",
+            "photo": null
+          }
+        }
+      ]
+    },
+    {
       "label": "Great-Grandparents",
       "description": "Grandparents of Chris Dorn",
       "couples": [
         {
           "id": "allan_dorn_parents",
           "branch": "Chris Dorn - Paternal Grandparents (Allan Dorn's Parents)",
-          "married_date": null,
-          "married_year": null,
+          "parent_couple_1": "michael_dorn_fredericka",
+          "parent_couple_2": "peter_schaefer_elizabeth",
+          "married_date": "1929-06-24",
+          "married_year": 1929,
           "person1": {
-            "name": null,
+            "name": "Herman John Dorn",
             "maiden": null,
-            "birthdate": null,
-            "birth_year": null,
-            "death_date": null,
-            "death_year": null,
-            "photo": null
+            "birthdate": "1905-11-25",
+            "birth_year": "1905",
+            "death_date": "1984-06-04",
+            "death_year": "1984",
+            "photo": null,
+            "parent_couple": "michael_dorn_fredericka"
           },
           "person2": {
-            "name": null,
-            "maiden": null,
-            "birthdate": null,
-            "birth_year": null,
-            "death_date": null,
-            "death_year": null,
-            "photo": null
+            "name": "Louise Dorn",
+            "maiden": "Schaefer",
+            "birthdate": "1913",
+            "birth_year": "1913",
+            "death_date": "1976-06-14",
+            "death_year": "1976",
+            "photo": null,
+            "parent_couple": "peter_schaefer_elizabeth"
           }
         },
         {
           "id": "teschner_parents",
           "branch": "Chris Dorn - Maternal Grandparents (Karen Teschner's Parents)",
-          "married_date": null,
-          "married_year": null,
+          "parent_couple_1": "paul_teschner_helen",
+          "parent_couple_2": "francis_malmstone_wilma",
+          "married_date": "1948-06-12",
+          "married_year": 1948,
           "person1": {
-            "name": null,
+            "name": "Paul A. Teschner Jr.",
             "maiden": null,
-            "birthdate": null,
-            "birth_year": null,
-            "death_date": null,
-            "death_year": null,
-            "photo": null
+            "birthdate": "1925-06-20",
+            "birth_year": "1925",
+            "death_date": "1987",
+            "death_year": "1987",
+            "photo": null,
+            "parent_couple": "paul_teschner_helen"
           },
           "person2": {
-            "name": null,
-            "maiden": null,
-            "birthdate": null,
-            "birth_year": null,
-            "death_date": null,
-            "death_year": null,
-            "photo": null
+            "name": "Barbara Teschner",
+            "maiden": "Malmstone",
+            "birthdate": "1928",
+            "birth_year": "1928",
+            "death_date": "1976-01-31",
+            "death_year": "1976",
+            "photo": null,
+            "parent_couple": "francis_malmstone_wilma"
           }
         }
       ]
