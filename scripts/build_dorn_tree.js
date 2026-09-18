@@ -118,7 +118,7 @@ function renderBranchTree(treeData, prefix) {
                 <div class="ft-couple-card${c.id === 'chris_elyse' ? ' main-couple' : ''}${c.is_sibling ? ' ft-sibling-card' : ''}"
                      id="card-${prefix}-${c.id.replace(/_/g, '-')}"
                      ${c.sibling_group ? `data-sibling-group="${c.sibling_group}" style="display: none;"` : ''}>
-                  ${c.is_sibling ? '<span class="ft-sibling-tag">Family Branch</span>' : ''}
+                  ${c.is_sibling ? '<span class="ft-sibling-tag">Branch</span>' : ''}
                   ${renderPersonCard(c.person1)}
                   <div class="ft-heart">&amp;</div>
                   ${renderPersonCard(c.person2)}
@@ -142,7 +142,7 @@ function renderBranchTree(treeData, prefix) {
                 <div class="ft-individual-card${ind.is_sibling ? ' ft-sibling-card' : ''}"
                      id="card-${prefix}-${ind.id.replace(/_/g, '-')}"
                      ${ind.sibling_group ? `data-sibling-group="${ind.sibling_group}" style="display: none;"` : ''}>
-                  ${ind.is_sibling ? '<span class="ft-sibling-tag">Family Branch</span>' : ''}
+                  ${ind.is_sibling ? '<span class="ft-sibling-tag">Branch</span>' : ''}
                   ${renderPersonCard(ind)}
                   ${childBtn}
                 </div>
@@ -164,7 +164,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
     <div class="family-tree-container">
       <div class="ft-header-bar">
         <h2 class="ft-title">Family Tree</h2>
-        <p class="ft-subtitle">Interactive family tree with expandable sibling cards, spouses, and children.</p>
+        <p class="ft-subtitle">Interactive family tree. Toggle sibling &amp; child branches to explore lines.</p>
 
         <!-- Segmented Branch Toggle -->
         <div class="ft-branch-toggle-group">
@@ -249,7 +249,47 @@ function renderUnifiedTree(dornTree, lucasTree) {
         setTimeout(drawConnectors, 60);
       };
 
-      // Toggle individual group cards (siblings or children)
+      // Recursive helper to close a group and all nested groups
+      function closeGroup(activeTree, groupId) {
+        const cards = activeTree.querySelectorAll(\`[data-sibling-group="\${groupId}"]\`);
+        cards.forEach(card => {
+          card.style.display = 'none';
+
+          // Find any trigger buttons on this card that trigger nested groups
+          const nestedBtns = card.querySelectorAll('[data-target-group]');
+          nestedBtns.forEach(btn => {
+            const nestedGroupId = btn.getAttribute('data-target-group');
+            if (nestedGroupId && nestedGroupId !== groupId) {
+              closeGroup(activeTree, nestedGroupId);
+            }
+          });
+        });
+
+        // Reset all buttons targeting this groupId
+        const triggerBtns = activeTree.querySelectorAll(\`[data-target-group="\${groupId}"]\`);
+        triggerBtns.forEach(btn => {
+          const icon = btn.querySelector('.ft-pill-icon');
+          if (icon) icon.textContent = '▸';
+          btn.classList.remove('active');
+        });
+      }
+
+      function openGroup(activeTree, groupId) {
+        const cards = activeTree.querySelectorAll(\`[data-sibling-group="\${groupId}"]\`);
+        cards.forEach(card => {
+          card.style.display = card.classList.contains('ft-couple-card') ? 'flex' : 'block';
+        });
+
+        // Update button targeting this groupId
+        const triggerBtns = activeTree.querySelectorAll(\`[data-target-group="\${groupId}"]\`);
+        triggerBtns.forEach(btn => {
+          const icon = btn.querySelector('.ft-pill-icon');
+          if (icon) icon.textContent = '▾';
+          btn.classList.add('active');
+        });
+      }
+
+      // Toggle individual group cards (siblings or children) with cascading close
       window.toggleSiblingGroup = function(e, groupId) {
         if (e) {
           e.stopPropagation();
@@ -262,18 +302,12 @@ function renderUnifiedTree(dornTree, lucasTree) {
         if (cards.length === 0) return;
 
         const isCurrentlyHidden = cards[0].style.display === 'none' || cards[0].style.display === '';
-        
-        cards.forEach(card => {
-          card.style.display = isCurrentlyHidden ? (card.classList.contains('ft-couple-card') ? 'flex' : 'block') : 'none';
-        });
 
-        // Update trigger buttons
-        const btns = activeTree.querySelectorAll(\`[data-target-group="\${groupId}"]\`);
-        btns.forEach(btn => {
-          const icon = btn.querySelector('.ft-pill-icon');
-          if (icon) icon.textContent = isCurrentlyHidden ? '▾' : '▸';
-          btn.classList.toggle('active', isCurrentlyHidden);
-        });
+        if (isCurrentlyHidden) {
+          openGroup(activeTree, groupId);
+        } else {
+          closeGroup(activeTree, groupId);
+        }
 
         setTimeout(drawConnectors, 80);
       };
@@ -284,18 +318,15 @@ function renderUnifiedTree(dornTree, lucasTree) {
         const activeTree = document.getElementById(\`ft-diagram-tree-\${currentBranch}\`);
         if (!activeTree) return;
 
-        const cards = activeTree.querySelectorAll('[data-sibling-group]');
-        const btns = activeTree.querySelectorAll('.ft-sib-pill-btn, .ft-child-pill-btn');
+        const allGroups = new Set();
+        const allBtns = activeTree.querySelectorAll('[data-target-group]');
+        allBtns.forEach(btn => allGroups.add(btn.getAttribute('data-target-group')));
 
-        cards.forEach(card => {
-          card.style.display = allExpanded ? (card.classList.contains('ft-couple-card') ? 'flex' : 'block') : 'none';
-        });
-
-        btns.forEach(btn => {
-          const icon = btn.querySelector('.ft-pill-icon');
-          if (icon) icon.textContent = allExpanded ? '▾' : '▸';
-          btn.classList.toggle('active', allExpanded);
-        });
+        if (allExpanded) {
+          allGroups.forEach(g => openGroup(activeTree, g));
+        } else {
+          allGroups.forEach(g => closeGroup(activeTree, g));
+        }
 
         const toggleAllBtn = document.getElementById('ft-toggle-all-cards');
         if (toggleAllBtn) {
@@ -430,7 +461,18 @@ function renderUnifiedTree(dornTree, lucasTree) {
         if (!svg) return;
         svg.innerHTML = '';
 
+        const activeTree = document.getElementById(\`ft-diagram-tree-\${currentBranch}\`);
+        if (!activeTree || activeTree.style.display === 'none') return;
+
         const vpRect = content.getBoundingClientRect();
+
+        // Size SVG dynamically to encompass tree content
+        const w = Math.max(activeTree.scrollWidth, content.scrollWidth, 3200);
+        const h = Math.max(activeTree.scrollHeight, content.scrollHeight, 3200);
+        svg.setAttribute('width', w);
+        svg.setAttribute('height', h);
+        svg.style.width = w + 'px';
+        svg.style.height = h + 'px';
 
         function getCenterBottom(el) {
           const r = el.getBoundingClientRect();
@@ -453,20 +495,42 @@ function renderUnifiedTree(dornTree, lucasTree) {
           const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
           const d = \`M \${p1.x} \${p1.y} C \${p1.x} \${midY}, \${p2.x} \${midY}, \${p2.x} \${p2.y}\`;
           path.setAttribute('d', d);
-          path.setAttribute('stroke', isSibling ? 'var(--muted, #8c857b)' : 'var(--accent, #b84b29)');
-          path.setAttribute('stroke-width', isSibling ? '1.5' : '2');
+          path.setAttribute('stroke', isSibling ? '#96705b' : 'var(--accent, #b84b29)');
+          path.setAttribute('stroke-width', isSibling ? '1.8' : '2.2');
           path.setAttribute('fill', 'none');
-          path.setAttribute('stroke-dasharray', isSibling ? '3 3' : '4 2');
+          path.setAttribute('stroke-dasharray', isSibling ? '4 3' : 'none');
+          path.setAttribute('stroke-linecap', 'round');
           svg.appendChild(path);
+
+          // Dot joint at parent
+          const dot1 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+          dot1.setAttribute('cx', p1.x);
+          dot1.setAttribute('cy', p1.y);
+          dot1.setAttribute('r', '3');
+          dot1.setAttribute('fill', isSibling ? '#96705b' : 'var(--accent, #b84b29)');
+          svg.appendChild(dot1);
+
+          // Dot joint at child
+          const dot2 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+          dot2.setAttribute('cx', p2.x);
+          dot2.setAttribute('cy', p2.y);
+          dot2.setAttribute('r', '3');
+          dot2.setAttribute('fill', isSibling ? '#96705b' : 'var(--accent, #b84b29)');
+          svg.appendChild(dot2);
         }
 
         const connections = ${JSON.stringify(allConnections)};
         connections.forEach(conn => {
           const pEl = document.getElementById(conn.parent);
           const cEl = document.getElementById(conn.child);
-          if (pEl && cEl && pEl.offsetParent !== null && cEl.offsetParent !== null) {
-            const isSibling = cEl.classList.contains('ft-sibling-card');
-            addPath(getCenterBottom(pEl), getCenterTop(cEl), isSibling);
+          if (pEl && cEl) {
+            // Check visibility
+            const pVis = pEl.offsetParent !== null && window.getComputedStyle(pEl).display !== 'none';
+            const cVis = cEl.offsetParent !== null && window.getComputedStyle(cEl).display !== 'none';
+            if (pVis && cVis) {
+              const isSibling = cEl.classList.contains('ft-sibling-card') || pEl.classList.contains('ft-sibling-card');
+              addPath(getCenterBottom(pEl), getCenterTop(cEl), isSibling);
+            }
           }
         });
       }
@@ -520,13 +584,13 @@ async function encrypt(pwd, text) {
 
 const plaintext = renderUnifiedTree(dornData, lucasData);
 const payload = await encrypt(password, plaintext);
-const SESSION_KEY = 'unified_family_tree_session_v6';
+const SESSION_KEY = 'unified_family_tree_session_v7';
 
 const pageHtml = `---
 layout: default
 title: "Family Tree"
 permalink: /family-tree.html
-description: "Interactive & Zoomable Dorn and Lucas Family Tree with Expandable Sibling and Children Cards."
+description: "Interactive & Zoomable Dorn and Lucas Family Tree with Cascading Collapsible Sibling & Children Cards."
 ---
 
 <article class="post shell wide">
@@ -646,7 +710,7 @@ ${JSON.stringify(payload)}
 .ft-viewport-wrapper {
   position: relative;
   width: 100%;
-  height: 700px;
+  height: 720px;
   background: var(--paper-subtle, #f9f8f6);
   border: 1px solid var(--line, #e3dfd6);
   border-radius: var(--radius-md, 12px);
@@ -707,20 +771,20 @@ ${JSON.stringify(payload)}
   position: relative;
   z-index: 2;
   display: flex; flex-direction: column; align-items: center;
-  gap: 60px; padding: 40px 20px;
+  gap: 65px; padding: 40px 20px;
 }
 
 .ft-gen { display: flex; flex-direction: column; align-items: center; width: 100%; }
 .ft-gen-label {
   font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 1.5px; color: var(--muted); margin-bottom: 16px;
+  letter-spacing: 1.5px; color: var(--muted); margin-bottom: 18px;
   background: var(--surface-card); padding: 3px 10px; border-radius: 12px;
   border: 1px solid var(--line);
 }
 
 .ft-cards-row {
   display: flex;
-  gap: 28px;
+  gap: 26px;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: nowrap;
@@ -728,27 +792,19 @@ ${JSON.stringify(payload)}
 
 .ft-couple-card {
   position: relative;
-  display: flex; flex-direction: column; align-items: center;
-  background: var(--surface-card); border: 1px solid var(--line);
-  border-radius: var(--radius-md, 12px); padding: 18px 20px;
-  box-shadow: var(--shadow-sm, 0 4px 14px rgba(0,0,0,0.05));
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.ft-couple-card > .ft-person, .ft-couple-card > .ft-heart {
-  display: flex;
-}
-.ft-couple-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
-.ft-couple-card.main-couple { border: 2px solid var(--accent); background: var(--surface); }
-
-/* Horizontal inner layout for couple cards */
-.ft-couple-card {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   gap: 12px;
+  background: var(--surface-card); border: 1px solid var(--line);
+  border-radius: var(--radius-md, 12px); padding: 18px 20px;
+  box-shadow: var(--shadow-sm, 0 4px 14px rgba(0,0,0,0.05));
+  transition: transform 0.2s, box-shadow 0.2s;
 }
+.ft-couple-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.ft-couple-card.main-couple { border: 2px solid var(--accent); background: var(--surface); }
 
 .ft-individual-card {
   position: relative;
@@ -782,7 +838,7 @@ ${JSON.stringify(payload)}
   border-radius: 8px;
 }
 
-.ft-person { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 160px; }
+.ft-person { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 155px; }
 .ft-avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); margin-bottom: 8px; }
 .ft-avatar-placeholder {
   width: 56px; height: 56px; border-radius: 50%;
@@ -958,4 +1014,4 @@ ${JSON.stringify(payload)}
 `;
 
 fs.writeFileSync(targetPage, pageHtml, 'utf-8');
-console.log(`Successfully built unified interactive family tree with multi-level sibling/children cards into ${targetPage}`);
+console.log(`Successfully built unified interactive family tree into ${targetPage}`);
