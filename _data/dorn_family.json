@@ -310,6 +310,27 @@
           }
         },
         {
+          "id": "teschner_parents",
+          "parent_couple_1": "paul_teschner_helen",
+          "parent_couple_2": "francis_malmstone_wilma",
+          "married_year": 1948,
+          "person1": {
+            "name": "Paul A. Teschner Jr.",
+            "birthdate": "1925-06-20",
+            "birth_year": "1925",
+            "death_year": "1987",
+            "sibling_group_id": "paul_jr_siblings",
+            "sibling_count": 7
+          },
+          "person2": {
+            "name": "Barbara Teschner",
+            "maiden": "Malmstone",
+            "birth_year": "1928",
+            "death_date": "1976-01-31",
+            "death_year": "1976"
+          }
+        },
+        {
           "id": "sib_paul_jr_helen_couple",
           "is_sibling": true,
           "sibling_group": "paul_jr_siblings",
@@ -387,27 +408,6 @@
           "is_sibling": true,
           "sibling_group": "paul_jr_siblings",
           "parent_couple": "paul_teschner_helen"
-        },
-        {
-          "id": "teschner_parents",
-          "parent_couple_1": "paul_teschner_helen",
-          "parent_couple_2": "francis_malmstone_wilma",
-          "married_year": 1948,
-          "person1": {
-            "name": "Paul A. Teschner Jr.",
-            "birthdate": "1925-06-20",
-            "birth_year": "1925",
-            "death_year": "1987",
-            "sibling_group_id": "paul_jr_siblings",
-            "sibling_count": 7
-          },
-          "person2": {
-            "name": "Barbara Teschner",
-            "maiden": "Malmstone",
-            "birth_year": "1928",
-            "death_date": "1976-01-31",
-            "death_year": "1976"
-          }
         }
       ]
     },
