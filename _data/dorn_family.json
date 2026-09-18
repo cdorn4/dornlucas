@@ -751,7 +751,10 @@
           "person2": {
             "name": "Elyse Lucas",
             "birthdate": "1988-05-05",
-            "birth_year": "1988"
+            "birth_year": "1988",
+            "maiden": "Lucas",
+            "sibling_group_id": "elyse_siblings",
+            "sibling_count": 2
           }
         },
         {
@@ -783,6 +786,24 @@
           },
           "person2": {
             "name": "Kurt Krutsch"
+          }
+        },
+        {
+          "id": "sib_elyse_matthew_couple",
+          "is_sibling": true,
+          "sibling_group": "elyse_siblings",
+          "has_children": true,
+          "children_group_id": "matthew_lucas_children",
+          "children_count": 4,
+          "person1": {
+            "name": "Matthew Lucas",
+            "birthdate": "1985-09-13",
+            "birth_year": "1985"
+          },
+          "person2": {
+            "name": "Taylor Janine Barcelow",
+            "maiden": "Barcelow",
+            "birth_year": "1986"
           }
         }
       ],
@@ -852,6 +873,16 @@
           "is_sibling": true,
           "sibling_group": "leeann_walker_children",
           "parent_couple": "sib_child_leeann_walker_couple"
+        },
+        {
+          "id": "sib_elyse_justine",
+          "name": "Justine Lucas",
+          "maiden": "Lucas",
+          "is_sibling": true,
+          "sibling_group": "elyse_siblings",
+          "has_children": true,
+          "children_group_id": "justine_lucas_children",
+          "children_count": 1
         }
       ],
       "items": [
@@ -905,8 +936,39 @@
           "person2": {
             "name": "Elyse Lucas",
             "birthdate": "1988-05-05",
-            "birth_year": "1988"
+            "birth_year": "1988",
+            "maiden": "Lucas",
+            "sibling_group_id": "elyse_siblings",
+            "sibling_count": 2
           }
+        },
+        {
+          "id": "sib_elyse_matthew_couple",
+          "is_sibling": true,
+          "sibling_group": "elyse_siblings",
+          "has_children": true,
+          "children_group_id": "matthew_lucas_children",
+          "children_count": 4,
+          "person1": {
+            "name": "Matthew Lucas",
+            "birthdate": "1985-09-13",
+            "birth_year": "1985"
+          },
+          "person2": {
+            "name": "Taylor Janine Barcelow",
+            "maiden": "Barcelow",
+            "birth_year": "1986"
+          }
+        },
+        {
+          "id": "sib_elyse_justine",
+          "name": "Justine Lucas",
+          "maiden": "Lucas",
+          "is_sibling": true,
+          "sibling_group": "elyse_siblings",
+          "has_children": true,
+          "children_group_id": "justine_lucas_children",
+          "children_count": 1
         },
         {
           "id": "sib_child_aidan_delgado",
@@ -995,6 +1057,43 @@
           "is_sibling": true,
           "sibling_group": "krutsch_children_group",
           "parent_couple": "sib_child_julie_krutsch_couple"
+        },
+        {
+          "id": "sib_child_runa_lucas",
+          "name": "Runa Lucas",
+          "maiden": "Lucas",
+          "is_sibling": true,
+          "sibling_group": "matthew_lucas_children",
+          "parent_couple": "sib_elyse_matthew_couple"
+        },
+        {
+          "id": "sib_child_mads_lucas",
+          "name": "Mads Lucas",
+          "is_sibling": true,
+          "sibling_group": "matthew_lucas_children",
+          "parent_couple": "sib_elyse_matthew_couple"
+        },
+        {
+          "id": "sib_child_berit_lucas",
+          "name": "Berit Lucas",
+          "is_sibling": true,
+          "sibling_group": "matthew_lucas_children",
+          "parent_couple": "sib_elyse_matthew_couple"
+        },
+        {
+          "id": "sib_child_solveig_lucas",
+          "name": "Solveig Lucas",
+          "maiden": "Lucas",
+          "is_sibling": true,
+          "sibling_group": "matthew_lucas_children",
+          "parent_couple": "sib_elyse_matthew_couple"
+        },
+        {
+          "id": "sib_child_huck_lucas",
+          "name": "Huck Lucas",
+          "is_sibling": true,
+          "sibling_group": "justine_lucas_children",
+          "parent_couple": "sib_elyse_justine"
         }
       ],
       "items": [
@@ -1005,6 +1104,43 @@
           "birthdate": "2021-04-03",
           "birth_year": 2021,
           "parent_couple": "chris_elyse"
+        },
+        {
+          "id": "sib_child_runa_lucas",
+          "name": "Runa Lucas",
+          "maiden": "Lucas",
+          "is_sibling": true,
+          "sibling_group": "matthew_lucas_children",
+          "parent_couple": "sib_elyse_matthew_couple"
+        },
+        {
+          "id": "sib_child_mads_lucas",
+          "name": "Mads Lucas",
+          "is_sibling": true,
+          "sibling_group": "matthew_lucas_children",
+          "parent_couple": "sib_elyse_matthew_couple"
+        },
+        {
+          "id": "sib_child_berit_lucas",
+          "name": "Berit Lucas",
+          "is_sibling": true,
+          "sibling_group": "matthew_lucas_children",
+          "parent_couple": "sib_elyse_matthew_couple"
+        },
+        {
+          "id": "sib_child_solveig_lucas",
+          "name": "Solveig Lucas",
+          "maiden": "Lucas",
+          "is_sibling": true,
+          "sibling_group": "matthew_lucas_children",
+          "parent_couple": "sib_elyse_matthew_couple"
+        },
+        {
+          "id": "sib_child_huck_lucas",
+          "name": "Huck Lucas",
+          "is_sibling": true,
+          "sibling_group": "justine_lucas_children",
+          "parent_couple": "sib_elyse_justine"
         },
         {
           "id": "sib_child_andra_krutsch",
