@@ -305,8 +305,8 @@
             "sibling_count": 3
           },
           "person2": {
-            "name": "Leta Lucas",
-            "maiden": "Marino",
+            "name": "Leta Marino",
+            "maiden": null,
             "birthdate": null,
             "birth_year": null,
             "death_date": null,
@@ -356,8 +356,8 @@
           "children_group_id": "john_clark_johnson_children",
           "children_count": 3,
           "person1": {
-            "name": "Leta Clark-Johnson",
-            "maiden": "Marino",
+            "name": "Leta Marino",
+            "maiden": null,
             "photo": null,
             "parent_couple": "marino_parents"
           },
@@ -449,8 +449,8 @@
             "sibling_count": 3
           },
           "person2": {
-            "name": "Leta Lucas",
-            "maiden": "Marino",
+            "name": "Leta Marino",
+            "maiden": null,
             "birthdate": null,
             "birth_year": null,
             "death_date": null,
@@ -471,8 +471,8 @@
           "children_group_id": "john_clark_johnson_children",
           "children_count": 3,
           "person1": {
-            "name": "Leta Clark-Johnson",
-            "maiden": "Marino",
+            "name": "Leta Marino",
+            "maiden": null,
             "photo": null,
             "parent_couple": "marino_parents"
           },
