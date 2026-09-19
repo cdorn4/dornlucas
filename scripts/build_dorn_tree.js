@@ -86,13 +86,22 @@ function renderCard(item, prefix) {
     : '';
 
   if (isCouple) {
+    const isDivorced = Boolean(item.divorced);
+    const statusTag = isDivorced
+      ? `<span class="ft-status-tag ft-divorced-tag">Divorced</span>`
+      : (item.status ? `<span class="ft-status-tag">${item.status}</span>` : '');
+    const heartContent = isDivorced
+      ? `<div class="ft-heart ft-heart-divorced" title="Divorced">&ne;<span class="ft-divorced-text">(div.)</span></div>`
+      : `<div class="ft-heart">&amp;</div>`;
+
     return `
-      <div class="ft-couple-card${item.id === 'chris_elyse' ? ' main-couple' : ''}${item.is_sibling ? ' ft-sibling-card' : ''}"
+      <div class="ft-couple-card${item.id === 'chris_elyse' ? ' main-couple' : ''}${item.is_sibling ? ' ft-sibling-card' : ''}${isDivorced ? ' ft-divorced-card' : ''}"
            id="card-${prefix}-${item.id.replace(/_/g, '-')}"
            ${item.sibling_group ? `data-sibling-group="${item.sibling_group}" style="display: none;"` : ''}>
+        ${statusTag}
         ${item.is_sibling ? '<span class="ft-sibling-tag">Branch</span>' : ''}
         ${renderPersonCard(item.person1)}
-        <div class="ft-heart">&amp;</div>
+        ${heartContent}
         ${renderPersonCard(item.person2)}
         ${childBtn}
       </div>
@@ -829,6 +838,40 @@ ${JSON.stringify(payload)}
   letter-spacing: 0.5px;
   padding: 1px 6px;
   border-radius: 8px;
+}
+
+.ft-status-tag {
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 1px 6px;
+  border-radius: 8px;
+}
+.ft-divorced-tag {
+  background: #fdf2f2;
+  border: 1px solid #f8b4b4;
+  color: #c81e1e;
+}
+.ft-divorced-card {
+  border: 1px dashed rgba(200, 30, 30, 0.35);
+}
+.ft-heart-divorced {
+  color: #9b1c1c;
+  font-size: 1.1rem;
+}
+.ft-divorced-text {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #c81e1e;
+  font-family: var(--font-sans, sans-serif);
+  font-style: normal;
+  line-height: 1;
+  margin-top: -2px;
 }
 
 .ft-person { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 155px; }
