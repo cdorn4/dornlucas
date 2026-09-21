@@ -302,7 +302,9 @@
             "photo": null,
             "parent_couple": "john_lucas_parents",
             "sibling_group_id": "mark_siblings",
-            "sibling_count": 3
+            "sibling_count": 3,
+            "remarriage_group_id": "mark_remarriage",
+            "remarriage_label": "Marcie Luca"
           },
           "person2": {
             "name": "Leta Marino",
@@ -320,6 +322,34 @@
           },
           "divorced": true,
           "status": "Divorced"
+        },
+        {
+          "id": "mark_marcie_couple",
+          "branch": "Mark Lucas & Marcie Luca",
+          "parent_couple": "john_lucas_parents",
+          "is_sibling": true,
+          "is_remarriage": true,
+          "sibling_group": "mark_remarriage",
+          "status": "Remarried",
+          "has_children": true,
+          "children_group_id": "marcie_luca_children",
+          "children_count": 3,
+          "children_label": "3 Step-Children (Marcie's)",
+          "children_of_p2": true,
+          "notes": "Mark and Marcie have no children together. The 3 children (Dave, John, Neil) are from Marcie Luca's first marriage.",
+          "person1": {
+            "name": "Mark Lucas",
+            "birthdate": "1952-03-12",
+            "birth_year": "1952",
+            "photo": null,
+            "parent_couple": "john_lucas_parents",
+            "notes": "Mark and Marcie have no children together. Dave, John, and Neil are Marcie's children from her first marriage."
+          },
+          "person2": {
+            "name": "Marcie Luca",
+            "photo": null,
+            "notes": "Mother of Dave, John, and Neil from her first marriage. Married Mark Lucas."
+          }
         },
         {
           "id": "sib_leta_peter_couple",
@@ -457,7 +487,9 @@
             "photo": null,
             "parent_couple": "john_lucas_parents",
             "sibling_group_id": "mark_siblings",
-            "sibling_count": 3
+            "sibling_count": 3,
+            "remarriage_group_id": "mark_remarriage",
+            "remarriage_label": "Marcie Luca"
           },
           "person2": {
             "name": "Leta Marino",
@@ -475,6 +507,34 @@
           },
           "divorced": true,
           "status": "Divorced"
+        },
+        {
+          "id": "mark_marcie_couple",
+          "branch": "Mark Lucas & Marcie Luca",
+          "parent_couple": "john_lucas_parents",
+          "is_sibling": true,
+          "is_remarriage": true,
+          "sibling_group": "mark_remarriage",
+          "status": "Remarried",
+          "has_children": true,
+          "children_group_id": "marcie_luca_children",
+          "children_count": 3,
+          "children_label": "3 Step-Children (Marcie's)",
+          "children_of_p2": true,
+          "notes": "Mark and Marcie have no children together. The 3 children (Dave, John, Neil) are from Marcie Luca's first marriage.",
+          "person1": {
+            "name": "Mark Lucas",
+            "birthdate": "1952-03-12",
+            "birth_year": "1952",
+            "photo": null,
+            "parent_couple": "john_lucas_parents",
+            "notes": "Mark and Marcie have no children together. Dave, John, and Neil are Marcie's children from her first marriage."
+          },
+          "person2": {
+            "name": "Marcie Luca",
+            "photo": null,
+            "notes": "Mother of Dave, John, and Neil from her first marriage. Married Mark Lucas."
+          }
         },
         {
           "id": "leta_john_clark_johnson",
@@ -656,6 +716,30 @@
           "sibling_group": "john_clark_johnson_children",
           "parent_couple": "leta_john_clark_johnson",
           "notes": "Daughter of John Clark-Johnson and his first wife (step-daughter of Leta Marino)."
+        },
+        {
+          "id": "sib_child_dave_luca",
+          "name": "Dave",
+          "is_sibling": true,
+          "sibling_group": "marcie_luca_children",
+          "parent_couple": "mark_marcie_couple",
+          "notes": "Son of Marcie Luca and her first husband (step-son of Mark Lucas)."
+        },
+        {
+          "id": "sib_child_john_luca",
+          "name": "John",
+          "is_sibling": true,
+          "sibling_group": "marcie_luca_children",
+          "parent_couple": "mark_marcie_couple",
+          "notes": "Son of Marcie Luca and her first husband (step-son of Mark Lucas)."
+        },
+        {
+          "id": "sib_child_neil_luca",
+          "name": "Neil",
+          "is_sibling": true,
+          "sibling_group": "marcie_luca_children",
+          "parent_couple": "mark_marcie_couple",
+          "notes": "Son of Marcie Luca and her first husband (step-son of Mark Lucas)."
         }
       ],
       "items": [
@@ -751,6 +835,30 @@
           "sibling_group": "john_clark_johnson_children",
           "parent_couple": "leta_john_clark_johnson",
           "notes": "Daughter of John Clark-Johnson and his first wife (step-daughter of Leta Marino)."
+        },
+        {
+          "id": "sib_child_dave_luca",
+          "name": "Dave",
+          "is_sibling": true,
+          "sibling_group": "marcie_luca_children",
+          "parent_couple": "mark_marcie_couple",
+          "notes": "Son of Marcie Luca and her first husband (step-son of Mark Lucas)."
+        },
+        {
+          "id": "sib_child_john_luca",
+          "name": "John",
+          "is_sibling": true,
+          "sibling_group": "marcie_luca_children",
+          "parent_couple": "mark_marcie_couple",
+          "notes": "Son of Marcie Luca and her first husband (step-son of Mark Lucas)."
+        },
+        {
+          "id": "sib_child_neil_luca",
+          "name": "Neil",
+          "is_sibling": true,
+          "sibling_group": "marcie_luca_children",
+          "parent_couple": "mark_marcie_couple",
+          "notes": "Son of Marcie Luca and her first husband (step-son of Mark Lucas)."
         },
         {
           "id": "sib_child_alexis_musante",
