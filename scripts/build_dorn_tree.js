@@ -32,6 +32,54 @@ function formatYears(b, by, d, dy) {
   return (bText || dText) ? `${bText}${dText ? '–' + dText : ''}` : '';
 }
 
+const SUFFIXES = new Set(['jr.', 'jr', 'sr.', 'sr', 'ii', 'iii', 'iv', 'v', 'vi']);
+const TITLES = new Set(['dr.', 'dr', 'rev.', 'rev', 'mr.', 'mrs.', 'ms.']);
+
+function formatDisplayName(name) {
+  if (!name || typeof name !== 'string') return name;
+  const trimmed = name.trim();
+  if (!trimmed) return trimmed;
+
+  const tokens = trimmed.split(/\s+/);
+  if (tokens.length <= 2) return trimmed;
+
+  let prefix = '';
+  let startIndex = 0;
+  if (TITLES.has(tokens[0].toLowerCase())) {
+    prefix = tokens[0] + ' ';
+    startIndex = 1;
+  }
+
+  let suffix = '';
+  let endIndex = tokens.length - 1;
+  if (SUFFIXES.has(tokens[tokens.length - 1].toLowerCase())) {
+    suffix = ' ' + tokens[tokens.length - 1];
+    endIndex = tokens.length - 2;
+  }
+
+  const coreTokens = tokens.slice(startIndex, endIndex + 1);
+  if (coreTokens.length <= 2) {
+    return (prefix + coreTokens.join(' ') + suffix).trim();
+  }
+
+  const firstName = coreTokens[0];
+  const lastName = coreTokens[coreTokens.length - 1];
+  const middleTokens = coreTokens.slice(1, coreTokens.length - 1);
+
+  const middleInitials = middleTokens.map(tok => {
+    if (tok.startsWith('"') || tok.startsWith("'") || tok.startsWith('(')) {
+      return tok;
+    }
+    if (tok.length === 2 && tok.endsWith('.')) {
+      return tok;
+    }
+    const firstChar = tok.charAt(0).toUpperCase();
+    return firstChar + '.';
+  }).join(' ');
+
+  return (prefix + firstName + ' ' + middleInitials + ' ' + lastName + suffix).trim();
+}
+
 function renderPersonCard(person) {
   if (!person) return '';
   const initial = person.name ? person.name.trim().charAt(0).toUpperCase() : '?';
@@ -43,8 +91,9 @@ function renderPersonCard(person) {
   const years = formatYears(person.birthdate || person.birth_date, person.birth_year, person.death_date || person.deathdate, person.death_year);
   const yearsText = years ? `<div class="ft-years">${years}</div>` : '';
 
-  const displayName = person.name
-    ? `${person.name} ${maidenText}`
+  const formattedName = person.name ? formatDisplayName(person.name) : '';
+  const displayName = formattedName
+    ? `${formattedName} ${maidenText}`
     : `<span style="color:var(--muted);font-style:italic;">Unknown</span> ${maidenText}`;
 
   const sibBtn = person.sibling_group_id && person.sibling_count
