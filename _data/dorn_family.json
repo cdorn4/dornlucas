@@ -205,7 +205,9 @@
             "birthdate": "1928-01-01",
             "birth_year": "1928",
             "death_date": "1976-01-30",
-            "death_year": "1976"
+            "death_year": "1976",
+            "sibling_group_id": "barbara_malmstone_siblings",
+            "sibling_count": 2
           }
         },
         {
@@ -400,6 +402,21 @@
           "is_sibling": true,
           "sibling_group": "paul_jr_siblings",
           "parent_couple": "paul_teschner_helen"
+        },
+        {
+          "id": "sib_barbara_roberta",
+          "name": "Roberta Malmstone",
+          "maiden": "Malmstone",
+          "is_sibling": true,
+          "sibling_group": "barbara_malmstone_siblings",
+          "parent_couple": "francis_malmstone_wilma"
+        },
+        {
+          "id": "sib_barbara_john",
+          "name": "John Malmstone",
+          "is_sibling": true,
+          "sibling_group": "barbara_malmstone_siblings",
+          "parent_couple": "francis_malmstone_wilma"
         }
       ],
       "items": [
@@ -443,7 +460,9 @@
             "birthdate": "1928-01-01",
             "birth_year": "1928",
             "death_date": "1976-01-30",
-            "death_year": "1976"
+            "death_year": "1976",
+            "sibling_group_id": "barbara_malmstone_siblings",
+            "sibling_count": 2
           }
         },
         {
@@ -636,6 +655,21 @@
           "is_sibling": true,
           "sibling_group": "paul_jr_siblings",
           "parent_couple": "paul_teschner_helen"
+        },
+        {
+          "id": "sib_barbara_roberta",
+          "name": "Roberta Malmstone",
+          "maiden": "Malmstone",
+          "is_sibling": true,
+          "sibling_group": "barbara_malmstone_siblings",
+          "parent_couple": "francis_malmstone_wilma"
+        },
+        {
+          "id": "sib_barbara_john",
+          "name": "John Malmstone",
+          "is_sibling": true,
+          "sibling_group": "barbara_malmstone_siblings",
+          "parent_couple": "francis_malmstone_wilma"
         }
       ]
     },
