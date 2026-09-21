@@ -295,14 +295,18 @@
           "parent_couple": "paul_teschner_helen",
           "has_children": true,
           "children_group_id": "thomas_teschner_children",
-          "children_count": 5,
+          "children_count": 4,
+          "divorced": true,
+          "status": "Divorced",
           "person1": {
             "name": "Thomas Linwood Teschner",
             "birthdate": "1933-07-13",
             "birth_year": "1933",
             "death_date": null,
             "death_year": null,
-            "photo": null
+            "photo": null,
+            "remarriage_group_id": "thomas_remarriage",
+            "remarriage_label": "Carrol"
           },
           "person2": {
             "name": "Marilyn LaVerne Martino",
@@ -312,6 +316,30 @@
             "death_year": "1992",
             "photo": null,
             "maiden": "Buelow Teschner"
+          }
+        },
+        {
+          "id": "thomas_carrol_couple",
+          "is_sibling": true,
+          "is_remarriage": true,
+          "sibling_group": "thomas_remarriage",
+          "parent_couple": "paul_teschner_helen",
+          "has_children": true,
+          "children_group_id": "thomas_carrol_children",
+          "children_count": 1,
+          "status": "Remarried",
+          "person1": {
+            "name": "Thomas Linwood Teschner",
+            "birthdate": "1933-07-13",
+            "birth_year": "1933",
+            "death_date": null,
+            "death_year": null,
+            "photo": null,
+            "parent_couple": "paul_teschner_helen"
+          },
+          "person2": {
+            "name": "Carrol Teschner",
+            "photo": null
           }
         },
         {
@@ -550,14 +578,18 @@
           "parent_couple": "paul_teschner_helen",
           "has_children": true,
           "children_group_id": "thomas_teschner_children",
-          "children_count": 5,
+          "children_count": 4,
+          "divorced": true,
+          "status": "Divorced",
           "person1": {
             "name": "Thomas Linwood Teschner",
             "birthdate": "1933-07-13",
             "birth_year": "1933",
             "death_date": null,
             "death_year": null,
-            "photo": null
+            "photo": null,
+            "remarriage_group_id": "thomas_remarriage",
+            "remarriage_label": "Carrol"
           },
           "person2": {
             "name": "Marilyn LaVerne Martino",
@@ -567,6 +599,30 @@
             "death_year": "1992",
             "photo": null,
             "maiden": "Buelow Teschner"
+          }
+        },
+        {
+          "id": "thomas_carrol_couple",
+          "is_sibling": true,
+          "is_remarriage": true,
+          "sibling_group": "thomas_remarriage",
+          "parent_couple": "paul_teschner_helen",
+          "has_children": true,
+          "children_group_id": "thomas_carrol_children",
+          "children_count": 1,
+          "status": "Remarried",
+          "person1": {
+            "name": "Thomas Linwood Teschner",
+            "birthdate": "1933-07-13",
+            "birth_year": "1933",
+            "death_date": null,
+            "death_year": null,
+            "photo": null,
+            "parent_couple": "paul_teschner_helen"
+          },
+          "person2": {
+            "name": "Carrol Teschner",
+            "photo": null
           }
         },
         {
@@ -1023,8 +1079,8 @@
         {
           "id": "sib_child_megan_hebert_couple",
           "is_sibling": true,
-          "sibling_group": "thomas_teschner_children",
-          "parent_couple": "sib_paul_jr_thomas_couple",
+          "sibling_group": "thomas_carrol_children",
+          "parent_couple": "thomas_carrol_couple",
           "has_children": true,
           "children_group_id": "megan_hebert_children",
           "children_count": 1,
@@ -1774,8 +1830,8 @@
         {
           "id": "sib_child_megan_hebert_couple",
           "is_sibling": true,
-          "sibling_group": "thomas_teschner_children",
-          "parent_couple": "sib_paul_jr_thomas_couple",
+          "sibling_group": "thomas_carrol_children",
+          "parent_couple": "thomas_carrol_couple",
           "has_children": true,
           "children_group_id": "megan_hebert_children",
           "children_count": 1,
