@@ -361,16 +361,21 @@
           "has_children": true,
           "children_group_id": "john_clark_johnson_children",
           "children_count": 3,
+          "children_label": "3 Step-Children (John's)",
+          "children_of_p2": true,
+          "notes": "Leta and John have no children together. The 3 children (Matt, Becca, Katie) are from John Clark-Johnson's first marriage.",
           "person1": {
             "name": "Leta Marino",
             "maiden": null,
             "photo": null,
-            "parent_couple": "marino_parents"
+            "parent_couple": "marino_parents",
+            "notes": "Leta and John have no children together. Matt, Becca, and Katie are John's children from his first marriage."
           },
           "person2": {
             "name": "John Clark-Johnson",
             "maiden": null,
-            "photo": null
+            "photo": null,
+            "notes": "Father of Matt, Becca, and Katie from his first marriage. Married Leta Marino."
           }
         }
       ],
@@ -482,16 +487,21 @@
           "has_children": true,
           "children_group_id": "john_clark_johnson_children",
           "children_count": 3,
+          "children_label": "3 Step-Children (John's)",
+          "children_of_p2": true,
+          "notes": "Leta and John have no children together. The 3 children (Matt, Becca, Katie) are from John Clark-Johnson's first marriage.",
           "person1": {
             "name": "Leta Marino",
             "maiden": null,
             "photo": null,
-            "parent_couple": "marino_parents"
+            "parent_couple": "marino_parents",
+            "notes": "Leta and John have no children together. Matt, Becca, and Katie are John's children from his first marriage."
           },
           "person2": {
             "name": "John Clark-Johnson",
             "maiden": null,
-            "photo": null
+            "photo": null,
+            "notes": "Father of Matt, Becca, and Katie from his first marriage. Married Leta Marino."
           }
         },
         {
@@ -586,9 +596,11 @@
           "is_sibling": true,
           "sibling_group": "john_clark_johnson_children",
           "parent_couple": "leta_john_clark_johnson",
+          "notes": "Daughter of John Clark-Johnson and his first wife (step-daughter of Leta Marino).",
           "person1": {
             "name": "Becca Merril",
-            "maiden": "Clark-Johnson"
+            "maiden": "Clark-Johnson",
+            "notes": "Daughter of John Clark-Johnson and his first wife (step-daughter of Leta Marino)."
           },
           "person2": {
             "name": "Andrew Merril"
@@ -634,14 +646,16 @@
           "name": "Matt Clark-Johnson",
           "is_sibling": true,
           "sibling_group": "john_clark_johnson_children",
-          "parent_couple": "leta_john_clark_johnson"
+          "parent_couple": "leta_john_clark_johnson",
+          "notes": "Son of John Clark-Johnson and his first wife (step-son of Leta Marino)."
         },
         {
           "id": "sib_child_katie_clark_johnson",
           "name": "Katie Clark-Johnson",
           "is_sibling": true,
           "sibling_group": "john_clark_johnson_children",
-          "parent_couple": "leta_john_clark_johnson"
+          "parent_couple": "leta_john_clark_johnson",
+          "notes": "Daughter of John Clark-Johnson and his first wife (step-daughter of Leta Marino)."
         }
       ],
       "items": [
@@ -712,16 +726,19 @@
           "name": "Matt Clark-Johnson",
           "is_sibling": true,
           "sibling_group": "john_clark_johnson_children",
-          "parent_couple": "leta_john_clark_johnson"
+          "parent_couple": "leta_john_clark_johnson",
+          "notes": "Son of John Clark-Johnson and his first wife (step-son of Leta Marino)."
         },
         {
           "id": "sib_child_becca_merril_couple",
           "is_sibling": true,
           "sibling_group": "john_clark_johnson_children",
           "parent_couple": "leta_john_clark_johnson",
+          "notes": "Daughter of John Clark-Johnson and his first wife (step-daughter of Leta Marino).",
           "person1": {
             "name": "Becca Merril",
-            "maiden": "Clark-Johnson"
+            "maiden": "Clark-Johnson",
+            "notes": "Daughter of John Clark-Johnson and his first wife (step-daughter of Leta Marino)."
           },
           "person2": {
             "name": "Andrew Merril"
@@ -732,7 +749,8 @@
           "name": "Katie Clark-Johnson",
           "is_sibling": true,
           "sibling_group": "john_clark_johnson_children",
-          "parent_couple": "leta_john_clark_johnson"
+          "parent_couple": "leta_john_clark_johnson",
+          "notes": "Daughter of John Clark-Johnson and his first wife (step-daughter of Leta Marino)."
         },
         {
           "id": "sib_child_alexis_musante",

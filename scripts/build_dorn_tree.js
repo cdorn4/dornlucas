@@ -135,11 +135,12 @@ function getGenCards(gen) {
 function renderCard(item, prefix) {
   if (!item) return '';
   const isCouple = Boolean(item.person1 && item.person2);
+  const childBtnLabel = item.children_label || `${item.children_count} Child${item.children_count > 1 ? 'ren' : ''}`;
   const childBtn = item.has_children && item.children_group_id && item.children_count
     ? `
       <div class="ft-card-action-bar">
         <button type="button" class="ft-child-pill-btn" onclick="toggleSiblingGroup(event, '${item.children_group_id}')" data-target-group="${item.children_group_id}" title="Toggle children">
-          <span class="ft-pill-icon">▸</span> ${item.children_count} Child${item.children_count > 1 ? 'ren' : ''}
+          <span class="ft-pill-icon">▸</span> ${childBtnLabel}
         </button>
       </div>
     `
@@ -258,8 +259,16 @@ function buildPeopleRegistry(dornTree, lucasTree) {
             if (pc.person2) p1Parents.push(formatDisplayName(pc.person2.name));
           } else if (c.parent_couple && cardMap[c.parent_couple]) {
             const pc = cardMap[c.parent_couple].card;
-            if (pc.person1) p1Parents.push(formatDisplayName(pc.person1.name));
-            if (pc.person2) p1Parents.push(formatDisplayName(pc.person2.name));
+            if (pc.children_of_p2) {
+              if (pc.person2) p1Parents.push(formatDisplayName(pc.person2.name) + ' (Father)');
+              p1Parents.push('1st Wife (Mother)');
+            } else if (pc.children_of_p1) {
+              if (pc.person1) p1Parents.push(formatDisplayName(pc.person1.name) + ' (Mother)');
+              p1Parents.push('1st Husband (Father)');
+            } else {
+              if (pc.person1) p1Parents.push(formatDisplayName(pc.person1.name));
+              if (pc.person2) p1Parents.push(formatDisplayName(pc.person2.name));
+            }
           }
 
           const p2Parents = [];
@@ -269,13 +278,17 @@ function buildPeopleRegistry(dornTree, lucasTree) {
             if (pc.person2) p2Parents.push(formatDisplayName(pc.person2.name));
           }
 
+          const isChildrenOfP2 = Boolean(c.children_of_p2);
+          const isChildrenOfP1 = Boolean(c.children_of_p1);
+
           const p1Marriage = {
             spouseName: formatDisplayName(p2.name),
             spouseKey: p2Key,
             status: c.divorced ? 'Divorced' : (c.is_remarriage ? 'Married (Remarried)' : (c.status || 'Married')),
             isDivorced: Boolean(c.divorced),
             isRemarriage: Boolean(c.is_remarriage),
-            childrenCount: c.children_count || 0,
+            childrenCount: isChildrenOfP2 ? 0 : (c.children_count || 0),
+            stepChildrenCount: isChildrenOfP2 ? (c.children_count || 0) : 0,
             childrenGroup: c.children_group_id
           };
 
@@ -285,9 +298,21 @@ function buildPeopleRegistry(dornTree, lucasTree) {
             status: c.divorced ? 'Divorced' : (c.is_remarriage ? 'Married (Remarried)' : (c.status || 'Married')),
             isDivorced: Boolean(c.divorced),
             isRemarriage: Boolean(c.is_remarriage),
-            childrenCount: c.children_count || 0,
+            childrenCount: isChildrenOfP2 ? 0 : (c.children_count || 0),
             childrenGroup: c.children_group_id
           };
+
+          const p2Marriages = [p2Marriage];
+          if (isChildrenOfP2) {
+            p2Marriages.unshift({
+              spouseName: '1st Wife (Prior Marriage)',
+              status: 'Prior Marriage',
+              isDivorced: false,
+              isRemarriage: false,
+              childrenCount: c.children_count || 0,
+              childrenGroup: c.children_group_id
+            });
+          }
 
           registry[p1Key] = {
             key: p1Key,
@@ -309,7 +334,8 @@ function buildPeopleRegistry(dornTree, lucasTree) {
             spouseName: formatDisplayName(p2.name),
             spouseKey: p2Key,
             marriages: [p1Marriage],
-            childrenCount: c.children_count || 0,
+            childrenCount: isChildrenOfP2 ? 0 : (c.children_count || 0),
+            stepChildrenCount: isChildrenOfP2 ? (c.children_count || 0) : 0,
             childrenGroup: c.children_group_id,
             siblingsCount: p1.sibling_count || 0,
             siblingGroup: p1.sibling_group_id,
@@ -328,14 +354,14 @@ function buildPeopleRegistry(dornTree, lucasTree) {
             death_year: p2.death_year,
             photo: p2.photo,
             photos: p2.photos || [],
-            notes: p2.notes || p2.bio,
+            notes: p2.notes || p2.bio || c.notes,
             branch: prefix,
             cardId: domCardId,
             parentGroup: c.sibling_group,
             generationLabel: gen.label,
             spouseName: formatDisplayName(p1.name),
             spouseKey: p1Key,
-            marriages: [p2Marriage],
+            marriages: p2Marriages,
             childrenCount: c.children_count || 0,
             childrenGroup: c.children_group_id,
             siblingsCount: p2.sibling_count || 0,
@@ -348,8 +374,16 @@ function buildPeopleRegistry(dornTree, lucasTree) {
           const parents = [];
           if (c.parent_couple && cardMap[c.parent_couple]) {
             const pc = cardMap[c.parent_couple].card;
-            if (pc.person1) parents.push(formatDisplayName(pc.person1.name));
-            if (pc.person2) parents.push(formatDisplayName(pc.person2.name));
+            if (pc.children_of_p2) {
+              if (pc.person2) parents.push(formatDisplayName(pc.person2.name) + ' (Father)');
+              parents.push('1st Wife (Mother)');
+            } else if (pc.children_of_p1) {
+              if (pc.person1) parents.push(formatDisplayName(pc.person1.name) + ' (Mother)');
+              parents.push('1st Husband (Father)');
+            } else {
+              if (pc.person1) parents.push(formatDisplayName(pc.person1.name));
+              if (pc.person2) parents.push(formatDisplayName(pc.person2.name));
+            }
           }
 
           registry[pKey] = {
@@ -725,12 +759,15 @@ function renderUnifiedTree(dornTree, lucasTree) {
             const statusClass = m.isDivorced ? 'ft-chip-divorced' : (m.isRemarriage ? 'ft-chip-remarriage' : 'ft-chip-spouse');
             const statusText = m.status ? \` (\${m.status})\` : '';
             const clickAttr = m.spouseKey ? \`onclick="openPersonDetails(event, '\${m.spouseKey}')"\` : '';
+            const childChip = m.childrenCount > 0
+              ? \`<span class="ft-chip ft-chip-child">\${m.childrenCount} Child\${m.childrenCount > 1 ? 'ren' : ''}</span>\`
+              : (m.stepChildrenCount > 0 ? \`<span class="ft-chip ft-chip-step">\${m.stepChildrenCount} Step-Child\${m.stepChildrenCount > 1 ? 'ren' : ''}</span>\` : '');
             relHtml += \`
               <div class="ft-marriage-item">
                 <span class="ft-chip \${statusClass} \${m.spouseKey ? 'ft-chip-clickable' : ''}" \${clickAttr} title="\${m.spouseKey ? 'Click to view ' + m.spouseName : ''}">
                   \${m.spouseName}\${statusText}
                 </span>
-                \${m.childrenCount ? \`<span class="ft-chip ft-chip-child">\${m.childrenCount} Child\${m.childrenCount > 1 ? 'ren' : ''}</span>\` : ''}
+                \${childChip}
               </div>
             \`;
           });
@@ -1729,6 +1766,11 @@ ${JSON.stringify(payload)}
   background: rgba(74, 114, 94, 0.09);
   color: #3b6b55;
   border-color: rgba(74, 114, 94, 0.25);
+}
+.ft-chip-step {
+  background: rgba(124, 58, 237, 0.09);
+  color: #6d28d9;
+  border: 1px dashed rgba(124, 58, 237, 0.35);
 }
 .ft-chip-sib {
   background: rgba(150, 112, 91, 0.1);
