@@ -552,7 +552,14 @@
           "person2": {
             "name": "Chris Dorn",
             "birthdate": "1987-09-03",
-            "birth_year": "1987"
+            "birth_year": "1987",
+            "photo": "/files/family-tree/IMG_6835.jpeg",
+            "photos": [
+              {
+                "url": "/files/family-tree/IMG_6835.jpeg",
+                "caption": "Chris Dorn & Paul A. Teschner III"
+              }
+            ]
           }
         },
         {
@@ -690,7 +697,14 @@
           "person2": {
             "name": "Chris Dorn",
             "birthdate": "1987-09-03",
-            "birth_year": "1987"
+            "birth_year": "1987",
+            "photo": "/files/family-tree/IMG_6835.jpeg",
+            "photos": [
+              {
+                "url": "/files/family-tree/IMG_6835.jpeg",
+                "caption": "Chris Dorn & Paul A. Teschner III"
+              }
+            ]
           }
         },
         {

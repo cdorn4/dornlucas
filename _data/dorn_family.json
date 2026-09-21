@@ -1298,6 +1298,13 @@
           "id": "sib_karen_paul3",
           "name": "Paul A. Teschner III",
           "birth_year": "1958",
+          "photo": "/files/family-tree/IMG_6835.jpeg",
+          "photos": [
+            {
+              "url": "/files/family-tree/IMG_6835.jpeg",
+              "caption": "Paul A. Teschner III & Chris Dorn"
+            }
+          ],
           "is_sibling": true,
           "sibling_group": "karen_siblings",
           "parent_couple": "teschner_parents"
@@ -1468,6 +1475,13 @@
           "id": "sib_karen_paul3",
           "name": "Paul A. Teschner III",
           "birth_year": "1958",
+          "photo": "/files/family-tree/IMG_6835.jpeg",
+          "photos": [
+            {
+              "url": "/files/family-tree/IMG_6835.jpeg",
+              "caption": "Paul A. Teschner III & Chris Dorn"
+            }
+          ],
           "is_sibling": true,
           "sibling_group": "karen_siblings",
           "parent_couple": "teschner_parents"
@@ -2071,7 +2085,14 @@
           "person1": {
             "name": "Chris Dorn",
             "birthdate": "1987-09-03",
-            "birth_year": "1987"
+            "birth_year": "1987",
+            "photo": "/files/family-tree/IMG_6835.jpeg",
+            "photos": [
+              {
+                "url": "/files/family-tree/IMG_6835.jpeg",
+                "caption": "Chris Dorn & Paul A. Teschner III"
+              }
+            ]
           },
           "person2": {
             "name": "Elyse Lucas",
@@ -2666,7 +2687,14 @@
           "person1": {
             "name": "Chris Dorn",
             "birthdate": "1987-09-03",
-            "birth_year": "1987"
+            "birth_year": "1987",
+            "photo": "/files/family-tree/IMG_6835.jpeg",
+            "photos": [
+              {
+                "url": "/files/family-tree/IMG_6835.jpeg",
+                "caption": "Chris Dorn & Paul A. Teschner III"
+              }
+            ]
           },
           "person2": {
             "name": "Elyse Lucas",
