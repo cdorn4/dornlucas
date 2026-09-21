@@ -80,7 +80,7 @@ function formatDisplayName(name) {
   return (prefix + firstName + ' ' + middleInitials + ' ' + lastName + suffix).trim();
 }
 
-function renderPersonCard(person) {
+function renderPersonCard(person, personKey) {
   if (!person) return '';
   const initial = person.name ? person.name.trim().charAt(0).toUpperCase() : '?';
   const photoHtml = person.photo
@@ -104,8 +104,10 @@ function renderPersonCard(person) {
     `
     : '';
 
+  const clickAttr = personKey ? `onclick="openPersonDetails(event, '${personKey}')"` : '';
+
   return `
-    <div class="ft-person">
+    <div class="ft-person ft-person-clickable" ${clickAttr} title="Click to view details for ${formattedName || 'this person'}">
       ${photoHtml}
       <div class="ft-name">${displayName}</div>
       ${yearsText}
@@ -135,6 +137,8 @@ function renderCard(item, prefix) {
     : '';
 
   if (isCouple) {
+    const p1Key = `${prefix}-${item.id}-p1`;
+    const p2Key = `${prefix}-${item.id}-p2`;
     const isDivorced = Boolean(item.divorced);
     const statusTag = isDivorced
       ? `<span class="ft-status-tag ft-divorced-tag">Divorced</span>`
@@ -149,20 +153,21 @@ function renderCard(item, prefix) {
            ${item.sibling_group ? `data-sibling-group="${item.sibling_group}" style="display: none;"` : ''}>
         ${statusTag}
         ${item.is_sibling ? '<span class="ft-sibling-tag">Branch</span>' : ''}
-        ${renderPersonCard(item.person1)}
+        ${renderPersonCard(item.person1, p1Key)}
         ${heartContent}
-        ${renderPersonCard(item.person2)}
+        ${renderPersonCard(item.person2, p2Key)}
         ${childBtn}
       </div>
     `;
   } else {
+    const pKey = `${prefix}-${item.id}`;
     const person = item.person1 || item;
     return `
       <div class="ft-individual-card${item.is_sibling ? ' ft-sibling-card' : ''}"
            id="card-${prefix}-${item.id.replace(/_/g, '-')}"
            ${item.sibling_group ? `data-sibling-group="${item.sibling_group}" style="display: none;"` : ''}>
         ${item.is_sibling ? '<span class="ft-sibling-tag">Branch</span>' : ''}
-        ${renderPersonCard(person)}
+        ${renderPersonCard(person, pKey)}
         ${childBtn}
       </div>
     `;
@@ -206,16 +211,153 @@ function renderBranchTree(treeData, prefix) {
   `;
 }
 
+function buildPeopleRegistry(dornTree, lucasTree) {
+  const registry = {};
+
+  function processTree(tree, prefix) {
+    const cardMap = {};
+    tree.generations.forEach(gen => {
+      const cards = getGenCards(gen);
+      cards.forEach(c => {
+        cardMap[c.id] = { card: c, genLabel: gen.label };
+      });
+    });
+
+    tree.generations.forEach(gen => {
+      const cards = getGenCards(gen);
+      cards.forEach(c => {
+        const domCardId = `card-${prefix}-${c.id.replace(/_/g, '-')}`;
+        const isCouple = Boolean(c.person1 && c.person2);
+
+        if (isCouple) {
+          const p1 = c.person1;
+          const p2 = c.person2;
+          const p1Key = `${prefix}-${c.id}-p1`;
+          const p2Key = `${prefix}-${c.id}-p2`;
+
+          const p1Parents = [];
+          if (c.parent_couple_1 && cardMap[c.parent_couple_1]) {
+            const pc = cardMap[c.parent_couple_1].card;
+            if (pc.person1) p1Parents.push(formatDisplayName(pc.person1.name));
+            if (pc.person2) p1Parents.push(formatDisplayName(pc.person2.name));
+          } else if (c.parent_couple && cardMap[c.parent_couple]) {
+            const pc = cardMap[c.parent_couple].card;
+            if (pc.person1) p1Parents.push(formatDisplayName(pc.person1.name));
+            if (pc.person2) p1Parents.push(formatDisplayName(pc.person2.name));
+          }
+
+          const p2Parents = [];
+          if (c.parent_couple_2 && cardMap[c.parent_couple_2]) {
+            const pc = cardMap[c.parent_couple_2].card;
+            if (pc.person1) p2Parents.push(formatDisplayName(pc.person1.name));
+            if (pc.person2) p2Parents.push(formatDisplayName(pc.person2.name));
+          }
+
+          registry[p1Key] = {
+            key: p1Key,
+            name: p1.name,
+            formattedName: formatDisplayName(p1.name),
+            maiden: p1.maiden,
+            nickname: p1.nickname || p1.nick,
+            birthdate: p1.birthdate || p1.birth_date,
+            birth_year: p1.birth_year,
+            death_date: p1.death_date || p1.deathdate,
+            death_year: p1.death_year,
+            photo: p1.photo,
+            photos: p1.photos || [],
+            notes: p1.notes || p1.bio || c.notes,
+            branch: prefix,
+            cardId: domCardId,
+            parentGroup: c.sibling_group,
+            generationLabel: gen.label,
+            spouseName: formatDisplayName(p2.name),
+            spouseKey: p2Key,
+            childrenCount: c.children_count || 0,
+            childrenGroup: c.children_group_id,
+            siblingsCount: p1.sibling_count || 0,
+            siblingGroup: p1.sibling_group_id,
+            parents: p1Parents
+          };
+
+          registry[p2Key] = {
+            key: p2Key,
+            name: p2.name,
+            formattedName: formatDisplayName(p2.name),
+            maiden: p2.maiden,
+            nickname: p2.nickname || p2.nick,
+            birthdate: p2.birthdate || p2.birth_date,
+            birth_year: p2.birth_year,
+            death_date: p2.death_date || p2.deathdate,
+            death_year: p2.death_year,
+            photo: p2.photo,
+            photos: p2.photos || [],
+            notes: p2.notes || p2.bio,
+            branch: prefix,
+            cardId: domCardId,
+            parentGroup: c.sibling_group,
+            generationLabel: gen.label,
+            spouseName: formatDisplayName(p1.name),
+            spouseKey: p1Key,
+            childrenCount: c.children_count || 0,
+            childrenGroup: c.children_group_id,
+            siblingsCount: p2.sibling_count || 0,
+            siblingGroup: p2.sibling_group_id,
+            parents: p2Parents
+          };
+        } else {
+          const p = c.person1 || c;
+          const pKey = `${prefix}-${c.id}`;
+          const parents = [];
+          if (c.parent_couple && cardMap[c.parent_couple]) {
+            const pc = cardMap[c.parent_couple].card;
+            if (pc.person1) parents.push(formatDisplayName(pc.person1.name));
+            if (pc.person2) parents.push(formatDisplayName(pc.person2.name));
+          }
+
+          registry[pKey] = {
+            key: pKey,
+            name: p.name,
+            formattedName: formatDisplayName(p.name),
+            maiden: p.maiden,
+            nickname: p.nickname || p.nick,
+            birthdate: p.birthdate || p.birth_date,
+            birth_year: p.birth_year,
+            death_date: p.death_date || p.deathdate,
+            death_year: p.death_year,
+            photo: p.photo,
+            photos: p.photos || [],
+            notes: p.notes || p.bio || c.notes,
+            branch: prefix,
+            cardId: domCardId,
+            parentGroup: c.sibling_group,
+            generationLabel: gen.label,
+            childrenCount: c.children_count || p.children_count || 0,
+            childrenGroup: c.children_group_id || p.children_group_id,
+            siblingsCount: p.sibling_count || 0,
+            siblingGroup: p.sibling_group_id,
+            parents: parents
+          };
+        }
+      });
+    });
+  }
+
+  processTree(dornTree, 'dorn');
+  processTree(lucasTree, 'lucas');
+  return registry;
+}
+
 function renderUnifiedTree(dornTree, lucasTree) {
   const dornConns = getConnections(dornTree, 'dorn');
   const lucasConns = getConnections(lucasTree, 'lucas');
   const allConnections = [...dornConns, ...lucasConns];
+  const peopleRegistry = buildPeopleRegistry(dornTree, lucasTree);
 
   return `
     <div class="family-tree-container">
       <div class="ft-header-bar">
         <h2 class="ft-title">Family Tree</h2>
-        <p class="ft-subtitle">Interactive family tree. Toggle sibling &amp; child branches to explore lines.</p>
+        <p class="ft-subtitle">Interactive family tree. Click on any member to explore their full story &amp; photos.</p>
 
         <!-- Segmented Branch Toggle -->
         <div class="ft-branch-toggle-group">
@@ -251,6 +393,56 @@ function renderUnifiedTree(dornTree, lucasTree) {
           </div>
         </div>
       </div>
+
+      <!-- Person Details & Photo Gallery Drawer -->
+      <div class="ft-detail-drawer" id="ft-detail-drawer" style="display: none;">
+        <div class="ft-detail-box">
+          <button type="button" class="ft-detail-close" onclick="closePersonDetails()" title="Close details">&times;</button>
+          
+          <div class="ft-detail-grid">
+            <!-- Sidebar: Avatar & Action -->
+            <div class="ft-detail-sidebar">
+              <div class="ft-detail-avatar-container" id="ft-detail-avatar-wrap"></div>
+              <div class="ft-detail-vitals" id="ft-detail-vitals"></div>
+              <button type="button" class="ft-detail-locate-btn" onclick="locatePersonInTree()">
+                <span class="ft-locate-icon">🎯</span> Locate in Tree
+              </button>
+            </div>
+
+            <!-- Main Content: Bio, Relationships, Gallery -->
+            <div class="ft-detail-main">
+              <div class="ft-detail-header">
+                <h3 class="ft-detail-name" id="ft-detail-name"></h3>
+                <div class="ft-detail-meta" id="ft-detail-meta"></div>
+              </div>
+
+              <div class="ft-detail-section" id="ft-detail-bio-section" style="display: none;">
+                <h4 class="ft-section-heading">Biographical Notes</h4>
+                <div class="ft-detail-bio-text" id="ft-detail-bio"></div>
+              </div>
+
+              <div class="ft-detail-section" id="ft-detail-rel-section">
+                <h4 class="ft-section-heading">Family Connections</h4>
+                <div class="ft-detail-chips" id="ft-detail-relationships"></div>
+              </div>
+
+              <div class="ft-detail-section" id="ft-detail-gallery-section" style="display: none;">
+                <h4 class="ft-section-heading">Photos &amp; Memories</h4>
+                <div class="ft-detail-gallery" id="ft-detail-gallery"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fullscreen Photo Lightbox -->
+      <div class="ft-lightbox" id="ft-lightbox" style="display: none;" onclick="closeLightbox()">
+        <div class="ft-lightbox-content" onclick="event.stopPropagation()">
+          <button type="button" class="ft-lightbox-close" onclick="closeLightbox()">&times;</button>
+          <img id="ft-lightbox-img" src="" alt="Full view">
+          <div class="ft-lightbox-caption" id="ft-lightbox-caption"></div>
+        </div>
+      </div>
     </div>
 
     <script>
@@ -267,6 +459,8 @@ function renderUnifiedTree(dornTree, lucasTree) {
       let startY = 0;
       let currentBranch = 'dorn';
       let allExpanded = false;
+      const peopleRegistry = ${JSON.stringify(peopleRegistry)};
+      let activePersonKey = null;
 
       // Initialize initial branch view display
       const dornView = document.getElementById('ft-diagram-tree-dorn');
@@ -306,7 +500,6 @@ function renderUnifiedTree(dornTree, lucasTree) {
         cards.forEach(card => {
           card.style.display = 'none';
 
-          // Find any trigger buttons on this card that trigger nested groups
           const nestedBtns = card.querySelectorAll('[data-target-group]');
           nestedBtns.forEach(btn => {
             const nestedGroupId = btn.getAttribute('data-target-group');
@@ -316,7 +509,6 @@ function renderUnifiedTree(dornTree, lucasTree) {
           });
         });
 
-        // Reset all buttons targeting this groupId
         const triggerBtns = activeTree.querySelectorAll(\`[data-target-group="\${groupId}"]\`);
         triggerBtns.forEach(btn => {
           const icon = btn.querySelector('.ft-pill-icon');
@@ -331,7 +523,6 @@ function renderUnifiedTree(dornTree, lucasTree) {
           card.style.display = card.classList.contains('ft-couple-card') ? 'flex' : 'block';
         });
 
-        // Update button targeting this groupId
         const triggerBtns = activeTree.querySelectorAll(\`[data-target-group="\${groupId}"]\`);
         triggerBtns.forEach(btn => {
           const icon = btn.querySelector('.ft-pill-icon');
@@ -340,7 +531,6 @@ function renderUnifiedTree(dornTree, lucasTree) {
         });
       }
 
-      // Toggle individual group cards (siblings or children) with cascading close
       window.toggleSiblingGroup = function(e, groupId) {
         if (e) {
           e.stopPropagation();
@@ -363,7 +553,6 @@ function renderUnifiedTree(dornTree, lucasTree) {
         setTimeout(drawConnectors, 80);
       };
 
-      // Global toggle for all extended cards
       window.toggleAllSiblingCards = function() {
         allExpanded = !allExpanded;
         const activeTree = document.getElementById(\`ft-diagram-tree-\${currentBranch}\`);
@@ -387,13 +576,174 @@ function renderUnifiedTree(dornTree, lucasTree) {
         setTimeout(drawConnectors, 100);
       };
 
+      // Person Details & Photo Gallery Drawer
+      window.openPersonDetails = function(e, key) {
+        if (e) {
+          e.stopPropagation();
+        }
+        const person = peopleRegistry[key];
+        if (!person) return;
+        activePersonKey = key;
+
+        const drawer = document.getElementById('ft-detail-drawer');
+        const avatarWrap = document.getElementById('ft-detail-avatar-wrap');
+        const nameEl = document.getElementById('ft-detail-name');
+        const metaEl = document.getElementById('ft-detail-meta');
+        const vitalsEl = document.getElementById('ft-detail-vitals');
+        const bioSection = document.getElementById('ft-detail-bio-section');
+        const bioEl = document.getElementById('ft-detail-bio');
+        const relSection = document.getElementById('ft-detail-rel-section');
+        const relEl = document.getElementById('ft-detail-relationships');
+        const gallerySection = document.getElementById('ft-detail-gallery-section');
+        const galleryEl = document.getElementById('ft-detail-gallery');
+
+        const initial = person.formattedName ? person.formattedName.charAt(0).toUpperCase() : '?';
+        if (person.photo) {
+          avatarWrap.innerHTML = \`<img src="\${person.photo}" alt="\${person.formattedName}" class="ft-detail-avatar" onclick="openLightbox('\${person.photo}', '\${person.formattedName}')">\`;
+        } else {
+          avatarWrap.innerHTML = \`<div class="ft-detail-avatar-placeholder">\${initial}</div>\`;
+        }
+
+        const maidenHtml = person.maiden ? \`<span class="ft-detail-maiden">(\${person.maiden})</span>\` : '';
+        const nickHtml = person.nickname ? \`<span class="ft-detail-nick">"\${person.nickname}"</span>\` : '';
+        nameEl.innerHTML = \`\${person.formattedName} \${maidenHtml} \${nickHtml}\`;
+
+        const branchTitle = person.branch === 'lucas' ? 'Lucas Line' : 'Dorn Line';
+        metaEl.innerHTML = \`<span class="ft-meta-badge">\${branchTitle}</span> <span class="ft-meta-badge">\${person.generationLabel || ''}</span>\`;
+
+        let vitalsHtml = '';
+        const bText = person.birthdate || person.birth_year;
+        const dText = person.death_date || person.death_year;
+        if (bText || dText) {
+          vitalsHtml += \`<div class="ft-vital-row"><strong>Born:</strong> \${bText || 'Unknown'}</div>\`;
+          if (dText) {
+            vitalsHtml += \`<div class="ft-vital-row"><strong>Passed:</strong> \${dText}</div>\`;
+          }
+          const byNum = parseInt(person.birth_year || (bText && String(bText).match(/\\b\\d{4}\\b/) ? String(bText).match(/\\b\\d{4}\\b/)[0] : 0), 10);
+          const dyNum = parseInt(person.death_year || (dText && String(dText).match(/\\b\\d{4}\\b/) ? String(dText).match(/\\b\\d{4}\\b/)[0] : 0), 10);
+          if (byNum > 1800) {
+            if (dyNum > 1800) {
+              const age = dyNum - byNum;
+              vitalsHtml += \`<div class="ft-vital-badge">Lived ~\${age} years</div>\`;
+            } else if (!dText) {
+              const curYear = new Date().getFullYear();
+              const age = curYear - byNum;
+              if (age < 115) {
+                vitalsHtml += \`<div class="ft-vital-badge">\${age} years old</div>\`;
+              }
+            }
+          }
+        }
+        vitalsEl.innerHTML = vitalsHtml;
+
+        if (person.notes) {
+          bioSection.style.display = 'block';
+          bioEl.textContent = person.notes;
+        } else {
+          bioSection.style.display = 'none';
+        }
+
+        let relHtml = '';
+        if (person.parents && person.parents.length > 0) {
+          relHtml += \`<div class="ft-rel-group"><span class="ft-rel-label">Parents:</span> \${person.parents.map(p => \`<span class="ft-chip ft-chip-parent">\${p}</span>\`).join('')}</div>\`;
+        }
+        if (person.spouseName) {
+          relHtml += \`<div class="ft-rel-group"><span class="ft-rel-label">Spouse:</span> <span class="ft-chip ft-chip-spouse">\${person.spouseName}</span></div>\`;
+        }
+        if (person.childrenCount) {
+          relHtml += \`<div class="ft-rel-group"><span class="ft-rel-label">Children:</span> <span class="ft-chip ft-chip-child">\${person.childrenCount} Child\${person.childrenCount > 1 ? 'ren' : ''}</span></div>\`;
+        }
+        if (person.siblingsCount) {
+          relHtml += \`<div class="ft-rel-group"><span class="ft-rel-label">Siblings:</span> <span class="ft-chip ft-chip-sib">\${person.siblingsCount} Sibling\${person.siblingsCount > 1 ? 's' : ''}</span></div>\`;
+        }
+        relEl.innerHTML = relHtml || '<p class="ft-no-info">Direct family member</p>';
+
+        const photos = person.photos && person.photos.length > 0 ? person.photos : (person.photo ? [{ url: person.photo, caption: 'Portrait' }] : []);
+        if (photos && photos.length > 0) {
+          gallerySection.style.display = 'block';
+          galleryEl.innerHTML = photos.map(ph => {
+            const url = typeof ph === 'string' ? ph : ph.url;
+            const caption = typeof ph === 'string' ? '' : (ph.caption || '');
+            return \`
+              <div class="ft-gallery-item" onclick="openLightbox('\${url}', '\${caption || person.formattedName}')">
+                <img src="\${url}" alt="\${caption || person.formattedName}" class="ft-gallery-thumb" loading="lazy">
+                \${caption ? \`<span class="ft-gallery-cap">\${caption}</span>\` : ''}
+              </div>
+            \`;
+          }).join('');
+        } else {
+          gallerySection.style.display = 'none';
+        }
+
+        drawer.style.display = 'block';
+        drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      };
+
+      window.closePersonDetails = function() {
+        const drawer = document.getElementById('ft-detail-drawer');
+        if (drawer) drawer.style.display = 'none';
+        activePersonKey = null;
+      };
+
+      window.locatePersonInTree = function() {
+        if (!activePersonKey) return;
+        const person = peopleRegistry[activePersonKey];
+        if (!person) return;
+
+        if (person.branch !== currentBranch) {
+          switchBranch(person.branch);
+        }
+
+        const activeTree = document.getElementById(\`ft-diagram-tree-\${person.branch}\`);
+        if (!activeTree) return;
+
+        if (person.parentGroup) {
+          openGroup(activeTree, person.parentGroup);
+        }
+
+        const cardEl = document.getElementById(person.cardId);
+        if (!cardEl) return;
+
+        const vpRect = viewport.getBoundingClientRect();
+        const cardRect = cardEl.getBoundingClientRect();
+        const contentRect = content.getBoundingClientRect();
+
+        const cardCenterX = (cardRect.left + cardRect.width / 2 - contentRect.left) / scale;
+        const cardCenterY = (cardRect.top + cardRect.height / 2 - contentRect.top) / scale;
+
+        panX = (vpRect.width / 2) - (cardCenterX * scale);
+        panY = (vpRect.height / 2) - (cardCenterY * scale);
+        updateTransform();
+
+        cardEl.classList.remove('ft-card-pulse');
+        void cardEl.offsetWidth;
+        cardEl.classList.add('ft-card-pulse');
+
+        viewport.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      };
+
+      window.openLightbox = function(imgSrc, caption) {
+        const lb = document.getElementById('ft-lightbox');
+        const img = document.getElementById('ft-lightbox-img');
+        const cap = document.getElementById('ft-lightbox-caption');
+        if (!lb || !img) return;
+        img.src = imgSrc;
+        cap.textContent = caption || '';
+        lb.style.display = 'flex';
+      };
+
+      window.closeLightbox = function() {
+        const lb = document.getElementById('ft-lightbox');
+        if (lb) lb.style.display = 'none';
+      };
+
       function updateTransform() {
         content.style.transform = \`translate(\${panX}px, \${panY}px) scale(\${scale})\`;
       }
 
       // Mouse Drag Panning
       viewport.addEventListener('mousedown', (e) => {
-        if (e.target.closest('.ft-btn') || e.target.closest('.ft-toggle-btn') || e.target.closest('.ft-sib-pill-btn') || e.target.closest('.ft-child-pill-btn')) return;
+        if (e.target.closest('.ft-btn') || e.target.closest('.ft-toggle-btn') || e.target.closest('.ft-sib-pill-btn') || e.target.closest('.ft-child-pill-btn') || e.target.closest('.ft-person-clickable')) return;
         isDragging = true;
         startX = e.clientX - panX;
         startY = e.clientY - panY;
@@ -440,7 +790,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
 
       viewport.addEventListener('touchstart', (e) => {
         if (e.touches.length === 1) {
-          if (e.target.closest('.ft-sib-pill-btn') || e.target.closest('.ft-child-pill-btn') || e.target.closest('.ft-btn') || e.target.closest('.ft-toggle-btn')) return;
+          if (e.target.closest('.ft-sib-pill-btn') || e.target.closest('.ft-child-pill-btn') || e.target.closest('.ft-btn') || e.target.closest('.ft-toggle-btn') || e.target.closest('.ft-person-clickable')) return;
           isDragging = true;
           startX = e.touches[0].clientX - panX;
           startY = e.touches[0].clientY - panY;
@@ -517,7 +867,6 @@ function renderUnifiedTree(dornTree, lucasTree) {
 
         const vpRect = content.getBoundingClientRect();
 
-        // Size SVG dynamically to encompass tree content
         const w = Math.max(activeTree.scrollWidth, content.scrollWidth, 3200);
         const h = Math.max(activeTree.scrollHeight, content.scrollHeight, 3200);
         svg.setAttribute('width', w);
@@ -553,7 +902,6 @@ function renderUnifiedTree(dornTree, lucasTree) {
           path.setAttribute('stroke-linecap', 'round');
           svg.appendChild(path);
 
-          // Dot joint at parent
           const dot1 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
           dot1.setAttribute('cx', p1.x);
           dot1.setAttribute('cy', p1.y);
@@ -561,7 +909,6 @@ function renderUnifiedTree(dornTree, lucasTree) {
           dot1.setAttribute('fill', isSibling ? '#96705b' : 'var(--accent, #b84b29)');
           svg.appendChild(dot1);
 
-          // Dot joint at child
           const dot2 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
           dot2.setAttribute('cx', p2.x);
           dot2.setAttribute('cy', p2.y);
@@ -575,7 +922,6 @@ function renderUnifiedTree(dornTree, lucasTree) {
           const pEl = document.getElementById(conn.parent);
           const cEl = document.getElementById(conn.child);
           if (pEl && cEl) {
-            // Check visibility
             const pVis = pEl.offsetParent !== null && window.getComputedStyle(pEl).display !== 'none';
             const cVis = cEl.offsetParent !== null && window.getComputedStyle(cEl).display !== 'none';
             if (pVis && cVis) {
@@ -635,13 +981,13 @@ async function encrypt(pwd, text) {
 
 const plaintext = renderUnifiedTree(dornData, lucasData);
 const payload = await encrypt(password, plaintext);
-const SESSION_KEY = 'unified_family_tree_session_v7';
+const SESSION_KEY = 'unified_family_tree_session_v8';
 
 const pageHtml = `---
 layout: default
 title: "Family Tree"
 permalink: /family-tree.html
-description: "Interactive & Zoomable Dorn and Lucas Family Tree with Cascading Collapsible Sibling & Children Cards."
+description: "Interactive & Zoomable Dorn and Lucas Family Tree with Person Details & Photo Gallery."
 ---
 
 <article class="post shell wide">
@@ -923,16 +1269,58 @@ ${JSON.stringify(payload)}
   margin-top: -2px;
 }
 
-.ft-person { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 155px; }
-.ft-avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); margin-bottom: 8px; }
-.ft-avatar-placeholder {
-  width: 56px; height: 56px; border-radius: 50%;
-  background: var(--paper-subtle); color: var(--accent);
-  font-family: var(--font-serif-display); font-size: 1.35rem; font-weight: 700;
-  display: flex; align-items: center; justify-content: center;
-  border: 2px solid var(--line); margin-bottom: 8px;
+.ft-person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 155px;
+  border-radius: 8px;
+  padding: 4px;
+  transition: all 0.18s ease;
 }
-.ft-name { font-weight: 600; font-size: 0.9rem; color: var(--ink); line-height: 1.25; }
+
+.ft-person-clickable {
+  cursor: pointer;
+}
+
+.ft-person-clickable:hover {
+  background: rgba(184, 75, 41, 0.05);
+}
+
+.ft-person-clickable:hover .ft-name {
+  color: var(--accent, #b84b29);
+}
+
+.ft-person-clickable:hover .ft-avatar,
+.ft-person-clickable:hover .ft-avatar-placeholder {
+  transform: scale(1.08);
+  box-shadow: 0 4px 14px rgba(184, 75, 41, 0.25);
+}
+
+.ft-avatar {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  margin-bottom: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ft-avatar-placeholder {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--paper-subtle);
+  color: var(--accent);
+  font-family: var(--font-serif-display);
+  font-size: 1.35rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid var(--line);
+  margin-bottom: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ft-name { font-weight: 600; font-size: 0.9rem; color: var(--ink); line-height: 1.25; transition: color 0.15s; }
 .ft-maiden { font-size: 0.8rem; color: var(--muted); font-weight: normal; }
 .ft-years { font-size: 0.76rem; color: var(--muted); margin-top: 2px; }
 .ft-heart { font-family: var(--font-serif-display); font-style: italic; color: var(--accent); font-size: 1.2rem; font-weight: bold; margin-top: 18px; }
@@ -978,6 +1366,362 @@ ${JSON.stringify(payload)}
   box-shadow: 0 2px 6px rgba(74, 114, 94, 0.25);
 }
 .ft-pill-icon { font-size: 0.7rem; }
+
+/* Person Details Drawer Component */
+.ft-detail-drawer {
+  position: relative;
+  background: var(--surface-card, #ffffff);
+  border: 1px solid var(--line, #e3dfd6);
+  border-radius: var(--radius-lg, 16px);
+  padding: clamp(20px, 3.5vw, 32px);
+  box-shadow: var(--shadow-md, 0 8px 30px rgba(0,0,0,0.07));
+  margin-top: 20px;
+  animation: ftSlideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes ftSlideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ft-detail-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--muted, #61665d);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.ft-detail-close:hover {
+  background: var(--paper-subtle, #f0ede6);
+  color: var(--ink, #1f2421);
+}
+
+.ft-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(130px, 180px) 1fr;
+  gap: 28px;
+}
+
+@media (max-width: 680px) {
+  .ft-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+.ft-detail-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.ft-detail-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent, #b84b29);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.ft-detail-avatar:hover {
+  transform: scale(1.04);
+}
+
+.ft-detail-avatar-placeholder {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--paper-subtle, #f0ede6);
+  color: var(--accent, #b84b29);
+  font-family: var(--font-serif-display);
+  font-size: 2.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line, #e3dfd6);
+}
+
+.ft-detail-vitals {
+  font-size: 0.85rem;
+  color: var(--muted, #61665d);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.ft-vital-row {
+  line-height: 1.35;
+}
+
+.ft-vital-badge {
+  display: inline-block;
+  background: rgba(184, 75, 41, 0.08);
+  color: var(--accent, #b84b29);
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin-top: 4px;
+}
+
+.ft-detail-locate-btn {
+  margin-top: 6px;
+  width: 100%;
+  padding: 7px 12px;
+  background: var(--paper-subtle, #f0ede6);
+  border: 1px solid var(--line, #e3dfd6);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink, #1f2421);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+.ft-detail-locate-btn:hover {
+  background: var(--accent, #b84b29);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+.ft-detail-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ft-detail-name {
+  font-family: var(--font-serif-display);
+  font-size: 1.65rem;
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+
+.ft-detail-maiden {
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-weight: normal;
+}
+
+.ft-detail-nick {
+  font-size: 1.15rem;
+  color: var(--accent);
+  font-style: italic;
+}
+
+.ft-detail-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ft-meta-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: var(--paper-subtle, #f0ede6);
+  border: 1px solid var(--line, #e3dfd6);
+  color: var(--muted, #61665d);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.ft-section-heading {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin: 0 0 6px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 3px;
+}
+
+.ft-detail-bio-text {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0;
+}
+
+.ft-detail-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.88rem;
+}
+
+.ft-rel-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ft-rel-label {
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.ft-chip {
+  display: inline-flex;
+  align-items: center;
+  background: var(--paper-subtle, #f0ede6);
+  border: 1px solid var(--line, #e3dfd6);
+  border-radius: 12px;
+  padding: 2px 9px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.ft-chip-parent {
+  background: rgba(184, 75, 41, 0.08);
+  color: var(--accent);
+  border-color: rgba(184, 75, 41, 0.25);
+}
+.ft-chip-spouse {
+  background: rgba(184, 75, 41, 0.08);
+  color: var(--accent);
+}
+.ft-chip-child {
+  background: rgba(74, 114, 94, 0.09);
+  color: #3b6b55;
+  border-color: rgba(74, 114, 94, 0.25);
+}
+
+.ft-detail-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.ft-gallery-item {
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #f0ede6;
+  aspect-ratio: 4/3;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.ft-gallery-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.ft-gallery-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ft-gallery-cap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  font-size: 0.65rem;
+  padding: 2px 4px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Lightbox Modal */
+.ft-lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  animation: ftFadeIn 0.2s ease;
+}
+
+@keyframes ftFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.ft-lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ft-lightbox-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  object-fit: contain;
+}
+
+.ft-lightbox-close {
+  position: absolute;
+  top: -36px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.ft-lightbox-caption {
+  color: #ffffff;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Locate in Tree Highlight Pulse */
+@keyframes ftPulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(184, 75, 41, 0.8); }
+  50% { box-shadow: 0 0 0 14px rgba(184, 75, 41, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(184, 75, 41, 0); }
+}
+
+.ft-card-pulse {
+  animation: ftPulseGlow 1.8s ease-out 2 !important;
+  border-color: var(--accent) !important;
+}
 </style>
 
 <script>
@@ -1045,7 +1789,6 @@ ${JSON.stringify(payload)}
     target.style.display = 'block';
     document.getElementById('gate-toolbar').style.display = 'block';
 
-    // Execute scripts inside decrypted payload
     const scripts = target.querySelectorAll('script');
     scripts.forEach(s => {
       const newScript = document.createElement('script');
