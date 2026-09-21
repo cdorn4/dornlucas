@@ -104,6 +104,14 @@ function renderPersonCard(person, personKey) {
     `
     : '';
 
+  const remarriageBtn = person.remarriage_group_id
+    ? `
+      <button type="button" class="ft-remarriage-pill-btn" onclick="toggleSiblingGroup(event, '${person.remarriage_group_id}')" data-target-group="${person.remarriage_group_id}" title="Toggle remarriage details">
+        <span class="ft-pill-icon">▸</span> 💍 ${person.remarriage_label ? 'Remarried: ' + person.remarriage_label : 'Remarried'}
+      </button>
+    `
+    : '';
+
   const clickAttr = personKey ? `onclick="openPersonDetails(event, '${personKey}')"` : '';
 
   return `
@@ -112,6 +120,7 @@ function renderPersonCard(person, personKey) {
       <div class="ft-name">${displayName}</div>
       ${yearsText}
       ${sibBtn}
+      ${remarriageBtn}
     </div>
   `;
 }
@@ -140,19 +149,26 @@ function renderCard(item, prefix) {
     const p1Key = `${prefix}-${item.id}-p1`;
     const p2Key = `${prefix}-${item.id}-p2`;
     const isDivorced = Boolean(item.divorced);
-    const statusTag = isDivorced
-      ? `<span class="ft-status-tag ft-divorced-tag">Divorced</span>`
-      : (item.status ? `<span class="ft-status-tag">${item.status}</span>` : '');
+    const isRemarriage = Boolean(item.is_remarriage);
+    let statusTag = '';
+    if (isDivorced) {
+      statusTag = `<span class="ft-status-tag ft-divorced-tag">Divorced</span>`;
+    } else if (isRemarriage) {
+      statusTag = `<span class="ft-status-tag ft-remarriage-tag">2nd Marriage</span>`;
+    } else if (item.status) {
+      statusTag = `<span class="ft-status-tag">${item.status}</span>`;
+    }
+
     const heartContent = isDivorced
       ? `<div class="ft-heart ft-heart-divorced" title="Divorced">&ne;<span class="ft-divorced-text">(div.)</span></div>`
       : `<div class="ft-heart">&amp;</div>`;
 
     return `
-      <div class="ft-couple-card${item.id === 'chris_elyse' ? ' main-couple' : ''}${item.is_sibling ? ' ft-sibling-card' : ''}${isDivorced ? ' ft-divorced-card' : ''}"
+      <div class="ft-couple-card${item.id === 'chris_elyse' ? ' main-couple' : ''}${item.is_sibling ? ' ft-sibling-card' : ''}${isDivorced ? ' ft-divorced-card' : ''}${isRemarriage ? ' ft-remarriage-card' : ''}"
            id="card-${prefix}-${item.id.replace(/_/g, '-')}"
            ${item.sibling_group ? `data-sibling-group="${item.sibling_group}" style="display: none;"` : ''}>
         ${statusTag}
-        ${item.is_sibling ? '<span class="ft-sibling-tag">Branch</span>' : ''}
+        ${item.is_sibling && !isRemarriage ? '<span class="ft-sibling-tag">Branch</span>' : ''}
         ${renderPersonCard(item.person1, p1Key)}
         ${heartContent}
         ${renderPersonCard(item.person2, p2Key)}
@@ -253,6 +269,26 @@ function buildPeopleRegistry(dornTree, lucasTree) {
             if (pc.person2) p2Parents.push(formatDisplayName(pc.person2.name));
           }
 
+          const p1Marriage = {
+            spouseName: formatDisplayName(p2.name),
+            spouseKey: p2Key,
+            status: c.divorced ? 'Divorced' : (c.is_remarriage ? 'Married (Remarried)' : (c.status || 'Married')),
+            isDivorced: Boolean(c.divorced),
+            isRemarriage: Boolean(c.is_remarriage),
+            childrenCount: c.children_count || 0,
+            childrenGroup: c.children_group_id
+          };
+
+          const p2Marriage = {
+            spouseName: formatDisplayName(p1.name),
+            spouseKey: p1Key,
+            status: c.divorced ? 'Divorced' : (c.is_remarriage ? 'Married (Remarried)' : (c.status || 'Married')),
+            isDivorced: Boolean(c.divorced),
+            isRemarriage: Boolean(c.is_remarriage),
+            childrenCount: c.children_count || 0,
+            childrenGroup: c.children_group_id
+          };
+
           registry[p1Key] = {
             key: p1Key,
             name: p1.name,
@@ -272,6 +308,7 @@ function buildPeopleRegistry(dornTree, lucasTree) {
             generationLabel: gen.label,
             spouseName: formatDisplayName(p2.name),
             spouseKey: p2Key,
+            marriages: [p1Marriage],
             childrenCount: c.children_count || 0,
             childrenGroup: c.children_group_id,
             siblingsCount: p1.sibling_count || 0,
@@ -298,6 +335,7 @@ function buildPeopleRegistry(dornTree, lucasTree) {
             generationLabel: gen.label,
             spouseName: formatDisplayName(p1.name),
             spouseKey: p1Key,
+            marriages: [p2Marriage],
             childrenCount: c.children_count || 0,
             childrenGroup: c.children_group_id,
             siblingsCount: p2.sibling_count || 0,
@@ -331,6 +369,7 @@ function buildPeopleRegistry(dornTree, lucasTree) {
             cardId: domCardId,
             parentGroup: c.sibling_group,
             generationLabel: gen.label,
+            marriages: [],
             childrenCount: c.children_count || p.children_count || 0,
             childrenGroup: c.children_group_id || p.children_group_id,
             siblingsCount: p.sibling_count || 0,
@@ -344,6 +383,39 @@ function buildPeopleRegistry(dornTree, lucasTree) {
 
   processTree(dornTree, 'dorn');
   processTree(lucasTree, 'lucas');
+
+  // Consolidate multi-marriage entries for individuals who appear in multiple cards
+  const nameToKeys = {};
+  Object.keys(registry).forEach(key => {
+    const p = registry[key];
+    if (p.formattedName) {
+      const normName = p.formattedName.toLowerCase().trim();
+      if (!nameToKeys[normName]) nameToKeys[normName] = [];
+      nameToKeys[normName].push(key);
+    }
+  });
+
+  Object.values(nameToKeys).forEach(keys => {
+    if (keys.length > 1) {
+      const allMarriages = [];
+      const seenSpouses = new Set();
+      keys.forEach(k => {
+        const item = registry[k];
+        if (item.marriages) {
+          item.marriages.forEach(m => {
+            if (!seenSpouses.has(m.spouseName)) {
+              seenSpouses.add(m.spouseName);
+              allMarriages.push(m);
+            }
+          });
+        }
+      });
+      keys.forEach(k => {
+        registry[k].marriages = allMarriages;
+      });
+    }
+  });
+
   return registry;
 }
 
@@ -647,10 +719,27 @@ function renderUnifiedTree(dornTree, lucasTree) {
         if (person.parents && person.parents.length > 0) {
           relHtml += \`<div class="ft-rel-group"><span class="ft-rel-label">Parents:</span> \${person.parents.map(p => \`<span class="ft-chip ft-chip-parent">\${p}</span>\`).join('')}</div>\`;
         }
-        if (person.spouseName) {
-          relHtml += \`<div class="ft-rel-group"><span class="ft-rel-label">Spouse:</span> <span class="ft-chip ft-chip-spouse">\${person.spouseName}</span></div>\`;
+        if (person.marriages && person.marriages.length > 0) {
+          relHtml += \`<div class="ft-rel-group"><span class="ft-rel-label">\${person.marriages.length > 1 ? 'Marriages / Spouses:' : 'Spouse:'}</span>\`;
+          person.marriages.forEach(m => {
+            const statusClass = m.isDivorced ? 'ft-chip-divorced' : (m.isRemarriage ? 'ft-chip-remarriage' : 'ft-chip-spouse');
+            const statusText = m.status ? \` (\${m.status})\` : '';
+            const clickAttr = m.spouseKey ? \`onclick="openPersonDetails(event, '\${m.spouseKey}')"\` : '';
+            relHtml += \`
+              <div class="ft-marriage-item">
+                <span class="ft-chip \${statusClass} \${m.spouseKey ? 'ft-chip-clickable' : ''}" \${clickAttr} title="\${m.spouseKey ? 'Click to view ' + m.spouseName : ''}">
+                  \${m.spouseName}\${statusText}
+                </span>
+                \${m.childrenCount ? \`<span class="ft-chip ft-chip-child">\${m.childrenCount} Child\${m.childrenCount > 1 ? 'ren' : ''}</span>\` : ''}
+              </div>
+            \`;
+          });
+          relHtml += \`</div>\`;
+        } else if (person.spouseName) {
+          const clickAttr = person.spouseKey ? \`onclick="openPersonDetails(event, '\${person.spouseKey}')"\` : '';
+          relHtml += \`<div class="ft-rel-group"><span class="ft-rel-label">Spouse:</span> <span class="ft-chip ft-chip-spouse \${person.spouseKey ? 'ft-chip-clickable' : ''}" \${clickAttr} title="\${person.spouseKey ? 'Click to view ' + person.spouseName : ''}">\${person.spouseName}</span></div>\`;
         }
-        if (person.childrenCount) {
+        if (person.childrenCount && (!person.marriages || person.marriages.length === 0)) {
           relHtml += \`<div class="ft-rel-group"><span class="ft-rel-label">Children:</span> <span class="ft-chip ft-chip-child">\${person.childrenCount} Child\${person.childrenCount > 1 ? 'ren' : ''}</span></div>\`;
         }
         if (person.siblingsCount) {
@@ -1333,7 +1422,7 @@ ${JSON.stringify(payload)}
   margin-top: 8px;
 }
 
-.ft-sib-pill-btn, .ft-child-pill-btn {
+.ft-sib-pill-btn, .ft-child-pill-btn, .ft-remarriage-pill-btn {
   margin-top: 8px;
   background: rgba(184, 75, 41, 0.08);
   color: var(--accent, #b84b29);
@@ -1353,6 +1442,11 @@ ${JSON.stringify(payload)}
   color: #3b6b55;
   border-color: rgba(74, 114, 94, 0.35);
 }
+.ft-remarriage-pill-btn {
+  background: rgba(124, 58, 237, 0.09);
+  color: #7c3aed;
+  border-color: rgba(124, 58, 237, 0.35);
+}
 .ft-sib-pill-btn:hover, .ft-sib-pill-btn.active {
   background: var(--accent, #b84b29);
   color: #ffffff;
@@ -1365,7 +1459,23 @@ ${JSON.stringify(payload)}
   border-color: #3b6b55;
   box-shadow: 0 2px 6px rgba(74, 114, 94, 0.25);
 }
+.ft-remarriage-pill-btn:hover, .ft-remarriage-pill-btn.active {
+  background: #7c3aed;
+  color: #ffffff;
+  border-color: #7c3aed;
+  box-shadow: 0 2px 6px rgba(124, 58, 237, 0.25);
+}
 .ft-pill-icon { font-size: 0.7rem; }
+
+.ft-remarriage-tag {
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  color: #7c3aed;
+}
+.ft-remarriage-card {
+  border: 1px dashed rgba(124, 58, 237, 0.45);
+  background: rgba(253, 252, 255, 0.96);
+}
 
 /* Person Details Drawer Component */
 .ft-detail-drawer {
@@ -1605,10 +1715,41 @@ ${JSON.stringify(payload)}
   background: rgba(184, 75, 41, 0.08);
   color: var(--accent);
 }
+.ft-chip-remarriage {
+  background: rgba(124, 58, 237, 0.1);
+  color: #6d28d9;
+  border-color: rgba(124, 58, 237, 0.3);
+}
+.ft-chip-divorced {
+  background: #fdf2f2;
+  color: #c81e1e;
+  border: 1px dashed #f8b4b4;
+}
 .ft-chip-child {
   background: rgba(74, 114, 94, 0.09);
   color: #3b6b55;
   border-color: rgba(74, 114, 94, 0.25);
+}
+.ft-chip-sib {
+  background: rgba(150, 112, 91, 0.1);
+  color: #784f39;
+  border-color: rgba(150, 112, 91, 0.3);
+}
+.ft-chip-clickable {
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.ft-chip-clickable:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+  filter: brightness(0.95);
+}
+.ft-marriage-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 8px;
+  margin-bottom: 4px;
 }
 
 .ft-detail-gallery {

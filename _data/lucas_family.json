@@ -314,7 +314,9 @@
             "photo": null,
             "parent_couple": "marino_parents",
             "sibling_group_id": "leta_siblings",
-            "sibling_count": 3
+            "sibling_count": 3,
+            "remarriage_group_id": "leta_remarriage",
+            "remarriage_label": "John Clark-Johnson"
           },
           "divorced": true,
           "status": "Divorced"
@@ -352,6 +354,10 @@
           "id": "leta_john_clark_johnson",
           "branch": "Leta Marino & John Clark-Johnson",
           "parent_couple": "marino_parents",
+          "is_sibling": true,
+          "is_remarriage": true,
+          "sibling_group": "leta_remarriage",
+          "status": "Remarried",
           "has_children": true,
           "children_group_id": "john_clark_johnson_children",
           "children_count": 3,
@@ -458,7 +464,9 @@
             "photo": null,
             "parent_couple": "marino_parents",
             "sibling_group_id": "leta_siblings",
-            "sibling_count": 3
+            "sibling_count": 3,
+            "remarriage_group_id": "leta_remarriage",
+            "remarriage_label": "John Clark-Johnson"
           },
           "divorced": true,
           "status": "Divorced"
@@ -467,6 +475,10 @@
           "id": "leta_john_clark_johnson",
           "branch": "Leta Marino & John Clark-Johnson",
           "parent_couple": "marino_parents",
+          "is_sibling": true,
+          "is_remarriage": true,
+          "sibling_group": "leta_remarriage",
+          "status": "Remarried",
           "has_children": true,
           "children_group_id": "john_clark_johnson_children",
           "children_count": 3,
