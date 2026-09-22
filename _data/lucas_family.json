@@ -350,10 +350,10 @@
         },
         {
           "id": "leta_john_clark_johnson",
-          "branch": "Leta Marino & John Clark-Johnson",
+          "branch": "Leta Marino & John Clark",
           "parent_couple": "marino_parents",
           "has_children": true,
-          "children_group_id": "john_clark_johnson_children",
+          "children_group_id": "john_clark_children",
           "children_count": 3,
           "person1": {
             "name": "Leta Marino",
@@ -362,7 +362,7 @@
             "parent_couple": "marino_parents"
           },
           "person2": {
-            "name": "John Clark-Johnson",
+            "name": "John Clark",
             "maiden": null,
             "photo": null
           }
@@ -465,7 +465,7 @@
         },
         {
           "id": "leta_john_clark_johnson",
-          "branch": "Leta Marino & John Clark-Johnson",
+          "branch": "Leta Marino & John Clark",
           "parent_couple": "marino_parents",
           "has_children": true,
           "children_group_id": "john_clark_johnson_children",
@@ -477,7 +477,7 @@
             "parent_couple": "marino_parents"
           },
           "person2": {
-            "name": "John Clark-Johnson",
+            "name": "John Clark",
             "maiden": null,
             "photo": null
           }
