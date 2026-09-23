@@ -80,6 +80,26 @@ function formatDisplayName(name) {
   return (prefix + firstName + ' ' + middleInitials + ' ' + lastName + suffix).trim();
 }
 
+function getLastName(name) {
+  if (!name || typeof name !== 'string') return '';
+  const tokens = name.trim().split(/\s+/);
+  let end = tokens.length - 1;
+  if (end > 0 && SUFFIXES.has(tokens[end].toLowerCase())) end--;
+  return tokens[end] || '';
+}
+
+function shouldShowMaiden(name, maiden) {
+  if (!maiden || typeof maiden !== 'string') return false;
+  const trimmedMaiden = maiden.trim();
+  if (!trimmedMaiden) return false;
+  if (!name || typeof name !== 'string') return true;
+  const lName = getLastName(name);
+  if (lName.toLowerCase() === trimmedMaiden.toLowerCase()) return false;
+  const trimmedName = name.trim();
+  if (trimmedName.toLowerCase().endsWith(trimmedMaiden.toLowerCase())) return false;
+  return true;
+}
+
 function renderPersonCard(person, personKey) {
   if (!person) return '';
   const initial = person.name ? person.name.trim().charAt(0).toUpperCase() : '?';
@@ -87,7 +107,8 @@ function renderPersonCard(person, personKey) {
     ? `<img src="${person.photo}" alt="${person.name || 'Unknown'}" class="ft-avatar">`
     : `<div class="ft-avatar-placeholder">${initial}</div>`;
 
-  const maidenText = person.maiden ? `<span class="ft-maiden">(${person.maiden})</span>` : '';
+  const showMaiden = person.maiden && shouldShowMaiden(person.name, person.maiden);
+  const maidenText = showMaiden ? `<span class="ft-maiden">(${person.maiden})</span>` : '';
   const years = formatYears(person.birthdate || person.birth_date, person.birth_year, person.death_date || person.deathdate, person.death_year);
   const yearsText = years ? `<div class="ft-years">${years}</div>` : '';
 
@@ -322,11 +343,14 @@ function buildPeopleRegistry(dornTree, lucasTree) {
             });
           }
 
+          const p1Maiden = (p1.maiden && shouldShowMaiden(p1.name, p1.maiden)) ? p1.maiden : null;
+          const p2Maiden = (p2.maiden && shouldShowMaiden(p2.name, p2.maiden)) ? p2.maiden : null;
+
           registry[p1Key] = {
             key: p1Key,
             name: p1.name,
             formattedName: formatDisplayName(p1.name),
-            maiden: p1.maiden,
+            maiden: p1Maiden,
             nickname: p1.nickname || p1.nick,
             birthdate: p1.birthdate || p1.birth_date,
             birth_year: p1.birth_year,
@@ -354,7 +378,7 @@ function buildPeopleRegistry(dornTree, lucasTree) {
             key: p2Key,
             name: p2.name,
             formattedName: formatDisplayName(p2.name),
-            maiden: p2.maiden,
+            maiden: p2Maiden,
             nickname: p2.nickname || p2.nick,
             birthdate: p2.birthdate || p2.birth_date,
             birth_year: p2.birth_year,
@@ -379,6 +403,7 @@ function buildPeopleRegistry(dornTree, lucasTree) {
         } else {
           const p = c.person1 || c;
           const pKey = `${prefix}-${c.id}`;
+          const pMaiden = (p.maiden && shouldShowMaiden(p.name, p.maiden)) ? p.maiden : null;
           const parents = [];
           if (c.parent_couple && cardMap[c.parent_couple]) {
             const pc = cardMap[c.parent_couple].card;
@@ -402,7 +427,7 @@ function buildPeopleRegistry(dornTree, lucasTree) {
             key: pKey,
             name: p.name,
             formattedName: formatDisplayName(p.name),
-            maiden: p.maiden,
+            maiden: pMaiden,
             nickname: p.nickname || p.nick,
             birthdate: p.birthdate || p.birth_date,
             birth_year: p.birth_year,
