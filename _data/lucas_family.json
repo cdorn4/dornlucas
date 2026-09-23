@@ -639,7 +639,7 @@
           "parent_couple": "leta_john_clark",
           "person1": {
             "name": "Becca Merril",
-            "maiden": "Clark"
+            "maiden": "Clark-Johnson"
           },
           "person2": {
             "name": "Andrew Merril"
@@ -702,15 +702,15 @@
           "parent_couple": "mark_marcie_couple"
         },
         {
-          "id": "sib_child_matt_clark",
-          "name": "Matt Clark",
+          "id": "sib_child_matt_clark_johnson",
+          "name": "Matt Clark-Johnson",
           "is_sibling": true,
           "sibling_group": "john_clark_children",
           "parent_couple": "leta_john_clark"
         },
         {
-          "id": "sib_child_katie_clark",
-          "name": "Katie Clark",
+          "id": "sib_child_katie_clark_johnson",
+          "name": "Katie Clark-Johnson",
           "is_sibling": true,
           "sibling_group": "john_clark_children",
           "parent_couple": "leta_john_clark"
@@ -801,8 +801,8 @@
           }
         },
         {
-          "id": "sib_child_matt_clark",
-          "name": "Matt Clark",
+          "id": "sib_child_matt_clark_johnson",
+          "name": "Matt Clark-Johnson",
           "is_sibling": true,
           "sibling_group": "john_clark_children",
           "parent_couple": "leta_john_clark"
@@ -814,15 +814,15 @@
           "parent_couple": "leta_john_clark",
           "person1": {
             "name": "Becca Merril",
-            "maiden": "Clark"
+            "maiden": "Clark-Johnson"
           },
           "person2": {
             "name": "Andrew Merril"
           }
         },
         {
-          "id": "sib_child_katie_clark",
-          "name": "Katie Clark",
+          "id": "sib_child_katie_clark_johnson",
+          "name": "Katie Clark-Johnson",
           "is_sibling": true,
           "sibling_group": "john_clark_children",
           "parent_couple": "leta_john_clark"
