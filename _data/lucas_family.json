@@ -659,6 +659,19 @@
           "person2": {
             "name": "Andrew Merril"
           }
+        },
+        {
+          "id": "sib_child_alexis_musante_couple",
+          "is_sibling": true,
+          "sibling_group": "pat_musante_children",
+          "parent_couple": "sib_leta_pat_couple",
+          "person1": {
+            "name": "Alexis Price",
+            "maiden": "Musante"
+          },
+          "person2": {
+            "name": "Jason Price"
+          }
         }
       ],
       "individuals": [
@@ -672,14 +685,6 @@
           "has_children": true,
           "children_group_id": "justine_lucas_children",
           "children_count": 1
-        },
-        {
-          "id": "sib_child_alexis_musante",
-          "name": "Alexis Musante",
-          "maiden": "Musante",
-          "is_sibling": true,
-          "sibling_group": "pat_musante_children",
-          "parent_couple": "sib_leta_pat_couple"
         },
         {
           "id": "sib_child_brian_musante",
@@ -843,12 +848,17 @@
           "parent_couple": "leta_john_clark"
         },
         {
-          "id": "sib_child_alexis_musante",
-          "name": "Alexis Musante",
-          "maiden": "Musante",
+          "id": "sib_child_alexis_musante_couple",
           "is_sibling": true,
           "sibling_group": "pat_musante_children",
-          "parent_couple": "sib_leta_pat_couple"
+          "parent_couple": "sib_leta_pat_couple",
+          "person1": {
+            "name": "Alexis Price",
+            "maiden": "Musante"
+          },
+          "person2": {
+            "name": "Jason Price"
+          }
         },
         {
           "id": "sib_child_brian_musante",
