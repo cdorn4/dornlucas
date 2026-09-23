@@ -403,6 +403,25 @@
           "person2": {
             "name": "Al Musante"
           }
+        },
+        {
+          "id": "leta_john_clark_johnson",
+          "branch": "Leta Marino & John Clark",
+          "parent_couple": "marino_parents",
+          "has_children": true,
+          "children_group_id": "john_clark_children",
+          "children_count": 3,
+          "person1": {
+            "name": "Leta Marino",
+            "maiden": "Marino",
+            "photo": null,
+            "parent_couple": "marino_parents"
+          },
+          "person2": {
+            "name": "John Clark",
+            "maiden": null,
+            "photo": null
+          }
         }
       ],
       "individuals": [
@@ -505,38 +524,8 @@
           "status": "Divorced"
         },
         {
-          "id": "mark_marcie_couple",
-          "branch": "Mark Lucas & Marcie Luca",
-          "is_remarriage": true,
-          "is_sibling": true,
-          "sibling_group": "mark_remarriage",
-          "parent_couple": "john_lucas_parents",
-          "has_children": true,
-          "children_group_id": "marcie_luca_children",
-          "children_count": 3,
-          "children_label": "3 Step-Children (Marcie's)",
-          "children_of_p2": true,
-          "children_p2_role": "Mother",
-          "person1": {
-            "name": "Mark Lucas",
-            "maiden": null,
-            "birthdate": "1952-03-12",
-            "birth_year": "1952",
-            "photo": null,
-            "parent_couple": "john_lucas_parents"
-          },
-          "person2": {
-            "name": "Marcie Luca",
-            "maiden": null,
-            "photo": null
-          }
-        },
-        {
-          "id": "leta_john_clark",
+          "id": "leta_john_clark_johnson",
           "branch": "Leta Marino & John Clark",
-          "is_remarriage": true,
-          "is_sibling": true,
-          "sibling_group": "leta_remarriage",
           "parent_couple": "marino_parents",
           "has_children": true,
           "children_group_id": "john_clark_children",
