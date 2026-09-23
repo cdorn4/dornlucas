@@ -397,11 +397,13 @@
           "children_group_id": "pat_musante_children",
           "children_count": 2,
           "person1": {
-            "name": "Pat Musante",
+            "name": "Patricia Musante",
+            "nickname": "Pat",
             "maiden": "Marino"
           },
           "person2": {
-            "name": "Al Musante"
+            "name": "Alan Musante",
+            "nickname": "Al"
           }
         }
       ],
@@ -578,11 +580,13 @@
           "children_group_id": "pat_musante_children",
           "children_count": 2,
           "person1": {
-            "name": "Pat Musante",
+            "name": "Patricia Musante",
+            "nickname": "Pat",
             "maiden": "Marino"
           },
           "person2": {
-            "name": "Al Musante"
+            "name": "Alan Musante",
+            "nickname": "Al"
           }
         },
         {
