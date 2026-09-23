@@ -605,7 +605,7 @@
           "married_year": 2018,
           "person1": {
             "name": "Elyse Lucas",
-            "maiden": "Lucas",
+            "maiden": null,
             "birthdate": "1988-05-05",
             "birth_year": "1988",
             "sibling_group_id": "elyse_siblings",
@@ -792,7 +792,7 @@
           "married_year": 2018,
           "person1": {
             "name": "Elyse Lucas",
-            "maiden": "Lucas",
+            "maiden": null,
             "birthdate": "1988-05-05",
             "birth_year": "1988",
             "sibling_group_id": "elyse_siblings",

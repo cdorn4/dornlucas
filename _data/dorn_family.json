@@ -2154,7 +2154,7 @@
             "name": "Elyse Lucas",
             "birthdate": "1988-05-05",
             "birth_year": "1988",
-            "maiden": "Lucas",
+            "maiden": null,
             "sibling_group_id": "elyse_siblings",
             "sibling_count": 2
           }
@@ -2756,7 +2756,7 @@
             "name": "Elyse Lucas",
             "birthdate": "1988-05-05",
             "birth_year": "1988",
-            "maiden": "Lucas",
+            "maiden": null,
             "sibling_group_id": "elyse_siblings",
             "sibling_count": 2
           }
