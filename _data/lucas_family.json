@@ -666,8 +666,8 @@
           "sibling_group": "pat_musante_children",
           "parent_couple": "sib_leta_pat_couple",
           "person1": {
-            "name": "Alexis Price",
-            "maiden": "Musante"
+            "name": "Alexis Musante",
+            "maiden": null
           },
           "person2": {
             "name": "Jason Price"
@@ -853,8 +853,8 @@
           "sibling_group": "pat_musante_children",
           "parent_couple": "sib_leta_pat_couple",
           "person1": {
-            "name": "Alexis Price",
-            "maiden": "Musante"
+            "name": "Alexis Musante",
+            "maiden": null
           },
           "person2": {
             "name": "Jason Price"
