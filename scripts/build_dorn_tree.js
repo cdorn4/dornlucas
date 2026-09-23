@@ -260,11 +260,15 @@ function buildPeopleRegistry(dornTree, lucasTree) {
           } else if (c.parent_couple && cardMap[c.parent_couple]) {
             const pc = cardMap[c.parent_couple].card;
             if (pc.children_of_p2) {
-              if (pc.person2) p1Parents.push(formatDisplayName(pc.person2.name) + ' (Father)');
-              p1Parents.push('1st Wife (Mother)');
+              const role = pc.children_p2_role || (pc.person2 && (pc.person2.name && (pc.person2.name.includes('Marcie') || pc.person2.maiden)) ? 'Mother' : 'Father');
+              const priorParent = role === 'Mother' ? '1st Husband (Father)' : '1st Wife (Mother)';
+              if (pc.person2) p1Parents.push(formatDisplayName(pc.person2.name) + ` (${role})`);
+              p1Parents.push(priorParent);
             } else if (pc.children_of_p1) {
-              if (pc.person1) p1Parents.push(formatDisplayName(pc.person1.name) + ' (Mother)');
-              p1Parents.push('1st Husband (Father)');
+              const role = pc.children_p1_role || 'Mother';
+              const priorParent = role === 'Mother' ? '1st Husband (Father)' : '1st Wife (Mother)';
+              if (pc.person1) p1Parents.push(formatDisplayName(pc.person1.name) + ` (${role})`);
+              p1Parents.push(priorParent);
             } else {
               if (pc.person1) p1Parents.push(formatDisplayName(pc.person1.name));
               if (pc.person2) p1Parents.push(formatDisplayName(pc.person2.name));
@@ -280,6 +284,8 @@ function buildPeopleRegistry(dornTree, lucasTree) {
 
           const isChildrenOfP2 = Boolean(c.children_of_p2);
           const isChildrenOfP1 = Boolean(c.children_of_p1);
+          const p2Role = c.children_p2_role || (c.person2 && (c.person2.name && (c.person2.name.includes('Marcie') || c.person2.maiden)) ? 'Mother' : 'Father');
+          const priorSpouseForP2 = p2Role === 'Mother' ? '1st Husband (Prior Marriage)' : '1st Wife (Prior Marriage)';
 
           const p1Marriage = {
             spouseName: formatDisplayName(p2.name),
@@ -299,17 +305,19 @@ function buildPeopleRegistry(dornTree, lucasTree) {
             isDivorced: Boolean(c.divorced),
             isRemarriage: Boolean(c.is_remarriage),
             childrenCount: isChildrenOfP2 ? 0 : (c.children_count || 0),
+            stepChildrenCount: 0,
             childrenGroup: c.children_group_id
           };
 
           const p2Marriages = [p2Marriage];
           if (isChildrenOfP2) {
             p2Marriages.unshift({
-              spouseName: '1st Wife (Prior Marriage)',
+              spouseName: priorSpouseForP2,
               status: 'Prior Marriage',
               isDivorced: false,
               isRemarriage: false,
               childrenCount: c.children_count || 0,
+              stepChildrenCount: 0,
               childrenGroup: c.children_group_id
             });
           }
@@ -375,11 +383,15 @@ function buildPeopleRegistry(dornTree, lucasTree) {
           if (c.parent_couple && cardMap[c.parent_couple]) {
             const pc = cardMap[c.parent_couple].card;
             if (pc.children_of_p2) {
-              if (pc.person2) parents.push(formatDisplayName(pc.person2.name) + ' (Father)');
-              parents.push('1st Wife (Mother)');
+              const role = pc.children_p2_role || (pc.person2 && (pc.person2.name && (pc.person2.name.includes('Marcie') || pc.person2.maiden)) ? 'Mother' : 'Father');
+              const priorParent = role === 'Mother' ? '1st Husband (Father)' : '1st Wife (Mother)';
+              if (pc.person2) parents.push(formatDisplayName(pc.person2.name) + ` (${role})`);
+              parents.push(priorParent);
             } else if (pc.children_of_p1) {
-              if (pc.person1) parents.push(formatDisplayName(pc.person1.name) + ' (Mother)');
-              parents.push('1st Husband (Father)');
+              const role = pc.children_p1_role || 'Mother';
+              const priorParent = role === 'Mother' ? '1st Husband (Father)' : '1st Wife (Mother)';
+              if (pc.person1) parents.push(formatDisplayName(pc.person1.name) + ` (${role})`);
+              parents.push(priorParent);
             } else {
               if (pc.person1) parents.push(formatDisplayName(pc.person1.name));
               if (pc.person2) parents.push(formatDisplayName(pc.person2.name));

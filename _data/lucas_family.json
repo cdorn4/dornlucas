@@ -302,11 +302,13 @@
             "photo": null,
             "parent_couple": "john_lucas_parents",
             "sibling_group_id": "mark_siblings",
-            "sibling_count": 3
+            "sibling_count": 3,
+            "remarriage_group_id": "mark_remarriage",
+            "remarriage_label": "Marcie Luca"
           },
           "person2": {
             "name": "Leta Marino",
-            "maiden": "Marino",
+            "maiden": null,
             "birthdate": null,
             "birth_year": null,
             "death_date": null,
@@ -314,10 +316,64 @@
             "photo": null,
             "parent_couple": "marino_parents",
             "sibling_group_id": "leta_siblings",
-            "sibling_count": 3
+            "sibling_count": 3,
+            "remarriage_group_id": "leta_remarriage",
+            "remarriage_label": "John Clark"
           },
           "divorced": true,
           "status": "Divorced"
+        },
+        {
+          "id": "mark_marcie_couple",
+          "branch": "Mark Lucas & Marcie Luca",
+          "is_remarriage": true,
+          "is_sibling": true,
+          "sibling_group": "mark_remarriage",
+          "parent_couple": "john_lucas_parents",
+          "has_children": true,
+          "children_group_id": "marcie_luca_children",
+          "children_count": 3,
+          "children_label": "3 Step-Children (Marcie's)",
+          "children_of_p2": true,
+          "children_p2_role": "Mother",
+          "person1": {
+            "name": "Mark Lucas",
+            "maiden": null,
+            "birthdate": "1952-03-12",
+            "birth_year": "1952",
+            "photo": null,
+            "parent_couple": "john_lucas_parents"
+          },
+          "person2": {
+            "name": "Marcie Luca",
+            "maiden": null,
+            "photo": null
+          }
+        },
+        {
+          "id": "leta_john_clark",
+          "branch": "Leta Marino & John Clark",
+          "is_remarriage": true,
+          "is_sibling": true,
+          "sibling_group": "leta_remarriage",
+          "parent_couple": "marino_parents",
+          "has_children": true,
+          "children_group_id": "john_clark_children",
+          "children_count": 3,
+          "children_label": "3 Step-Children (John's)",
+          "children_of_p2": true,
+          "children_p2_role": "Father",
+          "person1": {
+            "name": "Leta Marino",
+            "maiden": null,
+            "photo": null,
+            "parent_couple": "marino_parents"
+          },
+          "person2": {
+            "name": "John Clark",
+            "maiden": null,
+            "photo": null
+          }
         },
         {
           "id": "sib_leta_peter_couple",
@@ -346,25 +402,6 @@
           },
           "person2": {
             "name": "Al Musante"
-          }
-        },
-        {
-          "id": "leta_john_clark_johnson",
-          "branch": "Leta Marino & John Clark-Johnson",
-          "parent_couple": "marino_parents",
-          "has_children": true,
-          "children_group_id": "john_clark_johnson_children",
-          "children_count": 3,
-          "person1": {
-            "name": "Leta Marino",
-            "maiden": "Marino",
-            "photo": null,
-            "parent_couple": "marino_parents"
-          },
-          "person2": {
-            "name": "John Clark-Johnson",
-            "maiden": null,
-            "photo": null
           }
         }
       ],
@@ -446,11 +483,13 @@
             "photo": null,
             "parent_couple": "john_lucas_parents",
             "sibling_group_id": "mark_siblings",
-            "sibling_count": 3
+            "sibling_count": 3,
+            "remarriage_group_id": "mark_remarriage",
+            "remarriage_label": "Marcie Luca"
           },
           "person2": {
-            "name": "Leta Lucas",
-            "maiden": "Marino",
+            "name": "Leta Marino",
+            "maiden": null,
             "birthdate": null,
             "birth_year": null,
             "death_date": null,
@@ -458,26 +497,61 @@
             "photo": null,
             "parent_couple": "marino_parents",
             "sibling_group_id": "leta_siblings",
-            "sibling_count": 3
+            "sibling_count": 3,
+            "remarriage_group_id": "leta_remarriage",
+            "remarriage_label": "John Clark"
           },
           "divorced": true,
           "status": "Divorced"
         },
         {
-          "id": "leta_john_clark_johnson",
-          "branch": "Leta Marino & John Clark-Johnson",
+          "id": "mark_marcie_couple",
+          "branch": "Mark Lucas & Marcie Luca",
+          "is_remarriage": true,
+          "is_sibling": true,
+          "sibling_group": "mark_remarriage",
+          "parent_couple": "john_lucas_parents",
+          "has_children": true,
+          "children_group_id": "marcie_luca_children",
+          "children_count": 3,
+          "children_label": "3 Step-Children (Marcie's)",
+          "children_of_p2": true,
+          "children_p2_role": "Mother",
+          "person1": {
+            "name": "Mark Lucas",
+            "maiden": null,
+            "birthdate": "1952-03-12",
+            "birth_year": "1952",
+            "photo": null,
+            "parent_couple": "john_lucas_parents"
+          },
+          "person2": {
+            "name": "Marcie Luca",
+            "maiden": null,
+            "photo": null
+          }
+        },
+        {
+          "id": "leta_john_clark",
+          "branch": "Leta Marino & John Clark",
+          "is_remarriage": true,
+          "is_sibling": true,
+          "sibling_group": "leta_remarriage",
           "parent_couple": "marino_parents",
           "has_children": true,
-          "children_group_id": "john_clark_johnson_children",
+          "children_group_id": "john_clark_children",
           "children_count": 3,
+          "children_label": "3 Step-Children (John's)",
+          "children_of_p2": true,
+          "children_p2_role": "Father",
           "person1": {
-            "name": "Leta Clark-Johnson",
-            "maiden": "Marino",
+            "name": "Leta Marino",
+            "maiden": null,
             "photo": null,
             "parent_couple": "marino_parents"
           },
           "person2": {
-            "name": "John Clark-Johnson",
+            "name": "John Clark",
             "maiden": null,
             "photo": null
           }
@@ -540,7 +614,14 @@
           "person2": {
             "name": "Chris Dorn",
             "birthdate": "1987-09-03",
-            "birth_year": "1987"
+            "birth_year": "1987",
+            "photo": "/files/family-tree/IMG_6835.jpeg",
+            "photos": [
+              {
+                "url": "/files/family-tree/IMG_6835.jpeg",
+                "caption": "Chris Dorn"
+              }
+            ]
           }
         },
         {
@@ -565,11 +646,11 @@
         {
           "id": "sib_child_becca_merril_couple",
           "is_sibling": true,
-          "sibling_group": "john_clark_johnson_children",
-          "parent_couple": "leta_john_clark_johnson",
+          "sibling_group": "john_clark_children",
+          "parent_couple": "leta_john_clark",
           "person1": {
             "name": "Becca Merril",
-            "maiden": "Clark-Johnson"
+            "maiden": "Clark"
           },
           "person2": {
             "name": "Andrew Merril"
@@ -611,18 +692,39 @@
           "parent_couple": "sib_mark_john"
         },
         {
-          "id": "sib_child_matt_clark_johnson",
-          "name": "Matt Clark-Johnson",
+          "id": "sib_child_dave_luca",
+          "name": "Dave",
           "is_sibling": true,
-          "sibling_group": "john_clark_johnson_children",
-          "parent_couple": "leta_john_clark_johnson"
+          "sibling_group": "marcie_luca_children",
+          "parent_couple": "mark_marcie_couple"
         },
         {
-          "id": "sib_child_katie_clark_johnson",
-          "name": "Katie Clark-Johnson",
+          "id": "sib_child_john_luca",
+          "name": "John",
           "is_sibling": true,
-          "sibling_group": "john_clark_johnson_children",
-          "parent_couple": "leta_john_clark_johnson"
+          "sibling_group": "marcie_luca_children",
+          "parent_couple": "mark_marcie_couple"
+        },
+        {
+          "id": "sib_child_neil_luca",
+          "name": "Neil",
+          "is_sibling": true,
+          "sibling_group": "marcie_luca_children",
+          "parent_couple": "mark_marcie_couple"
+        },
+        {
+          "id": "sib_child_matt_clark",
+          "name": "Matt Clark",
+          "is_sibling": true,
+          "sibling_group": "john_clark_children",
+          "parent_couple": "leta_john_clark"
+        },
+        {
+          "id": "sib_child_katie_clark",
+          "name": "Katie Clark",
+          "is_sibling": true,
+          "sibling_group": "john_clark_children",
+          "parent_couple": "leta_john_clark"
         }
       ],
       "items": [
@@ -632,6 +734,27 @@
           "is_sibling": true,
           "sibling_group": "john_lucas_children",
           "parent_couple": "sib_mark_john"
+        },
+        {
+          "id": "sib_child_dave_luca",
+          "name": "Dave",
+          "is_sibling": true,
+          "sibling_group": "marcie_luca_children",
+          "parent_couple": "mark_marcie_couple"
+        },
+        {
+          "id": "sib_child_john_luca",
+          "name": "John",
+          "is_sibling": true,
+          "sibling_group": "marcie_luca_children",
+          "parent_couple": "mark_marcie_couple"
+        },
+        {
+          "id": "sib_child_neil_luca",
+          "name": "Neil",
+          "is_sibling": true,
+          "sibling_group": "marcie_luca_children",
+          "parent_couple": "mark_marcie_couple"
         },
         {
           "id": "sib_elyse_matthew_couple",
@@ -678,35 +801,42 @@
           "person2": {
             "name": "Chris Dorn",
             "birthdate": "1987-09-03",
-            "birth_year": "1987"
+            "birth_year": "1987",
+            "photo": "/files/family-tree/IMG_6835.jpeg",
+            "photos": [
+              {
+                "url": "/files/family-tree/IMG_6835.jpeg",
+                "caption": "Chris Dorn"
+              }
+            ]
           }
         },
         {
-          "id": "sib_child_matt_clark_johnson",
-          "name": "Matt Clark-Johnson",
+          "id": "sib_child_matt_clark",
+          "name": "Matt Clark",
           "is_sibling": true,
-          "sibling_group": "john_clark_johnson_children",
-          "parent_couple": "leta_john_clark_johnson"
+          "sibling_group": "john_clark_children",
+          "parent_couple": "leta_john_clark"
         },
         {
           "id": "sib_child_becca_merril_couple",
           "is_sibling": true,
-          "sibling_group": "john_clark_johnson_children",
-          "parent_couple": "leta_john_clark_johnson",
+          "sibling_group": "john_clark_children",
+          "parent_couple": "leta_john_clark",
           "person1": {
             "name": "Becca Merril",
-            "maiden": "Clark-Johnson"
+            "maiden": "Clark"
           },
           "person2": {
             "name": "Andrew Merril"
           }
         },
         {
-          "id": "sib_child_katie_clark_johnson",
-          "name": "Katie Clark-Johnson",
+          "id": "sib_child_katie_clark",
+          "name": "Katie Clark",
           "is_sibling": true,
-          "sibling_group": "john_clark_johnson_children",
-          "parent_couple": "leta_john_clark_johnson"
+          "sibling_group": "john_clark_children",
+          "parent_couple": "leta_john_clark"
         },
         {
           "id": "sib_child_alexis_musante",
