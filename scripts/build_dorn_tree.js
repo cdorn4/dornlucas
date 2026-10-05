@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
-const password = process.argv[2] || 'dorn2026';
+const password = process.argv[2] || 'dornlucasfamily';
 const targetPage = path.join(rootDir, 'family-tree.html');
 
 const dornFile = path.join(rootDir, '_data', 'dorn_family.json');
