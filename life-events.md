@@ -7,7 +7,7 @@ description: Milestone life events and photo collections from the Dorn and Lucas
 <section class="archive-hero shell">
   <p class="eyebrow">The big things</p>
   <h2>Life Events</h2>
-  <p class="lede">A curated index of milestone galleries and stories carried over from the original archive.</p>
+  <p class="lede">The big life events . . . so far.</p>
 </section>
 <section class="photo-index shell" aria-label="Life events">
   <a class="photo-index-item photo-index-featured" href="{{ '/wedding/' | relative_url }}">
