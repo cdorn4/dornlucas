@@ -399,7 +399,70 @@
           "person1": {
             "name": "Patricia Marino",
             "nickname": "Pat",
-            "maiden": null
+            "maiden": null,
+            "photo": "/files/family-tree/PatMusanteIMG_9570.JPG",
+            "photos": [
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9570.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9579.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusante781809085.522464.jpg",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusante781809222.036469.jpg",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9568.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9569.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9571.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9573.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9574.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9575.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9576.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9577.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9578.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9580.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9581.JPG",
+                "caption": "Pat Marino"
+              }
+            ]
           },
           "person2": {
             "name": "Alan Musante",
@@ -582,7 +645,70 @@
           "person1": {
             "name": "Patricia Marino",
             "nickname": "Pat",
-            "maiden": null
+            "maiden": null,
+            "photo": "/files/family-tree/PatMusanteIMG_9570.JPG",
+            "photos": [
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9570.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9579.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusante781809085.522464.jpg",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusante781809222.036469.jpg",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9568.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9569.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9571.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9573.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9574.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9575.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9576.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9577.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9578.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9580.JPG",
+                "caption": "Pat Marino"
+              },
+              {
+                "url": "/files/family-tree/PatMusanteIMG_9581.JPG",
+                "caption": "Pat Marino"
+              }
+            ]
           },
           "person2": {
             "name": "Alan Musante",
