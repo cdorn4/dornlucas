@@ -103,8 +103,12 @@ function shouldShowMaiden(name, maiden) {
 function renderPersonCard(person, personKey) {
   if (!person) return '';
   const initial = person.name ? person.name.trim().charAt(0).toUpperCase() : '?';
+  const formattedName = person.name ? formatDisplayName(person.name) : '';
+  const photoClickAttr = (person.photo || (person.photos && person.photos.length))
+    ? `onclick="openPersonAvatar(event, '${personKey}')" style="cursor: zoom-in;" title="View photos for ${formattedName || 'this person'}"`
+    : '';
   const photoHtml = person.photo
-    ? `<img src="${person.photo}" alt="${person.name || 'Unknown'}" class="ft-avatar">`
+    ? `<img src="${person.photo}" alt="${person.name || 'Unknown'}" class="ft-avatar no-lightbox" ${photoClickAttr}>`
     : `<div class="ft-avatar-placeholder">${initial}</div>`;
 
   const showMaiden = person.maiden && shouldShowMaiden(person.name, person.maiden);
@@ -112,7 +116,6 @@ function renderPersonCard(person, personKey) {
   const years = formatYears(person.birthdate || person.birth_date, person.birth_year, person.death_date || person.deathdate, person.death_year);
   const yearsText = years ? `<div class="ft-years">${years}</div>` : '';
 
-  const formattedName = person.name ? formatDisplayName(person.name) : '';
   const displayName = formattedName
     ? `${formattedName} ${maidenText}`
     : `<span style="color:var(--muted);font-style:italic;">Unknown</span> ${maidenText}`;
@@ -581,9 +584,14 @@ function renderUnifiedTree(dornTree, lucasTree) {
       <!-- Fullscreen Photo Lightbox -->
       <div class="ft-lightbox" id="ft-lightbox" style="display: none;" onclick="closeLightbox()">
         <div class="ft-lightbox-content" onclick="event.stopPropagation()">
-          <button type="button" class="ft-lightbox-close" onclick="closeLightbox()">&times;</button>
-          <img id="ft-lightbox-img" src="" alt="Full view">
+          <button type="button" class="ft-lightbox-close" onclick="closeLightbox()" aria-label="Close photo viewer">&times;</button>
+          <button type="button" class="ft-lightbox-btn ft-lightbox-prev" id="ft-lightbox-prev" onclick="lightboxShowPrev(event)" aria-label="Previous photo">&#10094;</button>
+          <div class="ft-lightbox-img-wrap">
+            <img id="ft-lightbox-img" src="" alt="Full view">
+          </div>
+          <button type="button" class="ft-lightbox-btn ft-lightbox-next" id="ft-lightbox-next" onclick="lightboxShowNext(event)" aria-label="Next photo">&#10095;</button>
           <div class="ft-lightbox-caption" id="ft-lightbox-caption"></div>
+          <div class="ft-lightbox-counter" id="ft-lightbox-counter"></div>
         </div>
       </div>
     </div>
@@ -742,7 +750,7 @@ function renderUnifiedTree(dornTree, lucasTree) {
 
         const initial = person.formattedName ? person.formattedName.charAt(0).toUpperCase() : '?';
         if (person.photo) {
-          avatarWrap.innerHTML = \`<img src="\${person.photo}" alt="\${person.formattedName}" class="ft-detail-avatar" onclick="openLightbox('\${person.photo}', '\${person.formattedName}')">\`;
+          avatarWrap.innerHTML = \`<img src="\${person.photo}" alt="\${person.formattedName}" class="ft-detail-avatar no-lightbox" onclick="openPersonLightbox('\${person.key}', 0)" title="View photos for \${person.formattedName}" style="cursor: zoom-in;">\`;
         } else {
           avatarWrap.innerHTML = \`<div class="ft-detail-avatar-placeholder">\${initial}</div>\`;
         }
@@ -824,12 +832,12 @@ function renderUnifiedTree(dornTree, lucasTree) {
         const photos = person.photos && person.photos.length > 0 ? person.photos : (person.photo ? [{ url: person.photo, caption: 'Portrait' }] : []);
         if (photos && photos.length > 0) {
           gallerySection.style.display = 'block';
-          galleryEl.innerHTML = photos.map(ph => {
+          galleryEl.innerHTML = photos.map((ph, idx) => {
             const url = typeof ph === 'string' ? ph : ph.url;
             const caption = typeof ph === 'string' ? '' : (ph.caption || '');
             return \`
-              <div class="ft-gallery-item" onclick="openLightbox('\${url}', '\${caption || person.formattedName}')">
-                <img src="\${url}" alt="\${caption || person.formattedName}" class="ft-gallery-thumb" loading="lazy">
+              <div class="ft-gallery-item" onclick="openPersonLightbox('\${person.key}', \${idx})">
+                <img src="\${url}" alt="\${caption || person.formattedName}" class="ft-gallery-thumb no-lightbox" loading="lazy">
                 \${caption ? \`<span class="ft-gallery-cap">\${caption}</span>\` : ''}
               </div>
             \`;
@@ -885,20 +893,99 @@ function renderUnifiedTree(dornTree, lucasTree) {
         viewport.scrollIntoView({ behavior: 'smooth', block: 'center' });
       };
 
-      window.openLightbox = function(imgSrc, caption) {
+      let activeLightboxPhotos = [];
+      let activeLightboxIndex = 0;
+      let activeLightboxPersonName = '';
+
+      window.openPersonAvatar = function(event, personKey) {
+        if (event) event.stopPropagation();
+        openPersonLightbox(personKey, 0);
+      };
+
+      window.openPersonLightbox = function(personKey, index) {
+        const person = peopleRegistry[personKey];
+        if (!person) return;
+        const photos = (person.photos && person.photos.length > 0)
+          ? person.photos
+          : (person.photo ? [{ url: person.photo, caption: 'Portrait' }] : []);
+        if (!photos.length) return;
+
+        activeLightboxPhotos = photos;
+        activeLightboxIndex = Math.max(0, Math.min(typeof index === 'number' ? index : 0, photos.length - 1));
+        activeLightboxPersonName = person.formattedName || person.name || '';
+
+        updateLightboxView();
         const lb = document.getElementById('ft-lightbox');
+        if (lb) lb.style.display = 'flex';
+      };
+
+      window.openLightbox = function(imgSrc, caption) {
+        activeLightboxPhotos = [{ url: imgSrc, caption: caption || '' }];
+        activeLightboxIndex = 0;
+        activeLightboxPersonName = '';
+        updateLightboxView();
+        const lb = document.getElementById('ft-lightbox');
+        if (lb) lb.style.display = 'flex';
+      };
+
+      function updateLightboxView() {
+        if (!activeLightboxPhotos.length) return;
+        const current = activeLightboxPhotos[activeLightboxIndex];
+        const url = typeof current === 'string' ? current : current.url;
+        const caption = typeof current === 'string' ? '' : (current.caption || '');
+
         const img = document.getElementById('ft-lightbox-img');
         const cap = document.getElementById('ft-lightbox-caption');
-        if (!lb || !img) return;
-        img.src = imgSrc;
-        cap.textContent = caption || '';
-        lb.style.display = 'flex';
+        const counter = document.getElementById('ft-lightbox-counter');
+        const btnPrev = document.getElementById('ft-lightbox-prev');
+        const btnNext = document.getElementById('ft-lightbox-next');
+
+        if (img) img.src = url;
+        if (cap) {
+          const capText = caption ? \`\${caption}\${activeLightboxPersonName && caption !== activeLightboxPersonName ? ' — ' + activeLightboxPersonName : ''}\` : activeLightboxPersonName;
+          cap.textContent = capText;
+        }
+        if (counter) {
+          counter.textContent = activeLightboxPhotos.length > 1 ? \`\${activeLightboxIndex + 1} / \${activeLightboxPhotos.length}\` : '';
+        }
+        if (btnPrev && btnNext) {
+          const showNav = activeLightboxPhotos.length > 1;
+          btnPrev.style.display = showNav ? 'flex' : 'none';
+          btnNext.style.display = showNav ? 'flex' : 'none';
+        }
+      }
+
+      window.lightboxShowPrev = function(e) {
+        if (e) e.stopPropagation();
+        if (activeLightboxPhotos.length <= 1) return;
+        activeLightboxIndex = (activeLightboxIndex - 1 + activeLightboxPhotos.length) % activeLightboxPhotos.length;
+        updateLightboxView();
+      };
+
+      window.lightboxShowNext = function(e) {
+        if (e) e.stopPropagation();
+        if (activeLightboxPhotos.length <= 1) return;
+        activeLightboxIndex = (activeLightboxIndex + 1) % activeLightboxPhotos.length;
+        updateLightboxView();
       };
 
       window.closeLightbox = function() {
         const lb = document.getElementById('ft-lightbox');
         if (lb) lb.style.display = 'none';
+        activeLightboxPhotos = [];
       };
+
+      document.addEventListener('keydown', (e) => {
+        const lb = document.getElementById('ft-lightbox');
+        if (!lb || lb.style.display !== 'flex') return;
+        if (e.key === 'Escape') {
+          closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+          lightboxShowPrev();
+        } else if (e.key === 'ArrowRight') {
+          lightboxShowNext();
+        }
+      });
 
       function updateTransform() {
         content.style.transform = \`translate(\${panX}px, \${panY}px) scale(\${scale})\`;
@@ -1880,13 +1967,14 @@ ${JSON.stringify(payload)}
   position: fixed;
   top: 0; left: 0;
   width: 100vw; height: 100vh;
-  background: rgba(0, 0, 0, 0.88);
+  background: rgba(0, 0, 0, 0.9);
   z-index: 99999;
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
   animation: ftFadeIn 0.2s ease;
+  user-select: none;
 }
 
 @keyframes ftFadeIn {
@@ -1901,33 +1989,100 @@ ${JSON.stringify(payload)}
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.ft-lightbox-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90vw;
+  max-height: 78vh;
 }
 
 .ft-lightbox-content img {
   max-width: 100%;
-  max-height: 80vh;
+  max-height: 78vh;
   border-radius: 8px;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
   object-fit: contain;
 }
 
 .ft-lightbox-close {
   position: absolute;
-  top: -36px;
+  top: -44px;
   right: 0;
   background: none;
   border: none;
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 1;
   cursor: pointer;
   padding: 4px;
+  opacity: 0.8;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.ft-lightbox-close:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.ft-lightbox-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(30, 30, 30, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  z-index: 5;
+}
+
+.ft-lightbox-btn:hover {
+  background: rgba(60, 60, 60, 0.95);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.ft-lightbox-prev {
+  left: -60px;
+}
+
+.ft-lightbox-next {
+  right: -60px;
+}
+
+@media (max-width: 768px) {
+  .ft-lightbox-prev {
+    left: 8px;
+  }
+  .ft-lightbox-next {
+    right: 8px;
+  }
 }
 
 .ft-lightbox-caption {
   color: #ffffff;
   margin-top: 12px;
   font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.ft-lightbox-counter {
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 4px;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
   text-align: center;
 }
 

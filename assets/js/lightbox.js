@@ -50,7 +50,13 @@
 
     // Attach click listener to gallery images
     galleries.forEach(gallery => {
-      const imgs = Array.from(gallery.querySelectorAll('img')).filter(img => !img.classList.contains('no-lightbox'));
+      // Do not bind blog lightbox to family tree pages or canvas
+      if (gallery.querySelector('#private-content, #family-tree-app, .ft-canvas-viewport') || gallery.closest('#private-content, #family-tree-app')) {
+        return;
+      }
+      const imgs = Array.from(gallery.querySelectorAll('img')).filter(img => {
+        return !img.classList.contains('no-lightbox') && !img.closest('.ft-person, .ft-detail-drawer, .ft-lightbox, #private-content');
+      });
       imgs.forEach((img, idx) => {
         img.style.cursor = 'zoom-in';
         img.addEventListener('click', (e) => {
