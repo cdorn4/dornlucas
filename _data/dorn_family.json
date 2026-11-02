@@ -2320,7 +2320,7 @@
           "sibling_group": "elyse_siblings",
           "has_children": true,
           "children_group_id": "justine_lucas_children",
-          "children_count": 1
+          "children_count": 2
         },
         {
           "id": "sib_child_aidan_delgado",
@@ -2787,7 +2787,7 @@
           "sibling_group": "elyse_siblings",
           "has_children": true,
           "children_group_id": "justine_lucas_children",
-          "children_count": 1
+          "children_count": 2
         },
         {
           "id": "sib_child_aidan_delgado",
@@ -3323,6 +3323,16 @@
           "is_sibling": true,
           "sibling_group": "justine_lucas_children",
           "parent_couple": "sib_elyse_justine"
+        },
+        {
+          "id": "sib_child_alice_lucas",
+          "name": "Alice Lucas",
+          "birthdate": "2026-10-30",
+          "birth_year": "2026",
+          "maiden": null,
+          "is_sibling": true,
+          "sibling_group": "justine_lucas_children",
+          "parent_couple": "sib_elyse_justine"
         }
       ],
       "items": [
@@ -3367,6 +3377,16 @@
         {
           "id": "sib_child_huck_lucas",
           "name": "Huck Lucas",
+          "is_sibling": true,
+          "sibling_group": "justine_lucas_children",
+          "parent_couple": "sib_elyse_justine"
+        },
+        {
+          "id": "sib_child_alice_lucas",
+          "name": "Alice Lucas",
+          "birthdate": "2026-10-30",
+          "birth_year": "2026",
+          "maiden": null,
           "is_sibling": true,
           "sibling_group": "justine_lucas_children",
           "parent_couple": "sib_elyse_justine"
