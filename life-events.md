@@ -30,4 +30,9 @@ description: Milestone life events and photo collections from the Dorn and Lucas
     <span><strong>Bj&ouml;rklunden 2024</strong><small>5 Years out</small></span>
     <span aria-hidden="true">&nearr;</span>
   </a>
+  <a class="photo-index-item" href="{{ '/travels.html' | relative_url }}">
+    <span class="photo-index-number">05</span>
+    <span><strong>Travels</strong><small>Where we've all been</small></span>
+    <span aria-hidden="true">&nearr;</span>
+  </a>
 </section>
