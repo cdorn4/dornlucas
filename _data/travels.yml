@@ -61,7 +61,53 @@ elyse:
 august:
   label: August
   color: "#d69e2e"
-  countries: []
-  states: []
-  provinces: []
+  countries:
+    - name: Canada
+      note: "2024 Banff, Canmore"
+    - name: Denmark
+      note: "2025, Copenhagen"
+    - name: France
+      note: "2023 Perpignan"
+    - name: Portugal
+      note: "2026 Porto and Douro River area"
+    - name: Spain
+      note: "2023 Barcelona, Cadeques"
+  provinces:
+    - name: Alberta
+      note: "2024 Banff, Canmore"
+  states:
+    - name: Alaska
+      note: "2025 Ketchikan, Wrangle, Juneau, Glacier Bay"
+    - name: California
+      note: "2022 Lake Tahoe, Oakland"
+    - name: Connecticut
+      note: "2025 Fairfield, Rawleys Hot Dogs"
+    - name: Florida
+      note: "2022, 2023, 2024, 2025"
+    - Illinois
+    - Indiana
+    - Kentucky
+    - name: Maine
+      note: "2025 Surry"
+    - name: Massachusetts
+      note: "2025"
+    - Michigan
+    - Minnesota
+    - Montana
+    - name: Nevada
+      note: "2022 Lake Tahoe"
+    - name: New Hampshire
+      note: "2025"
+    - name: New Jersey
+      note: "2025"
+    - name: New York
+      note: "2025 Woodstock, 2025 New York City"
+    - North Carolina
+    - name: Rhode Island
+      note: "2025 Providence"
+    - Tennessee
+    - name: Vermont
+      note: "2025"
+    - Wisconsin
+
 

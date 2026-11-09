@@ -73,10 +73,12 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
 .tm-tooltip {
   position: absolute; pointer-events: none; z-index: 5;
   background: var(--ink); color: #fff; font-family: var(--font-sans); font-size: 0.85rem;
-  padding: 0.35rem 0.6rem; border-radius: var(--radius-sm); white-space: nowrap;
+  padding: 0.4rem 0.7rem; border-radius: var(--radius-sm); max-width: 300px;
   transform: translate(-50%, calc(-100% - 10px)); box-shadow: var(--shadow-md);
+  line-height: 1.35;
 }
-.tm-tooltip .tm-tip-status { opacity: 0.75; margin-left: 0.35rem; }
+.tm-tooltip strong { display: block; font-size: 0.9rem; }
+.tm-tooltip .tm-tip-status { display: block; opacity: 0.85; font-size: 0.8rem; margin-top: 0.15rem; }
 
 .tm-controls { position: absolute; right: 12px; bottom: 12px; display: flex; flex-direction: column; gap: 6px; }
 .tm-ctrl {
@@ -98,6 +100,7 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
   font-family: var(--font-sans); font-size: 0.85rem; padding: 0.25rem 0.65rem;
   border-radius: 999px; background: var(--paper-subtle); border: 1px solid var(--line-subtle);
 }
+.tm-chip-note { opacity: 0.7; font-size: 0.8em; margin-left: 0.25rem; font-weight: normal; }
 .tm-chip.is-unmatched { border-style: dashed; color: var(--muted); }
 .tm-empty { font-family: var(--font-sans); font-size: 0.9rem; color: var(--muted-light); font-style: italic; }
 </style>
@@ -250,6 +253,13 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
   document.getElementById('tm-zoom-out').addEventListener('click', function () { svg.transition().duration(300).call(zoom.scaleBy, 1 / 1.6); });
   document.getElementById('tm-zoom-reset').addEventListener('click', function () { svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity); });
 
+  function parseEntry(entry) {
+    if (entry && typeof entry === 'object') {
+      return { name: String(entry.name || '').trim(), note: String(entry.note || '').trim() };
+    }
+    return { name: String(entry || '').trim(), note: '' };
+  }
+
   function showTip(event, d, kind) {
     var t = activeKey && resolved[activeKey];
     var name = d.properties.name;
@@ -259,14 +269,18 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
     else if (name === USA_NAME) displayName = 'United States';
 
     var visited = false;
+    var note = '';
     if (t) {
       if (kind === 'state') visited = t.states.has(name);
       else if (kind === 'province') visited = t.provinces.has(name);
       else visited = t.countries.has(name);
+      note = t.notes[name] || '';
     }
     var label = activeKey ? (TRAVELERS[activeKey].label || activeKey) : '';
-    tooltip.innerHTML = escapeHtml(displayName) +
-      (activeKey ? '<span class="tm-tip-status">' + (visited ? '&#10003; ' + escapeHtml(label) + ' visited' : 'Not yet') + '</span>' : '');
+    var statusText = visited
+      ? ('&#10003; ' + escapeHtml(label) + ' visited' + (note ? ' &middot; <em>' + escapeHtml(note) + '</em>' : ''))
+      : 'Not yet';
+    tooltip.innerHTML = '<strong>' + escapeHtml(displayName) + '</strong><span class="tm-tip-status">' + statusText + '</span>';
     var rect = wrap.getBoundingClientRect();
     tooltip.style.left = (event.clientX - rect.left) + 'px';
     tooltip.style.top = (event.clientY - rect.top) + 'px';
@@ -343,44 +357,54 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
         countries: new Set(),
         states: new Set(),
         provinces: new Set(),
+        notes: {},
         unmatchedCountries: [],
         unmatchedStates: [],
         unmatchedProvinces: []
       };
 
-      (t.countries || []).forEach(function (c) {
-        var prov = resolveProvince(c);
-        var st = resolveState(c);
-        var m = resolveCountry(c);
+      (t.countries || []).forEach(function (raw) {
+        var item = parseEntry(raw);
+        var prov = resolveProvince(item.name);
+        var st = resolveState(item.name);
+        var m = resolveCountry(item.name);
         if (m) {
           r.countries.add(m);
+          if (item.note) r.notes[m] = item.note;
         } else if (prov) {
           r.provinces.add(prov);
+          if (item.note) r.notes[prov] = item.note;
         } else if (st) {
           r.states.add(st);
+          if (item.note) r.notes[st] = item.note;
         } else {
-          r.unmatchedCountries.push(c);
+          r.unmatchedCountries.push(item.name);
         }
       });
 
-      (t.states || []).forEach(function (s) {
-        var prov = resolveProvince(s);
-        var st = resolveState(s);
+      (t.states || []).forEach(function (raw) {
+        var item = parseEntry(raw);
+        var prov = resolveProvince(item.name);
+        var st = resolveState(item.name);
         if (st) {
           r.states.add(st);
+          if (item.note) r.notes[st] = item.note;
         } else if (prov) {
           r.provinces.add(prov);
+          if (item.note) r.notes[prov] = item.note;
         } else {
-          r.unmatchedStates.push(s);
+          r.unmatchedStates.push(item.name);
         }
       });
 
-      (t.provinces || []).forEach(function (p) {
-        var prov = resolveProvince(p);
+      (t.provinces || []).forEach(function (raw) {
+        var item = parseEntry(raw);
+        var prov = resolveProvince(item.name);
         if (prov) {
           r.provinces.add(prov);
+          if (item.note) r.notes[prov] = item.note;
         } else {
-          r.unmatchedProvinces.push(p);
+          r.unmatchedProvinces.push(item.name);
         }
       });
 
@@ -433,10 +457,10 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
     }
     statsEl.innerHTML = statParts.join(' &middot; ');
 
-    var html = renderList('Countries', Array.from(r.countries).sort(), r.unmatchedCountries) +
-      renderList('U.S. States', Array.from(r.states).sort(), r.unmatchedStates);
+    var html = renderList('Countries', Array.from(r.countries).sort(), r.unmatchedCountries, r.notes) +
+      renderList('U.S. States', Array.from(r.states).sort(), r.unmatchedStates, r.notes);
     if (r.provinces.size > 0 || r.unmatchedProvinces.length > 0 || (t.provinces && t.provinces.length > 0)) {
-      html += renderList('Canadian Provinces', Array.from(r.provinces).sort(), r.unmatchedProvinces);
+      html += renderList('Canadian Provinces', Array.from(r.provinces).sort(), r.unmatchedProvinces, r.notes);
     }
     listsEl.innerHTML = html;
   }
@@ -445,9 +469,14 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
     return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; });
   }
 
-  function renderList(title, items, unmatched) {
+  function renderList(title, items, unmatched, notes) {
+    notes = notes || {};
     var chips = items.map(function (i) {
-      return '<span class="tm-chip">' + escapeHtml(i === USA_NAME ? 'United States' : i) + '</span>';
+      var label = i === USA_NAME ? 'United States' : i;
+      var note = notes[i] || '';
+      var titleAttr = note ? ' title="' + escapeHtml(note) + '"' : '';
+      return '<span class="tm-chip"' + titleAttr + '>' + escapeHtml(label) +
+        (note ? ' <span class="tm-chip-note">(' + escapeHtml(note) + ')</span>' : '') + '</span>';
     }).concat(unmatched.map(function (i) {
       return '<span class="tm-chip is-unmatched" title="Not found on the map">' + escapeHtml(i) + '</span>';
     }));
