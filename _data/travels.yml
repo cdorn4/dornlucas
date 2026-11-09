@@ -15,6 +15,7 @@ chris:
     - Austria
     - Canada
     - Denmark
+    - Egypt
     - France
     - Germany
     - Greece
@@ -30,8 +31,10 @@ chris:
     - United Kingdom
     - United States
   states:
+    - Alaska
     - California
     - Colorado
+    - Connecticut
     - Florida
     - Georgia
     - Hawaii
@@ -43,12 +46,14 @@ chris:
     - Kentucky
     - Louisiana
     - Maine
+    - Massachusetts
     - Michigan
     - Minnesota
     - Missouri
     - Montana
     - Nebraska
     - Nevada
+    - New Hampshire
     - New Jersey
     - New York
     - North Carolina
@@ -56,6 +61,7 @@ chris:
     - Ohio
     - Oregon
     - Pennsylvania
+    - Rhode Island
     - South Carolina
     - South Dakota
     - Tennessee
@@ -65,7 +71,9 @@ chris:
     - Washington
     - Wisconsin
     - Wyoming
-  provinces: []
+  provinces: 
+    - Alberta
+    - Ontario
 
 elyse:
   label: Elyse
