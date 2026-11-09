@@ -12,7 +12,23 @@ chris:
   label: Chris
   color: "#c2593f"
   countries:
+    - Austria
+    - Canada
+    - Denmark
+    - France
+    - Germany
+    - Greece
+    - Ireland
+    - Italy
+    - Mexico
+    - Morocco
+    - Netherlands
     - Portugal
+    - Spain
+    - Sweden
+    - Switzerland
+    - United Kingdom
+    - United States
   states:
     - California
     - Colorado
@@ -70,6 +86,8 @@ elyse:
     - Switzerland
     - United Kingdom
     - United States
+  provinces:
+    - name: Alberta
   states:
     - Alabama
     - Alaska
