@@ -1,0 +1,460 @@
+---
+layout: default
+title: "Travels"
+permalink: /travels.html
+description: "An interactive map of the countries, U.S. states, and Canadian provinces Chris, Elyse, and August have visited."
+---
+
+<section class="archive-hero shell">
+  <p class="eyebrow"><a href="{{ '/life-events/' | relative_url }}" class="back-link">&larr; Life Events</a></p>
+  <h2>Travels</h2>
+  <p class="lede">Where we've been. Choose a person to see the countries, states, and provinces they've visited.</p>
+</section>
+
+<section class="shell travel-map-section" aria-label="Interactive travel map">
+  <div class="tm-toolbar">
+    <div class="tm-legend" role="radiogroup" aria-label="Choose a traveler" id="tm-legend"></div>
+    <div class="tm-stats" id="tm-stats" aria-live="polite"></div>
+  </div>
+
+  <div class="tm-map-wrap" id="tm-map-wrap">
+    <svg id="tm-map" role="img" aria-label="World map of visited countries, U.S. states, and Canadian provinces"></svg>
+    <div class="tm-tooltip" id="tm-tooltip" hidden></div>
+    <div class="tm-controls">
+      <button type="button" class="tm-ctrl" id="tm-zoom-in" aria-label="Zoom in">+</button>
+      <button type="button" class="tm-ctrl" id="tm-zoom-out" aria-label="Zoom out">&minus;</button>
+      <button type="button" class="tm-ctrl tm-ctrl-text" id="tm-zoom-reset" aria-label="Reset zoom">Reset</button>
+    </div>
+    <p class="tm-loading" id="tm-loading">Loading map&hellip;</p>
+  </div>
+
+  <div class="tm-lists" id="tm-lists"></div>
+</section>
+
+<style>
+.travel-map-section { padding-bottom: 4rem; }
+.tm-toolbar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 1rem; margin-bottom: 1rem;
+}
+.tm-legend { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tm-legend-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.5rem 1rem; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--surface);
+  font-family: var(--font-sans); font-size: 0.95rem; color: var(--ink);
+  cursor: pointer; transition: all var(--transition-fast);
+}
+.tm-legend-btn:hover { border-color: var(--muted-light); box-shadow: var(--shadow-sm); }
+.tm-legend-btn .tm-swatch {
+  width: 14px; height: 14px; border-radius: 50%; background: var(--swatch);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12);
+}
+.tm-legend-btn[aria-checked="true"] {
+  background: var(--swatch); border-color: var(--swatch); color: #fff;
+  box-shadow: var(--shadow-md);
+}
+.tm-legend-btn[aria-checked="true"] .tm-swatch { background: #fff; }
+.tm-stats { font-family: var(--font-sans); font-size: 0.95rem; color: var(--muted); }
+.tm-stats strong { color: var(--ink); font-size: 1.1rem; }
+
+.tm-map-wrap {
+  position: relative; width: 100%; aspect-ratio: 16 / 9; min-height: 320px;
+  background: #eaf1f3; border: 1px solid var(--line); border-radius: var(--radius-lg);
+  overflow: hidden; box-shadow: var(--shadow-sm);
+}
+#tm-map { width: 100%; height: 100%; display: block; cursor: grab; touch-action: none; }
+#tm-map:active { cursor: grabbing; }
+#tm-map path { vector-effect: non-scaling-stroke; transition: fill 0.35s ease; }
+.tm-country { fill: #d9d4c7; stroke: #ffffff; stroke-width: 0.6; }
+.tm-state, .tm-province { fill: transparent; stroke: #ffffff; stroke-width: 0.5; }
+.tm-country.is-hover, .tm-state.is-hover, .tm-province.is-hover { stroke: var(--ink); stroke-width: 1.4; }
+
+.tm-tooltip {
+  position: absolute; pointer-events: none; z-index: 5;
+  background: var(--ink); color: #fff; font-family: var(--font-sans); font-size: 0.85rem;
+  padding: 0.35rem 0.6rem; border-radius: var(--radius-sm); white-space: nowrap;
+  transform: translate(-50%, calc(-100% - 10px)); box-shadow: var(--shadow-md);
+}
+.tm-tooltip .tm-tip-status { opacity: 0.75; margin-left: 0.35rem; }
+
+.tm-controls { position: absolute; right: 12px; bottom: 12px; display: flex; flex-direction: column; gap: 6px; }
+.tm-ctrl {
+  min-width: 36px; height: 36px; border-radius: var(--radius-md);
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  font-size: 1.2rem; line-height: 1; cursor: pointer; box-shadow: var(--shadow-sm);
+}
+.tm-ctrl:hover { background: var(--paper-subtle); }
+.tm-ctrl-text { font-size: 0.75rem; font-family: var(--font-sans); padding: 0 6px; }
+.tm-loading {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  margin: 0; font-family: var(--font-sans); color: var(--muted);
+}
+
+.tm-lists { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1.75rem; }
+.tm-list h3 { font-family: var(--font-sans); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.6rem; }
+.tm-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tm-chip {
+  font-family: var(--font-sans); font-size: 0.85rem; padding: 0.25rem 0.65rem;
+  border-radius: 999px; background: var(--paper-subtle); border: 1px solid var(--line-subtle);
+}
+.tm-chip.is-unmatched { border-style: dashed; color: var(--muted); }
+.tm-empty { font-family: var(--font-sans); font-size: 0.9rem; color: var(--muted-light); font-style: italic; }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var TRAVELERS = {{ site.data.travels | jsonify }};
+  var WORLD_URL = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json';
+  var STATES_URL = 'https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json';
+  var CANADA_URL = "{{ '/assets/geo/canada-provinces.json' | relative_url }}";
+  var USA_NAME = 'United States of America';
+  var CANADA_NAME = 'Canada';
+
+  // Map common names to the names used in the world-atlas dataset.
+  var COUNTRY_ALIASES = {
+    'usa': USA_NAME, 'us': USA_NAME, 'u.s.': USA_NAME, 'u.s.a.': USA_NAME, 'united states': USA_NAME, 'america': USA_NAME,
+    'canada': CANADA_NAME,
+    'uk': 'United Kingdom', 'u.k.': 'United Kingdom', 'great britain': 'United Kingdom', 'britain': 'United Kingdom',
+    'england': 'United Kingdom', 'scotland': 'United Kingdom', 'wales': 'United Kingdom', 'northern ireland': 'United Kingdom',
+    'czech republic': 'Czechia', 'czech': 'Czechia',
+    'dominican republic': 'Dominican Rep.',
+    'bosnia and herzegovina': 'Bosnia and Herz.', 'bosnia': 'Bosnia and Herz.',
+    'democratic republic of the congo': 'Dem. Rep. Congo', 'drc': 'Dem. Rep. Congo',
+    'republic of the congo': 'Congo',
+    'ivory coast': "Côte d'Ivoire", 'cote divoire': "Côte d'Ivoire",
+    'north macedonia': 'Macedonia',
+    'eswatini': 'eSwatini', 'swaziland': 'eSwatini',
+    'south sudan': 'S. Sudan',
+    'central african republic': 'Central African Rep.',
+    'equatorial guinea': 'Eq. Guinea',
+    'western sahara': 'W. Sahara',
+    'solomon islands': 'Solomon Is.',
+    'falkland islands': 'Falkland Is.',
+    'vatican city': 'Vatican', 'holy see': 'Vatican',
+    'the netherlands': 'Netherlands', 'holland': 'Netherlands',
+    'turkiye': 'Turkey', 'türkiye': 'Turkey',
+    'the bahamas': 'Bahamas',
+    'south korea': 'South Korea', 'korea': 'South Korea',
+    'virgin islands': 'U.S. Virgin Is.', 'us virgin islands': 'U.S. Virgin Is.', 'u.s. virgin islands': 'U.S. Virgin Is.',
+    'british virgin islands': 'British Virgin Is.',
+    'cayman islands': 'Cayman Is.',
+    'turks and caicos': 'Turks and Caicos Is.', 'turks and caicos islands': 'Turks and Caicos Is.',
+    'st. lucia': 'Saint Lucia', 'st lucia': 'Saint Lucia',
+    'antigua': 'Antigua and Barb.', 'antigua and barbuda': 'Antigua and Barb.',
+    'st. kitts and nevis': 'St. Kitts and Nevis', 'saint kitts and nevis': 'St. Kitts and Nevis',
+    'st. vincent and the grenadines': 'St. Vin. and Gren.', 'saint vincent and the grenadines': 'St. Vin. and Gren.',
+    'french polynesia': 'Fr. Polynesia'
+  };
+
+  var STATE_ABBR = {
+    AL: 'Alabama', AK: 'Alaska', AZ: 'Arizona', AR: 'Arkansas', CA: 'California', CO: 'Colorado',
+    CT: 'Connecticut', DE: 'Delaware', DC: 'District of Columbia', FL: 'Florida', GA: 'Georgia',
+    HI: 'Hawaii', ID: 'Idaho', IL: 'Illinois', IN: 'Indiana', IA: 'Iowa', KS: 'Kansas', KY: 'Kentucky',
+    LA: 'Louisiana', ME: 'Maine', MD: 'Maryland', MA: 'Massachusetts', MI: 'Michigan', MN: 'Minnesota',
+    MS: 'Mississippi', MO: 'Missouri', MT: 'Montana', NE: 'Nebraska', NV: 'Nevada', NH: 'New Hampshire',
+    NJ: 'New Jersey', NM: 'New Mexico', NY: 'New York', NC: 'North Carolina', ND: 'North Dakota',
+    OH: 'Ohio', OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', RI: 'Rhode Island', SC: 'South Carolina',
+    SD: 'South Dakota', TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VT: 'Vermont', VA: 'Virginia',
+    WA: 'Washington', WV: 'West Virginia', WI: 'Wisconsin', WY: 'Wyoming', PR: 'Puerto Rico'
+  };
+
+  var PROVINCE_ABBR = {
+    AB: 'Alberta', BC: 'British Columbia', MB: 'Manitoba', NB: 'New Brunswick',
+    NL: 'Newfoundland and Labrador', NS: 'Nova Scotia', NT: 'Northwest Territories',
+    NU: 'Nunavut', ON: 'Ontario', PE: 'Prince Edward Island', QC: 'Quebec',
+    SK: 'Saskatchewan', YT: 'Yukon'
+  };
+
+  var PROVINCE_ALIASES = {
+    'quebec': 'Quebec',
+    'pei': 'Prince Edward Island',
+    'p.e.i.': 'Prince Edward Island',
+    'prince edward': 'Prince Edward Island',
+    'prince edward island': 'Prince Edward Island',
+    'b.c.': 'British Columbia',
+    'british columbia': 'British Columbia',
+    'newfoundland': 'Newfoundland and Labrador',
+    'labrador': 'Newfoundland and Labrador',
+    'newfoundland and labrador': 'Newfoundland and Labrador',
+    'newfoundland & labrador': 'Newfoundland and Labrador',
+    'nwt': 'Northwest Territories',
+    'n.w.t.': 'Northwest Territories',
+    'northwest territories': 'Northwest Territories',
+    'yukon': 'Yukon',
+    'yukon territory': 'Yukon',
+    'y.t.': 'Yukon'
+  };
+
+  function norm(s) {
+    return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase().replace(/[^a-z0-9. ]/g, '').replace(/\s+/g, ' ').trim();
+  }
+
+  var legendEl = document.getElementById('tm-legend');
+  var statsEl = document.getElementById('tm-stats');
+  var listsEl = document.getElementById('tm-lists');
+  var tooltip = document.getElementById('tm-tooltip');
+  var wrap = document.getElementById('tm-map-wrap');
+  var loadingEl = document.getElementById('tm-loading');
+
+  var keys = Object.keys(TRAVELERS || {});
+  var activeKey = keys[0] || null;
+  var countryByNorm = {};
+  var stateByNorm = {};
+  var provinceByNorm = {};
+  var resolved = {}; // per traveler: { countries:Set, states:Set, provinces:Set, unmatchedCountries:[], unmatchedStates:[], unmatchedProvinces:[] }
+
+  // Legend
+  keys.forEach(function (key) {
+    var t = TRAVELERS[key];
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'tm-legend-btn';
+    btn.setAttribute('role', 'radio');
+    btn.dataset.key = key;
+    btn.style.setProperty('--swatch', t.color || '#c2593f');
+    btn.innerHTML = '<span class="tm-swatch" aria-hidden="true"></span>' + (t.label || key);
+    btn.addEventListener('click', function () { setActive(key); });
+    legendEl.appendChild(btn);
+  });
+
+  function setActive(key) {
+    activeKey = key;
+    Array.prototype.forEach.call(legendEl.children, function (b) {
+      b.setAttribute('aria-checked', b.dataset.key === key ? 'true' : 'false');
+    });
+    paint();
+  }
+
+  // Map setup
+  var svg = d3.select('#tm-map');
+  var width = 960, height = 540;
+  svg.attr('viewBox', '0 0 ' + width + ' ' + height).attr('preserveAspectRatio', 'xMidYMid meet');
+  var g = svg.append('g');
+  var countriesG = g.append('g').attr('class', 'tm-countries-layer');
+  var statesG = g.append('g').attr('class', 'tm-states-layer');
+  var provincesG = g.append('g').attr('class', 'tm-provinces-layer');
+  var projection = d3.geoNaturalEarth1();
+  var path = d3.geoPath(projection);
+
+  var zoom = d3.zoom().scaleExtent([1, 12])
+    .translateExtent([[0, 0], [width, height]])
+    .on('zoom', function (event) { g.attr('transform', event.transform); });
+  svg.call(zoom);
+  document.getElementById('tm-zoom-in').addEventListener('click', function () { svg.transition().duration(300).call(zoom.scaleBy, 1.6); });
+  document.getElementById('tm-zoom-out').addEventListener('click', function () { svg.transition().duration(300).call(zoom.scaleBy, 1 / 1.6); });
+  document.getElementById('tm-zoom-reset').addEventListener('click', function () { svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity); });
+
+  function showTip(event, d, kind) {
+    var t = activeKey && resolved[activeKey];
+    var name = d.properties.name;
+    var displayName = name;
+    if (kind === 'state') displayName = name + ', United States';
+    else if (kind === 'province') displayName = name + ', Canada';
+    else if (name === USA_NAME) displayName = 'United States';
+
+    var visited = false;
+    if (t) {
+      if (kind === 'state') visited = t.states.has(name);
+      else if (kind === 'province') visited = t.provinces.has(name);
+      else visited = t.countries.has(name);
+    }
+    var label = activeKey ? (TRAVELERS[activeKey].label || activeKey) : '';
+    tooltip.innerHTML = escapeHtml(displayName) +
+      (activeKey ? '<span class="tm-tip-status">' + (visited ? '&#10003; ' + escapeHtml(label) + ' visited' : 'Not yet') + '</span>' : '');
+    var rect = wrap.getBoundingClientRect();
+    tooltip.style.left = (event.clientX - rect.left) + 'px';
+    tooltip.style.top = (event.clientY - rect.top) + 'px';
+    tooltip.hidden = false;
+  }
+  function hideTip() { tooltip.hidden = true; }
+
+  function bindHover(sel, kind) {
+    sel.on('mousemove', function (event, d) {
+      d3.select(this).classed('is-hover', true).raise();
+      showTip(event, d, kind);
+    }).on('mouseleave', function () {
+      d3.select(this).classed('is-hover', false);
+      hideTip();
+    });
+  }
+
+  Promise.all([
+    d3.json(WORLD_URL),
+    d3.json(STATES_URL),
+    d3.json(CANADA_URL)
+  ]).then(function (res) {
+    var world = res[0], us = res[1], canada = res[2];
+    var countries = topojson.feature(world, world.objects.countries).features
+      .filter(function (f) { return f.properties.name !== 'Antarctica'; });
+    var states = topojson.feature(us, us.objects.states).features;
+    var provinces = topojson.feature(canada, canada.objects.provinces).features;
+
+    countries.forEach(function (f) { countryByNorm[norm(f.properties.name)] = f.properties.name; });
+    states.forEach(function (f) { stateByNorm[norm(f.properties.name)] = f.properties.name; });
+    provinces.forEach(function (f) { provinceByNorm[norm(f.properties.name)] = f.properties.name; });
+
+    projection.fitExtent([[8, 8], [width - 8, height - 8]], { type: 'FeatureCollection', features: countries });
+
+    bindHover(countriesG.selectAll('path').data(countries).join('path')
+      .attr('class', 'tm-country').attr('d', path), 'country');
+    bindHover(statesG.selectAll('path').data(states).join('path')
+      .attr('class', 'tm-state').attr('d', path), 'state');
+    bindHover(provincesG.selectAll('path').data(provinces).join('path')
+      .attr('class', 'tm-province').attr('d', path), 'province');
+
+    resolveAll();
+    loadingEl.remove();
+    setActive(activeKey);
+  }).catch(function (err) {
+    loadingEl.textContent = 'Sorry, the map could not be loaded.';
+    console.error(err);
+  });
+
+  function resolveCountry(name) {
+    var n = norm(name);
+    if (COUNTRY_ALIASES[n]) return COUNTRY_ALIASES[n];
+    return countryByNorm[n] || null;
+  }
+  function resolveState(name) {
+    var raw = String(name || '').trim();
+    var up = raw.toUpperCase().replace(/\./g, '');
+    if (STATE_ABBR[up]) return STATE_ABBR[up];
+    return stateByNorm[norm(raw)] || null;
+  }
+  function resolveProvince(name) {
+    var raw = String(name || '').trim();
+    var up = raw.toUpperCase().replace(/\./g, '');
+    if (PROVINCE_ABBR[up]) return PROVINCE_ABBR[up];
+    var n = norm(raw);
+    if (PROVINCE_ALIASES[n]) return PROVINCE_ALIASES[n];
+    return provinceByNorm[n] || null;
+  }
+
+  function resolveAll() {
+    keys.forEach(function (key) {
+      var t = TRAVELERS[key];
+      var r = {
+        countries: new Set(),
+        states: new Set(),
+        provinces: new Set(),
+        unmatchedCountries: [],
+        unmatchedStates: [],
+        unmatchedProvinces: []
+      };
+
+      (t.countries || []).forEach(function (c) {
+        var prov = resolveProvince(c);
+        var st = resolveState(c);
+        var m = resolveCountry(c);
+        if (m) {
+          r.countries.add(m);
+        } else if (prov) {
+          r.provinces.add(prov);
+        } else if (st) {
+          r.states.add(st);
+        } else {
+          r.unmatchedCountries.push(c);
+        }
+      });
+
+      (t.states || []).forEach(function (s) {
+        var prov = resolveProvince(s);
+        var st = resolveState(s);
+        if (st) {
+          r.states.add(st);
+        } else if (prov) {
+          r.provinces.add(prov);
+        } else {
+          r.unmatchedStates.push(s);
+        }
+      });
+
+      (t.provinces || []).forEach(function (p) {
+        var prov = resolveProvince(p);
+        if (prov) {
+          r.provinces.add(prov);
+        } else {
+          r.unmatchedProvinces.push(p);
+        }
+      });
+
+      // Visiting any U.S. state implies the United States has been visited.
+      if (r.states.size) r.countries.add(USA_NAME);
+      // Visiting any Canadian province implies Canada has been visited.
+      if (r.provinces.size) r.countries.add(CANADA_NAME);
+
+      if (r.unmatchedCountries.length || r.unmatchedStates.length || r.unmatchedProvinces.length) {
+        console.warn('[travels] Unrecognized names for ' + key + ':',
+          r.unmatchedCountries.concat(r.unmatchedStates, r.unmatchedProvinces));
+      }
+      resolved[key] = r;
+    });
+  }
+
+  function paint() {
+    if (!activeKey || !resolved[activeKey]) return;
+    var t = TRAVELERS[activeKey];
+    var r = resolved[activeKey];
+    var color = t.color || '#c2593f';
+    var tint = d3.interpolateRgb('#d9d4c7', color)(0.35);
+    var hasStates = r.states.size > 0;
+    var hasProvinces = r.provinces.size > 0;
+
+    countriesG.selectAll('path').style('fill', function (d) {
+      var name = d.properties.name;
+      if (!r.countries.has(name)) return null;
+      // When sub-regions are listed, tint the country lightly so visited states/provinces pop out.
+      if (name === USA_NAME && hasStates) return tint;
+      if (name === CANADA_NAME && hasProvinces) return tint;
+      return color;
+    });
+
+    statesG.selectAll('path').style('fill', function (d) {
+      return r.states.has(d.properties.name) ? color : 'transparent';
+    });
+
+    provincesG.selectAll('path').style('fill', function (d) {
+      return r.provinces.has(d.properties.name) ? color : 'transparent';
+    });
+
+    var countryCount = r.countries.size;
+    var statParts = [
+      '<strong>' + countryCount + '</strong> ' + (countryCount === 1 ? 'country' : 'countries'),
+      '<strong>' + r.states.size + '</strong> ' + (r.states.size === 1 ? 'state' : 'states')
+    ];
+    if (r.provinces.size > 0 || (t.provinces && t.provinces.length > 0)) {
+      statParts.push('<strong>' + r.provinces.size + '</strong> ' + (r.provinces.size === 1 ? 'province' : 'provinces'));
+    }
+    statsEl.innerHTML = statParts.join(' &middot; ');
+
+    var html = renderList('Countries', Array.from(r.countries).sort(), r.unmatchedCountries) +
+      renderList('U.S. States', Array.from(r.states).sort(), r.unmatchedStates);
+    if (r.provinces.size > 0 || r.unmatchedProvinces.length > 0 || (t.provinces && t.provinces.length > 0)) {
+      html += renderList('Canadian Provinces', Array.from(r.provinces).sort(), r.unmatchedProvinces);
+    }
+    listsEl.innerHTML = html;
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; });
+  }
+
+  function renderList(title, items, unmatched) {
+    var chips = items.map(function (i) {
+      return '<span class="tm-chip">' + escapeHtml(i === USA_NAME ? 'United States' : i) + '</span>';
+    }).concat(unmatched.map(function (i) {
+      return '<span class="tm-chip is-unmatched" title="Not found on the map">' + escapeHtml(i) + '</span>';
+    }));
+    return '<div class="tm-list"><h3>' + title + '</h3>' +
+      (chips.length ? '<div class="tm-chips">' + chips.join('') + '</div>' : '<p class="tm-empty">None listed yet.</p>') +
+      '</div>';
+  }
+})();
+</script>
+

@@ -1,0 +1,31 @@
+# Travel map data for travels.html
+#
+# For each person, list the countries, U.S. states, and Canadian provinces they have visited.
+# - Countries: use common English names (e.g. "Greece", "United States", "Canada",
+#   "United Kingdom", "Czech Republic"). Common aliases are handled automatically.
+# - States: full names ("Wisconsin") or postal abbreviations ("WI") both work.
+# - Provinces: Canadian province/territory names ("Ontario", "British Columbia", "Quebec")
+#   or postal abbreviations ("ON", "BC", "QC") both work.
+# - color: the highlight color used on the map when that person is selected.
+
+chris:
+  label: Chris
+  color: "#c2593f"
+  countries: []
+  states: []
+  provinces: []
+
+elyse:
+  label: Elyse
+  color: "#1e5959"
+  countries: []
+  states: []
+  provinces: []
+
+august:
+  label: August
+  color: "#d69e2e"
+  countries: []
+  states: []
+  provinces: []
+
