@@ -50,7 +50,10 @@ def main() -> int:
     parser.add_argument("--max-size", type=int, default=2000)
     parser.add_argument("--quality", type=int, default=84)
     args = parser.parse_args()
-    files = [path for path in args.directory.rglob("*") if path.is_file() and path.suffix.lower() in SUPPORTED]
+    if args.directory.is_file():
+        files = [args.directory] if args.directory.suffix.lower() in SUPPORTED else []
+    else:
+        files = [path for path in args.directory.rglob("*") if path.is_file() and path.suffix.lower() in SUPPORTED]
     before = after = resized = reduced = 0
     for index, path in enumerate(files, 1):
         old_size, new_size, did_resize = optimize_image(path, args.max_size, args.quality)
