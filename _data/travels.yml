@@ -11,8 +11,44 @@
 chris:
   label: Chris
   color: "#c2593f"
-  countries: []
-  states: []
+  countries:
+    - Portugal
+  states:
+    - California
+    - Colorado
+    - Florida
+    - Georgia
+    - Hawaii
+    - Idaho
+    - Illinois
+    - Indiana
+    - Iowa
+    - Kansas
+    - Kentucky
+    - Louisiana
+    - Maine
+    - Michigan
+    - Minnesota
+    - Missouri
+    - Montana
+    - Nebraska
+    - Nevada
+    - New Jersey
+    - New York
+    - North Carolina
+    - North Dakota
+    - Ohio
+    - Oregon
+    - Pennsylvania
+    - South Carolina
+    - South Dakota
+    - Tennessee
+    - Utah
+    - Vermont
+    - Virginia
+    - Washington
+    - Wisconsin
+    - Wyoming
   provinces: []
 
 elyse:
