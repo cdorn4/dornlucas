@@ -54,9 +54,68 @@ chris:
 elyse:
   label: Elyse
   color: "#1e5959"
-  countries: []
-  states: []
-  provinces: []
+  countries:
+    - Austria
+    - Canada
+    - Denmark
+    - France
+    - Germany
+    - Greece
+    - Ireland
+    - Italy
+    - Mexico
+    - Netherlands
+    - Portugal
+    - Spain
+    - Switzerland
+    - United Kingdom
+    - United States
+  states:
+    - Alabama
+    - Alaska
+    - California
+    - Colorado
+    - Connecticut
+    - Florida
+    - Georgia
+    - Hawaii
+    - Idaho
+    - Illinois
+    - Indiana
+    - Iowa
+    - Kentucky
+    - Louisiana
+    - Maine
+    - Maryland
+    - Massachusetts
+    - Michigan
+    - Minnesota
+    - Mississippi
+    - Missouri
+    - Montana
+    - Nebraska
+    - Nevada
+    - New Hampshire
+    - New Jersey
+    - New York
+    - North Carolina
+    - North Dakota
+    - Ohio
+    - Oregon
+    - Pennsylvania
+    - Rhode Island
+    - South Carolina
+    - South Dakota
+    - Tennessee
+    - Texas
+    - Utah
+    - Vermont
+    - Virginia
+    - Washington
+    - West Virginia
+    - Wisconsin
+    - Wyoming
+
 
 august:
   label: August
