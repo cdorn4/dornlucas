@@ -151,7 +151,8 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
     'antigua': 'Antigua and Barb.', 'antigua and barbuda': 'Antigua and Barb.',
     'st. kitts and nevis': 'St. Kitts and Nevis', 'saint kitts and nevis': 'St. Kitts and Nevis',
     'st. vincent and the grenadines': 'St. Vin. and Gren.', 'saint vincent and the grenadines': 'St. Vin. and Gren.',
-    'french polynesia': 'Fr. Polynesia'
+    'french polynesia': 'Fr. Polynesia',
+    'french guiana': 'French Guiana', 'guyane': 'French Guiana'
   };
 
   var STATE_ABBR = {
@@ -306,6 +307,30 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
     var world = res[0], us = res[1], canada = res[2];
     var countries = topojson.feature(world, world.objects.countries).features
       .filter(function (f) { return f.properties.name !== 'Antarctica'; });
+
+    // Split French Guiana out of France into its own territory so visiting France does not color South America
+    var france = countries.find(function (f) { return f.properties && f.properties.name === 'France'; });
+    if (france && france.geometry && france.geometry.type === 'MultiPolygon') {
+      var guianaIndex = -1;
+      france.geometry.coordinates.forEach(function (poly, idx) {
+        var pt = poly[0] && poly[0][0];
+        if (pt && pt[0] < -45 && pt[0] > -60 && pt[1] > 0 && pt[1] < 10) {
+          guianaIndex = idx;
+        }
+      });
+      if (guianaIndex !== -1) {
+        var guianaCoords = france.geometry.coordinates.splice(guianaIndex, 1)[0];
+        countries.push({
+          type: 'Feature',
+          id: '254',
+          properties: { name: 'French Guiana' },
+          geometry: {
+            type: 'Polygon',
+            coordinates: guianaCoords
+          }
+        });
+      }
+    }
     var states = topojson.feature(us, us.objects.states).features;
     var provinces = topojson.feature(canada, canada.objects.provinces).features;
 
