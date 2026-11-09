@@ -9,7 +9,7 @@ description: Milestone life events and photo collections from the Dorn and Lucas
   <h2>Life Events</h2>
   <p class="lede">The big life events . . . so far.</p>
 </section>
-<section class="photo-index shell" aria-label="Life events">
+<section class="photo-index shell" aria-label="Life events" style="padding-bottom: 48px;">
   <a class="photo-index-item photo-index-featured" href="{{ '/wedding/' | relative_url }}">
     <span class="photo-index-number">01</span>
     <span><strong>Our Wedding</strong><small>Early years, the wedding day &amp; disposable cameras</small></span>
@@ -30,9 +30,23 @@ description: Milestone life events and photo collections from the Dorn and Lucas
     <span><strong>Bj&ouml;rklunden 2024</strong><small>5 Years out</small></span>
     <span aria-hidden="true">&nearr;</span>
   </a>
+</section>
+
+<section class="archive-hero shell" style="padding-top: 40px; border-top: 1px solid var(--line);">
+  <p class="eyebrow">Interactive Archives</p>
+  <h2>Family &amp; Travels</h2>
+  <p class="lede">Our family trees and where we've all been.</p>
+</section>
+
+<section class="photo-index shell" aria-label="Family and Travels">
+  <a class="photo-index-item photo-index-featured" href="{{ '/family-tree.html' | relative_url }}">
+    <span class="photo-index-number">&bull;</span>
+    <span><strong>Family Tree</strong><small>Interactive Dorn &amp; Lucas lineage, person profiles &amp; photos</small></span>
+    <span aria-hidden="true">&nearr;</span>
+  </a>
   <a class="photo-index-item" href="{{ '/travels.html' | relative_url }}">
-    <span class="photo-index-number">05</span>
-    <span><strong>Travels</strong><small>Where we've all been</small></span>
+    <span class="photo-index-number">&bull;</span>
+    <span><strong>Travels</strong><small>Interactive world map of visited countries, states &amp; provinces</small></span>
     <span aria-hidden="true">&nearr;</span>
   </a>
 </section>
