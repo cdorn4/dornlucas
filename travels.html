@@ -2,7 +2,7 @@
 layout: default
 title: "Travels"
 permalink: /travels.html
-description: "An interactive map of the countries, U.S. states, and Canadian provinces Chris, Elyse, and August have visited."
+description: "An interactive map of the countries, U.S. states, Canadian provinces, and U.S. National Parks Chris, Elyse, and August have visited."
 ---
 
 <section class="archive-hero shell">
@@ -13,12 +13,16 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
 
 <section class="shell travel-map-section" aria-label="Interactive travel map">
   <div class="tm-toolbar">
+    <div class="tm-mode-toggle" role="tablist" aria-label="Map view mode">
+      <button type="button" class="tm-mode-btn is-active" role="tab" id="tm-mode-countries" aria-selected="true" data-mode="countries">Countries &amp; States</button>
+      <button type="button" class="tm-mode-btn" role="tab" id="tm-mode-parks" aria-selected="false" data-mode="parks">US National Parks</button>
+    </div>
     <div class="tm-legend" role="radiogroup" aria-label="Choose a traveler" id="tm-legend"></div>
     <div class="tm-stats" id="tm-stats" aria-live="polite"></div>
   </div>
 
   <div class="tm-map-wrap" id="tm-map-wrap">
-    <svg id="tm-map" role="img" aria-label="World map of visited countries, U.S. states, and Canadian provinces"></svg>
+    <svg id="tm-map" role="img" aria-label="Interactive map of visited places"></svg>
     <div class="tm-tooltip" id="tm-tooltip" hidden></div>
     <div class="tm-controls">
       <button type="button" class="tm-ctrl" id="tm-zoom-in" aria-label="Zoom in">+</button>
@@ -37,6 +41,40 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
   gap: 1rem; margin-bottom: 1rem;
 }
+
+/* Mode toggle */
+.tm-mode-toggle {
+  display: inline-flex;
+  background: var(--paper-subtle);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 3px;
+}
+.tm-mode-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.tm-mode-btn:hover { color: var(--ink); }
+.tm-mode-btn.is-active,
+.tm-mode-btn[aria-selected="true"] {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+  font-weight: 600;
+}
+
 .tm-legend { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .tm-legend-btn {
   display: inline-flex; align-items: center; gap: 0.5rem;
@@ -62,7 +100,12 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
   position: relative; width: 100%; aspect-ratio: 16 / 9; min-height: 320px;
   background: #eaf1f3; border: 1px solid var(--line); border-radius: var(--radius-lg);
   overflow: hidden; box-shadow: var(--shadow-sm);
+  transition: background 0.3s ease;
 }
+.tm-map-wrap.is-parks-mode {
+  background: #e6eded;
+}
+
 #tm-map { width: 100%; height: 100%; display: block; cursor: grab; touch-action: none; }
 #tm-map:active { cursor: grabbing; }
 #tm-map path { vector-effect: non-scaling-stroke; transition: fill 0.35s ease; }
@@ -70,15 +113,67 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
 .tm-state, .tm-province { fill: transparent; stroke: #ffffff; stroke-width: 0.5; }
 .tm-country.is-hover, .tm-state.is-hover, .tm-province.is-hover { stroke: var(--ink); stroke-width: 1.4; }
 
+/* Parks mode state styling */
+.tm-state-base { fill: #eae6dc; stroke: #ffffff; stroke-width: 0.75; }
+
+/* Inset boxes for overseas national parks */
+.tm-inset-box {
+  fill: rgba(255, 255, 255, 0.88);
+  stroke: #c5bfb2;
+  stroke-width: 1;
+  stroke-dasharray: 4 3;
+  rx: 7;
+}
+.tm-inset-title {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  fill: var(--muted);
+}
+.tm-inset-caption {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  fill: var(--ink);
+}
+
+/* National Parks Markers */
+.tm-park-node { cursor: pointer; }
+.tm-park-pulse {
+  fill: none;
+  stroke-width: 1.5;
+  opacity: 0.45;
+  transition: r 0.2s ease, opacity 0.2s ease;
+}
+.tm-park-dot {
+  stroke: #ffffff;
+  stroke-width: 1.8;
+  vector-effect: non-scaling-stroke;
+  transition: r 0.2s ease, stroke-width 0.2s ease, stroke 0.2s ease, fill 0.3s ease;
+}
+.tm-park-node:hover .tm-park-dot {
+  stroke: var(--ink);
+  stroke-width: 2.6;
+}
+.tm-park-node:hover .tm-park-pulse {
+  opacity: 0.85;
+}
+
 .tm-tooltip {
   position: absolute; pointer-events: none; z-index: 5;
   background: var(--ink); color: #fff; font-family: var(--font-sans); font-size: 0.85rem;
-  padding: 0.4rem 0.7rem; border-radius: var(--radius-sm); max-width: 300px;
-  transform: translate(-50%, calc(-100% - 10px)); box-shadow: var(--shadow-md);
+  padding: 0.45rem 0.75rem; border-radius: var(--radius-sm); max-width: 320px;
+  transform: translate(-50%, -100%); box-shadow: var(--shadow-md);
   line-height: 1.35;
 }
+.tm-tooltip.is-below {
+  transform: translate(-50%, 0);
+}
 .tm-tooltip strong { display: block; font-size: 0.9rem; }
-.tm-tooltip .tm-tip-status { display: block; opacity: 0.85; font-size: 0.8rem; margin-top: 0.15rem; }
+.tm-tooltip .tm-tip-sub { display: block; opacity: 0.8; font-size: 0.8rem; margin-top: 0.15rem; }
+.tm-tooltip .tm-tip-status { display: block; opacity: 0.95; font-size: 0.8rem; margin-top: 0.25rem; }
 
 .tm-controls { position: absolute; right: 12px; bottom: 12px; display: flex; flex-direction: column; gap: 6px; }
 .tm-ctrl {
@@ -99,10 +194,29 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
 .tm-chip {
   font-family: var(--font-sans); font-size: 0.85rem; padding: 0.25rem 0.65rem;
   border-radius: 999px; background: var(--paper-subtle); border: 1px solid var(--line-subtle);
+  display: inline-flex; align-items: center;
 }
-.tm-chip-note { opacity: 0.7; font-size: 0.8em; margin-left: 0.25rem; font-weight: normal; }
+.tm-chip-note { opacity: 0.75; font-size: 0.8em; margin-left: 0.35rem; font-weight: normal; }
+.tm-chip-state {
+  display: inline-block; background: rgba(0, 0, 0, 0.06); font-size: 0.72rem;
+  font-weight: 600; padding: 0.05rem 0.35rem; border-radius: 4px; margin-left: 0.35rem;
+  color: var(--muted); letter-spacing: 0.02em;
+}
 .tm-chip.is-unmatched { border-style: dashed; color: var(--muted); }
+.tm-chip-park-unvisited {
+  color: var(--muted); background: var(--paper-subtle); border: 1px solid var(--line-subtle);
+  font-size: 0.8rem; opacity: 0.9;
+}
 .tm-empty { font-family: var(--font-sans); font-size: 0.9rem; color: var(--muted-light); font-style: italic; }
+
+.tm-details-block {
+  margin-top: 0.5rem;
+}
+.tm-details-summary {
+  font-family: var(--font-sans); font-size: 0.85rem; color: var(--muted);
+  cursor: pointer; padding: 0.25rem 0; user-select: none;
+}
+.tm-details-summary:hover { color: var(--ink); }
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
@@ -115,6 +229,7 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
   var WORLD_URL = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json';
   var STATES_URL = 'https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json';
   var CANADA_URL = "{{ '/assets/geo/canada-provinces.json' | relative_url }}";
+  var PARKS_URL = "{{ '/assets/geo/us-national-parks.json' | relative_url }}";
   var USA_NAME = 'United States of America';
   var CANADA_NAME = 'Canada';
 
@@ -194,9 +309,92 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
     'y.t.': 'Yukon'
   };
 
+  var PARK_ALIASES = {
+    'great smoky': 'great-smoky-mountains',
+    'great smokies': 'great-smoky-mountains',
+    'smoky mountains': 'great-smoky-mountains',
+    'smokies': 'great-smoky-mountains',
+    'haleakala': 'haleakala',
+    'hawaii volcanoes': 'hawaii-volcanoes',
+    'hawaii volcanos': 'hawaii-volcanoes',
+    'volcanoes': 'hawaii-volcanoes',
+    'volcanos': 'hawaii-volcanoes',
+    'carlsbad': 'carlsbad-caverns',
+    'cuyahoga': 'cuyahoga-valley',
+    'glacier bay': 'glacier-bay',
+    'wrangell': 'wrangell-st-elias',
+    'wrangell st elias': 'wrangell-st-elias',
+    'wrangell saint elias': 'wrangell-st-elias',
+    'saint john': 'virgin-islands',
+    'st john': 'virgin-islands',
+    'redwoods': 'redwood',
+    'new river': 'new-river-gorge',
+    'black canyon': 'black-canyon-of-the-gunnison',
+    'gunnison': 'black-canyon-of-the-gunnison',
+    'joshua tree': 'joshua-tree',
+    'death valley': 'death-valley',
+    'grand canyon': 'grand-canyon',
+    'petrified forest': 'petrified-forest',
+    'saguaro': 'saguaro',
+    'capitol reef': 'capitol-reef',
+    'bryce': 'bryce-canyon',
+    'bryce canyon': 'bryce-canyon',
+    'canyonlands': 'canyonlands',
+    'zion': 'zion',
+    'arches': 'arches',
+    'yellowstone': 'yellowstone',
+    'grand teton': 'grand-teton',
+    'tetons': 'grand-teton',
+    'olympic': 'olympic',
+    'rainier': 'mount-rainier',
+    'mount rainier': 'mount-rainier',
+    'mt rainier': 'mount-rainier',
+    'north cascades': 'north-cascades',
+    'crater lake': 'crater-lake',
+    'yosemite': 'yosemite',
+    'lassen': 'lassen-volcanic',
+    'lassen volcanic': 'lassen-volcanic',
+    'channel islands': 'channel-islands',
+    'pinnacles': 'pinnacles',
+    'rocky mountain': 'rocky-mountain',
+    'rocky mountains': 'rocky-mountain',
+    'mesa verde': 'mesa-verde',
+    'great sand dunes': 'great-sand-dunes',
+    'white sands': 'white-sands',
+    'guadalupe': 'guadalupe-mountains',
+    'guadalupe mountains': 'guadalupe-mountains',
+    'big bend': 'big-bend',
+    'hot springs': 'hot-springs',
+    'gateway arch': 'gateway-arch',
+    'gateway': 'gateway-arch',
+    'isle royale': 'isle-royale',
+    'voyageurs': 'voyageurs',
+    'theodore roosevelt': 'theodore-roosevelt',
+    'badlands': 'badlands',
+    'wind cave': 'wind-cave',
+    'shenandoah': 'shenandoah',
+    'mammoth cave': 'mammoth-cave',
+    'congaree': 'congaree',
+    'everglades': 'everglades',
+    'biscayne': 'biscayne',
+    'dry tortugas': 'dry-tortugas',
+    'acadia': 'acadia',
+    'indiana dunes': 'indiana-dunes'
+  };
+
   function norm(s) {
     return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
       .toLowerCase().replace(/[^a-z0-9. ]/g, '').replace(/\s+/g, ' ').trim();
+  }
+
+  function normPark(s) {
+    return norm(s)
+      .replace(/\bnational park and preserve\b/g, '')
+      .replace(/\bnational and state parks\b/g, '')
+      .replace(/\bnational park\b/g, '')
+      .replace(/\bnatl park\b/g, '')
+      .replace(/\bnp\b/g, '')
+      .trim();
   }
 
   var legendEl = document.getElementById('tm-legend');
@@ -205,15 +403,26 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
   var tooltip = document.getElementById('tm-tooltip');
   var wrap = document.getElementById('tm-map-wrap');
   var loadingEl = document.getElementById('tm-loading');
+  var modeCountriesBtn = document.getElementById('tm-mode-countries');
+  var modeParksBtn = document.getElementById('tm-mode-parks');
 
-  var keys = Object.keys(TRAVELERS || {});
+  var currentMode = 'countries'; // 'countries' | 'parks'
+  var rawKeys = Object.keys(TRAVELERS || {});
+  var PREFERRED_ORDER = ['august', 'chris', 'elyse'];
+  var keys = PREFERRED_ORDER.filter(function (k) { return rawKeys.indexOf(k) !== -1; })
+    .concat(rawKeys.filter(function (k) { return PREFERRED_ORDER.indexOf(k) === -1; }));
   var activeKey = keys[0] || null;
   var countryByNorm = {};
   var stateByNorm = {};
   var provinceByNorm = {};
-  var resolved = {}; // per traveler: { countries:Set, states:Set, provinces:Set, unmatchedCountries:[], unmatchedStates:[], unmatchedProvinces:[] }
 
-  // Legend
+  var nationalParks = [];
+  var parkById = {};
+  var parkByNorm = {};
+
+  var resolved = {}; // per traveler: { countries:Set, states:Set, provinces:Set, parks:Set, notes:{}, parkNotes:{}, unmatchedCountries:[], ... }
+
+  // Legend setup
   keys.forEach(function (key) {
     var t = TRAVELERS[key];
     var btn = document.createElement('button');
@@ -235,6 +444,24 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
     paint();
   }
 
+  // Mode toggling
+  modeCountriesBtn.addEventListener('click', function () { setMode('countries'); });
+  modeParksBtn.addEventListener('click', function () { setMode('parks'); });
+
+  function setMode(mode) {
+    if (mode === currentMode) return;
+    currentMode = mode;
+    modeCountriesBtn.setAttribute('aria-selected', mode === 'countries' ? 'true' : 'false');
+    modeParksBtn.setAttribute('aria-selected', mode === 'parks' ? 'true' : 'false');
+    modeCountriesBtn.classList.toggle('is-active', mode === 'countries');
+    modeParksBtn.classList.toggle('is-active', mode === 'parks');
+    wrap.classList.toggle('is-parks-mode', mode === 'parks');
+
+    svg.call(zoom.transform, d3.zoomIdentity);
+    hideTip();
+    paint();
+  }
+
   // Map setup
   var svg = d3.select('#tm-map');
   var width = 960, height = 540;
@@ -243,13 +470,19 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
   var countriesG = g.append('g').attr('class', 'tm-countries-layer');
   var statesG = g.append('g').attr('class', 'tm-states-layer');
   var provincesG = g.append('g').attr('class', 'tm-provinces-layer');
-  var projection = d3.geoNaturalEarth1();
-  var path = d3.geoPath(projection);
+  var parksG = g.append('g').attr('class', 'tm-parks-layer').style('display', 'none');
 
-  var zoom = d3.zoom().scaleExtent([1, 12])
+  var projectionWorld = d3.geoNaturalEarth1();
+  var pathWorld = d3.geoPath(projectionWorld);
+
+  var projectionUsa = d3.geoAlbersUsa();
+  var pathUsa = d3.geoPath(projectionUsa);
+
+  var zoom = d3.zoom().scaleExtent([1, 14])
     .translateExtent([[0, 0], [width, height]])
     .on('zoom', function (event) { g.attr('transform', event.transform); });
   svg.call(zoom);
+
   document.getElementById('tm-zoom-in').addEventListener('click', function () { svg.transition().duration(300).call(zoom.scaleBy, 1.6); });
   document.getElementById('tm-zoom-out').addEventListener('click', function () { svg.transition().duration(300).call(zoom.scaleBy, 1 / 1.6); });
   document.getElementById('tm-zoom-reset').addEventListener('click', function () { svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity); });
@@ -259,6 +492,32 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
       return { name: String(entry.name || '').trim(), note: String(entry.note || '').trim() };
     }
     return { name: String(entry || '').trim(), note: '' };
+  }
+
+  function updateTooltipPosition(event) {
+    var rect = wrap.getBoundingClientRect();
+    var x = event.clientX - rect.left;
+    var y = event.clientY - rect.top;
+
+    var tipW = tooltip.offsetWidth || 180;
+    var tipH = tooltip.offsetHeight || 60;
+
+    // If placing above would overflow the top edge of the map container, flip below
+    var placeBelow = (y - tipH - 14) < 8;
+    if (placeBelow) {
+      tooltip.classList.add('is-below');
+      tooltip.style.top = (y + 14) + 'px';
+    } else {
+      tooltip.classList.remove('is-below');
+      tooltip.style.top = (y - 12) + 'px';
+    }
+
+    // Clamp horizontally so the tooltip never bleeds off left or right edges
+    var halfW = tipW / 2;
+    var minX = halfW + 10;
+    var maxX = rect.width - halfW - 10;
+    var clampedX = Math.max(minX, Math.min(maxX, x));
+    tooltip.style.left = clampedX + 'px';
   }
 
   function showTip(event, d, kind) {
@@ -282,15 +541,36 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
       ? ('&#10003; ' + escapeHtml(label) + ' visited' + (note ? ' &middot; <em>' + escapeHtml(note) + '</em>' : ''))
       : 'Not yet';
     tooltip.innerHTML = '<strong>' + escapeHtml(displayName) + '</strong><span class="tm-tip-status">' + statusText + '</span>';
-    var rect = wrap.getBoundingClientRect();
-    tooltip.style.left = (event.clientX - rect.left) + 'px';
-    tooltip.style.top = (event.clientY - rect.top) + 'px';
     tooltip.hidden = false;
+    updateTooltipPosition(event);
   }
+
+  function showParkTip(event, park) {
+    var t = activeKey && resolved[activeKey];
+    var visited = t && t.parks.has(park.id);
+    var note = (t && t.parkNotes[park.id]) || '';
+    var travelerLabel = activeKey ? (TRAVELERS[activeKey].label || activeKey) : '';
+
+    var statesStr = park.stateNames || park.states.join(', ');
+    var subStr = statesStr + (park.established ? ' &middot; Est. ' + park.established : '');
+
+    var statusHtml = visited
+      ? '<span class="tm-tip-status" style="color:#6be4c3;">&#10003; ' + escapeHtml(travelerLabel) + ' visited' +
+        (note ? ' &middot; <em>' + escapeHtml(note) + '</em>' : '') + '</span>'
+      : '<span class="tm-tip-status">Not yet visited</span>';
+
+    tooltip.innerHTML = '<strong>' + escapeHtml(park.name) + '</strong>' +
+      '<span class="tm-tip-sub">' + subStr + '</span>' +
+      statusHtml;
+    tooltip.hidden = false;
+    updateTooltipPosition(event);
+  }
+
   function hideTip() { tooltip.hidden = true; }
 
   function bindHover(sel, kind) {
     sel.on('mousemove', function (event, d) {
+      if (currentMode === 'parks' && kind !== 'park') return;
       d3.select(this).classed('is-hover', true).raise();
       showTip(event, d, kind);
     }).on('mouseleave', function () {
@@ -299,12 +579,16 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
     });
   }
 
+  // Load geo datasets
   Promise.all([
     d3.json(WORLD_URL),
     d3.json(STATES_URL),
-    d3.json(CANADA_URL)
+    d3.json(CANADA_URL),
+    d3.json(PARKS_URL)
   ]).then(function (res) {
-    var world = res[0], us = res[1], canada = res[2];
+    var world = res[0], us = res[1], canada = res[2], parks = res[3];
+    nationalParks = parks || [];
+
     var countries = topojson.feature(world, world.objects.countries).features
       .filter(function (f) { return f.properties.name !== 'Antarctica'; });
 
@@ -338,15 +622,25 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
     states.forEach(function (f) { stateByNorm[norm(f.properties.name)] = f.properties.name; });
     provinces.forEach(function (f) { provinceByNorm[norm(f.properties.name)] = f.properties.name; });
 
-    projection.fitExtent([[8, 8], [width - 8, height - 8]], { type: 'FeatureCollection', features: countries });
+    // Build parks indexes
+    nationalParks.forEach(function (p) {
+      parkById[p.id] = p;
+      parkByNorm[norm(p.name)] = p;
+      parkByNorm[norm(p.shortName)] = p;
+      parkByNorm[normPark(p.name)] = p;
+    });
+
+    projectionWorld.fitExtent([[8, 8], [width - 8, height - 8]], { type: 'FeatureCollection', features: countries });
+    projectionUsa.fitExtent([[24, 24], [width - 24, height - 24]], { type: 'FeatureCollection', features: states });
 
     bindHover(countriesG.selectAll('path').data(countries).join('path')
-      .attr('class', 'tm-country').attr('d', path), 'country');
+      .attr('class', 'tm-country').attr('d', pathWorld), 'country');
     bindHover(statesG.selectAll('path').data(states).join('path')
-      .attr('class', 'tm-state').attr('d', path), 'state');
+      .attr('class', 'tm-state').attr('d', pathWorld), 'state');
     bindHover(provincesG.selectAll('path').data(provinces).join('path')
-      .attr('class', 'tm-province').attr('d', path), 'province');
+      .attr('class', 'tm-province').attr('d', pathWorld), 'province');
 
+    setupParksLayer();
     resolveAll();
     loadingEl.remove();
     setActive(activeKey);
@@ -355,17 +649,90 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
     console.error(err);
   });
 
+  // Build the National Parks SVG elements (including inset boxes for American Samoa and Virgin Islands)
+  function setupParksLayer() {
+    var insetsG = parksG.append('g').attr('class', 'tm-parks-insets');
+
+    var INSET_CONFIG = {
+      'american-samoa': {
+        x: 320, y: 460, w: 140, h: 62,
+        title: 'American Samoa',
+        label: "Nat'l Park of American Samoa",
+        markerPos: [390, 498]
+      },
+      'virgin-islands': {
+        x: 805, y: 460, w: 140, h: 62,
+        title: 'U.S. Virgin Islands',
+        label: "Virgin Islands Nat'l Park",
+        markerPos: [875, 498]
+      }
+    };
+
+    // Render inset cards
+    Object.keys(INSET_CONFIG).forEach(function (id) {
+      var cfg = INSET_CONFIG[id];
+      var inset = insetsG.append('g').attr('class', 'tm-inset-group');
+      inset.append('rect')
+        .attr('class', 'tm-inset-box')
+        .attr('x', cfg.x).attr('y', cfg.y)
+        .attr('width', cfg.w).attr('height', cfg.h);
+      inset.append('text')
+        .attr('class', 'tm-inset-title')
+        .attr('x', cfg.x + 8).attr('y', cfg.y + 14)
+        .text(cfg.title);
+      inset.append('text')
+        .attr('class', 'tm-inset-caption')
+        .attr('text-anchor', 'middle')
+        .attr('x', cfg.x + cfg.w / 2).attr('y', cfg.y + cfg.h - 8)
+        .text(cfg.label);
+    });
+
+    var markersG = parksG.append('g').attr('class', 'tm-parks-markers');
+
+    nationalParks.forEach(function (park) {
+      var pt;
+      if (INSET_CONFIG[park.id]) {
+        pt = INSET_CONFIG[park.id].markerPos;
+      } else {
+        pt = projectionUsa(park.coordinates);
+      }
+      if (!pt) return;
+
+      var node = markersG.append('g')
+        .attr('class', 'tm-park-node')
+        .attr('data-id', park.id)
+        .attr('transform', 'translate(' + pt[0] + ',' + pt[1] + ')');
+
+      node.append('circle')
+        .attr('class', 'tm-park-pulse')
+        .attr('r', 9);
+
+      node.append('circle')
+        .attr('class', 'tm-park-dot')
+        .attr('r', 5);
+
+      node.on('mousemove', function (event) {
+        d3.select(this).raise();
+        showParkTip(event, park);
+      }).on('mouseleave', function () {
+        hideTip();
+      });
+    });
+  }
+
   function resolveCountry(name) {
     var n = norm(name);
     if (COUNTRY_ALIASES[n]) return COUNTRY_ALIASES[n];
     return countryByNorm[n] || null;
   }
+
   function resolveState(name) {
     var raw = String(name || '').trim();
     var up = raw.toUpperCase().replace(/\./g, '');
     if (STATE_ABBR[up]) return STATE_ABBR[up];
     return stateByNorm[norm(raw)] || null;
   }
+
   function resolveProvince(name) {
     var raw = String(name || '').trim();
     var up = raw.toUpperCase().replace(/\./g, '');
@@ -375,6 +742,18 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
     return provinceByNorm[n] || null;
   }
 
+  function resolvePark(name) {
+    var raw = String(name || '').trim();
+    if (parkById[raw]) return parkById[raw];
+    var n = norm(raw);
+    if (parkByNorm[n]) return parkByNorm[n];
+    var np = normPark(raw);
+    if (PARK_ALIASES[np] && parkById[PARK_ALIASES[np]]) return parkById[PARK_ALIASES[np]];
+    if (parkByNorm[np]) return parkByNorm[np];
+    if (PARK_ALIASES[n] && parkById[PARK_ALIASES[n]]) return parkById[PARK_ALIASES[n]];
+    return null;
+  }
+
   function resolveAll() {
     keys.forEach(function (key) {
       var t = TRAVELERS[key];
@@ -382,10 +761,13 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
         countries: new Set(),
         states: new Set(),
         provinces: new Set(),
+        parks: new Set(),
         notes: {},
+        parkNotes: {},
         unmatchedCountries: [],
         unmatchedStates: [],
-        unmatchedProvinces: []
+        unmatchedProvinces: [],
+        unmatchedParks: []
       };
 
       (t.countries || []).forEach(function (raw) {
@@ -433,14 +815,25 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
         }
       });
 
+      (t.national_parks || []).forEach(function (raw) {
+        var item = parseEntry(raw);
+        var park = resolvePark(item.name);
+        if (park) {
+          r.parks.add(park.id);
+          if (item.note) r.parkNotes[park.id] = item.note;
+        } else {
+          r.unmatchedParks.push(item.name);
+        }
+      });
+
       // Visiting any U.S. state implies the United States has been visited.
       if (r.states.size) r.countries.add(USA_NAME);
       // Visiting any Canadian province implies Canada has been visited.
       if (r.provinces.size) r.countries.add(CANADA_NAME);
 
-      if (r.unmatchedCountries.length || r.unmatchedStates.length || r.unmatchedProvinces.length) {
+      if (r.unmatchedCountries.length || r.unmatchedStates.length || r.unmatchedProvinces.length || r.unmatchedParks.length) {
         console.warn('[travels] Unrecognized names for ' + key + ':',
-          r.unmatchedCountries.concat(r.unmatchedStates, r.unmatchedProvinces));
+          r.unmatchedCountries.concat(r.unmatchedStates, r.unmatchedProvinces, r.unmatchedParks));
       }
       resolved[key] = r;
     });
@@ -451,6 +844,22 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
     var t = TRAVELERS[activeKey];
     var r = resolved[activeKey];
     var color = t.color || '#c2593f';
+
+    if (currentMode === 'countries') {
+      paintCountriesMode(t, r, color);
+    } else {
+      paintParksMode(t, r, color);
+    }
+  }
+
+  function paintCountriesMode(t, r, color) {
+    countriesG.style('display', null);
+    provincesG.style('display', null);
+    parksG.style('display', 'none');
+
+    // Switch states layer to world projection
+    statesG.selectAll('path').attr('d', pathWorld).attr('class', 'tm-state');
+
     var tint = d3.interpolateRgb('#d9d4c7', color)(0.35);
     var hasStates = r.states.size > 0;
     var hasProvinces = r.provinces.size > 0;
@@ -458,7 +867,6 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
     countriesG.selectAll('path').style('fill', function (d) {
       var name = d.properties.name;
       if (!r.countries.has(name)) return null;
-      // When sub-regions are listed, tint the country lightly so visited states/provinces pop out.
       if (name === USA_NAME && hasStates) return tint;
       if (name === CANADA_NAME && hasProvinces) return tint;
       return color;
@@ -490,8 +898,103 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
     listsEl.innerHTML = html;
   }
 
+  function paintParksMode(t, r, color) {
+    countriesG.style('display', 'none');
+    provincesG.style('display', 'none');
+    parksG.style('display', null);
+
+    // Switch states layer to USA Albers projection as clean base map
+    statesG.selectAll('path')
+      .attr('d', pathUsa)
+      .attr('class', 'tm-state tm-state-base')
+      .style('fill', null);
+
+    // Paint national park markers
+    parksG.selectAll('.tm-park-node').each(function () {
+      var node = d3.select(this);
+      var parkId = node.attr('data-id');
+      var isVisited = r.parks.has(parkId);
+
+      var dot = node.select('.tm-park-dot');
+      var pulse = node.select('.tm-park-pulse');
+
+      if (isVisited) {
+        dot.attr('r', 6)
+          .style('fill', color)
+          .style('stroke', '#ffffff')
+          .style('stroke-width', 2);
+        pulse.attr('r', 10)
+          .style('stroke', color)
+          .style('opacity', 0.45);
+      } else {
+        dot.attr('r', 4.5)
+          .style('fill', '#476856')
+          .style('stroke', '#ffffff')
+          .style('stroke-width', 1.4);
+        pulse.attr('r', 4.5)
+          .style('stroke', 'none')
+          .style('opacity', 0);
+      }
+    });
+
+    var visitedCount = r.parks.size;
+    var totalParks = nationalParks.length || 63;
+    var pct = Math.round((visitedCount / totalParks) * 100);
+    statsEl.innerHTML = '<strong>' + visitedCount + ' of ' + totalParks + '</strong> National Parks visited (' + pct + '%)';
+
+    // Bottom list: Visited Parks and Remaining Parks
+    var visitedParksList = [];
+    var remainingParksList = [];
+
+    nationalParks.forEach(function (park) {
+      if (r.parks.has(park.id)) {
+        visitedParksList.push(park);
+      } else {
+        remainingParksList.push(park);
+      }
+    });
+
+    visitedParksList.sort(function (a, b) { return a.name.localeCompare(b.name); });
+    remainingParksList.sort(function (a, b) { return a.name.localeCompare(b.name); });
+
+    var visitedChips = visitedParksList.map(function (p) {
+      var note = r.parkNotes[p.id] || '';
+      var titleAttr = (p.stateNames ? p.stateNames + ' · ' : '') + 'Est. ' + p.established + (note ? ' · ' + note : '');
+      return '<span class="tm-chip tm-chip-park-visited" style="border-color:' + color + ';" title="' + escapeHtml(titleAttr) + '">' +
+        '&#10003; ' + escapeHtml(p.shortName || p.name) +
+        '<span class="tm-chip-state">' + escapeHtml(p.states.join(', ')) + '</span>' +
+        (note ? ' <span class="tm-chip-note">(' + escapeHtml(note) + ')</span>' : '') +
+        '</span>';
+    }).concat(r.unmatchedParks.map(function (name) {
+      return '<span class="tm-chip is-unmatched" title="Park name not recognized">' + escapeHtml(name) + '</span>';
+    }));
+
+    var remainingChips = remainingParksList.map(function (p) {
+      var titleAttr = (p.stateNames ? p.stateNames + ' · ' : '') + 'Est. ' + p.established;
+      return '<span class="tm-chip tm-chip-park-unvisited" title="' + escapeHtml(titleAttr) + '">' +
+        escapeHtml(p.shortName || p.name) +
+        '<span class="tm-chip-state">' + escapeHtml(p.states.join(', ')) + '</span>' +
+        '</span>';
+    });
+
+    var visitedHtml = '<div class="tm-list"><h3>Visited National Parks (' + visitedParksList.length + ')</h3>' +
+      (visitedChips.length ? '<div class="tm-chips">' + visitedChips.join('') + '</div>' : '<p class="tm-empty">No national parks listed yet. Add them to travels.yml to track!</p>') +
+      '</div>';
+
+    var remainingHtml = '<div class="tm-list"><h3>Wishlist / Remaining Parks (' + remainingParksList.length + ')</h3>' +
+      '<details class="tm-details-block" open>' +
+        '<summary class="tm-details-summary">Show all ' + remainingParksList.length + ' parks</summary>' +
+        '<div class="tm-chips" style="margin-top:0.6rem;">' + remainingChips.join('') + '</div>' +
+      '</details>' +
+      '</div>';
+
+    listsEl.innerHTML = visitedHtml + remainingHtml;
+  }
+
   function escapeHtml(s) {
-    return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; });
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
   }
 
   function renderList(title, items, unmatched, notes) {
@@ -511,4 +1014,3 @@ description: "An interactive map of the countries, U.S. states, and Canadian pro
   }
 })();
 </script>
-

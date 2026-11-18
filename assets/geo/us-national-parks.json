@@ -1,0 +1,888 @@
+[
+  {
+    "id": "acadia",
+    "name": "Acadia National Park",
+    "shortName": "Acadia",
+    "states": [
+      "ME"
+    ],
+    "stateNames": "Maine",
+    "coordinates": [
+      -68.21,
+      44.35
+    ],
+    "established": 1919
+  },
+  {
+    "id": "american-samoa",
+    "name": "National Park of American Samoa",
+    "shortName": "American Samoa",
+    "states": [
+      "AS"
+    ],
+    "stateNames": "American Samoa",
+    "coordinates": [
+      -170.68,
+      -14.25
+    ],
+    "established": 1988
+  },
+  {
+    "id": "arches",
+    "name": "Arches National Park",
+    "shortName": "Arches",
+    "states": [
+      "UT"
+    ],
+    "stateNames": "Utah",
+    "coordinates": [
+      -109.57,
+      38.68
+    ],
+    "established": 1971
+  },
+  {
+    "id": "badlands",
+    "name": "Badlands National Park",
+    "shortName": "Badlands",
+    "states": [
+      "SD"
+    ],
+    "stateNames": "South Dakota",
+    "coordinates": [
+      -102.4,
+      43.75
+    ],
+    "established": 1978
+  },
+  {
+    "id": "big-bend",
+    "name": "Big Bend National Park",
+    "shortName": "Big Bend",
+    "states": [
+      "TX"
+    ],
+    "stateNames": "Texas",
+    "coordinates": [
+      -103.25,
+      29.25
+    ],
+    "established": 1944
+  },
+  {
+    "id": "biscayne",
+    "name": "Biscayne National Park",
+    "shortName": "Biscayne",
+    "states": [
+      "FL"
+    ],
+    "stateNames": "Florida",
+    "coordinates": [
+      -80.2,
+      25.47
+    ],
+    "established": 1980
+  },
+  {
+    "id": "black-canyon-of-the-gunnison",
+    "name": "Black Canyon of the Gunnison National Park",
+    "shortName": "Black Canyon of the Gunnison",
+    "states": [
+      "CO"
+    ],
+    "stateNames": "Colorado",
+    "coordinates": [
+      -107.72,
+      38.57
+    ],
+    "established": 1999
+  },
+  {
+    "id": "bryce-canyon",
+    "name": "Bryce Canyon National Park",
+    "shortName": "Bryce Canyon",
+    "states": [
+      "UT"
+    ],
+    "stateNames": "Utah",
+    "coordinates": [
+      -112.17,
+      37.57
+    ],
+    "established": 1928
+  },
+  {
+    "id": "canyonlands",
+    "name": "Canyonlands National Park",
+    "shortName": "Canyonlands",
+    "states": [
+      "UT"
+    ],
+    "stateNames": "Utah",
+    "coordinates": [
+      -109.93,
+      38.2
+    ],
+    "established": 1964
+  },
+  {
+    "id": "capitol-reef",
+    "name": "Capitol Reef National Park",
+    "shortName": "Capitol Reef",
+    "states": [
+      "UT"
+    ],
+    "stateNames": "Utah",
+    "coordinates": [
+      -111.17,
+      38.2
+    ],
+    "established": 1971
+  },
+  {
+    "id": "carlsbad-caverns",
+    "name": "Carlsbad Caverns National Park",
+    "shortName": "Carlsbad Caverns",
+    "states": [
+      "NM"
+    ],
+    "stateNames": "New Mexico",
+    "coordinates": [
+      -104.44,
+      32.17
+    ],
+    "established": 1930
+  },
+  {
+    "id": "channel-islands",
+    "name": "Channel Islands National Park",
+    "shortName": "Channel Islands",
+    "states": [
+      "CA"
+    ],
+    "stateNames": "California",
+    "coordinates": [
+      -119.87,
+      34.01
+    ],
+    "established": 1980
+  },
+  {
+    "id": "congaree",
+    "name": "Congaree National Park",
+    "shortName": "Congaree",
+    "states": [
+      "SC"
+    ],
+    "stateNames": "South Carolina",
+    "coordinates": [
+      -80.78,
+      33.78
+    ],
+    "established": 2003
+  },
+  {
+    "id": "crater-lake",
+    "name": "Crater Lake National Park",
+    "shortName": "Crater Lake",
+    "states": [
+      "OR"
+    ],
+    "stateNames": "Oregon",
+    "coordinates": [
+      -122.1,
+      42.94
+    ],
+    "established": 1902
+  },
+  {
+    "id": "cuyahoga-valley",
+    "name": "Cuyahoga Valley National Park",
+    "shortName": "Cuyahoga Valley",
+    "states": [
+      "OH"
+    ],
+    "stateNames": "Ohio",
+    "coordinates": [
+      -81.55,
+      41.24
+    ],
+    "established": 2000
+  },
+  {
+    "id": "death-valley",
+    "name": "Death Valley National Park",
+    "shortName": "Death Valley",
+    "states": [
+      "CA",
+      "NV"
+    ],
+    "stateNames": "California, Nevada",
+    "coordinates": [
+      -116.82,
+      36.24
+    ],
+    "established": 1994
+  },
+  {
+    "id": "denali",
+    "name": "Denali National Park and Preserve",
+    "shortName": "Denali",
+    "states": [
+      "AK"
+    ],
+    "stateNames": "Alaska",
+    "coordinates": [
+      -151.19,
+      63.11
+    ],
+    "established": 1917
+  },
+  {
+    "id": "dry-tortugas",
+    "name": "Dry Tortugas National Park",
+    "shortName": "Dry Tortugas",
+    "states": [
+      "FL"
+    ],
+    "stateNames": "Florida",
+    "coordinates": [
+      -82.87,
+      24.63
+    ],
+    "established": 1992
+  },
+  {
+    "id": "everglades",
+    "name": "Everglades National Park",
+    "shortName": "Everglades",
+    "states": [
+      "FL"
+    ],
+    "stateNames": "Florida",
+    "coordinates": [
+      -80.93,
+      25.29
+    ],
+    "established": 1934
+  },
+  {
+    "id": "gates-of-the-arctic",
+    "name": "Gates of the Arctic National Park",
+    "shortName": "Gates of the Arctic",
+    "states": [
+      "AK"
+    ],
+    "stateNames": "Alaska",
+    "coordinates": [
+      -153.3,
+      67.78
+    ],
+    "established": 1980
+  },
+  {
+    "id": "gateway-arch",
+    "name": "Gateway Arch National Park",
+    "shortName": "Gateway Arch",
+    "states": [
+      "MO"
+    ],
+    "stateNames": "Missouri",
+    "coordinates": [
+      -90.18,
+      38.63
+    ],
+    "established": 2018
+  },
+  {
+    "id": "glacier",
+    "name": "Glacier National Park",
+    "shortName": "Glacier",
+    "states": [
+      "MT"
+    ],
+    "stateNames": "Montana",
+    "coordinates": [
+      -113.78,
+      48.7
+    ],
+    "established": 1910
+  },
+  {
+    "id": "glacier-bay",
+    "name": "Glacier Bay National Park",
+    "shortName": "Glacier Bay",
+    "states": [
+      "AK"
+    ],
+    "stateNames": "Alaska",
+    "coordinates": [
+      -137,
+      58.5
+    ],
+    "established": 1980
+  },
+  {
+    "id": "grand-canyon",
+    "name": "Grand Canyon National Park",
+    "shortName": "Grand Canyon",
+    "states": [
+      "AZ"
+    ],
+    "stateNames": "Arizona",
+    "coordinates": [
+      -112.14,
+      36.06
+    ],
+    "established": 1919
+  },
+  {
+    "id": "grand-teton",
+    "name": "Grand Teton National Park",
+    "shortName": "Grand Teton",
+    "states": [
+      "WY"
+    ],
+    "stateNames": "Wyoming",
+    "coordinates": [
+      -110.8,
+      43.73
+    ],
+    "established": 1929
+  },
+  {
+    "id": "great-basin",
+    "name": "Great Basin National Park",
+    "shortName": "Great Basin",
+    "states": [
+      "NV"
+    ],
+    "stateNames": "Nevada",
+    "coordinates": [
+      -114.3,
+      38.98
+    ],
+    "established": 1986
+  },
+  {
+    "id": "great-sand-dunes",
+    "name": "Great Sand Dunes National Park",
+    "shortName": "Great Sand Dunes",
+    "states": [
+      "CO"
+    ],
+    "stateNames": "Colorado",
+    "coordinates": [
+      -105.59,
+      37.73
+    ],
+    "established": 2004
+  },
+  {
+    "id": "great-smoky-mountains",
+    "name": "Great Smoky Mountains National Park",
+    "shortName": "Great Smoky Mountains",
+    "states": [
+      "NC",
+      "TN"
+    ],
+    "stateNames": "North Carolina, Tennessee",
+    "coordinates": [
+      -83.53,
+      35.68
+    ],
+    "established": 1934
+  },
+  {
+    "id": "guadalupe-mountains",
+    "name": "Guadalupe Mountains National Park",
+    "shortName": "Guadalupe Mountains",
+    "states": [
+      "TX"
+    ],
+    "stateNames": "Texas",
+    "coordinates": [
+      -104.87,
+      31.92
+    ],
+    "established": 1972
+  },
+  {
+    "id": "haleakala",
+    "name": "Haleakalā National Park",
+    "shortName": "Haleakalā",
+    "states": [
+      "HI"
+    ],
+    "stateNames": "Hawaii",
+    "coordinates": [
+      -156.17,
+      20.72
+    ],
+    "established": 1916
+  },
+  {
+    "id": "hawaii-volcanoes",
+    "name": "Hawaiʻi Volcanoes National Park",
+    "shortName": "Hawaiʻi Volcanoes",
+    "states": [
+      "HI"
+    ],
+    "stateNames": "Hawaii",
+    "coordinates": [
+      -155.2,
+      19.38
+    ],
+    "established": 1916
+  },
+  {
+    "id": "hot-springs",
+    "name": "Hot Springs National Park",
+    "shortName": "Hot Springs",
+    "states": [
+      "AR"
+    ],
+    "stateNames": "Arkansas",
+    "coordinates": [
+      -93.05,
+      34.51
+    ],
+    "established": 1921
+  },
+  {
+    "id": "indiana-dunes",
+    "name": "Indiana Dunes National Park",
+    "shortName": "Indiana Dunes",
+    "states": [
+      "IN"
+    ],
+    "stateNames": "Indiana",
+    "coordinates": [
+      -87.05,
+      41.65
+    ],
+    "established": 2019
+  },
+  {
+    "id": "isle-royale",
+    "name": "Isle Royale National Park",
+    "shortName": "Isle Royale",
+    "states": [
+      "MI"
+    ],
+    "stateNames": "Michigan",
+    "coordinates": [
+      -88.55,
+      48.1
+    ],
+    "established": 1940
+  },
+  {
+    "id": "joshua-tree",
+    "name": "Joshua Tree National Park",
+    "shortName": "Joshua Tree",
+    "states": [
+      "CA"
+    ],
+    "stateNames": "California",
+    "coordinates": [
+      -115.9,
+      33.79
+    ],
+    "established": 1994
+  },
+  {
+    "id": "katmai",
+    "name": "Katmai National Park and Preserve",
+    "shortName": "Katmai",
+    "states": [
+      "AK"
+    ],
+    "stateNames": "Alaska",
+    "coordinates": [
+      -155,
+      58.5
+    ],
+    "established": 1980
+  },
+  {
+    "id": "kenai-fjords",
+    "name": "Kenai Fjords National Park",
+    "shortName": "Kenai Fjords",
+    "states": [
+      "AK"
+    ],
+    "stateNames": "Alaska",
+    "coordinates": [
+      -149.65,
+      59.92
+    ],
+    "established": 1980
+  },
+  {
+    "id": "kings-canyon",
+    "name": "Kings Canyon National Park",
+    "shortName": "Kings Canyon",
+    "states": [
+      "CA"
+    ],
+    "stateNames": "California",
+    "coordinates": [
+      -118.55,
+      36.8
+    ],
+    "established": 1940
+  },
+  {
+    "id": "kobuk-valley",
+    "name": "Kobuk Valley National Park",
+    "shortName": "Kobuk Valley",
+    "states": [
+      "AK"
+    ],
+    "stateNames": "Alaska",
+    "coordinates": [
+      -159.28,
+      67.55
+    ],
+    "established": 1980
+  },
+  {
+    "id": "lake-clark",
+    "name": "Lake Clark National Park and Preserve",
+    "shortName": "Lake Clark",
+    "states": [
+      "AK"
+    ],
+    "stateNames": "Alaska",
+    "coordinates": [
+      -153.42,
+      60.97
+    ],
+    "established": 1980
+  },
+  {
+    "id": "lassen-volcanic",
+    "name": "Lassen Volcanic National Park",
+    "shortName": "Lassen Volcanic",
+    "states": [
+      "CA"
+    ],
+    "stateNames": "California",
+    "coordinates": [
+      -121.51,
+      40.49
+    ],
+    "established": 1916
+  },
+  {
+    "id": "mammoth-cave",
+    "name": "Mammoth Cave National Park",
+    "shortName": "Mammoth Cave",
+    "states": [
+      "KY"
+    ],
+    "stateNames": "Kentucky",
+    "coordinates": [
+      -86.1,
+      37.18
+    ],
+    "established": 1941
+  },
+  {
+    "id": "mesa-verde",
+    "name": "Mesa Verde National Park",
+    "shortName": "Mesa Verde",
+    "states": [
+      "CO"
+    ],
+    "stateNames": "Colorado",
+    "coordinates": [
+      -108.49,
+      37.23
+    ],
+    "established": 1906
+  },
+  {
+    "id": "mount-rainier",
+    "name": "Mount Rainier National Park",
+    "shortName": "Mount Rainier",
+    "states": [
+      "WA"
+    ],
+    "stateNames": "Mount Rainier",
+    "coordinates": [
+      -121.76,
+      46.85
+    ],
+    "established": 1899
+  },
+  {
+    "id": "new-river-gorge",
+    "name": "New River Gorge National Park",
+    "shortName": "New River Gorge",
+    "states": [
+      "WV"
+    ],
+    "stateNames": "West Virginia",
+    "coordinates": [
+      -81.08,
+      38.07
+    ],
+    "established": 2020
+  },
+  {
+    "id": "north-cascades",
+    "name": "North Cascades National Park",
+    "shortName": "North Cascades",
+    "states": [
+      "WA"
+    ],
+    "stateNames": "Washington",
+    "coordinates": [
+      -121.2,
+      48.7
+    ],
+    "established": 1968
+  },
+  {
+    "id": "olympic",
+    "name": "Olympic National Park",
+    "shortName": "Olympic",
+    "states": [
+      "WA"
+    ],
+    "stateNames": "Washington",
+    "coordinates": [
+      -123.5,
+      47.97
+    ],
+    "established": 1938
+  },
+  {
+    "id": "petrified-forest",
+    "name": "Petrified Forest National Park",
+    "shortName": "Petrified Forest",
+    "states": [
+      "AZ"
+    ],
+    "stateNames": "Arizona",
+    "coordinates": [
+      -109.78,
+      35.07
+    ],
+    "established": 1962
+  },
+  {
+    "id": "pinnacles",
+    "name": "Pinnacles National Park",
+    "shortName": "Pinnacles",
+    "states": [
+      "CA"
+    ],
+    "stateNames": "California",
+    "coordinates": [
+      -121.16,
+      36.48
+    ],
+    "established": 2013
+  },
+  {
+    "id": "redwood",
+    "name": "Redwood National and State Parks",
+    "shortName": "Redwood",
+    "states": [
+      "CA"
+    ],
+    "stateNames": "California",
+    "coordinates": [
+      -124,
+      41.3
+    ],
+    "established": 1968
+  },
+  {
+    "id": "rocky-mountain",
+    "name": "Rocky Mountain National Park",
+    "shortName": "Rocky Mountain",
+    "states": [
+      "CO"
+    ],
+    "stateNames": "Colorado",
+    "coordinates": [
+      -105.58,
+      40.4
+    ],
+    "established": 1915
+  },
+  {
+    "id": "saguaro",
+    "name": "Saguaro National Park",
+    "shortName": "Saguaro",
+    "states": [
+      "AZ"
+    ],
+    "stateNames": "Arizona",
+    "coordinates": [
+      -110.5,
+      32.25
+    ],
+    "established": 1994
+  },
+  {
+    "id": "sequoia",
+    "name": "Sequoia National Park",
+    "shortName": "Sequoia",
+    "states": [
+      "CA"
+    ],
+    "stateNames": "California",
+    "coordinates": [
+      -118.55,
+      36.43
+    ],
+    "established": 1890
+  },
+  {
+    "id": "shenandoah",
+    "name": "Shenandoah National Park",
+    "shortName": "Shenandoah",
+    "states": [
+      "VA"
+    ],
+    "stateNames": "Virginia",
+    "coordinates": [
+      -78.35,
+      38.53
+    ],
+    "established": 1935
+  },
+  {
+    "id": "theodore-roosevelt",
+    "name": "Theodore Roosevelt National Park",
+    "shortName": "Theodore Roosevelt",
+    "states": [
+      "ND"
+    ],
+    "stateNames": "North Dakota",
+    "coordinates": [
+      -103.45,
+      46.97
+    ],
+    "established": 1978
+  },
+  {
+    "id": "virgin-islands",
+    "name": "Virgin Islands National Park",
+    "shortName": "Virgin Islands",
+    "states": [
+      "VI"
+    ],
+    "stateNames": "U.S. Virgin Islands",
+    "coordinates": [
+      -64.73,
+      18.33
+    ],
+    "established": 1956
+  },
+  {
+    "id": "voyageurs",
+    "name": "Voyageurs National Park",
+    "shortName": "Voyageurs",
+    "states": [
+      "MN"
+    ],
+    "stateNames": "Minnesota",
+    "coordinates": [
+      -92.88,
+      48.5
+    ],
+    "established": 1975
+  },
+  {
+    "id": "white-sands",
+    "name": "White Sands National Park",
+    "shortName": "White Sands",
+    "states": [
+      "NM"
+    ],
+    "stateNames": "New Mexico",
+    "coordinates": [
+      -106.17,
+      32.78
+    ],
+    "established": 2019
+  },
+  {
+    "id": "wind-cave",
+    "name": "Wind Cave National Park",
+    "shortName": "Wind Cave",
+    "states": [
+      "SD"
+    ],
+    "stateNames": "South Dakota",
+    "coordinates": [
+      -103.42,
+      43.57
+    ],
+    "established": 1903
+  },
+  {
+    "id": "wrangell-st-elias",
+    "name": "Wrangell–St. Elias National Park",
+    "shortName": "Wrangell–St. Elias",
+    "states": [
+      "AK"
+    ],
+    "stateNames": "Alaska",
+    "coordinates": [
+      -142,
+      61
+    ],
+    "established": 1980
+  },
+  {
+    "id": "yellowstone",
+    "name": "Yellowstone National Park",
+    "shortName": "Yellowstone",
+    "states": [
+      "WY",
+      "MT",
+      "ID"
+    ],
+    "stateNames": "Wyoming, Montana, Idaho",
+    "coordinates": [
+      -110.58,
+      44.42
+    ],
+    "established": 1872
+  },
+  {
+    "id": "yosemite",
+    "name": "Yosemite National Park",
+    "shortName": "Yosemite",
+    "states": [
+      "CA"
+    ],
+    "stateNames": "California",
+    "coordinates": [
+      -119.5,
+      37.85
+    ],
+    "established": 1890
+  },
+  {
+    "id": "zion",
+    "name": "Zion National Park",
+    "shortName": "Zion",
+    "states": [
+      "UT"
+    ],
+    "stateNames": "Utah",
+    "coordinates": [
+      -113.05,
+      37.3
+    ],
+    "established": 1919
+  }
+]

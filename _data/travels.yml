@@ -1,12 +1,73 @@
 # Travel map data for travels.html
 #
-# For each person, list the countries, U.S. states, and Canadian provinces they have visited.
+# For each person, list the countries, U.S. states, Canadian provinces, and U.S. National Parks they have visited.
 # - Countries: use common English names (e.g. "Greece", "United States", "Canada",
 #   "United Kingdom", "Czech Republic"). Common aliases are handled automatically.
 # - States: full names ("Wisconsin") or postal abbreviations ("WI") both work.
 # - Provinces: Canadian province/territory names ("Ontario", "British Columbia", "Quebec")
 #   or postal abbreviations ("ON", "BC", "QC") both work.
+# - National Parks: U.S. National Parks (e.g. "Yellowstone", "Yosemite", "Grand Canyon",
+#   "Acadia", "Glacier", "Zion"). Full or short names work. You can also supply notes:
+#     - name: "Yellowstone"
+#       note: "2024 with family"
 # - color: the highlight color used on the map when that person is selected.
+
+august:
+  label: August
+  color: "#d69e2e"
+  countries:
+    - name: Canada
+      note: "2024 Banff, Canmore"
+    - name: Denmark
+      note: "2025, Copenhagen"
+    - name: France
+      note: "2023 Perpignan"
+    - name: Portugal
+      note: "2026 Porto and Douro River area"
+    - name: Spain
+      note: "2023 Barcelona, Cadeques"
+  provinces:
+    - name: Alberta
+      note: "2024 Banff, Canmore"
+  states:
+    - name: Alaska
+      note: "2025 Ketchikan, Wrangle, Juneau, Glacier Bay"
+    - name: California
+      note: "2022 Lake Tahoe, Oakland"
+    - name: Connecticut
+      note: "2025 Fairfield, Rawleys Hot Dogs"
+    - name: Florida
+      note: "2022, 2023, 2024, 2025"
+    - Illinois
+    - Indiana
+    - Kentucky
+    - name: Maine
+      note: "2025 Surry"
+    - name: Massachusetts
+      note: "2025"
+    - Michigan
+    - Minnesota
+    - Montana
+    - name: Nevada
+      note: "2022 Lake Tahoe"
+    - name: New Hampshire
+      note: "2025"
+    - name: New Jersey
+      note: "2025"
+    - name: New York
+      note: "2025 Woodstock, 2025 New York City"
+    - North Carolina
+    - name: Rhode Island
+      note: "2025 Providence"
+    - Tennessee
+    - name: Vermont
+      note: "2025"
+    - Wisconsin
+  national_parks:
+    - Acadia
+    - Glacier
+    - Glacier Bay
+    - Indiana Dunes
 
 chris:
   label: Chris
@@ -74,6 +135,26 @@ chris:
   provinces: 
     - Alberta
     - Ontario
+  national_parks:
+    - Acadia
+    - Badlands
+    - Crater Lake
+    - Dry Tortugas
+    - Everglades
+    - Gateway Arch
+    - Glacier
+    - Glacier Bay
+    - Grand Teton
+    - Great Smoky Mountains
+    - Hawai'i Volcanoes
+    - Indiana Dunes
+    - Mammoth Cave
+    - Olympic
+    - Redwood
+    - Rocky Mountain
+    - Sequoia
+    - Yellowstone
+    - Yosemite
 
 elyse:
   label: Elyse
@@ -141,58 +222,10 @@ elyse:
     - West Virginia
     - Wisconsin
     - Wyoming
-
-
-august:
-  label: August
-  color: "#d69e2e"
-  countries:
-    - name: Canada
-      note: "2024 Banff, Canmore"
-    - name: Denmark
-      note: "2025, Copenhagen"
-    - name: France
-      note: "2023 Perpignan"
-    - name: Portugal
-      note: "2026 Porto and Douro River area"
-    - name: Spain
-      note: "2023 Barcelona, Cadeques"
-  provinces:
-    - name: Alberta
-      note: "2024 Banff, Canmore"
-  states:
-    - name: Alaska
-      note: "2025 Ketchikan, Wrangle, Juneau, Glacier Bay"
-    - name: California
-      note: "2022 Lake Tahoe, Oakland"
-    - name: Connecticut
-      note: "2025 Fairfield, Rawleys Hot Dogs"
-    - name: Florida
-      note: "2022, 2023, 2024, 2025"
-    - Illinois
-    - Indiana
-    - Kentucky
-    - name: Maine
-      note: "2025 Surry"
-    - name: Massachusetts
-      note: "2025"
-    - Michigan
-    - Minnesota
-    - Montana
-    - name: Nevada
-      note: "2022 Lake Tahoe"
-    - name: New Hampshire
-      note: "2025"
-    - name: New Jersey
-      note: "2025"
-    - name: New York
-      note: "2025 Woodstock, 2025 New York City"
-    - North Carolina
-    - name: Rhode Island
-      note: "2025 Providence"
-    - Tennessee
-    - name: Vermont
-      note: "2025"
-    - Wisconsin
-
-
+  national_parks:
+    - Acadia
+    - Glacier
+    - Glacier Bay
+    - Hawai'i Volcanoes
+    - Indiana Dunes
+    - Mount Rainier
