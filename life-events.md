@@ -17,7 +17,7 @@ description: Milestone life events and photo collections from the Dorn and Lucas
   </a>
   <a class="photo-index-item" href="{{ '/fk-2019/' | relative_url }}">
     <span class="photo-index-number">02</span>
-    <span><strong>F**k 2019</strong><small>The year in dispatches and updates</small></span>
+    <span><strong>F**k 2019</strong><small>Cancer, treatment and the support that goes us through</small></span>
     <span aria-hidden="true">&nearr;</span>
   </a>
   <a class="photo-index-item" href="{{ '/auggie.html' | relative_url }}">
@@ -27,7 +27,7 @@ description: Milestone life events and photo collections from the Dorn and Lucas
   </a>
   <a class="photo-index-item" href="{{ '/bjoumlrklunden-2024.html' | relative_url }}">
     <span class="photo-index-number">04</span>
-    <span><strong>Bj&ouml;rklunden 2024</strong><small>5 Years out</small></span>
+    <span><strong>Bj&ouml;rklunden 2024</strong><small>Celebrating 5 years out</small></span>
     <span aria-hidden="true">&nearr;</span>
   </a>
 </section>
@@ -46,7 +46,7 @@ description: Milestone life events and photo collections from the Dorn and Lucas
   </a>
   <a class="photo-index-item" href="{{ '/travels.html' | relative_url }}">
     <span class="photo-index-number">&bull;</span>
-    <span><strong>Travels</strong><small>Interactive world map of visited countries, states &amp; provinces</small></span>
+    <span><strong>Travels</strong><small>Interactive map of visited countries, states &amp; National Parks</small></span>
     <span aria-hidden="true">&nearr;</span>
   </a>
 </section>

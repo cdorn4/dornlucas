@@ -96,6 +96,7 @@ chris:
     - California
     - Colorado
     - Connecticut
+    - Delaware
     - Florida
     - Georgia
     - Hawaii
@@ -107,6 +108,7 @@ chris:
     - Kentucky
     - Louisiana
     - Maine
+    - Maryland
     - Massachusetts
     - Michigan
     - Minnesota
@@ -130,6 +132,7 @@ chris:
     - Vermont
     - Virginia
     - Washington
+    - West Virginia
     - Wisconsin
     - Wyoming
   provinces: 
@@ -183,6 +186,7 @@ elyse:
     - California
     - Colorado
     - Connecticut
+    - Delaware
     - Florida
     - Georgia
     - Hawaii
