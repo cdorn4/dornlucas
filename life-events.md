@@ -12,17 +12,17 @@ description: Milestone life events and photo collections from the Dorn and Lucas
 <section class="photo-index shell" aria-label="Life events" style="padding-bottom: 48px;">
   <a class="photo-index-item photo-index-featured" href="{{ '/wedding/' | relative_url }}">
     <span class="photo-index-number">01</span>
-    <span><strong>Our Wedding</strong><small>Early years, the wedding day &amp; disposable cameras</small></span>
+    <span><strong>Our Wedding</strong><small>Our early years, the wedding day &amp; disposable cameras</small></span>
     <span aria-hidden="true">&nearr;</span>
   </a>
   <a class="photo-index-item" href="{{ '/fk-2019/' | relative_url }}">
     <span class="photo-index-number">02</span>
-    <span><strong>F**k 2019</strong><small>Cancer, treatment and the support that goes us through</small></span>
+    <span><strong>F**k 2019</strong><small>Cancer, treatment and the support that got us through</small></span>
     <span aria-hidden="true">&nearr;</span>
   </a>
   <a class="photo-index-item" href="{{ '/auggie.html' | relative_url }}">
     <span class="photo-index-number">03</span>
-    <span><strong>Welcome Auggie</strong><small>The only good thing out of covid</small></span>
+    <span><strong>Welcome Auggie</strong><small>The only good thing to come out of covid</small></span>
     <span aria-hidden="true">&nearr;</span>
   </a>
   <a class="photo-index-item" href="{{ '/bjoumlrklunden-2024.html' | relative_url }}">
